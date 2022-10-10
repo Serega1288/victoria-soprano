@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link} from 'gatsby';
-import ImgLogo from '../assets/img/logo.png';
-import ImgSearch from '../assets/img/search.png';
-import ImgUser from '../assets/img/user.png';
-import WrapMenu from '../components/WrapMenu';
+import ImgLogo from '../../assets/img/logo.png';
+import ImgSearch from '../../assets/img/search.png';
+import ImgUser from '../../assets/img/user.png';
+import WrapMenu from './WrapMenu';
 
 const {useState} = React;
 
@@ -22,11 +22,9 @@ const Header = ( props ) => {
         }
     };
 
-    console.log('firstOpen >>', first);
-
     return (
         <>
-            <WrapHeader>
+            <WrapHeader className="d-flex align-items-center">
                 <div className="container">
                     <div className="row">
                         <div className="col">
@@ -34,19 +32,19 @@ const Header = ( props ) => {
                         </div>
                         <div className="col-auto">
                             <Link  to="/">
-                                <img className="d-block" src={ImgLogo} alt="logo"/>
+                                <img className="d-block logo" src={ImgLogo} alt="logo"/>
                             </Link>
                         </div>
                         <div className="col d-flex align-items-center justify-content-end">
                             <IconItems className="ul-clear d-flex align-items-center ">
                                 <li>
                                     <Link to="/search/">
-                                        <img src={ImgSearch} alt="search" />
+                                        <img src={ImgSearch} className="search" alt="search" />
                                     </Link>
                                 </li>
                                 <li>
                                     <Link to="/user/">
-                                        <img src={ImgUser} alt="user" />
+                                        <img src={ImgUser} className="user" alt="user" />
                                     </Link>
                                 </li>
                             </IconItems>
@@ -69,15 +67,19 @@ const Header = ( props ) => {
 export default Header;
 
 
-const bar_width = 30;
-const bar_height = 2;
-const bar_spacing = 7;
+const bar_width = 3;
+const bar_height = 0.2;
+const bar_spacing = 0.7;
+const m = 0.7;
 
  const WrapHeader = styled.header`
      border: 1px solid #000000;
-     padding-top: 10px;
-     padding-bottom: 10px;
-     min-height: 134px;
+     padding-top: 1rem;
+     padding-bottom: 1rem; 
+     min-height: 13.4rem;
+     @media (max-width:575px) {
+         min-height: 8.8rem;    
+     }
      position: fixed;
      top:0;
      left:0;
@@ -85,28 +87,59 @@ const bar_spacing = 7;
      z-index:100;
      background-color: #f7f4ed;
      
-    .menu-wrapper {
-        margin-left: 28px;
-        @media(max-width:576px) {
-            margin-left: 20px;
+     
+     .logo {
+        height: 11.2rem;
+        @media (max-width:575px) {
+            height: 5.6rem;    
         }
-        width: ${bar_width}px;
-        height: ${bar_height + bar_spacing * 2 }px;
+     }
+     .user {
+        height: 2.2rem;
+        @media (max-width:575px) {
+            height: 1.6rem;    
+        }
+     }
+     .search {
+        height: 2.6rem;
+        @media (max-width:575px) {
+            height: 1.8rem;    
+        }
+     }
+     
+    .menu-wrapper {
+        margin-left: 2.8rem;
+        @media(max-width:576px) {
+            margin-left: 2rem;
+        }
+        width: ${bar_width}rem;
+        height: ${bar_height + bar_spacing * 2 }rem;
+        @media (max-width:575px) {
+            width: ${bar_width*m}rem;
+            height: ${ (bar_height + bar_spacing * 2 )*m }rem;  
+        }
         cursor: pointer;
     }
     
     .hamburger-menu,
     .hamburger-menu:after,
     .hamburger-menu:before {
-        width: ${bar_width}px;
-        height: ${bar_height}px;
-        border-radius: 8px
+        width: ${bar_width}rem;
+        height: ${bar_height}rem;
+        @media (max-width:575px) {
+            width: ${bar_width*m}rem;
+            height: ${bar_height*m}rem;  
+        }
+        border-radius: 0.8rem
     }
     
     .hamburger-menu {
         display:block;
         position: relative;
-        transform: translateY(${bar_spacing}px);
+        transform: translateY(${bar_spacing}rem);
+        @media (max-width:575px) {
+            transform: translateY(${bar_spacing*m}rem);
+        }
         background: rgba(0, 0, 0, 1);
         transition: all 0ms 300ms;
       
@@ -119,7 +152,10 @@ const bar_spacing = 7;
         content: "";
         position: absolute;
         left: 0;
-        bottom: ${bar_spacing}px;
+        bottom: ${bar_spacing}rem;
+        @media (max-width:575px) {
+            bottom: ${bar_spacing*m}rem;
+        }
         background: rgba(0, 0, 0, 1);
         transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
     }
@@ -128,7 +164,10 @@ const bar_spacing = 7;
         content: "";
         position: absolute;
         left: 0;
-        top: ${bar_spacing}px;
+        top: ${bar_spacing}rem;
+        @media (max-width:575px) {
+            top: ${bar_spacing*m}rem;
+        }
         background: rgba(0, 0, 0, 1);
         transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
     }
@@ -151,9 +190,9 @@ const bar_spacing = 7;
 const IconItems = styled.ul`
      li {
         display:block;
-        margin-left: 20px;
-        @media(max-width:576px) {
-           margin-left: 14px;
+        margin-left: 2rem;
+        @media(max-width:576px) { 
+           margin-left: 1.4rem;
         }
         img {
             display:block;
