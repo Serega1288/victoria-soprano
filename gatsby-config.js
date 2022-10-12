@@ -16,6 +16,7 @@ module.exports = {
       options: {
         //url: process.env.WPGRAPHQL_URL,
         "url": process.env.SERVER_QRAPHQL_URL,
+        useACF: true,
         schema: {
           timeout: 1000000,
           perPage: 10,

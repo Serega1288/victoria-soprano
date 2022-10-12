@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../theme/.idea/theme.iml" filepath="$PROJECT_DIR$/../theme/.idea/theme.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/victoria-soprano.iml" filepath="$PROJECT_DIR$/.idea/victoria-soprano.iml" />
     </modules>
   </component>

@@ -120,7 +120,8 @@ body {
     background-color: #f7f4ed; 
     margin: 0;
     font-size: 1.8rem;
-    line-height: 2.6rem;
+    line-height: 1.45;
+    font-family: 'sfPro';
     color: #1a0f07;
     font-weight: 400;
     -webkit-text-size-adjust: 100%;
