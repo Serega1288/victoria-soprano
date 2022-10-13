@@ -23,5 +23,5 @@ const Layout = ( {children} ) => (
 export default Layout;
 
 const Main = styled.main`
-      min-height: 50vh;
+      min-height: 100vh;
 `;

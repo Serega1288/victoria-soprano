@@ -4,7 +4,7 @@ import React from "react";
 const FooterMenuUL = ({menu}) => {
     return (
         <>
-           <ul className="ul-clear">
+           <ul className="ul-clear box-menu-ul">
                {menu.map(item => (
                    <li key={item.id} className={ item.childItems && item.childItems.length > 0 ? 'parents' : '' } >
                        <Link to={item.path} >{item.label}</Link>
