@@ -1,5 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 import bolkit from '../assets/fonts/bolkit/bolkit.woff2';
+import bolkitBold from '../assets/fonts/bolkit/bolkit-bold.woff2';
+
+
+import sfPro from '../assets/fonts/SFProDisplay/sf-regular.woff2';
+import sfProBold from '../assets/fonts/SFProDisplay/sf-bold.woff2';
 
 
 
@@ -7,9 +12,40 @@ import bolkit from '../assets/fonts/bolkit/bolkit.woff2';
 // font-family: 'Bolkit';
 // font-family: 'SF Pro Display';
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle` 
+
+@font-face {
+    font-family: 'sfPro';
+    font-style: normal;
+    font-weight: 400; 
+    src: url("${sfPro}") format("woff2");
+}
+@font-face {
+    font-family: 'sfPro';
+    font-style: normal;
+    font-weight: 4700; 
+    src: url("${sfProBold}") format("woff2");
+}
 
 
+
+@font-face {
+    font-family: 'Bolkit';
+    font-style: normal;
+    font-weight: 400; 
+    src: url("${bolkit}") format("woff2");
+}
+@font-face {
+    font-family: 'Bolkit';
+    font-style: normal;
+    font-weight: 700; 
+    src: url("${bolkitBold}") format("woff2");
+}
+
+
+h1, h2, h3, h4, .WrapMenu {
+   font-family: 'Bolkit';
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -25,12 +61,17 @@ const GlobalStyles = createGlobalStyle`
 ::-webkit-scrollbar-thumb {
   background: #86644B;
 }
-
-
+ 
+.pos {
+    position: relative;
+}
 
 .h100 {
     height: 100%;
 } 
+.w100 {
+    width: 100%;
+}
 
 .ul-clear {
     margin: 0;
@@ -41,7 +82,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
  
- 
+
  
  
 *,
@@ -49,31 +90,65 @@ const GlobalStyles = createGlobalStyle`
 *::after {
   box-sizing: border-box;
 }
- 
 
-body {
-    height: 200vh;
-  background-color: #f7f4ed; 
-  margin: 0;
-   font-size: 18px;
-   line-height: 26px;
-   font-family: Bolkit;
-   font-weight: 400;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  padding-top: 134px;
-  @media (max-width: $sm_max) {
-     font-size: 15px;
-    line-height: 22px;
-  }
+html {
+    font-size: 62.5%;
+    --bs-gutter-x: 1.6rem;
+    @media (min-width:576px) {
+        font-size: 35%;
+    }
+    
+    @media (min-width:768px) {
+        
+    }
+    
+    @media (min-width:992px) {
+        font-size: 55%;
+    }
+    
+    @media (min-width:1200px) {
+        
+    }
+    
+    @media (min-width:1400px) {
+        font-size: 62.5%;
+    }
+}
+ 
+body { 
+    height: 100vh;
+    background-color: #f7f4ed; 
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.45;
+    font-family: 'sfPro';
+    color: #1a0f07;
+    font-weight: 400;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    padding-top: 13.4rem;
+    @media (max-width: 565px) {
+        padding-top: 8.8rem;    
+    }
 } 
+a {
+    color: #86644b;
+}
+ul {
+    a {
+        color: #1a0f07;
+        &:hover {
+            color: #86644b; 
+        }
+    }
+}
  
 
 .container,.container-fluid,.container-lg,.container-md,.container-sm,.container-xl,.container-xxl {
     width:100%;
     padding-right:var(--bs-gutter-x,.75rem);
     padding-left:var(--bs-gutter-x,.75rem);
-    margin-right:auto;
+    margin-right:auto; 
     margin-left:auto
 } 
 
@@ -157,7 +232,7 @@ body {
 .offset-7{margin-left:58.33333333%}
 .offset-8{margin-left:66.66666667%}
 .offset-9{margin-left:75%}
-.offset-10{margin-left:83.33333333%}
+.offset-10{margin-left:83.33333333%} 
 .offset-11{margin-left:91.66666667%}
 @media (min-width:576px) {
     .col-sm{flex:1 0 0}
@@ -643,16 +718,19 @@ body {
     .order-xxl-last{order:6}
 }
 
-.anim {
+.anim, a, .btn, input {
     transition: all 0.5s ease;
 }
 .WrapMenu {
     position: fixed;
     bottom:100%;
-    height: calc(100vh - 134px);
+    height: calc(100vh - 13.4rem);  
+    @media (max-width: 565px) { 
+        height: calc(100vh - 8.8rem);   
+    }
     left: 0;
-    right: 0;
-    transition: all 1s ease;
+    right: 0; 
+    transition: all 1s ease-in-out;
     opacity: 1; 
     z-index: 99;
     background-color: #f7f4ed; 
@@ -661,6 +739,24 @@ body {
     &.open {
         bottom:0;
     }
+}
+ 
+.btn {
+    cursor: pointer; 
+    display: inline-block;
+     text-transform: uppercase;
+    &.style-1 {
+        font-size: 1.8rem;
+        border: none;
+        padding: 1rem 3.3rem;
+        background-color: #1a0f07;
+        color: #86644b;
+        &:hover { 
+            background-color: #86644b;
+            color: #fff;
+        }
+    }
+    
 }
 `;
 

@@ -1,26 +1,27 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import  GlobalStyles from '../styles/GlobalStyles';
-import  Header from './Header';
-import  Footer from './Footer';
-
+import  Header from './header/Header';
+import  Footer from './footer/Footer';
+import styled from "styled-components";
 
 
 const Layout = ( {children} ) => (
     <div>
         <div>
             <Helmet>
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
-                    rel="stylesheet"
-                />
+
             </Helmet>
             <GlobalStyles />
             <Header/>
-            <div>{children}</div>
+            <Main>{children}</Main>
             <Footer/>
         </div>
     </div>
 );
 
 export default Layout;
+
+const Main = styled.main`
+      min-height: 100vh;
+`;
