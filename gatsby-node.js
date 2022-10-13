@@ -45,6 +45,45 @@ exports.createPages = ({graphql, actions}) => {
               template {
                 templateName
               }
+              ACFconstructor {
+                const {
+                  ... on WpPage_Acfconstructor_Const_Banner {
+                    fieldGroupName
+                    title
+                    banner {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                    bannerMobile {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                  }
+                  ... on WpPage_Acfconstructor_Const_Collections {
+                    blockTitle
+                    fieldGroupName
+                    collection {
+                      title
+                      text
+                      img1 {
+                        localFile {
+                          publicURL
+                        }
+                      }
+                      img2 {
+                        localFile {
+                          publicURL
+                        }
+                      }
+                      collection {
+                        collectionUrl
+                      }
+                    }
+                  }
+                }
+              }
             }
           } 
         } 
@@ -102,6 +141,7 @@ exports.createPages = ({graphql, actions}) => {
                     path: '/',
                     component:  frontTemplate,
                     context: item.content,
+                    acf: item.ACFconstructor
                 })
 
             } else {
@@ -110,6 +150,7 @@ exports.createPages = ({graphql, actions}) => {
                     path: `${item.slug}`,
                     component:  pageTemplate,
                     context: item.content,
+                    acf: item.ACFconstructor
                 })
 
             }
