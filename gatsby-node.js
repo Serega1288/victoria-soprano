@@ -35,15 +35,52 @@ exports.createPages = ({graphql, actions}) => {
     const {createPage} = actions;
 
     return graphql(`
-        { 
+        {
           page:allWpPage {
             nodes {
               slug
               title
               content
               isFrontPage
-              template {
+              template { 
                 templateName
+              }
+              ACFconstructor {
+                const {
+                  ... on WpPage_Acfconstructor_Const_Banner {
+                    fieldGroupName
+                    title
+                    banner {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                    bannerMobile {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                  }
+                  ... on WpPage_Acfconstructor_Const_Collections {
+                    blockTitle
+                    fieldGroupName
+                    collection {
+                      title
+                      text
+                      img1 {
+                        localFile {
+                          publicURL
+                        }
+                      }
+                      img2 {
+                        localFile {
+                          publicURL
+                        }
+                      }
+                      collectionUrl
+                    }
+                  }
+                }
               }
             }
           } 
@@ -92,6 +129,8 @@ exports.createPages = ({graphql, actions}) => {
         //
         // });
 
+
+
         results.data.page.nodes.forEach(item => {
 
             //console.log('>>>', item);
@@ -100,8 +139,8 @@ exports.createPages = ({graphql, actions}) => {
 
                 createPage({
                     path: '/',
-                    component:  frontTemplate,
-                    context: item.content,
+                    component:  pageTemplate,
+                    context: item,
                 })
 
             } else {
@@ -109,7 +148,7 @@ exports.createPages = ({graphql, actions}) => {
                 createPage({
                     path: `${item.slug}`,
                     component:  pageTemplate,
-                    context: item.content,
+                    context: item,
                 })
 
             }

@@ -6,19 +6,22 @@ import  Footer from './footer/Footer';
 import styled from "styled-components";
 
 
-const Layout = ( {children} ) => (
-    <div>
-        <div>
-            <Helmet>
+const Layout = ( {children, title, desc } ) => {
 
-            </Helmet>
-            <GlobalStyles />
-            <Header/>
-            <Main>{children}</Main>
-            <Footer/>
+    return (
+        <div>
+            <div>
+                <Helmet>
+                    <title>{ title } | { desc }</title>
+                </Helmet>
+                <GlobalStyles />
+                <Header/>
+                <Main>{children}</Main>
+                <Footer/>
+            </div>
         </div>
-    </div>
-);
+    )
+};
 
 export default Layout;
 
