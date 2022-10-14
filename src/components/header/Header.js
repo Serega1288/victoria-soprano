@@ -194,7 +194,7 @@ const IconItems = styled.ul`
         @media(max-width:576px) { 
            margin-left: 1.4rem;
         }
-        img {
+        img { 
             display:block;
         }
      }

@@ -47,6 +47,7 @@ exports.createPages = ({graphql, actions}) => {
               }
               ACFconstructor {
                 const {
+                
                   ... on WpPage_Acfconstructor_Const_Banner {
                     fieldGroupName
                     title
@@ -61,6 +62,7 @@ exports.createPages = ({graphql, actions}) => {
                       }
                     }
                   }
+                  
                   ... on WpPage_Acfconstructor_Const_Collections {
                     blockTitle
                     fieldGroupName
@@ -80,6 +82,20 @@ exports.createPages = ({graphql, actions}) => {
                       collectionUrl
                     }
                   }
+                  
+                  ... on WpPage_Acfconstructor_Const_Videovoutube {
+                    blockTitle
+                    fieldGroupName
+                    video
+                    videofon {
+                      localFile { 
+                        publicURL
+                      } 
+                    }
+                  }
+                  
+                  
+                  
                 }
               }
             }
