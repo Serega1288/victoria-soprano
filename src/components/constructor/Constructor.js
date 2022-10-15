@@ -5,7 +5,7 @@ const Const = ( props ) => {
     //console.log('>>', props.props );
     return (
         <>
-            {props.props.map( (item, index) => (
+            {props?.props?.map( (item, index) => (
                 <ConstItem key={index} item={item}  />
             ))}
         </>
