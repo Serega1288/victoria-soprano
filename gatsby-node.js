@@ -92,9 +92,54 @@ exports.createPages = ({graphql, actions}) => {
                         publicURL
                       } 
                     }
+                    videofon {
+                      localFile { 
+                        publicURL
+                      } 
+                    } 
+                    videofonMobile {
+                      localFile { 
+                        publicURL
+                      } 
+                    }
                   }
-                  
-                  
+                   
+                  ... on WpPage_Acfconstructor_Const_Instagram {
+                    blockTitle0
+                    blockTitle1
+                    blockTitle2
+                    blockTitle3
+                    channelname
+                    channelurl
+                    fieldGroupName 
+                    image1 {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                    image2 {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                  } 
+                   
+                  ... on WpPage_Acfconstructor_Const_Slider {
+                    fieldGroupName
+                    blocktitle 
+                    sliders {
+                      fotoSlider {
+                        localFile {
+                          publicURL
+                        }
+                      }
+                      fotoSliderMob {
+                        localFile {
+                          publicURL
+                        }
+                      }
+                    } 
+                  }
                   
                 }
               }

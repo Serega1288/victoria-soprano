@@ -2,6 +2,8 @@ import React from 'react';
 import Banner from './Banner';
 import Collections from './Collections';
 import Video from './Video';
+import Instagram from './Instagram';
+import Slider from './Slider';
 
 const Const = ( { item } ) => {
     //console.log('>>', props.props );
@@ -11,7 +13,10 @@ const Const = ( { item } ) => {
                 <>
                     { item.fieldGroupName == 'Page_Acfconstructor_Const_Banner' ? ( <Banner item={item} /> ) : null }
                     { item.fieldGroupName == 'Page_Acfconstructor_Const_Collections' ? ( <Collections item={item} /> ) : null }
-                    { item.fieldGroupName == 'WpPage_Acfconstructor_Const_Videovoutube' ? ( <Video item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Videovoutube' ? ( <Video item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Instagram' ? ( <Instagram item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Slider' ? ( <Slider item={item} /> ) : null }
+
                 </>
             ) : null }
         </>

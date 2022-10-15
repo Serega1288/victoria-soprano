@@ -96,12 +96,14 @@ const m = 0.7;
      }
      .user {
         height: 2.2rem;
+        width: auto;
         @media (max-width:575px) {
             height: 1.6rem;    
         }
      }
      .search {
         height: 2.6rem;
+        width: auto;
         @media (max-width:575px) {
             height: 1.8rem;    
         }

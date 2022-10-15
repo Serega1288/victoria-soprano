@@ -8,31 +8,10 @@ const Collections = ( {item} ) => {
     //console.log('item >>>', item);
 
     const Section = styled.section`
-        margin-top: 5rem;
-        margin-bottom: 5rem; 
-        @media(min-width: 576px) {   
-            margin-top: 20rem;  
-            margin-bottom: 20rem;
-            .block-title { 
-                font-size: 3rem;
-                padding-bottom:2.6rem;
-            } 
-            
-        }
-        .collections-list {
-            padding-top: 5rem;
-            @media(min-width: 576px) {
-                padding-top: 20rem; 
-            }
-        }
-        .collections-item {
-            
-        } 
         .box { 
             @media (min-width: 576px) {
                 max-width: 42.5rem; 
             }
-           
         }
         .box-ImageBG {
             position: absolute;
@@ -63,8 +42,12 @@ const Collections = ( {item} ) => {
             background-position: center center;  
             filter: none;
         }
+        .collections-list {
+            
+        }
         .collection-item {
-            margin-bottom: 20rem;
+            margin-bottom: 10rem;
+            //margin-bottom: 20rem;
             @media (max-width: 575px) {
                 margin-bottom: 2rem;
             } 
@@ -122,7 +105,7 @@ const Collections = ( {item} ) => {
     `;
 
     return (
-        <Section className="collections">
+        <Section className="collections section">
 
             <div className="container">
                 <h2 className="block-title">
@@ -130,7 +113,7 @@ const Collections = ( {item} ) => {
                 </h2>
             </div>
 
-            <div className="collections-list">
+            <div className="collections-list section-box">
 
                 {item.collection.map( (item, index) => (
                     <ConstructorItem key={index} item={item}  />

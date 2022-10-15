@@ -10,7 +10,9 @@ const GlobalStyles = createGlobalStyle`
 h1, h2, h3, h4, .WrapMenu {
    font-family: 'Bolkit';
 }
-
+.ovh {
+    overflow: hidden;
+}
 img { 
     max-width: 100%;
 }
@@ -33,7 +35,12 @@ img {
 .pos {
     position: relative;
 }
-
+.z-in-1 {
+    z-index: 1;
+}
+.z-in-2 {
+    z-index: 2;
+}
 .h100 {
     height: 100%;
 } 
@@ -75,7 +82,7 @@ html {
     @media (min-width:1200px) {
         
     }
-    
+     
     @media (min-width:1400px) {
         font-size: 62.5%;
     }
@@ -109,7 +116,7 @@ ul {
     }
 }
  
-.anim, a, .btn, input, a:after, a:before {
+.anim, a, .btn, input, a:after, a:before, a div {
     transition: all 0.5s ease; 
 }
 .WrapMenu {
@@ -130,7 +137,7 @@ ul {
     &.open {
         bottom:0;
     }
-}
+} 
  
 .btn {
     cursor: pointer; 
@@ -142,7 +149,7 @@ ul {
         padding: 1rem 3.3rem;
         background-color: #1a0f07;
         color: #86644b;
-        &:hover { 
+        &:hover, &:focus { 
             background-color: #86644b;
             color: #fff;
         }
@@ -166,7 +173,7 @@ ul {
             display: block;
             background-color: #1a0f07;
         } 
-        &:hover { 
+        &:hover, &:focus { 
             color: #fff; 
             &:before { 
                 background-color: #86644b;
@@ -180,6 +187,25 @@ ul {
         }
     }
 } 
+ 
+ 
+.section {
+        margin-top: 5rem;
+        margin-bottom: 5rem; 
+        @media(min-width: 576px) {   
+            // margin-top: 20rem;  
+            // margin-bottom: 20rem;
+            margin-top: 10rem;  
+            margin-bottom: 10rem;
+        }
+        .section-box {
+            padding-top: 5rem;
+            @media(min-width: 576px) {
+                padding-top: 10rem; 
+                //padding-top: 20rem; 
+            }
+        }
+}      
 
 .block-title {
     color: #1a0f07;
@@ -189,6 +215,11 @@ ul {
     padding-bottom:1rem;
     position: relative;
     text-transform: uppercase;
+    margin-bottom: 0;
+    @media(min-width: 576px) {   
+        font-size: 3rem;
+        padding-bottom:2.6rem;
+    }        
     &:before {
          content: '';
          height: 1px;
@@ -200,6 +231,37 @@ ul {
          z-index: 1;
     }
 }  
+
+.exit {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    @media(min-width: 576px) {  
+        top: 2rem;
+        right: 2rem;
+    }
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: #f7f4ed; 
+    z-index: 15;
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        width: 60%;
+        height: 2px;
+        background: #1a0f07;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: rotate(45deg);
+        margin: auto;
+    }
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
 `;
 
 export default GlobalStyles;
