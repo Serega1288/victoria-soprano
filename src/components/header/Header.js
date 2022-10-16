@@ -1,4 +1,6 @@
 import React from 'react';
+import {minCol, maxCol} from "../../function/SizeCol";
+
 import styled from 'styled-components';
 import {Link} from 'gatsby';
 import ImgLogo from '../../assets/img/logo.png';
@@ -20,6 +22,17 @@ const Header = ( props ) => {
         if (first === false) {
             firstOpen(!first)
         }
+
+        if (open === false) {
+            document.body.classList.add(
+                'ovh',
+            );
+        }
+        if (open === true) {
+            document.body.classList.remove(
+                'ovh',
+            );
+        }
     };
 
     return (
@@ -27,8 +40,14 @@ const Header = ( props ) => {
             <WrapHeader className="d-flex align-items-center">
                 <div className="container">
                     <div className="row">
-                        <div className="col">
-
+                        <div className="col d-flex align-items-center">
+                            <IconItems className="ul-clear align-items-center d-flex d-md-none">
+                                <li className="">
+                                    <Link to="/search/">
+                                        <img src={ImgSearch} className="search" alt="search" />
+                                    </Link>
+                                </li>
+                            </IconItems>
                         </div>
                         <div className="col-auto">
                             <Link  to="/">
@@ -37,12 +56,12 @@ const Header = ( props ) => {
                         </div>
                         <div className="col d-flex align-items-center justify-content-end">
                             <IconItems className="ul-clear d-flex align-items-center ">
-                                <li>
+                                <li className="d-none d-md-block">
                                     <Link to="/search/">
                                         <img src={ImgSearch} className="search" alt="search" />
                                     </Link>
                                 </li>
-                                <li>
+                                <li className="d-none">
                                     <Link to="/user/">
                                         <img src={ImgUser} className="user" alt="user" />
                                     </Link>
@@ -77,7 +96,7 @@ const m = 0.7;
      padding-top: 1rem;
      padding-bottom: 1rem; 
      min-height: 13.4rem;
-     @media (max-width:575px) {
+     @media (max-width:${maxCol.sm}) {
          min-height: 8.8rem;    
      }
      position: fixed;
@@ -90,31 +109,33 @@ const m = 0.7;
      
      .logo {
         height: 11.2rem;
-        @media (max-width:575px) {
+        @media (max-width:${maxCol.sm}) {
             height: 5.6rem;    
         }
      }
      .user {
         height: 2.2rem;
-        @media (max-width:575px) {
+        width: auto;
+        @media (max-width:${maxCol.sm}) {
             height: 1.6rem;    
         }
-     }
+     } 
      .search {
         height: 2.6rem;
-        @media (max-width:575px) {
+        width: auto;
+        @media (max-width:${maxCol.sm}) {
             height: 1.8rem;    
         }
      }
      
     .menu-wrapper {
         margin-left: 2.8rem;
-        @media(max-width:576px) {
+        @media(max-width:${maxCol.sm}) {
             margin-left: 2rem;
         }
         width: ${bar_width}rem;
         height: ${bar_height + bar_spacing * 2 }rem;
-        @media (max-width:575px) {
+        @media (max-width:${maxCol.sm}) {
             width: ${bar_width*m}rem;
             height: ${ (bar_height + bar_spacing * 2 )*m }rem;  
         }
@@ -126,7 +147,7 @@ const m = 0.7;
     .hamburger-menu:before {
         width: ${bar_width}rem;
         height: ${bar_height}rem;
-        @media (max-width:575px) {
+        @media (max-width:${maxCol.sm}) {
             width: ${bar_width*m}rem;
             height: ${bar_height*m}rem;  
         }
@@ -137,7 +158,7 @@ const m = 0.7;
         display:block;
         position: relative;
         transform: translateY(${bar_spacing}rem);
-        @media (max-width:575px) {
+        @media (max-width:${maxCol.sm}) {
             transform: translateY(${bar_spacing*m}rem);
         }
         background: rgba(0, 0, 0, 1);
@@ -153,7 +174,7 @@ const m = 0.7;
         position: absolute;
         left: 0;
         bottom: ${bar_spacing}rem;
-        @media (max-width:575px) {
+        @media (max-width:${maxCol.sm}) {
             bottom: ${bar_spacing*m}rem;
         }
         background: rgba(0, 0, 0, 1);
@@ -165,7 +186,7 @@ const m = 0.7;
         position: absolute;
         left: 0;
         top: ${bar_spacing}rem;
-        @media (max-width:575px) {
+        @media (max-width:${maxCol.sm}) {
             top: ${bar_spacing*m}rem;
         }
         background: rgba(0, 0, 0, 1);
@@ -189,36 +210,13 @@ const m = 0.7;
 
 const IconItems = styled.ul`
      li {
-        display:block;
+        //display:block;
         margin-left: 2rem;
-        @media(max-width:576px) { 
+        @media(max-width:${maxCol.sm}) { 
            margin-left: 1.4rem;
         }
-        img {
+        img { 
             display:block;
         }
      }
 `;
-
-//
-// const Wrapper = styled.div`
-//     padding:  20px;
-//     h1 {
-//         font-size: 28px;
-//         font-family: 'Balsamiq Sans', cursive;
-//         font-weight: 700;
-//         margin: 0;
-//         display: flex;
-//         align-item: center;
-//     }
-//     a {
-//     color: ${props => props.theme.black};
-//     text-decoration: none;
-//         svg {
-//             fill: ${props => props.theme.yellow}
-//             width; 40px;
-//             height: 40px;
-//             margin-right: 10px;
-//         }
-//     }
-// `;

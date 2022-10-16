@@ -14,7 +14,7 @@ const Footer = () => {
             firstSetScroll(!firstScroll)
         }
     });
-    console.log('>>>', firstScroll ? 'LoadFooter' :' not LoadFooter' )
+    //console.log('>>>', firstScroll ? 'LoadFooter' :' not LoadFooter' )
     return (
         <>
             {firstScroll ? <LoadFooter /> : <footer className="footer-clone" style={{minHeight: '50rem'}} />  }

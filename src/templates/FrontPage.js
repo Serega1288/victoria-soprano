@@ -1,8 +1,11 @@
 import React from 'react';
 import Layout from '../components/Layout';
+import {graphql, useStaticQuery} from "gatsby";
+
 const FrontPage = props => {
+
     return (
-        <Layout>
+        <Layout  title={` ${ props.pageContext.title } `}  >
             home page
         </Layout>
     );

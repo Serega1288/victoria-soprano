@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {minCol, maxCol} from "../../function/SizeCol";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import styled from 'styled-components';
 //import BackgroundImage from 'gatsby-background-image';
@@ -107,7 +108,7 @@ const WrapBoxMenuImage = styled.div`
     bottom:0;
     left: 0;
     right: 47%;
-    @media (max-width: 1399px) {
+    @media (max-width: ${maxCol.sm}) {
         right: 50%;    
     }
     z-index: 2;
@@ -196,14 +197,15 @@ const WrapBoxMenuTop = styled.div`
         position: relative;
         width: 3rem;
         height: 3rem;
+        top: -0.5rem;
+        bottom: 0;
+        right: 0;
+        z-index: 1;     
         @media (max-width: 565px) { 
+            top: 0rem;
             width: 1.8rem;
             height: 1.8rem;
         }
-        top: 0;
-        bottom: 0;
-        right: 0;
-        z-index: 1;
         &:before {
             content: '';
             display: block;
@@ -222,6 +224,10 @@ const WrapBoxMenuTop = styled.div`
       }
       .sub-menu-prev {
         transform: rotate(180deg);
+        top: -4.5rem;
+        @media (max-width: 565px) {
+            top: -3rem;
+        }
       }
       .box-submenu {
         background-color: #f7f4ed;

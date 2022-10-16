@@ -35,18 +35,19 @@ exports.createPages = ({graphql, actions}) => {
     const {createPage} = actions;
 
     return graphql(`
-        { 
+        {
           page:allWpPage {
             nodes {
               slug
               title
               content
               isFrontPage
-              template {
+              template { 
                 templateName
               }
               ACFconstructor {
                 const {
+                
                   ... on WpPage_Acfconstructor_Const_Banner {
                     fieldGroupName
                     title
@@ -61,6 +62,7 @@ exports.createPages = ({graphql, actions}) => {
                       }
                     }
                   }
+                  
                   ... on WpPage_Acfconstructor_Const_Collections {
                     blockTitle
                     fieldGroupName
@@ -77,11 +79,129 @@ exports.createPages = ({graphql, actions}) => {
                           publicURL
                         }
                       }
-                      collection {
-                        collectionUrl
+                      collectionUrl
+                    }
+                  }
+                  
+                  ... on WpPage_Acfconstructor_Const_Videovoutube {
+                    blockTitle
+                    fieldGroupName
+                    video
+                    videofon {
+                      localFile { 
+                        publicURL
+                      } 
+                    }
+                    videofon {
+                      localFile { 
+                        publicURL
+                      } 
+                    } 
+                    videofonMobile {
+                      localFile { 
+                        publicURL
+                      } 
+                    }
+                  }
+                   
+                  ... on WpPage_Acfconstructor_Const_Instagram {
+                    blockTitle0
+                    blockTitle1
+                    blockTitle2
+                    blockTitle3
+                    channelname
+                    channelurl
+                    fieldGroupName 
+                    image1 {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                    image2 {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                  } 
+                   
+                  ... on WpPage_Acfconstructor_Const_Slider {
+                    fieldGroupName
+                    blocktitle 
+                    sliders {
+                      fotoSlider {
+                        localFile {
+                          publicURL
+                        }
+                      }
+                      fotoSliderMob {
+                        localFile {
+                          publicURL
+                        }
+                      }
+                    } 
+                  }
+                  
+                  ... on WpPage_Acfconstructor_Const_Title {
+                    fieldGroupName
+                    title
+                  }
+                  ... on WpPage_Acfconstructor_Const_ContentTextImgImg {
+                    editor
+                    fieldGroupName
+                    notColor1
+                    foto1 {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                    notColor2
+                    foto2 {
+                      localFile {
+                        publicURL
                       }
                     }
                   }
+                  ... on WpPage_Acfconstructor_Const_Collaps {
+                    fieldGroupName
+                    collapsListLeft {
+                      title
+                      list {
+                        subTitle
+                        editor
+                      }
+                    }
+                    collapsListRight {
+                      title
+                      list {
+                        subTitle
+                        editor
+                      }
+                    }
+                  }
+                  ... on WpPage_Acfconstructor_Const_ContentImgTitleText {
+                    editor
+                    fieldGroupName
+                    notColor
+                    title
+                    foto {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                  }
+                  ... on WpPage_Acfconstructor_Const_Content {
+                    editor
+                    fieldGroupName
+                    textHorizont
+                    textVertical
+                    revers
+                    foto {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                  }
+                  
                 }
               }
             }
@@ -131,6 +251,8 @@ exports.createPages = ({graphql, actions}) => {
         //
         // });
 
+
+
         results.data.page.nodes.forEach(item => {
 
             //console.log('>>>', item);
@@ -139,9 +261,8 @@ exports.createPages = ({graphql, actions}) => {
 
                 createPage({
                     path: '/',
-                    component:  frontTemplate,
-                    context: item.content,
-                    acf: item.ACFconstructor
+                    component:  pageTemplate,
+                    context: item,
                 })
 
             } else {
@@ -149,8 +270,7 @@ exports.createPages = ({graphql, actions}) => {
                 createPage({
                     path: `${item.slug}`,
                     component:  pageTemplate,
-                    context: item.content,
-                    acf: item.ACFconstructor
+                    context: item,
                 })
 
             }
