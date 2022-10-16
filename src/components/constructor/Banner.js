@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import {minCol, maxCol} from "../../function/SizeCol";
 
 
 const Banner = ( {item} ) => {
@@ -22,7 +22,7 @@ const Banner = ( {item} ) => {
             line-height: normal;
             text-align: center;
         }
-        @media(min-width: 576px) {   
+        @media(min-width: ${minCol.sm}) {   
             background-image: url(${ imgUrl }); 
             height: calc(100vh - 13.4rem);
             background-position: center left;

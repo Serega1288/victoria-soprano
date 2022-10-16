@@ -7,6 +7,10 @@ import  Footer from './footer/Footer';
 import styled from "styled-components";
 
 
+
+
+// ${props => props.sizeCol.sm}
+
 const Layout = ( {children, title, desc } ) => {
 
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ConstructorItem from "./Constructor_Item";
-
+import {minCol, maxCol} from "../../function/SizeCol";
 
 
 const Collections = ( {item} ) => {
@@ -9,7 +9,7 @@ const Collections = ( {item} ) => {
 
     const Section = styled.section`
         .box { 
-            @media (min-width: 576px) {
+            @media (min-width: ${minCol.sm}) {
                 max-width: 42.5rem; 
             }
         }
@@ -24,7 +24,7 @@ const Collections = ( {item} ) => {
             filter: none;
         }
         .WrapImg {
-            @media (max-width: 575px) {
+            @media (max-width: ${maxCol.sm}) {
                 display: block;
                 width: calc( 100%  + ( var(--bs-gutter-x) * 2 ) );
                 margin-left: calc( -1 * var(--bs-gutter-x) );  
@@ -48,7 +48,7 @@ const Collections = ( {item} ) => {
         .collection-item {
             margin-bottom: 10rem;
             //margin-bottom: 20rem;
-            @media (max-width: 575px) {
+            @media (max-width: ${maxCol.sm}) {
                 margin-bottom: 2rem;
             } 
             position: relative;
@@ -59,7 +59,7 @@ const Collections = ( {item} ) => {
                 font-weight: 400;
                 line-height: 4.95rem;
                 margin-bottom: 1.7rem; 
-                @media (max-width: 575px) {
+                @media (max-width: ${maxCol.sm}) {
                     font-size: 2.4rem;
                     line-height: 2.64rem;
                     margin-bottom: 1rem; 
@@ -71,7 +71,7 @@ const Collections = ( {item} ) => {
                 line-height: 2.6rem;
                 margin-bottom: 2rem; 
                 max-width: 32rem;
-                @media (max-width: 575px) {
+                @media (max-width: ${maxCol.sm}) {
                     font-size: 1.7rem;
                     line-height: 2.3rem;
                     margin-bottom: 1rem; 
@@ -82,7 +82,7 @@ const Collections = ( {item} ) => {
             }
             &:nth-child(odd) {
                 img {
-                    @media(min-width: 576px) {
+                    @media(min-width: ${minCol.sm}) {
                         filter: grayscale(100%);
                     }
                     &:hover {
@@ -92,7 +92,7 @@ const Collections = ( {item} ) => {
             }
             &:nth-child(even) {
                 .ImageBG {
-                    @media(min-width: 576px) {
+                    @media(min-width: ${minCol.sm}) {
                         filter: grayscale(100%);
                     }
                     &:hover {

@@ -141,6 +141,67 @@ exports.createPages = ({graphql, actions}) => {
                     } 
                   }
                   
+                  ... on WpPage_Acfconstructor_Const_Title {
+                    fieldGroupName
+                    title
+                  }
+                  ... on WpPage_Acfconstructor_Const_ContentTextImgImg {
+                    editor
+                    fieldGroupName
+                    notColor1
+                    foto1 {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                    notColor2
+                    foto2 {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                  }
+                  ... on WpPage_Acfconstructor_Const_Collaps {
+                    fieldGroupName
+                    collapsListLeft {
+                      title
+                      list {
+                        subTitle
+                        editor
+                      }
+                    }
+                    collapsListRight {
+                      title
+                      list {
+                        subTitle
+                        editor
+                      }
+                    }
+                  }
+                  ... on WpPage_Acfconstructor_Const_ContentImgTitleText {
+                    editor
+                    fieldGroupName
+                    notColor
+                    title
+                    foto {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                  }
+                  ... on WpPage_Acfconstructor_Const_Content {
+                    editor
+                    fieldGroupName
+                    textHorizont
+                    textVertical
+                    revers
+                    foto {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                  }
+                  
                 }
               }
             }

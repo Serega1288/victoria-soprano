@@ -1,5 +1,5 @@
 import React from 'react';
-//import { Link, graphql, useStaticQuery } from 'gatsby';
+import {minCol, maxCol} from "../../function/SizeCol";
 import styled from "styled-components";
 import FooterMenu1 from './FooterMenu1';
 import FooterMenu2 from './FooterMenu2';
@@ -83,7 +83,7 @@ const WrapFooter = styled.footer`
         border-bottom: 1px solid #1a0f07;
     }
     .Newsletter {
-        @media (max-width: 575px) {
+        @media (max-width: ${maxCol.sm}) {
             button {
                 width: calc(100% + 2.7rem + 2.7rem);
                 margin-left: -2.7rem;
@@ -132,7 +132,7 @@ const WrapFooter = styled.footer`
         }
     }
     .icons {
-        @media (max-width: 565px) {
+        @media (max-width: ${maxCol.sm}) {
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
         }
@@ -142,7 +142,7 @@ const WrapFooter = styled.footer`
             margin-right: 1rem;
             margin-bottom: 1.5rem;
             margin-top: 1.5rem;
-            @media (max-width: 575px) {
+            @media (max-width: ${maxCol.sm}) {
                  margin-left: 1rem;
             }
         }
@@ -177,16 +177,16 @@ const WrapFooter = styled.footer`
         line-height: 1;
         font-weight: 700;
         padding-bottom: 2.5rem;
-        @media (max-width: 1399px) {
+        @media (max-width: ${maxCol.xxl}) {
             font-size: 12rem;
         }
-        @media (max-width: 1199px) {
+        @media (max-width: ${maxCol.xl}) {
             font-size: 10rem;
         }
-        @media (max-width: 991px) {
+        @media (max-width: ${maxCol.lg}) {
             font-size: 12rem;
         }
-        @media (max-width: 767px) {
+        @media (max-width: ${maxCol.md}) {
             font-size: 9rem;
         }
      }
@@ -196,12 +196,12 @@ const WrapFooter = styled.footer`
         & > .container > .row > div:first-child > .w100 {
             border: none;
         }
-        @media (max-width: 767px) {
+        @media (max-width: ${maxCol.md}) {
             & > .container > .row > div:nth-child(3) > .w100 {
                 border: none;
             }
         }
-        @media (max-width: 575px) {
+        @media (max-width: ${maxCol.sm}) {
             padding-top: 6rem;
             border: none;
             & > .container > .row > div > .w100 {
@@ -218,7 +218,7 @@ const WrapFooter = styled.footer`
         font-weight: 400;
         line-height: 3.6rem;
         margin: 0 0 2.5rem;
-        @media (max-width: 575px) {
+        @media (max-width: ${maxCol.sm}) {
             font-size: 2.2rem;
             line-height: 2.4rem;
             margin: 0 0 1.5rem;
@@ -227,11 +227,11 @@ const WrapFooter = styled.footer`
      .box-menu {
          padding-top: 5rem;
          padding-bottom: 1rem;
-         @media (max-width: 575px) {
+         @media (max-width: ${maxCol.sm}) {
             padding-top: 1rem;
             padding-left: 2.7rem;
             padding-right: 2.7rem; 
-            ul.box-menu-ul { 
+            ul.box-menu-ul {  
                 display: flex; 
                 flex-wrap: wrap;
                 li {
@@ -240,7 +240,7 @@ const WrapFooter = styled.footer`
                 }
             }
          }
-         @media (min-width: 576px) {
+         @media (min-width: ${minCol.sm}) {
             max-width: 23.2rem;
          }
      } 
@@ -250,16 +250,16 @@ const WrapFooter = styled.footer`
      ul {
         li {
             margin-bottom: 1.5rem;
-            @media (max-width: 575px) {
+            @media (max-width: ${maxCol.sm}) {
                 margin-bottom: 1rem;
              }
             a {
                 font-size: 1.8rem;
-                font-style: normal;
+                font-style: normal; 
                 letter-spacing: normal;
                 line-height: 2.2rem;
                 text-decoration: none; 
-                @media (max-width: 575px) {
+                @media (max-width: ${maxCol.sm}) {
                     font-size: 1.6rem;
                     line-height: 1.9rem;
                 }

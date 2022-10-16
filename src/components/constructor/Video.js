@@ -1,14 +1,15 @@
 import React from 'react';
+import {minCol, maxCol} from "../../function/SizeCol";
 import styled from 'styled-components';
 import VideoOpen from './VideoOpen';
 
 const Video = ( {item} ) => {
     //console.log('Video >>>', item);
 
-    const ImageBG = styled.div` 
+    const ImageBG = styled.div`  
         background-size: cover;
         background-image: url(${ item.videofonMobile.localFile.publicURL });
-        @media(min-width: 768px) {
+        @media(min-width: ${minCol.md}) { 
               background-image: url(${ item.videofon.localFile.publicURL });
         }
     `;
@@ -27,7 +28,7 @@ const Video = ( {item} ) => {
             bottom: 2rem;
             left: 2rem;
             right: 2rem;
-            @media(min-width: 576px) {
+            @media(min-width: ${minCol.sm}) {
                 top:10rem;
                 bottom: 10rem; 
                 left: 10rem;
@@ -49,7 +50,7 @@ const Video = ( {item} ) => {
            cursor: pointer; 
            position: relative;
            min-height: calc( 100vh - 8.8rem );
-            @media(min-width: 576px) {
+            @media(min-width: ${minCol.sm}) {
                 min-height: calc( 100vh - 13.4rem );
             }
             .play:before {
@@ -93,7 +94,7 @@ const Video = ( {item} ) => {
             left: 0;
             right: 0;
             margin: auto;
-            @media(min-width: 576px) {
+            @media(min-width: ${minCol.sm}) {
                 top:calc(50% - ( 24rem / 2 ) );
                 width: 24rem;
                 height: 24rem;
@@ -115,7 +116,7 @@ const Video = ( {item} ) => {
                 border-left: 3.3rem solid rgba(255, 255, 255, 0.6);;
                 border-bottom: 1.8rem solid transparent; 
                 left: 1rem;
-                @media(min-width: 576px) {
+                @media(min-width: ${minCol.sm}) {
                     left: 3rem;
                     border-top: 4.4rem solid transparent;
                     border-left: 8.1rem solid rgba(255, 255, 255, 0.6);;

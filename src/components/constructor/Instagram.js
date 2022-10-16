@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import VideoOpen from "./VideoOpen";
-
+import {minCol, maxCol} from "../../function/SizeCol";
 
 const Instagram = ( { item } ) => {
     //console.log('Instagram >>>', item);
@@ -15,7 +15,7 @@ const Instagram = ( { item } ) => {
             font-size: 1.8rem;
             line-height: 2.6rem;
             margin-bottom: 2.5rem;
-            @media (max-width: 575px) {
+            @media (max-width: ${maxCol.sm}) {
                 font-size: 1.1rem;
                 line-height: 1.6rem;
                 margin-bottom: 1rem;
@@ -27,10 +27,10 @@ const Instagram = ( { item } ) => {
             font-size: 11.4rem;
             font-weight: 700;
             line-height: 1;
-            @media (max-width: 767px) {
+            @media (max-width: ${maxCol.md}) {
                 font-size: 7.5rem;
             }
-            @media (max-width: 575px) {
+            @media (max-width: ${maxCol.sm}) {
                 margin-bottom: 1.4rem;
             }
         }
@@ -43,14 +43,14 @@ const Instagram = ( { item } ) => {
         
         .Title3 {
             font-weight: 400;
-            @media (max-width: 575px) {
+            @media (max-width: ${maxCol.sm}) {
                 font-size: 1.8rem;
                 line-height: 2.4rem;
             }
         }
         .ChannelName {
             font-weight: 600;
-            @media (max-width: 575px) {
+            @media (max-width: ${maxCol.sm}) {
                 font-size: 1.8rem;
                 line-height: 1.2;
             }
@@ -60,11 +60,11 @@ const Instagram = ( { item } ) => {
         .BoxLeft {
             padding-bottom: 5rem;
              max-width: 50rem;
-             @media (max-width: 767px) {
+             @media (max-width: ${maxCol.md}) {
                 max-width: 30rem;
              }
             
-            @media (max-width: 575px) {
+            @media (max-width: ${maxCol.sm}) {
                  height: auto;
                  padding-bottom: 0;
                  img {
@@ -80,7 +80,7 @@ const Instagram = ( { item } ) => {
                     color: #86644b;
                 }
             }
-            @media (max-width: 575px) {
+            @media (max-width: ${maxCol.sm}) {
                  margin-bottom: 3rem;
                  //display: block;
             }
@@ -89,7 +89,7 @@ const Instagram = ( { item } ) => {
              .img {
                 margin-top: 14rem;
                 margin-bottom: 2rem;
-                @media (max-width: 575px) {
+                @media (max-width: ${maxCol.sm}) {
                     margin-top: 12.8rem;
                     margin-bottom: 0rem;
                     img {

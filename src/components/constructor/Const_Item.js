@@ -4,6 +4,7 @@ import Collections from './Collections';
 import Video from './Video';
 import Instagram from './Instagram';
 import Slider from './Slider';
+import Title from './Title';
 
 const Const = ( { item } ) => {
     //console.log('>>', props.props );
@@ -16,6 +17,7 @@ const Const = ( { item } ) => {
                     { item.fieldGroupName == 'Page_Acfconstructor_Const_Videovoutube' ? ( <Video item={item} /> ) : null }
                     { item.fieldGroupName == 'Page_Acfconstructor_Const_Instagram' ? ( <Instagram item={item} /> ) : null }
                     { item.fieldGroupName == 'Page_Acfconstructor_Const_Slider' ? ( <Slider item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Title' ? ( <Title item={item} /> ) : null }
 
                 </>
             ) : null }

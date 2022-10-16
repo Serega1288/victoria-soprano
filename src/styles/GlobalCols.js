@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import {minCol, maxCol} from "../function/SizeCol";
 import bolkit from '../assets/fonts/bolkit/bolkit.woff2';
 import bolkitBold from '../assets/fonts/bolkit/bolkit-bold.woff2';
 
@@ -56,31 +57,31 @@ const GlobalCols = createGlobalStyle`
     margin-left:auto
 } 
 
-@media (min-width:576px) {
+@media (min-width:${minCol.sm}) {
     .container,.container-sm {
         max-width:540px
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:${minCol.md}) {
     .container,.container-md,.container-sm {
         max-width:720px
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:${minCol.lg}) {
     .container,.container-lg,.container-md,.container-sm {
         max-width:960px
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width:${minCol.xl}) {
     .container,.container-lg,.container-md,.container-sm,.container-xl {
         max-width:1140px
     }
 }
 
-@media (min-width:1400px) {
+@media (min-width:${minCol.xxl}) {
     .container,.container-lg,.container-md,.container-sm,.container-xl,.container-xxl {
         max-width:1320px
     }
@@ -138,7 +139,7 @@ const GlobalCols = createGlobalStyle`
 .offset-9{margin-left:75%}
 .offset-10{margin-left:83.33333333%} 
 .offset-11{margin-left:91.66666667%}
-@media (min-width:576px) {
+@media (min-width:${minCol.sm}) { 
     .col-sm{flex:1 0 0}
     .row-cols-sm-auto>*{flex:0 0 auto;width:auto}
     .row-cols-sm-1>*{flex:0 0 auto;width:100%}
@@ -173,7 +174,7 @@ const GlobalCols = createGlobalStyle`
     .offset-sm-10{margin-left:83.33333333%}
     .offset-sm-11{margin-left:91.66666667%}
 }
-@media (min-width:768px) {
+@media (min-width:${minCol.md}) {
     .col-md{flex:1 0 0}
     .row-cols-md-auto>*{flex:0 0 auto;width:auto}
     .row-cols-md-1>*{flex:0 0 auto;width:100%}
@@ -208,7 +209,7 @@ const GlobalCols = createGlobalStyle`
     .offset-md-10{margin-left:83.33333333%}
     .offset-md-11{margin-left:91.66666667%}
 }
-@media (min-width:992px) {
+@media (min-width:${minCol.lg}) {
     .col-lg{flex:1 0 0}
     .row-cols-lg-auto>*{flex:0 0 auto;width:auto}
     .row-cols-lg-1>*{flex:0 0 auto;width:100%}
@@ -244,7 +245,7 @@ const GlobalCols = createGlobalStyle`
     .offset-lg-11{margin-left:91.66666667%}
 }
 
-@media (min-width:1200px) {
+@media (min-width:${minCol.xl}) {
     .col-xl{flex:1 0 0}
     .row-cols-xl-auto>*{flex:0 0 auto;width:auto}
     .row-cols-xl-1>*{flex:0 0 auto;width:100%}
@@ -280,7 +281,7 @@ const GlobalCols = createGlobalStyle`
     .offset-xl-11{margin-left:91.66666667%}
 }
 
-@media (min-width:1400px) {
+@media (min-width:${minCol.xxl}) {
     .col-xxl{flex:1 0 0}
     .row-cols-xxl-auto>*{flex:0 0 auto;width:auto}
     .row-cols-xxl-1>*{flex:0 0 auto;width:100%}
@@ -366,7 +367,7 @@ const GlobalCols = createGlobalStyle`
 .order-5{order:5}
 .order-last{order:6}
 
-@media (min-width:576px) {
+@media (min-width:${minCol.sm}) {
     .d-sm-inline{display:inline}
     .d-sm-inline-block{display:inline-block}
     .d-sm-block{display:block}
@@ -417,7 +418,7 @@ const GlobalCols = createGlobalStyle`
     .order-sm-5{order:5}
     .order-sm-last{order:6}
 }
-@media (min-width:768px) {
+@media (min-width:${minCol.md}) {
     .d-md-inline{display:inline}
     .d-md-inline-block{display:inline-block}
     .d-md-block{display:block}
@@ -468,7 +469,7 @@ const GlobalCols = createGlobalStyle`
     .order-md-5{order:5}
     .order-md-last{order:6}
 }
-@media (min-width:992px) {
+@media (min-width:${minCol.lg}) {
     .d-lg-inline{display:inline}
     .d-lg-inline-block{display:inline-block}
     .d-lg-block{display:block}
@@ -519,7 +520,7 @@ const GlobalCols = createGlobalStyle`
     .order-lg-5{order:5}
     .order-lg-last{order:6}
 }
-@media (min-width:1200px) {
+@media (min-width:${minCol.xl}) {
     .d-xl-inline{display:inline}
     .d-xl-inline-block{display:inline-block}
     .d-xl-block{display:block}
@@ -570,7 +571,7 @@ const GlobalCols = createGlobalStyle`
     .order-xl-5{order:5}
     .order-xl-last{order:6}
 }
-@media (min-width:1400px) {
+@media (min-width:${minCol.xxl}) {
     .d-xxl-inline{display:inline}
     .d-xxl-inline-block{display:inline-block}
     .d-xxl-block{display:block}
@@ -621,7 +622,7 @@ const GlobalCols = createGlobalStyle`
     .order-xxl-5{order:5}
     .order-xxl-last{order:6}
 }
- 
+  
 `;
 
 export default GlobalCols;

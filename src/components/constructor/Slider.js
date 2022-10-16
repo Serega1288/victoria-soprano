@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Lazy } from 'swiper';
-
+import {minCol, maxCol} from "../../function/SizeCol";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/scrollbar";
@@ -12,12 +12,12 @@ import "swiper/css/scrollbar";
 import { Scrollbar } from "swiper";
 
 const Slider = ( { item } ) => {
-    console.log('Slider >>>', item.sliders);
+    //console.log('Slider >>>', item.sliders);
 
     const Section = styled.section`
          .section-box {
             padding-bottom: 6rem;
-            @media(max-width: 575px) {
+            @media(max-width: ${maxCol.sm}) {
                 padding-bottom: 3.5rem;
             }
          }
@@ -25,7 +25,7 @@ const Slider = ( { item } ) => {
             background-size: cover;
             background-position: center center;
             min-height: calc(100vh - 8.8rem - 9rem); 
-            @media(min-width: 768px) {
+            @media(min-width: ${minCol.md}) {  
                 min-height: calc(100vh - 13.4rem - 9rem);
             }
          }
@@ -44,10 +44,10 @@ const Slider = ( { item } ) => {
             bottom: 0rem !important;
             overflow: hidden;
             background: rgba(0,0,0,0);
-            @media(max-width: 991px) {
+            @media(max-width: ${maxCol.lg}) { 
                 height: 12px !important;
             }
-            @media(max-width: 575px) {
+            @media(max-width: ${maxCol.sm}) {
                 width: 34rem !important; 
                 bottom: 0rem !important;
             }
@@ -64,7 +64,7 @@ const Slider = ( { item } ) => {
             }
             .swiper-scrollbar-drag {
                 height: 25px;
-                @media(max-width: 991px) {
+                @media(max-width: ${maxCol.lg}) {
                    height: 12px; 
                 }
                 border-radius: 50%;

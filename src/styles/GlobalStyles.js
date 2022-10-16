@@ -1,7 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
-
+import {minCol, maxCol} from "../function/SizeCol";
 // font-family: 'Bolkit';
 // font-family: 'SF Pro Display';
+
+
+//console.log('sizeCol >>' , sizeCol.sm );
 
 const GlobalStyles = createGlobalStyle` 
 
@@ -59,7 +62,7 @@ img {
  
 
 .body {
-    overflow: hidden;  
+    overflow: hidden;   
 }
  
 
@@ -67,25 +70,25 @@ img {
 html {
     font-size: 62.5%;
     --bs-gutter-x: 1.6rem;
-    @media (min-width:576px) {
+    @media (min-width: ${minCol.sm} ) {
         font-size: 35%;
     }
     
-    @media (min-width:768px) {
+    @media (min-width: ${minCol.md} ) {
         
     }
     
-    @media (min-width:992px) {
+    @media (min-width: ${minCol.lg} ) {
         font-size: 55%;
     }
     
-    @media (min-width:1200px) {
+    @media (min-width: ${minCol.xl}) {
         
     }
      
-    @media (min-width:1400px) {
+    @media (min-width: ${minCol.xxl}) {
         font-size: 62.5%;
-    }
+    } 
 }
  
 body { 
@@ -100,7 +103,7 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     padding-top: 13.4rem;
-    @media (max-width: 565px) {
+    @media (max-width: ${maxCol.sm}) {
         padding-top: 8.8rem;    
     }
 } 
@@ -123,9 +126,9 @@ ul {
     position: fixed;
     bottom:100%;
     height: calc(100vh - 13.4rem);  
-    @media (max-width: 565px) { 
+    @media (max-width: ${maxCol.sm}) { 
         height: calc(100vh - 8.8rem);   
-    }
+    } 
     left: 0;
     right: 0; 
     transition: all 1s ease-in-out;
@@ -180,7 +183,7 @@ ul {
                 top: 0;
             }
         }
-        @media(max-width: 575px) {
+        @media(max-width: ${maxCol.sm}) {
             font-size: 1.6rem;
             line-height: 1.92rem;
             min-width: 10rem;
@@ -192,15 +195,15 @@ ul {
 .section {
         margin-top: 5rem;
         margin-bottom: 5rem; 
-        @media(min-width: 576px) {   
+        @media(min-width: ${minCol.sm}) {   
             // margin-top: 20rem;  
             // margin-bottom: 20rem;
-            margin-top: 10rem;  
+            margin-top: 10rem;   
             margin-bottom: 10rem;
         }
         .section-box {
             padding-top: 5rem;
-            @media(min-width: 576px) {
+            @media(min-width: ${minCol.sm}) {
                 padding-top: 10rem; 
                 //padding-top: 20rem; 
             }
@@ -216,13 +219,13 @@ ul {
     position: relative;
     text-transform: uppercase;
     margin-bottom: 0;
-    @media(min-width: 576px) {   
+    @media(min-width: ${minCol.sm}) {    
         font-size: 3rem;
-        padding-bottom:2.6rem;
+        padding-bottom:2.6rem; 
     }        
     &:before {
          content: '';
-         height: 1px;
+         height: 1px; 
          background-color: #000;
          left: -1000px;
          right: -1000px;
@@ -236,7 +239,7 @@ ul {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    @media(min-width: 576px) {  
+    @media(min-width: ${minCol.sm}) {  
         top: 2rem;
         right: 2rem;
     }
@@ -261,7 +264,7 @@ ul {
     &:after {
         transform: rotate(-45deg);
     }
-}
+} 
 `;
 
 export default GlobalStyles;
