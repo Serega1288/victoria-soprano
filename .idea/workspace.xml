@@ -5,28 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="data new">
-      <change afterPath="$PROJECT_DIR$/src/components/constructor/Content_img_title_text.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/constructor/Content_text_img_img.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/victoria-soprano.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/victoria-soprano.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SFProDisplay/sf-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SFProDisplay/sf-regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SFProDisplay/sf-semibold-italic.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SFProDisplay/sf-semibold-italic.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SFProDisplay/sf-thin-italic.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SFProDisplay/sf-thin-italic.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SFProDisplay/sf-ultra-light-italic.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SFProDisplay/sf-ultra-light-italic.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/LoadFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/LoadFooter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/MenuTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/MenuTop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/GlobalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalStyles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/FrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/FrontPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/page.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +69,7 @@
       <workItem from="1665813980242" duration="3733000" />
       <workItem from="1665823307416" duration="33157000" />
       <workItem from="1665901991145" duration="7568000" />
-      <workItem from="1665915829611" duration="7106000" />
+      <workItem from="1665915829611" duration="7820000" />
     </task>
     <task id="LOCAL-00001" summary="data new">
       <created>1665393400359</created>
@@ -134,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665861782769</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="data new">
+      <created>1665942621638</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665942621638</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
