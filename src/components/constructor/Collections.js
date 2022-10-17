@@ -107,7 +107,7 @@ const Collections = ( {item} ) => {
     return (
         <Section className="collections section">
 
-            <div className="container">
+            <div className="container box-title">
                 <h2 className="block-title">
                     {item.blockTitle}
                 </h2>

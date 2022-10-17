@@ -195,9 +195,28 @@ exports.createPages = ({graphql, actions}) => {
                     textHorizont
                     textVertical
                     revers
+                    notColor
                     foto {
                       localFile {
                         publicURL
+                      }
+                    }
+                  } 
+                  
+                  ... on WpPage_Acfconstructor_Const_Collaps {
+                    fieldGroupName
+                    collapsListLeft {
+                      title
+                      list {
+                        editor
+                        subTitle
+                      }
+                    }
+                    collapsListRight {
+                      title
+                      list {
+                        editor
+                        subTitle
                       }
                     }
                   }

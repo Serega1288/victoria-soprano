@@ -5,6 +5,9 @@ import Video from './Video';
 import Instagram from './Instagram';
 import Slider from './Slider';
 import Title from './Title';
+import Content1 from './Content_text_img_img';
+import Content2 from './Content_img_title_text';
+
 
 const Const = ( { item } ) => {
     //console.log('>>', props.props );
@@ -18,7 +21,8 @@ const Const = ( { item } ) => {
                     { item.fieldGroupName == 'Page_Acfconstructor_Const_Instagram' ? ( <Instagram item={item} /> ) : null }
                     { item.fieldGroupName == 'Page_Acfconstructor_Const_Slider' ? ( <Slider item={item} /> ) : null }
                     { item.fieldGroupName == 'Page_Acfconstructor_Const_Title' ? ( <Title item={item} /> ) : null }
-
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_ContentTextImgImg' ? ( <Content1 item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_ContentImgTitleText' ? ( <Content2 item={item} /> ) : null }
                 </>
             ) : null }
         </>

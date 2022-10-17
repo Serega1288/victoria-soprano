@@ -102,7 +102,7 @@ const Instagram = ( { item } ) => {
     `;
     return (
         <Section className="instagram section">
-            <div className="container">
+            <div className="container box-title">
                 <h2 className="block-title">
                     {item.blockTitle0}
                 </h2>

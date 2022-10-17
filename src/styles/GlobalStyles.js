@@ -34,6 +34,13 @@ img {
 ::-webkit-scrollbar-thumb {
   background: #86644B;
 }
+
+.grey { 
+    filter: grayscale(100%);
+}
+.grey_off { 
+    filter: none;
+}
  
 .pos {
     position: relative;
@@ -65,7 +72,12 @@ img {
     overflow: hidden;   
 }
  
-
+p { 
+    margin: 0 0 2rem;
+    @media (max-width: ${maxCol.sm} ) {
+        margin: 0 0 1rem;
+    }
+} 
 
 html {
     font-size: 62.5%;
@@ -190,6 +202,8 @@ ul {
         }
     }
 } 
+
+
  
  
 .section {
@@ -201,12 +215,15 @@ ul {
             margin-top: 10rem;   
             margin-bottom: 10rem;
         }
-        .section-box {
+        .box-title ~ .section-box {
             padding-top: 5rem;
             @media(min-width: ${minCol.sm}) {
                 padding-top: 10rem; 
                 //padding-top: 20rem; 
             }
+        }
+        .section-box {
+             
         }
 }      
 

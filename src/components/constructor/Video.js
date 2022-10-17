@@ -130,7 +130,7 @@ const Video = ( {item} ) => {
 
     return (
         <Section className="Video section">
-            <div className="container">
+            <div className="container box-title">
                 <h2 className="block-title">
                     {item.blockTitle}
                 </h2>

@@ -333,7 +333,7 @@ const GlobalCols = createGlobalStyle`
 .flex-shrink-0{flex-shrink:0}
 .flex-shrink-1{flex-shrink:1}
 .flex-wrap{flex-wrap:wrap}
-.flex-nowrap{flex-wrap:nowrap}
+.flex-nowrap{flex-wrap:nowrap} 
 .flex-wrap-reverse{flex-wrap:wrap-reverse}
 .justify-content-start{justify-content:flex-start}
 .justify-content-end{justify-content:flex-end}
@@ -365,7 +365,7 @@ const GlobalCols = createGlobalStyle`
 .order-3{order:3}
 .order-4{order:4}
 .order-5{order:5}
-.order-last{order:6}
+.order-last{order:6} 
 
 @media (min-width:${minCol.sm}) {
     .d-sm-inline{display:inline}

@@ -75,7 +75,7 @@ const Slider = ( { item } ) => {
 
     return (
         <Section className="slider section">
-            <div className="container">
+            <div className="container box-title">
                 <h2 className="block-title">
                     {item.blocktitle}
                 </h2>
