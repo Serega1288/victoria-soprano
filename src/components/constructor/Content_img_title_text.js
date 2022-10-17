@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import {minCol, maxCol} from "../../function/SizeCol";
 
 const Content1 = ( {item} ) => {
-    console.log('img title text  >>>', item )
-    const Section = styled.section`
+    //console.log('img title text  >>>', item )
+    const Section = styled.section` 
         .row > * { 
             padding-right: 2.5rem;
             padding-left: 2.5rem; 

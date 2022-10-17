@@ -164,14 +164,7 @@ exports.createPages = ({graphql, actions}) => {
                   ... on WpPage_Acfconstructor_Const_Collaps {
                     fieldGroupName
                     collapsListLeft {
-                      title
-                      list {
-                        subTitle
-                        editor
-                      }
-                    }
-                    collapsListRight {
-                      title
+                      title 
                       list {
                         subTitle
                         editor
@@ -202,24 +195,7 @@ exports.createPages = ({graphql, actions}) => {
                       }
                     }
                   } 
-                  
-                  ... on WpPage_Acfconstructor_Const_Collaps {
-                    fieldGroupName
-                    collapsListLeft {
-                      title
-                      list {
-                        editor
-                        subTitle
-                      }
-                    }
-                    collapsListRight {
-                      title
-                      list {
-                        editor
-                        subTitle
-                      }
-                    }
-                  }
+
                   
                 }
               }
