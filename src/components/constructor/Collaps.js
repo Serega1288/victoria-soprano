@@ -17,7 +17,7 @@ const Collaps = ({item} ) => {
             }
         }
         .collaps-title {
-            padding-left: 3rem;
+            //padding-left: 3rem;
             cursor: pointer; 
             span, span:before, span:after {
                 top: 0;
@@ -26,8 +26,17 @@ const Collaps = ({item} ) => {
                 display: block;
                 width: 2.2rem;
                 height: 2.2rem;
+                @media(max-width: ${maxCol.sm}) {
+                   width: 1.6rem;
+                   height: 1.6rem; 
+                }
                 position: absolute; 
                 margin: auto; 
+            }
+            span {
+                position: relative; 
+                display: inline-block;
+                margin-right: 0.5rem;
             }
             span:before, span:after {
                 content: ''; 

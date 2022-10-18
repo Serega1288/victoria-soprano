@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="data new">
-      <change afterPath="$PROJECT_DIR$/src/components/constructor/Collaps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/constructor/CollapsList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Const_Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Const_Item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Content_img_title_text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Content_img_title_text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Content_text_img_img.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Content_text_img_img.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Collaps.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Collaps.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +72,7 @@
       <workItem from="1665901991145" duration="7568000" />
       <workItem from="1666000079171" duration="9000" />
       <workItem from="1666000152665" duration="18229000" />
+      <workItem from="1666076441087" duration="407000" />
     </task>
     <task id="LOCAL-00001" summary="data new">
       <created>1665393400359</created>
