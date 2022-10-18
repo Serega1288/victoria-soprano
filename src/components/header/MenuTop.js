@@ -170,8 +170,8 @@ const WrapBoxMenuTop = styled.div`
         [aria-current="page"] {
             border-bottom: 1px solid #1a0f07;
         }
-        a {
-           font-size: 6.8rem;
+        a { 
+           font-size: 6.6rem;
            line-height: 6.9rem;
            padding: 0 2rem;
            @media (max-width: 565px) { 

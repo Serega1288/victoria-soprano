@@ -71,11 +71,19 @@ const Collaps = ({item} ) => {
             line-height: 1;
             margin-bottom: 1rem;
             margin-top: 2.8rem;
+            @media(max-width: ${maxCol.sm}) {
+                font-size: 2.8rem;
+                line-height: 1;
+            }
         }
-        .editor {
+        .editor { 
             margin-bottom: 0rem;
             p:last-child {
                 margin-bottom: 0rem;
+            }
+            @media(max-width: ${maxCol.sm}) {
+                font-size: 1.6rem;
+                line-height: 130%;
             }
         }
         

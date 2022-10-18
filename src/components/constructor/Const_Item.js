@@ -8,6 +8,7 @@ import Title from './Title';
 import Content1 from './Content_text_img_img';
 import Content2 from './Content_img_title_text';
 import Collaps from './Collaps';
+import Content3 from './ContentCols';
 
 
 const Const = ( { item } ) => {
@@ -25,7 +26,7 @@ const Const = ( { item } ) => {
                     { item.fieldGroupName == 'Page_Acfconstructor_Const_ContentTextImgImg' ? ( <Content1 item={item} /> ) : null }
                     { item.fieldGroupName == 'Page_Acfconstructor_Const_ContentImgTitleText' ? ( <Content2 item={item} /> ) : null }
                     { item.fieldGroupName == 'Page_Acfconstructor_Const_Collaps' ? ( <Collaps item={item} /> ) : null }
-
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Content' ? ( <Content3 item={item} /> ) : null }
 
                 </>
             ) : null }

@@ -33,10 +33,11 @@ const Content1 = ( {item} ) => {
         .box-text { 
             font-size: 1.6rem;
             @media (min-width: ${minCol.md} ) {
-                max-width: 340px;   
+                max-width: 450px;   
                 font-size: 1.8rem; 
+                margin-right: 3.6rem;
             }
-            margin-right: 3.6rem;
+            
         }
     `;
 // grey
@@ -44,10 +45,10 @@ const Content1 = ( {item} ) => {
         <Section className="section content2">
             <div className="container section-box">
                 <div className="row">
-                    <div className="col-12 col-md-7">
+                    <div className="col-12 col-sm-5 col-md-7">
                         <img className={ item.notColor === true && 'grey' } src={item.foto.localFile.publicURL} alt=""/>
                     </div>
-                    <div className="col-12 col-md-5 d-flex align-items-center justify-content-end">
+                    <div className="col-12 col-sm-7 col-md-5 d-flex align-items-center justify-content-end">
                         <div className="box-text">
                             <h2 className="title">
                                 {item.title}

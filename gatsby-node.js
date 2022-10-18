@@ -182,15 +182,15 @@ exports.createPages = ({graphql, actions}) => {
                       }
                     }
                   }
+                  
                   ... on WpPage_Acfconstructor_Const_Content {
                     editor
-                    fieldGroupName
-                    textHorizont
-                    textVertical
-                    revers
+                    fieldGroupName 
+                    vertical
+                    reverse
                     notColor
                     foto {
-                      localFile {
+                      localFile { 
                         publicURL
                       }
                     }
@@ -201,6 +201,9 @@ exports.createPages = ({graphql, actions}) => {
               }
             }
           } 
+          
+          
+          
         } 
     `).then(results => {
         if (results.error) {
