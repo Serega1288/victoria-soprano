@@ -30,6 +30,8 @@ const path = require('path');
 
 const frontTemplate = path.resolve('./src/templates/FrontPage.js');
 const pageTemplate = path.resolve(`./src/templates/page.js`)
+const categoryProductTemplate = path.resolve(`./src/templates/CategoryProduct.js`)
+
 
 exports.createPages = ({graphql, actions}) => {
     const {createPage} = actions;
@@ -202,7 +204,89 @@ exports.createPages = ({graphql, actions}) => {
             }
           } 
           
-          
+          allWpProductCategory {
+            nodes {
+              name
+              id
+              wpChildren {
+                nodes {
+                  name
+                  id
+                  uri
+                  ACFcategory {
+                    typ
+                    subtitle
+                    edit
+                    banner {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                    bannerMobile {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                    bannerOpenCategory {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                  }
+                  products {
+                    nodes {
+                      title
+                      slug
+                      uri
+                      featuredImage {
+                        node {
+                          localFile {
+                            publicURL
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              uri
+              products {
+                nodes {
+                  title
+                  uri
+                  featuredImage {
+                    node {
+                      uri
+                      localFile {
+                        publicURL
+                      }
+                    }
+                  }
+                }
+              }
+              ACFcategory {
+                typ
+                subtitle
+                edit
+                banner {
+                  localFile {
+                    publicURL
+                  }
+                }
+                bannerMobile {
+                  localFile {
+                    publicURL
+                  }
+                }
+                bannerOpenCategory {
+                  localFile {
+                    publicURL
+                  }
+                }
+              }
+            }
+          }
+           
           
         } 
     `).then(results => {
@@ -236,18 +320,15 @@ exports.createPages = ({graphql, actions}) => {
 
         // categoty  categoryTemplate
 
-        // categories.nodes.forEach(category => {
-        //
-        //     createPage({
-        //         path: `/categories/${category.title.toLowerCase()}`,
-        //         component: categoryTemplate,
-        //         context: {
-        //             categoryTitle: category.title,
-        //             posts,
-        //         }
-        //     })
-        //
-        // });
+        results.data.allWpProductCategory.nodes.forEach(category => {
+
+            createPage({
+                path: category.uri,
+                component: categoryProductTemplate,
+                context: category,
+            })
+
+        });
 
 
 
@@ -350,3 +431,6 @@ exports.createPages = ({graphql, actions}) => {
 //
 //
 // }
+
+
+

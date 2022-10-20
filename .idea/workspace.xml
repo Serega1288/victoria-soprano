@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="data new">
-      <change afterPath="$PROJECT_DIR$/src/components/constructor/ContentCols.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/CategoryProduct.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CategoryProduct/BannerProductCat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CategoryProduct/CatTitleBlock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CategoryProduct/Categories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CategoryProduct/CategoryBox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CategoryProduct/CategoryItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CategoryProduct/Products.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/breadcrumb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../theme/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../theme/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Collaps.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Collaps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Const_Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Const_Item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Content_img_title_text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Content_img_title_text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/MenuTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/MenuTop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/CategoryProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/CategoryProduct.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +83,9 @@
       <workItem from="1666000079171" duration="9000" />
       <workItem from="1666000152665" duration="18229000" />
       <workItem from="1666076441087" duration="407000" />
-      <workItem from="1666097363935" duration="9510000" />
+      <workItem from="1666097363935" duration="11383000" />
+      <workItem from="1666179781242" duration="9455000" />
+      <workItem from="1666241414132" duration="8958000" />
     </task>
     <task id="LOCAL-00001" summary="data new">
       <created>1665393400359</created>
@@ -138,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666005192273</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="data new">
+      <created>1666110783964</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1666110783964</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
