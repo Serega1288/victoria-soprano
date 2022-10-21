@@ -232,21 +232,7 @@ exports.createPages = ({graphql, actions}) => {
                         publicURL
                       }
                     }
-                  }
-                  products {
-                    nodes {
-                      title
-                      slug
-                      uri
-                      featuredImage {
-                        node {
-                          localFile {
-                            publicURL
-                          }
-                        }
-                      }
-                    }
-                  }
+                  } 
                 }
               }
               uri
@@ -287,6 +273,22 @@ exports.createPages = ({graphql, actions}) => {
             }
           }
            
+           
+           allWpProduct {
+            nodes {
+              featuredImage {
+                node {
+                  localFile {
+                    publicURL
+                  }
+                }
+              }
+              title
+              internal {
+                description
+              }
+            }
+          }
           
         } 
     `).then(results => {

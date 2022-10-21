@@ -1,6 +1,7 @@
 import React from 'react';
 import CategoryTitle from "../CategoryProduct/CatTitleBlock";
-import CategoryBox from './CategoryBox.js';
+import CategoryBox from './CategoryBox';
+import CategoryDesc from './CategoriesDesc';
 
 const Categories = (props) => {
     // console.log('categories page >>', props.theme.pageContext );
