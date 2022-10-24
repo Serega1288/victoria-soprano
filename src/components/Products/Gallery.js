@@ -12,7 +12,7 @@ import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs, Lazy } from "swiper";
 
 const Gallery = (prop) => {
-    console.log('page product gallery', prop);
+    //console.log('page product gallery', prop);
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
@@ -34,6 +34,18 @@ const Gallery = (prop) => {
                     loadOnTransitionStart: true
                 }}
             >
+                {
+                    prop.firstImage && (
+                        <SwiperSlide>
+                            <div className="slider-item swiper-lazy"
+                                 key={prop.firstImage.node.localFile.publicURL}
+                                 data-background={prop.firstImage.node.localFile.publicURL} >
+                                <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                            </div>
+                        </SwiperSlide>
+                    )
+                }
+
 
                 {prop.item.map( (item, index) => (
                     <SwiperSlide key={index}>
@@ -61,6 +73,18 @@ const Gallery = (prop) => {
                     loadOnTransitionStart: true
                 }}
             >
+
+                {
+                    prop.firstImage && (
+                        <SwiperSlide>
+                            <div className="slider-item swiper-lazy"
+                                 key={prop.firstImage.node.localFile.publicURL}
+                                 data-background={prop.firstImage.node.localFile.publicURL} >
+                                <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                            </div>
+                        </SwiperSlide>
+                    )
+                }
 
                 {prop.item.map( (item, index) => (
                     <SwiperSlide key={index}>

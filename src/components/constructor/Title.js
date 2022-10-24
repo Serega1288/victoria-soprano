@@ -2,12 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import {minCol, maxCol} from "../../function/SizeCol";
 
-const Title = ( {item} ) => {
-    //console.log('Title >>>', item )
-    const Title = styled.section` 
+
+const TitleH = styled.section` 
         .title {
             font-weight: 700;
-            font-size: 6.8rem;
+            font-size: 6.8rem; 
             line-height: 1;
             margin-top: 5rem;
             margin-bottom: 10rem;
@@ -20,12 +19,16 @@ const Title = ( {item} ) => {
         }
     `;
 
+const Title = ( {item} ) => {
+    //console.log('Title >>>', item )
+
+
     return (
-     <Title>
+     <TitleH>
          <h1 className="title">
              {item.title}
          </h1>
-     </Title>
+     </TitleH>
     )
 };
 export default Title;
