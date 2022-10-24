@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="data new">
+      <change afterPath="$PROJECT_DIR$/src/templates/Product.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Collections.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Collections.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Const_Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Const_Item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Constructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Constructor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Content_img_title_text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Content_img_title_text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Content_text_img_img.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Content_text_img_img.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Instagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Instagram.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Video.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Video.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/MenuTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/MenuTop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/GlobalCols.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalCols.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/GlobalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalStyles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/page.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +87,15 @@
       <workItem from="1665813980242" duration="3733000" />
       <workItem from="1665823307416" duration="33157000" />
       <workItem from="1665901991145" duration="7568000" />
-      <workItem from="1665915829611" duration="7820000" />
+      <workItem from="1666000079171" duration="9000" />
+      <workItem from="1666000152665" duration="18229000" />
+      <workItem from="1666076441087" duration="407000" />
+      <workItem from="1666097363935" duration="11383000" />
+      <workItem from="1666179781242" duration="9455000" />
+      <workItem from="1666241414132" duration="8958000" />
+      <workItem from="1666265451018" duration="11565000" />
+      <workItem from="1666332402743" duration="2667000" />
+      <workItem from="1666512108446" duration="10293000" />
     </task>
     <task id="LOCAL-00001" summary="data new">
       <created>1665393400359</created>
@@ -114,13 +140,27 @@
       <updated>1665861782769</updated>
     </task>
     <task id="LOCAL-00007" summary="data new">
-      <created>1665942621638</created>
+      <created>1666005182296</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1665942621638</updated>
+      <updated>1666005182296</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="data new">
+      <created>1666005192273</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666005192273</updated>
+    </task>
+    <task id="LOCAL-00009" summary="data new">
+      <created>1666110783964</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1666110783964</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -30,7 +30,7 @@ const Content1 = ( {item} ) => {
             <div className="container section-box">
                 <div className="row">
                     <div className="order-4 order-md-1 col-12 col-md-4 d-flex align-items-end">
-                        <div className="text" dangerouslySetInnerHTML={{__html: item.editor}}></div>
+                        <div className="text" dangerouslySetInnerHTML={{__html: item.editor}} />
                     </div>
                     <div className="order-md-2 col-6 col-md-4">
                         <img className={ item.notColor1 === true && 'grey' } src={item.foto1.localFile.publicURL} alt=""/>

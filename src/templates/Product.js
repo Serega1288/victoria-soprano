@@ -1,13 +1,12 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import {graphql, useStaticQuery} from "gatsby";
-import Const from "../components/constructor/Constructor";
 
-const FrontPage = (props) => {
+const Product = (props) => {
 
     const data = useStaticQuery(graphql` 
         {
-            wp { 
+            wp {  
                 allSettings {
                     generalSettingsTitle 
                     generalSettingsDescription
@@ -15,11 +14,11 @@ const FrontPage = (props) => {
             } 
         }
     `);
-    const list = props.pageContext.ACFconstructor.const;
+
     return (
         <Layout title={ props.pageContext.title } desc={ data.wp.allSettings.generalSettingsTitle } >
-            <Const props={list} />
+            produstss
         </Layout>
     );
 };
-export default FrontPage;
+export default Product;
