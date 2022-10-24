@@ -12,7 +12,7 @@ import styled from "styled-components";
 // ${props => props.sizeCol.sm}
 
 const Layout = ( {children, title, desc } ) => {
-    console.log('>>>', );
+    //console.log('>>>', );
     return (
         <div className="body">
             <Helmet>

@@ -6,7 +6,7 @@ import {maxCol} from "../../function/SizeCol";
 const ProductItem = ({item}) => {
     console.log('ListProduct >>', item );
     const ImageBG = styled.div`
-        background-image: url(${ item.featuredImage.node.localFile?.publicURL });
+        background-image: url(${ item?.featuredImage?.node.localFile?.publicURL });
     `;
     return (
         <Link to={item.uri}>

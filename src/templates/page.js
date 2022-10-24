@@ -12,7 +12,7 @@ const FrontPage = (props) => {
                     generalSettingsTitle 
                     generalSettingsDescription
                 }
-            }
+            } 
         }
     `);
     const list = props.pageContext.ACFconstructor.const;

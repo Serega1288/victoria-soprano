@@ -18,6 +18,7 @@ const CategoryProduct = (props) => {
             } 
         } 
     `);
+
     //const list = props.pageContext.ACFconstructor.const;
     return (
         <Layout title={ props.pageContext.name } desc={ data.wp.allSettings.generalSettingsTitle } >

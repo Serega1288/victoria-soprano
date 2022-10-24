@@ -132,7 +132,7 @@ ul {
 }
  
 .anim, a, .btn, input, a:after, a:before, a div {
-    transition: all 0.5s ease; 
+    transition: all 0.5s ease;  
 }
 .WrapMenu {
     position: fixed;

@@ -31,6 +31,7 @@ const path = require('path');
 const frontTemplate = path.resolve('./src/templates/FrontPage.js');
 const pageTemplate = path.resolve(`./src/templates/page.js`)
 const categoryProductTemplate = path.resolve(`./src/templates/CategoryProduct.js`)
+const productTemplate = path.resolve(`./src/templates/Product.js`)
 
 
 exports.createPages = ({graphql, actions}) => {
@@ -274,8 +275,29 @@ exports.createPages = ({graphql, actions}) => {
           }
            
            
-           allWpProduct {
+          allWpProduct {
             nodes {
+              uri
+              ACFBox {
+                  like { 
+                    ... on WpProduct {
+                      uri
+                      title
+                      featuredImage {
+                        node {
+                          localFile {
+                            publicURL
+                          }
+                        }
+                      }
+                    }
+                  }
+                  gallery {
+                    localFile {
+                        publicURL
+                      } 
+                  }
+              }
               featuredImage {
                 node {
                   localFile {
@@ -284,10 +306,8 @@ exports.createPages = ({graphql, actions}) => {
                 }
               }
               title
-              internal {
-                description
-              }
-            }
+              content
+            } 
           }
           
         } 
@@ -332,7 +352,13 @@ exports.createPages = ({graphql, actions}) => {
 
         });
 
-
+        results.data.allWpProduct.nodes.forEach(item => {
+            createPage({
+                path: item.uri,
+                component: productTemplate,
+                context: item,
+            })
+        });
 
         results.data.page.nodes.forEach(item => {
 
@@ -414,14 +440,14 @@ exports.createPages = ({graphql, actions}) => {
 //     })
 //
 //
-//     // allWpProduct.edges.forEach(edge => {
-//     //     createPage({
-//     //         path: `/shop/${edge.node.productCategories.slug}/${edge.node.slug}`,
-//     //         component: slash(path.resolve(`./src/templates/product.js`)),
-//     //         context: edge.node,
-//     //     })
-//     //
-//     // })
+    // allWpProduct.edges.forEach(edge => {
+    //     createPage({
+    //         path: `/shop/${edge.node.productCategories.slug}/${edge.node.slug}`,
+    //         component: slash(path.resolve(`./src/templates/product.js`)),
+    //         context: edge.node,
+    //     })
+    //
+    // })
 //
 //     // allWpProductCategory.edges.forEach(edge => {
 //     //     createPage({
