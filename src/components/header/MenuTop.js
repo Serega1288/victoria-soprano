@@ -54,6 +54,13 @@ const MenuTop = () => {
         setOpen(!open)
     };
 
+
+    const ovhClose = () => {
+        document.body.classList.remove(
+            'ovh',
+        );
+    };
+
     return (
         <>
             <WrapBoxMenuImage>
@@ -72,7 +79,7 @@ const MenuTop = () => {
                             <ul className="menu ul-clear">
                                 {allWpMenuItem.nodes.map(item => (
                                     <li key={item.id} className={ item.childItems.nodes && item.childItems.nodes.length > 0 ? 'parents' : '' } >
-                                        <Link to={item.path} >{item.label}</Link>
+                                        <Link  onClick={ovhClose} to={item.path} >{item.label}</Link>
                                         { item.childItems.nodes && item.childItems.nodes.length > 0 ? (
                                             <>
                                                 <span onClick={clickSubmenu} className="sub-menu-next"></span>
@@ -81,7 +88,7 @@ const MenuTop = () => {
                                                     <ul className="submenu ul-clear">
                                                         {item.childItems.nodes.map(li => (
                                                             <li key={li.id}>
-                                                                <Link  to={li.path}>{li.label}</Link>
+                                                                <Link onClick={ovhClose} to={li.path}>{li.label}</Link>
                                                             </li>
                                                         ) )}
                                                     </ul>

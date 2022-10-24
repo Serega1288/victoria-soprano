@@ -49,7 +49,7 @@ const Slider = ( { item } ) => {
             }
             @media(max-width: ${maxCol.sm}) {
                 width: 34rem !important; 
-                bottom: 0rem !important;
+                bottom: 0rem !important; 
             }
             &:before {
                 content: '';

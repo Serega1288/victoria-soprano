@@ -191,7 +191,7 @@ const WrapFooter = styled.footer`
         }
      }
      .wrap-footer-1 {
-        border-top: 1px solid #000000;
+        border-top: 1px solid #000000 !important;
         border-bottom: 1px solid #000000;
         & > .container > .row > div:first-child > .w100 {
             border: none;

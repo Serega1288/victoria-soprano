@@ -132,7 +132,7 @@ ul {
 }
  
 .anim, a, .btn, input, a:after, a:before, a div {
-    transition: all 0.5s ease; 
+    transition: all 0.5s ease;  
 }
 .WrapMenu {
     position: fixed;
@@ -164,6 +164,7 @@ ul {
         padding: 1rem 3.3rem;
         background-color: #1a0f07;
         color: #86644b;
+        text-decoration: none;
         &:hover, &:focus { 
             background-color: #86644b;
             color: #fff;
@@ -199,6 +200,22 @@ ul {
             font-size: 1.6rem;
             line-height: 1.92rem;
             min-width: 10rem;
+        }
+    }
+    
+    &.style-3 {
+        font-size: 1.8rem;
+        border: none;
+        padding: 1rem 3.3rem;
+        background-color: #86644b;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        &:hover, &:focus { 
+            background-color: #1a0f07;
+        }
+         @media(max-width: ${maxCol.sm}) {
+            display: block;
         }
     }
 } 

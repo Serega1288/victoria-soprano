@@ -278,6 +278,26 @@ exports.createPages = ({graphql, actions}) => {
           allWpProduct {
             nodes {
               uri
+              ACFBox {
+                  like { 
+                    ... on WpProduct {
+                      uri
+                      title
+                      featuredImage {
+                        node {
+                          localFile {
+                            publicURL
+                          }
+                        }
+                      }
+                    }
+                  }
+                  gallery {
+                    localFile {
+                        publicURL
+                      } 
+                  }
+              }
               featuredImage {
                 node {
                   localFile {
@@ -286,9 +306,7 @@ exports.createPages = ({graphql, actions}) => {
                 }
               }
               title
-              internal {
-                description
-              }
+              content
             } 
           }
           
