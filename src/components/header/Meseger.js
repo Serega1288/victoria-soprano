@@ -34,78 +34,7 @@ const Meseger = () => {
         }
     `);
 
-    const BoxChat = styled.ul`
-        position: absolute;
-        left:0;
-        top:0;
-        .chat-img {
-            border-radius: 50%;
-            background-color: #ffe4d0;
-            
-            img {
-                width: auto;
-                height: auto;
-            }
-            transition: all .3s ease;
-            //opacity: 0;
-            position: absolute;
-            left:0;
-            right: 0;
-            margin: auto;
-            width: 6rem;
-            height: 6rem;
-            //transition-delay: 0s,0s,0s,.13s;
-            transform: translateY(0); 
-            &:nth-child(1) {
-                transition-delay: 0.1s, 0s, 0s, 0.13s;
-            }
-            &:nth-child(2) {
-                transition-delay: 0.2s, 0s, 0s, 0.13s;
-            } 
-            &:nth-child(3) {
-                transition-delay: 0.3s, 0s, 0s, 0.13s;
-            }
-            &:nth-child(4) {
-                transition-delay: 0.4s, 0s, 0s, 0.13s;
-            }
-            &:nth-child(5) {
-                transition-delay: 0.5s, 0s, 0s, 0.13s;
-            }
-            &:nth-child(6) {
-                transition-delay: 0.6s, 0s, 0s, 0.13s;
-            }
-        }
-       
-        
-        &.active {
-            .chat-img {
-                opacity: 1;
-                
-                &:nth-child(1) {
-                    transform: translateY(-20rem);  
-                    transition-delay: 0.1s, 0s, 0s, 0.6s;
-                }  
-                &:nth-child(2) {
-                    transform: translateY(-30rem); 
-                    transition-delay: 0.4s, 0s, 0s, 0.5s;
-                }
-                &:nth-child(3) {
-                    transform: translateY(-40rem); 
-                    transition-delay: 0.8s, 0s, 0s, 0.4s;
-                }
-                &:nth-child(4) {
-                    transform: translateY(-50rem); 
-                    transition-delay: 1.2s, 0s, 0s, 0.3s;
-                }
-                &:nth-child(5) {
-                    transition-delay: 1.6s, 0s, 0s, 0.2s; 
-                }
-                &:nth-child(6) {
-                    transition-delay: 2s, 0s, 0s, 0.1s;
-                }
-            }
-        }
-    `;
+
 
     return (
         <MesegerStyle className={`MesegerBtn d-inline-flex align-items-center justify-content-center ${open ? ' active' : '' }`}>
@@ -114,7 +43,7 @@ const Meseger = () => {
                     <img className="MesegerImg anim" src={MesegerImg} alt=""/>
                     <div className="MesegerClose anim"></div>
                 </div>
-                <BoxChat className={`ul-clear ${open ? ' active' : ''}`}>
+                <ul className={`BoxChat ul-clear ${open ? ' active' : ''}`}>
                     { data.wp.themeGeneralSettings.ACFoptionThemes.messengers.map( (item, index) => {
                         return (
                             <li className="chat-img d-flex align-items-center justify-content-center" key={ index + 1 } >
@@ -127,7 +56,7 @@ const Meseger = () => {
                             </li>
                         )
                     } )}
-                </BoxChat>
+                </ul>
             </div>
         </MesegerStyle>
     )
@@ -140,6 +69,7 @@ const MesegerStyle = styled.div`
     left: 0;
     right:0;
     z-index: 10;
+    
     .MesegerImg {
         visibility: visible;
         opacity:1;
@@ -229,5 +159,78 @@ const MesegerStyle = styled.div`
         transform: scale(1.2);
         opacity: 0;
       }
+    }
+
+    .BoxChat {
+        position: absolute;
+        left:0;
+        top:0;
+        .chat-img {
+            border-radius: 50%;
+            background-color: #ffe4d0;
+            
+            img {
+                width: auto;
+                height: auto;
+            }
+            transition: all .3s ease;
+            //opacity: 0;
+            position: absolute;
+            left:0;
+            right: 0;
+            margin: auto;
+            width: 6rem;
+            height: 6rem;
+            //transition-delay: 0s,0s,0s,.13s;
+            transform: translateY(0); 
+            &:nth-child(1) {
+                transition-delay: 0.1s, 0s, 0s, 0.13s;
+            }
+            &:nth-child(2) {
+                transition-delay: 0.2s, 0s, 0s, 0.13s;
+            } 
+            &:nth-child(3) {
+                transition-delay: 0.3s, 0s, 0s, 0.13s;
+            }
+            &:nth-child(4) {
+                transition-delay: 0.4s, 0s, 0s, 0.13s;
+            }
+            &:nth-child(5) {
+                transition-delay: 0.5s, 0s, 0s, 0.13s;
+            }
+            &:nth-child(6) {
+                transition-delay: 0.6s, 0s, 0s, 0.13s;
+            }
+        }
+       
+        
+        &.active {
+            .chat-img {
+                opacity: 1;
+                
+                &:nth-child(1) {
+                    transform: translateY(-20rem);  
+                    transition-delay: 0.1s, 0s, 0s, 0.6s;
+                }  
+                &:nth-child(2) {
+                    transform: translateY(-30rem); 
+                    transition-delay: 0.3s, 0s, 0s, 0.5s;
+                }
+                &:nth-child(3) {
+                    transform: translateY(-40rem); 
+                    transition-delay: 0.6s, 0s, 0s, 0.4s;
+                }
+                &:nth-child(4) {
+                    transform: translateY(-50rem); 
+                    transition-delay: 0.9s, 0s, 0s, 0.3s;
+                }
+                &:nth-child(5) {
+                    transition-delay: 1.2s, 0s, 0s, 0.2s; 
+                }
+                &:nth-child(6) {
+                    transition-delay: 1.5s, 0s, 0s, 0.1s;
+                }
+            } 
+        }
     }
 `;

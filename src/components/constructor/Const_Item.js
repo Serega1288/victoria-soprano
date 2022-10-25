@@ -9,6 +9,7 @@ import Content1 from './Content_text_img_img';
 import Content2 from './Content_img_title_text';
 import Collaps from './Collaps';
 import Content3 from './ContentCols';
+import Editor from "./Editor";
 
 
 const Const = ( { item } ) => {
@@ -17,6 +18,7 @@ const Const = ( { item } ) => {
         <>
             { item.fieldGroupName ? (
                 <>
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Editor' ? ( <Editor item={item} /> ) : null }
                     { item.fieldGroupName == 'Page_Acfconstructor_Const_Banner' ? ( <Banner item={item} /> ) : null }
                     { item.fieldGroupName == 'Page_Acfconstructor_Const_Collections' ? ( <Collections item={item} /> ) : null }
                     { item.fieldGroupName == 'Page_Acfconstructor_Const_Videovoutube' ? ( <Video item={item} /> ) : null }

@@ -46,10 +46,15 @@ exports.createPages = ({graphql, actions}) => {
               content
               isFrontPage
               template { 
-                templateName
+                templateName 
               }
               ACFconstructor {
                 const {
+                
+                 ... on WpPage_Acfconstructor_Const_Editor {
+                   fieldGroupName
+                   text 
+                 }
                 
                   ... on WpPage_Acfconstructor_Const_Banner {
                     fieldGroupName

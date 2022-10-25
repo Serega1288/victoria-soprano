@@ -339,7 +339,7 @@ const GlobalCols = createGlobalStyle`
 .justify-content-start{justify-content:flex-start}
 .justify-content-end{justify-content:flex-end}
 .justify-content-center{justify-content:center}
-.justify-content-between{justify-content:space-between}
+.justify-content-between{justify-content:space-between} 
 .justify-content-around{justify-content:space-around}
 .justify-content-evenly{justify-content:space-evenly}
 .align-items-start{align-items:flex-start}

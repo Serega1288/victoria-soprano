@@ -78,8 +78,10 @@ const MenuTop = () => {
                         <div className="wrap">
                             <ul className="menu ul-clear">
                                 {allWpMenuItem.nodes.map(item => (
+
                                     <li key={item.id} className={ item.childItems.nodes && item.childItems.nodes.length > 0 ? 'parents' : '' } >
-                                        <Link  onClick={ovhClose} to={item.path} >{item.label}</Link>
+                                        {  item.path === '/collection/' ? (<span className="a" onClick={clickSubmenu} >{item.label}</span>) : (<Link className="a"  onClick={ovhClose} to={item.path} >{item.label}</Link>) }
+
                                         { item.childItems.nodes && item.childItems.nodes.length > 0 ? (
                                             <>
                                                 <span onClick={clickSubmenu} className="sub-menu-next"></span>
@@ -88,7 +90,7 @@ const MenuTop = () => {
                                                     <ul className="submenu ul-clear">
                                                         {item.childItems.nodes.map(li => (
                                                             <li key={li.id}>
-                                                                <Link onClick={ovhClose} to={li.path}>{li.label}</Link>
+                                                                <Link className="a" onClick={ovhClose} to={li.path}>{li.label}</Link>
                                                             </li>
                                                         ) )}
                                                     </ul>
@@ -177,7 +179,8 @@ const WrapBoxMenuTop = styled.div`
         [aria-current="page"] {
             border-bottom: 1px solid #1a0f07;
         }
-        a { 
+        .a { 
+            cursor: pointer;
            font-size: 6.6rem;
            line-height: 6.9rem;
            padding: 0 2rem;

@@ -1,11 +1,29 @@
 import React from 'react';
-import { Link } from "gatsby";
+import {graphql, Link, useStaticQuery} from "gatsby";
 import iconWois from '../../assets/img/whatsapp.png';
 import CollapsListAttribute from "../Products/CollapsListAttribute";
-
+//import { Meseger } from '../header/Meseger';
 
 const BoxProductDesc = ({item}) => {
     //console.log('BoxProductDesc >>>', item);
+
+    const data = useStaticQuery(graphql` 
+        {
+            wp {
+                themeGeneralSettings {
+                  ACFoptionThemes {
+                    sizeguide {
+                      ... on WpPage {
+                        id
+                        uri
+                      }
+                    }
+                  }
+                }
+              } 
+        }
+    `);
+
     return (
         <>
             { item.content && (
@@ -19,7 +37,7 @@ const BoxProductDesc = ({item}) => {
 
             <div className="box-not-login">
                 <div className="d-flex align-items-center box-desc-1">
-                    <Link className="a" to={'/'}>
+                    <Link className="a" to={data.wp.themeGeneralSettings.ACFoptionThemes.sizeguide.uri}>
                         <span>Size Guide</span>
                     </Link>
                     <div className="a">

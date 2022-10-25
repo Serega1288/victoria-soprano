@@ -103,8 +103,7 @@ html {
     } 
 }
  
-body { 
-    height: 100vh;
+body {
     background-color: #f7f4ed; 
     margin: 0;
     font-size: 1.8rem;
@@ -299,6 +298,19 @@ ul {
         transform: rotate(-45deg);
     }
 } 
+
+.box-img {  
+    img {
+        transform: translateZ(0) scale3d(1, 1, 1);
+        transition: all 0.3s;
+    }
+    &:hover {
+        img {
+            transform: translateZ(0) scale3d(1.1, 1.1, 1);
+            transition: all 3.5s;
+        }
+    }
+}
 `;
 
 export default GlobalStyles;
