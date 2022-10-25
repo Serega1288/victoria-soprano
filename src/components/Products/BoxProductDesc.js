@@ -33,8 +33,10 @@ const BoxProductDesc = ({item}) => {
                 </div>
             </div>
 
-
-            <CollapsListAttribute />
+            { item.ACFBox.specifications && (
+                    <CollapsListAttribute item={item.ACFBox.specifications} />
+                )
+            }
 
         </>
     );

@@ -2,7 +2,9 @@ import React, {useState} from "react";
 import useCollapse from "react-collapsed";
 
 
-const CollapsList = () => {
+const CollapsList = ({item}) => {
+    console.log('col attr >>>', item);
+
     const [isExpanded, setExpanded] = useState( true );
     const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded })
 
@@ -21,68 +23,21 @@ const CollapsList = () => {
                 <div className="CollapsList-text">
                     {/*<div className="subTitle">{item.subTitle}</div>*/}
                     {/*<div className="editor" dangerouslySetInnerHTML={{__html: item.editor}} />*/}
-                    <div>
-                        <div className="CollapsList-text-sub-title">
-                            colors
-                        </div>
-                        <div className="CollapsList-text-sub-text">
-                            Nude\Ivory, Ivory\Ivory
-                        </div>
-                    </div>
 
-                    <div>
-                        <div className="CollapsList-text-sub-title">
-                            colors
-                        </div>
-                        <div className="CollapsList-text-sub-text">
-                            Nude\Ivory, Ivory\Ivory
-                        </div>
-                    </div>
+                    {
+                        item.map( (item, index) => (
+                            <div key={index}>
+                                <div className="CollapsList-text-sub-title">
+                                    {item.title}
+                                </div>
+                                <div className="CollapsList-text-sub-text">
+                                    { item.list.map( (item, index) => (<>{item.item}<span>,</span></>))}
+                                </div>
+                            </div>
+                        ))
+                    }
 
-                    <div>
-                        <div className="CollapsList-text-sub-title">
-                            colors
-                        </div>
-                        <div className="CollapsList-text-sub-text">
-                            Nude\Ivory, Ivory\Ivory
-                        </div>
-                    </div>
 
-                    <div>
-                        <div className="CollapsList-text-sub-title">
-                            colors
-                        </div>
-                        <div className="CollapsList-text-sub-text">
-                            Nude\Ivory, Ivory\Ivory
-                        </div>
-                    </div>
-
-                    <div>
-                        <div className="CollapsList-text-sub-title">
-                            colors
-                        </div>
-                        <div className="CollapsList-text-sub-text">
-                            Nude\Ivory, Ivory\Ivory
-                        </div>
-                    </div>
-
-                    <div>
-                        <div className="CollapsList-text-sub-title">
-                            colors
-                        </div>
-                        <div className="CollapsList-text-sub-text">
-                            Nude\Ivory, Ivory\Ivory
-                        </div>
-                    </div>
-
-                    <div>
-                        <div className="CollapsList-text-sub-title">
-                            colors
-                        </div>
-                        <div className="CollapsList-text-sub-text">
-                            Nude\Ivory, Ivory\Ivory
-                        </div>
-                    </div>
 
                 </div>
             </div>

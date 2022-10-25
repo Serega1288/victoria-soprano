@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="data new">
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="data new 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/BoxProductDesc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/BoxProductDesc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/CollapsListAttribute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/CollapsListAttribute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Products/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Gallery.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Product.js" afterDir="false" />
     </list>
@@ -81,7 +85,7 @@
       <workItem from="1666332402743" duration="2667000" />
       <workItem from="1666512108446" duration="10293000" />
       <workItem from="1666615558813" duration="7218000" />
-      <workItem from="1666679565832" duration="2116000" />
+      <workItem from="1666679565832" duration="9585000" />
     </task>
     <task id="LOCAL-00001" summary="data new">
       <created>1665393400359</created>
@@ -174,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666681383520</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="data new 2">
+      <created>1666682034340</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1666682034340</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +204,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="data new" />
-    <option name="LAST_COMMIT_MESSAGE" value="data new" />
+    <MESSAGE value="data new 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="data new 2" />
   </component>
 </project>

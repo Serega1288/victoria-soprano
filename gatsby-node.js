@@ -297,6 +297,12 @@ exports.createPages = ({graphql, actions}) => {
                         publicURL
                       } 
                   }
+                  specifications {
+                      title
+                      list {
+                        item 
+                      }
+                    }
               }
               featuredImage {
                 node {

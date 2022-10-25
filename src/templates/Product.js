@@ -28,7 +28,7 @@ const Product = (props) => {
     return (
         <Layout title={ props.pageContext.title } desc={ data.wp.allSettings.generalSettingsTitle } >
             <Section>
-                <div className="container">
+                <div className="container box-desc">
                     <div className="row">
                         <div className="col-12 box-title">
                             <Title item={props.pageContext} />
@@ -43,7 +43,6 @@ const Product = (props) => {
                         </div>
                     </div>
                 </div>
-
                 { props.pageContext.ACFBox?.like && (<LikeProduct item={props.pageContext.ACFBox.like} />) }
             </Section>
         </Layout>
@@ -53,7 +52,12 @@ export default Product;
 
 
 const Section = styled.section`
-
+    .box-desc {
+        margin-bottom: 10rem;
+        @media(max-width: ${maxCol.sm}) {
+            margin-bottom: 5rem;    
+        }
+    }
     @media(max-width: ${maxCol.sm}) {
         .container {
             padding: 0;
@@ -73,6 +77,13 @@ const Section = styled.section`
         @media(max-width: ${maxCol.sm}) {
             margin-bottom: 2.5rem;
             font-size: 1.6rem;
+        }
+        span {
+            margin-right: 0.5rem;
+            display: inline-block;
+        }
+        span:last-child {
+            display: none; 
         }
     }
     .CollapsList-text-sub-title {

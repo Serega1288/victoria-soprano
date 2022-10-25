@@ -77,7 +77,7 @@ const Gallery = (prop) => {
             >
 
                 {
-
+                    prop.firstImage && (
                         <SwiperSlide>
                             <div className="slider-item swiper-lazy"
                                  key={prop.firstImage.node.localFile.publicURL}
@@ -85,7 +85,7 @@ const Gallery = (prop) => {
                                 <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                             </div>
                         </SwiperSlide>
-
+                    )
                 }
 
                 {
