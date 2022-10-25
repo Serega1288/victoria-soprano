@@ -15,60 +15,128 @@ const Meseger = () => {
         setOpen(!open)
     }
 
-    const data = useStaticQuery(graphql` 
+    const data = useStaticQuery(graphql`  
         {
-            wp {  
-                allSettings { 
-                    generalSettingsTitle 
-                    generalSettingsDescription
+            wp {
+                themeGeneralSettings {
+                    ACFoptionThemes {
+                        messengers { 
+                            url
+                            icon {
+                                localFile {
+                                    publicURL
+                                }
+                            }
+                        }
+                    }
                 }
-            } 
-        } 
+            }
+        }
     `);
 
-    const BoxChat = styled.div`
-        .viber {
-            transition-delay: 0.1s, 0s, 0s, 0.13s;
-        } 
-        
+    const BoxChat = styled.ul`
+        position: absolute;
+        left:0;
+        top:0;
         .chat-img {
+            border-radius: 50%;
+            background-color: #ffe4d0;
+            
+            img {
+                width: auto;
+                height: auto;
+            }
             transition: all .3s ease;
-            opacity: 0;
-            width: 50px;
-            height: 50px;
+            //opacity: 0;
+            position: absolute;
+            left:0;
+            right: 0;
+            margin: auto;
+            width: 6rem;
+            height: 6rem;
+            transition-delay: 0s,0s,0s,.13s;
+            transform: translateY(0); 
+            // &:nth-child(1) {
+            //     transition-delay: 0.1s, 0s, 0s, 0.13s;
+            // }
+            // &:nth-child(2) {
+            //     transition-delay: 0.2s, 0s, 0s, 0.13s;
+            // }
+            // &:nth-child(3) {
+            //     transition-delay: 0.3s, 0s, 0s, 0.13s;
+            // }
+            // &:nth-child(4) {
+            //     transition-delay: 0.4s, 0s, 0s, 0.13s;
+            // }
+            // &:nth-child(5) {
+            //     transition-delay: 0.5s, 0s, 0s, 0.13s;
+            // }
+            // &:nth-child(6) {
+            //     transition-delay: 0.6s, 0s, 0s, 0.13s;
+            // }
         }
+       
         
         &.active {
             .chat-img {
                 opacity: 1;
-            }
-            .viber {
-              transform: translateY(-220px);
-              transition-delay: 0.3s, 0s, 0s, 0.4s;
+                
+                &:nth-child(1) {
+                    transform: translateY(-20rem);  
+                    transition-delay: 0.4s, 0s, 0s, 0.6s;
+                }  
+                &:nth-child(2) {
+                    transform: translateY(-30rem); 
+                    transition-delay: 0.4s, 0s, 0s, 0.5s;
+                }
+                &:nth-child(3) {
+                    transform: translateY(-40rem); 
+                    transition-delay: 0.4s, 0s, 0s, 0.4s;
+                }
+                &:nth-child(4) {
+                    transform: translateY(-50rem); 
+                    transition-delay: 0.4s, 0s, 0s, 0.3s;
+                }
+                // &:nth-child(5) {
+                //     transition-delay: 0.5s, 0s, 0s, 0.13s;
+                // }
+                // &:nth-child(6) {
+                //     transition-delay: 0.6s, 0s, 0s, 0.13s;
+                // }
             }
         }
     `;
 
     return (
         <MesegerStyle className={`MesegerBtn d-inline-flex align-items-center justify-content-center ${open ? ' active' : '' }`}>
-            <div className="container">
+            <div className="container pos">
                 <div onClick={clickBtnMessege} className="pulse MesegerBtn d-inline-flex align-items-center justify-content-center">
                     <img className="MesegerImg anim" src={MesegerImg} alt=""/>
                     <div className="MesegerClose anim"></div>
                 </div>
+                <BoxChat className={`ul-clear ${open ? ' active' : ''}`}>
+                    { data.wp.themeGeneralSettings.ACFoptionThemes.messengers.map( (item, index) => {
+                        return (
+                            <li className="chat-img d-flex align-items-center justify-content-center" key={ index + 1 } >
+                                <a
+                                    className="anim d-flex align-items-center justify-content-center" target="_blank" href={item.url} >
+                                    <img
+                                        className="anim" src={item.icon.localFile.publicURL}
+                                    />
+                                </a>
+                            </li>
+                        )
+                    } )}
+                </BoxChat>
             </div>
-            <BoxChat className={open ? ' active' : '' }>
-
-            </BoxChat>
         </MesegerStyle>
     )
 }
 export default Meseger;
 
 const MesegerStyle = styled.div`
-
     position: fixed;
-    bottom: -14rem;
+    top: 100%;
     left: 0;
     right:0;
     z-index: 10;
@@ -77,21 +145,22 @@ const MesegerStyle = styled.div`
         opacity:1;
     }
     .MesegerBtn {
-        position: relative;
-        margin-bottom: calc(14rem + 2.5rem);
+        position: absolute;
+        left: 0;
+        top: -8rem;
         cursor: pointer;
-        width: 12.7rem;
-        height: 12.7rem;
+        width: 6rem;
+        height: 6rem;
         border-radius: 50%;
         background-color: #ffe4d0;
     }
     img {
-        width: 8rem;
-        height: 8rem;
+        width: 4rem;
+        height: 4rem;
     }
     .MesegerClose {
-        width: 8rem;
-        height: 8rem;
+        width: 4rem;
+        height: 4rem;
         position: absolute;
         top: 0;
         bottom:0;
@@ -104,7 +173,7 @@ const MesegerStyle = styled.div`
             content:'';
             display: block;
             width: 100%;
-            height: 6px;
+            height: 0.5rem;
             background-color: #86644b;
             position: absolute;
             top: 0;
