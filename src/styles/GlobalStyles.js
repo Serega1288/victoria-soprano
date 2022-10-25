@@ -210,8 +210,12 @@ ul {
         background-color: #86644b;
         color: #fff;
         text-decoration: none;
+        text-align: center;
         &:hover, &:focus { 
             background-color: #1a0f07;
+        }
+         @media(max-width: ${maxCol.sm}) {
+            display: block;
         }
     }
 } 

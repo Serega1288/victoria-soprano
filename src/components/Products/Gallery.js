@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
 // import required modules
-import { FreeMode, Navigation, Thumbs, Lazy } from "swiper";
+import {FreeMode, Navigation, Thumbs, Lazy, Pagination} from "swiper";
 
 const Gallery = (prop) => {
     //console.log('page product gallery', prop);
@@ -24,9 +24,10 @@ const Gallery = (prop) => {
                     "--swiper-pagination-color": "#fff",
                 }}
                 spaceBetween={22}
+                pagination={true}
                 navigation={true}
                 thumbs={{ swiper: thumbsSwiper }}
-                modules={[FreeMode, Navigation, Thumbs, Lazy]}
+                modules={[FreeMode, Navigation, Thumbs, Lazy, Pagination]}
                 className="mySwiper2"
                 preloadImages={false}
                 lazy={{
@@ -47,7 +48,8 @@ const Gallery = (prop) => {
                 }
 
 
-                {prop.item.map( (item, index) => (
+                { prop.item && (
+                    prop.item && ( prop.item.map( (item, index) => (
                     <SwiperSlide key={index}>
                         <div className="slider-item swiper-lazy"
                              key={item.localFile.publicURL}
@@ -55,7 +57,7 @@ const Gallery = (prop) => {
                             <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                     </SwiperSlide>
-                ))}
+                ))))}
 
             </Swiper>
 
@@ -86,7 +88,9 @@ const Gallery = (prop) => {
                     )
                 }
 
-                {prop.item.map( (item, index) => (
+                {
+                    prop.item && (
+                    prop.item.map( (item, index) => (
                     <SwiperSlide key={index}>
                         <div className="slider-item swiper-lazy anim"
                              key={item.localFile.publicURL}
@@ -94,7 +98,7 @@ const Gallery = (prop) => {
                             <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                     </SwiperSlide>
-                ))}
+                )))}
 
             </Swiper>
         </>

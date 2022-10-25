@@ -28,7 +28,7 @@ const Product = (props) => {
     return (
         <Layout title={ props.pageContext.title } desc={ data.wp.allSettings.generalSettingsTitle } >
             <Section>
-                <div className="container">
+                <div className="container box-desc">
                     <div className="row">
                         <div className="col-12 box-title">
                             <Title item={props.pageContext} />
@@ -43,8 +43,7 @@ const Product = (props) => {
                         </div>
                     </div>
                 </div>
-
-                { props.pageContext.ACFBox.like && (<LikeProduct item={props.pageContext.ACFBox.like} />) }
+                { props.pageContext.ACFBox?.like && (<LikeProduct item={props.pageContext.ACFBox.like} />) }
             </Section>
         </Layout>
     );
@@ -53,9 +52,39 @@ export default Product;
 
 
 const Section = styled.section`
+    .box-desc {
+        margin-bottom: 10rem;
+        @media(max-width: ${maxCol.sm}) {
+            margin-bottom: 5rem;    
+        }
+    }
+    @media(max-width: ${maxCol.sm}) {
+        .container {
+            padding: 0;
+        }
+        .CollapsList-text {
+            display: flex;
+            flex-wrap: wrap;
+            & > * {
+                flex: 0 0 auto;
+                width: 50%;
+            }
+        }
+    }
     .CollapsList-text-sub-text {
         margin-bottom: 2rem;
         line-height: 1;
+        @media(max-width: ${maxCol.sm}) {
+            margin-bottom: 2.5rem;
+            font-size: 1.6rem;
+        }
+        span span {
+            margin-right: 0.5rem;
+            display: inline-block;
+        }
+        span:last-child span {
+            display: none; 
+        }
     }
     .CollapsList-text-sub-title {
         color: #c4c4c4;
@@ -63,9 +92,16 @@ const Section = styled.section`
         margin-bottom: 1.5rem;
         text-transform: uppercase;
         line-height: 1;
+        @media(max-width: ${maxCol.sm}) {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
     }
     .CollapsList-product-attribute {
         display: inline-block;
+        @media(max-width: ${maxCol.sm}) {
+            display: block;
+        }
         .CollapsList-title {
             margin-bottom: 2.5rem;
             cursor: pointer;
@@ -76,6 +112,9 @@ const Section = styled.section`
                 color: #000;
                 font-family: 'Bolkit';
                 font-size: 4.5rem; 
+                @media(max-width: ${maxCol.sm}) {
+                    font-size: 3rem;
+                }
                 font-weight: 700;
                 margin-bottom: 2.5rem;
             } 
@@ -85,6 +124,12 @@ const Section = styled.section`
                 right: 0;
                 z-index: 1;
                 transform: rotate(180deg);
+                @media(max-width: ${maxCol.sm}) {
+                    width: 2rem;
+                    height: 1.2rem;
+                    bottom: 0;
+                    margin: auto;
+                }
             }
             &.active {
                 svg {
@@ -97,6 +142,12 @@ const Section = styled.section`
     .box-desc-2 {
        margin-top: 4rem;
         margin-bottom: 5rem; 
+        @media(max-width: ${maxCol.sm}) {
+            a {
+                margin-bottom: 2.5rem;
+            }
+        } 
+        
     }
     .box-desc-1 {
         margin-top: 2.5rem;
@@ -130,11 +181,25 @@ const Section = styled.section`
         }
     }
     .box-product-desc {
-        max-width: 42rem; 
+        @media(max-width: ${maxCol.xl}) {
+            padding-left: 2rem;
+        } 
+        @media(max-width: ${maxCol.sm}) {
+            padding-left: 1.6rem;
+            padding-right: 1.6rem;
+            
+        } 
+        @media(min-width: ${minCol.xl}) {
+            width: 42rem;
+        }
     }
     .text {
         p {
-            margin-bottom2.5rem;
+            margin-bottom: 2.5rem;
+            @media(max-width: ${maxCol.sm}) {
+                margin-bottom: 1.5rem;
+                font-size: 1.6rem;
+            }
         }
     }
     .sub-title {
@@ -144,6 +209,10 @@ const Section = styled.section`
         line-height: normal;
         text-transform: uppercase;
         margin-bottom: 2.5rem;
+        @media(max-width: ${maxCol.sm}) {
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+        }
     }
     .box-gallery {
         
@@ -155,6 +224,9 @@ const Section = styled.section`
     .mySwiper2 {
         .slider-item {
             padding-top: 118%;
+            @media(max-width: ${maxCol.sm}) {
+                padding-top: 170%;
+            }
             background-position: top center;
             background-size: cover;
         }
@@ -162,9 +234,29 @@ const Section = styled.section`
          
         }
         margin-bottom: 5rem;
+        @media(max-width: ${maxCol.sm}) {
+            .swiper-button-prev, .swiper-button-next {
+                opacity: 0;
+                visibility: hidden;
+            }
+            .slider-item {
+                margin-bottom: 2rem;
+            }
+        }
+        .swiper-pagination {
+            display: none;
+            @media(max-width: ${maxCol.sm}) {
+                display: block;
+                bottom:0;
+                position: relative;
+            } 
+        }
     }
     
     .mySwiper {
+        @media(max-width: ${maxCol.sm}) {
+            display: none;
+        } 
         .swiper-slide {
             cursor: pointer;
         }

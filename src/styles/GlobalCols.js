@@ -12,6 +12,18 @@ import sfProBold from '../assets/fonts/SFProDisplay/sf-bold.woff2';
 
 const GlobalCols = createGlobalStyle`  
 
+@font-face {
+    font-family: 'Bolkit';
+    font-style: normal;
+    font-weight: 400; 
+    src: url("${bolkit}") format("woff2");
+}
+@font-face {
+    font-family: 'Bolkit';
+    font-style: normal;
+    font-weight: 700; 
+    src: url("${bolkitBold}") format("woff2");
+}
 
 
 @font-face {
@@ -29,18 +41,7 @@ const GlobalCols = createGlobalStyle`
 
 
 
-@font-face {
-    font-family: 'Bolkit';
-    font-style: normal;
-    font-weight: 400; 
-    src: url("${bolkit}") format("woff2");
-}
-@font-face {
-    font-family: 'Bolkit';
-    font-style: normal;
-    font-weight: 700; 
-    src: url("${bolkitBold}") format("woff2");
-}
+
 
  
 *,

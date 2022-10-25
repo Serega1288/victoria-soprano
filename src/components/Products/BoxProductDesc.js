@@ -27,14 +27,16 @@ const BoxProductDesc = ({item}) => {
                         <span>Contact us</span>
                     </div>
                 </div>
-                <div className="d-flex align-items-center justify-content-between box-desc-2">
+                <div className="d-sm-flex align-items-center justify-content-between box-desc-2">
                     <Link className='btn style-3' to={'/'}>Where to buy</Link>
                     <Link className='btn style-3' to={'/'}>Partnership</Link>
                 </div>
             </div>
 
-
-            <CollapsListAttribute />
+            { item.ACFBox.specifications && (
+                    <CollapsListAttribute item={item.ACFBox.specifications} />
+                )
+            }
 
         </>
     );

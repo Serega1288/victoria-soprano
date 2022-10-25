@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="data new">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/whatsapp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Products/CollapsListAttribute.js" afterDir="false" />
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="data new 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Products/BoxProductDesc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/BoxProductDesc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/CollapsListAttribute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/CollapsListAttribute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Products/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Gallery.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Products/LikeProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/LikeProduct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Title.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Title.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/breadcrumb.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/breadcrumb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/LoadFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/LoadFooter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/GlobalCols.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalCols.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/GlobalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalStyles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Product.js" afterDir="false" />
     </list>
@@ -36,21 +41,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/work/project/soprano/victoria-soprano/src/assets/img",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/work/project/soprano/victoria-soprano/src/assets/img&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\work\project\soprano\victoria-soprano\src\assets\img" />
@@ -87,6 +92,7 @@
       <workItem from="1666332402743" duration="2667000" />
       <workItem from="1666512108446" duration="10293000" />
       <workItem from="1666615558813" duration="7218000" />
+      <workItem from="1666679565832" duration="12509000" />
     </task>
     <task id="LOCAL-00001" summary="data new">
       <created>1665393400359</created>
@@ -165,7 +171,35 @@
       <option name="project" value="LOCAL" />
       <updated>1666607508878</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="data new">
+      <created>1666632226799</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1666632226799</updated>
+    </task>
+    <task id="LOCAL-00013" summary="data new">
+      <created>1666681383520</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1666681383520</updated>
+    </task>
+    <task id="LOCAL-00014" summary="data new 2">
+      <created>1666682034340</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1666682034340</updated>
+    </task>
+    <task id="LOCAL-00015" summary="data new 2">
+      <created>1666696969260</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1666696969260</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +218,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="data new" />
-    <option name="LAST_COMMIT_MESSAGE" value="data new" />
+    <MESSAGE value="data new 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="data new 2" />
   </component>
 </project>

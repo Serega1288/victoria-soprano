@@ -7,6 +7,7 @@ import ImgLogo from '../../assets/img/logo.png';
 import ImgSearch from '../../assets/img/search.png';
 import ImgUser from '../../assets/img/user.png';
 import WrapMenu from './WrapMenu';
+import Meseger from '../header/Meseger'
 
 const {useState} = React;
 
@@ -78,6 +79,9 @@ const Header = ( props ) => {
             </WrapHeader>
 
             <WrapMenu open={open} first={first} />
+
+
+            <Meseger />
 
         </>
     )
