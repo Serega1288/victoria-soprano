@@ -44,7 +44,7 @@ const Product = (props) => {
                     </div>
                 </div>
 
-                { props.pageContext.ACFBox.like && (<LikeProduct item={props.pageContext.ACFBox.like} />) }
+                { props.pageContext.ACFBox?.like && (<LikeProduct item={props.pageContext.ACFBox.like} />) }
             </Section>
         </Layout>
     );

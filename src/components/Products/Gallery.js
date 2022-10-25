@@ -48,7 +48,8 @@ const Gallery = (prop) => {
                 }
 
 
-                {prop.item.map( (item, index) => (
+                { prop.item && (
+                    prop.item && ( prop.item.map( (item, index) => (
                     <SwiperSlide key={index}>
                         <div className="slider-item swiper-lazy"
                              key={item.localFile.publicURL}
@@ -56,7 +57,7 @@ const Gallery = (prop) => {
                             <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                     </SwiperSlide>
-                ))}
+                ))))}
 
             </Swiper>
 
@@ -76,7 +77,7 @@ const Gallery = (prop) => {
             >
 
                 {
-                    prop.firstImage && (
+
                         <SwiperSlide>
                             <div className="slider-item swiper-lazy"
                                  key={prop.firstImage.node.localFile.publicURL}
@@ -84,10 +85,12 @@ const Gallery = (prop) => {
                                 <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                             </div>
                         </SwiperSlide>
-                    )
+
                 }
 
-                {prop.item.map( (item, index) => (
+                {
+                    prop.item && (
+                    prop.item.map( (item, index) => (
                     <SwiperSlide key={index}>
                         <div className="slider-item swiper-lazy anim"
                              key={item.localFile.publicURL}
@@ -95,7 +98,7 @@ const Gallery = (prop) => {
                             <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                     </SwiperSlide>
-                ))}
+                )))}
 
             </Swiper>
         </>
