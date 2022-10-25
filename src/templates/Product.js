@@ -78,11 +78,11 @@ const Section = styled.section`
             margin-bottom: 2.5rem;
             font-size: 1.6rem;
         }
-        span {
+        span span {
             margin-right: 0.5rem;
             display: inline-block;
         }
-        span:last-child {
+        span:last-child span {
             display: none; 
         }
     }

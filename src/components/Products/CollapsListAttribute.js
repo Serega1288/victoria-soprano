@@ -3,7 +3,7 @@ import useCollapse from "react-collapsed";
 
 
 const CollapsList = ({item}) => {
-    console.log('col attr >>>', item);
+    //console.log('col attr >>>', item);
 
     const [isExpanded, setExpanded] = useState( true );
     const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded })
@@ -17,7 +17,9 @@ const CollapsList = ({item}) => {
                 className={`CollapsList-title ${isExpanded ? 'active' : ''}`}
             >
                 <span>Specifications</span>
-                <svg className="anim" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12"><g><g><path d="M3.5.8L10 7.3 16.5.8l2.6 1.3-9.1 9.1L.9 2.1z"/></g></g></svg>
+                <svg className="anim" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12">
+                    <g><g><path d="M3.5.8L10 7.3 16.5.8l2.6 1.3-9.1 9.1L.9 2.1z"/></g></g>
+                </svg>
             </div>
             <div  {...getCollapseProps()}>
                 <div className="CollapsList-text">
@@ -31,7 +33,9 @@ const CollapsList = ({item}) => {
                                     {item.title}
                                 </div>
                                 <div className="CollapsList-text-sub-text">
-                                    { item.list.map( (item, index) => (<>{item.item}<span>,</span></>))}
+                                    { item.list.map( (item, index) => (
+                                        <span key={index}>{item.item}<span>,</span></span>
+                                    ))}
                                 </div>
                             </div>
                         ))
