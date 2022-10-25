@@ -54,26 +54,26 @@ const Meseger = () => {
             margin: auto;
             width: 6rem;
             height: 6rem;
-            transition-delay: 0s,0s,0s,.13s;
+            //transition-delay: 0s,0s,0s,.13s;
             transform: translateY(0); 
-            // &:nth-child(1) {
-            //     transition-delay: 0.1s, 0s, 0s, 0.13s;
-            // }
-            // &:nth-child(2) {
-            //     transition-delay: 0.2s, 0s, 0s, 0.13s;
-            // }
-            // &:nth-child(3) {
-            //     transition-delay: 0.3s, 0s, 0s, 0.13s;
-            // }
-            // &:nth-child(4) {
-            //     transition-delay: 0.4s, 0s, 0s, 0.13s;
-            // }
-            // &:nth-child(5) {
-            //     transition-delay: 0.5s, 0s, 0s, 0.13s;
-            // }
-            // &:nth-child(6) {
-            //     transition-delay: 0.6s, 0s, 0s, 0.13s;
-            // }
+            &:nth-child(1) {
+                transition-delay: 0.1s, 0s, 0s, 0.13s;
+            }
+            &:nth-child(2) {
+                transition-delay: 0.2s, 0s, 0s, 0.13s;
+            } 
+            &:nth-child(3) {
+                transition-delay: 0.3s, 0s, 0s, 0.13s;
+            }
+            &:nth-child(4) {
+                transition-delay: 0.4s, 0s, 0s, 0.13s;
+            }
+            &:nth-child(5) {
+                transition-delay: 0.5s, 0s, 0s, 0.13s;
+            }
+            &:nth-child(6) {
+                transition-delay: 0.6s, 0s, 0s, 0.13s;
+            }
         }
        
         
@@ -83,7 +83,7 @@ const Meseger = () => {
                 
                 &:nth-child(1) {
                     transform: translateY(-20rem);  
-                    transition-delay: 0.4s, 0s, 0s, 0.6s;
+                    transition-delay: 0.1s, 0s, 0s, 0.6s;
                 }  
                 &:nth-child(2) {
                     transform: translateY(-30rem); 
@@ -91,18 +91,18 @@ const Meseger = () => {
                 }
                 &:nth-child(3) {
                     transform: translateY(-40rem); 
-                    transition-delay: 0.4s, 0s, 0s, 0.4s;
+                    transition-delay: 0.8s, 0s, 0s, 0.4s;
                 }
                 &:nth-child(4) {
                     transform: translateY(-50rem); 
-                    transition-delay: 0.4s, 0s, 0s, 0.3s;
+                    transition-delay: 1.2s, 0s, 0s, 0.3s;
                 }
-                // &:nth-child(5) {
-                //     transition-delay: 0.5s, 0s, 0s, 0.13s;
-                // }
-                // &:nth-child(6) {
-                //     transition-delay: 0.6s, 0s, 0s, 0.13s;
-                // }
+                &:nth-child(5) {
+                    transition-delay: 1.6s, 0s, 0s, 0.2s; 
+                }
+                &:nth-child(6) {
+                    transition-delay: 2s, 0s, 0s, 0.1s;
+                }
             }
         }
     `;
