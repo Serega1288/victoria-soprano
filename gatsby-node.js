@@ -202,7 +202,41 @@ exports.createPages = ({graphql, actions}) => {
                         publicURL
                       }
                     }
-                  } 
+                  }  
+                  
+                  // ... on WpPage_Acfconstructor_Const_Contactdata {
+                  //   fieldGroupName
+                  //   title
+                  //   contacts {
+                  //     name
+                  //     title
+                  //     typ
+                  //     value
+                  //   }
+                  //   image {
+                  //     localFile { 
+                  //       publicURL
+                  //     }
+                  //   } 
+                  // }
+                  //
+                  //
+                  // ... on WpPage_Acfconstructor_Const_Contactform {
+                  //   fieldGroupName
+                  //   revers
+                  //   title
+                  //   titleForm
+                  //   titleImage
+                  //   image {
+                  //     localFile { 
+                  //       publicURL
+                  //     }
+                  //   }
+                  //   contacts {
+                  //     value
+                  //     name
+                  //   }
+                  // }
 
                   
                 }
@@ -353,7 +387,7 @@ exports.createPages = ({graphql, actions}) => {
 
         // categoty  categoryTemplate
 
-        results.data.allWpProductCategory.nodes.forEach(category => {
+        results.data?.allWpProductCategory.nodes.forEach(category => {
 
             createPage({
                 path: category.uri,

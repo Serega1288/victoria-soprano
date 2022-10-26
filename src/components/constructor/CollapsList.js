@@ -11,7 +11,7 @@ const CollapsList = ({item, step , ev1, ev2, s } ) => {
     //const [visible, setVisible] = useState(false)
 
 
-    const [isExpanded, setExpanded] = useState( step == ev1 || step == ev2 ? true : false );
+    const [isExpanded, setExpanded] = useState( step === ev1 || step === ev2 ? true : false );
 
     const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded })
 
@@ -19,7 +19,7 @@ const CollapsList = ({item, step , ev1, ev2, s } ) => {
     return (
         <>
             {
-                s == 'left' && (
+                s === 'left' && (
                     step % 2 !== 0 ? (
                         <div className="box-collaps-list">
                             <div
@@ -46,7 +46,7 @@ const CollapsList = ({item, step , ev1, ev2, s } ) => {
             }
 
             {
-                s == 'right' && (
+                s === 'right' && (
                     step % 2 === 0 ? (
                         <div className="box-collaps-list">
                             <div
@@ -73,7 +73,7 @@ const CollapsList = ({item, step , ev1, ev2, s } ) => {
             }
 
             {
-                s == 'all' && (
+                s === 'all' && (
 
                         <div className="box-collaps-list">
                             <div
