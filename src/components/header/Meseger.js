@@ -2,6 +2,7 @@ import React, {useState}  from 'react';
 import {graphql, useStaticQuery} from "gatsby";
 import styled from "styled-components";
 import MesegerImg from "../../assets/img/Messaanger.png"
+import {maxCol} from "../../function/SizeCol";
 
 
 
@@ -77,6 +78,9 @@ const MesegerStyle = styled.div`
     .MesegerBtn {
         position: absolute;
         left: 0;
+        @media(max-width: ${maxCol.sm}) {
+            left: 2rem;
+        }
         top: -8rem;
         cursor: pointer;
         width: 6rem;
@@ -164,6 +168,9 @@ const MesegerStyle = styled.div`
     .BoxChat {
         position: absolute;
         left:0;
+        @media(max-width: ${maxCol.sm}) {
+            left: 2rem; 
+        }
         top:0;
         .chat-img {
             border-radius: 50%;
