@@ -207,7 +207,7 @@ const WrapBoxMenuTop = styled.div`
         position: relative;
         width: 3rem;
         height: 3rem;
-        top: -0.5rem;
+        top: -0.3rem;
         bottom: 0;
         right: 0;
         z-index: 1;     
