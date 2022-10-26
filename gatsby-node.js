@@ -28,7 +28,7 @@ const path = require('path');
 //     })
 // }
 
-const frontTemplate = path.resolve('./src/templates/FrontPage.js');
+const frontTemplate = path.resolve('./src/templates/FrontPage.js')
 const pageTemplate = path.resolve(`./src/templates/page.js`)
 const categoryProductTemplate = path.resolve(`./src/templates/CategoryProduct.js`)
 const productTemplate = path.resolve(`./src/templates/Product.js`)
@@ -46,15 +46,10 @@ exports.createPages = ({graphql, actions}) => {
               content
               isFrontPage
               template { 
-                templateName 
+                templateName
               }
               ACFconstructor {
                 const {
-                
-                 ... on WpPage_Acfconstructor_Const_Editor {
-                   fieldGroupName
-                   text 
-                 }
                 
                   ... on WpPage_Acfconstructor_Const_Banner {
                     fieldGroupName
@@ -202,42 +197,24 @@ exports.createPages = ({graphql, actions}) => {
                         publicURL
                       }
                     }
-                  }  
+                  } 
                   
-                  // ... on WpPage_Acfconstructor_Const_Contactdata {
-                  //   fieldGroupName
-                  //   title
-                  //   contacts {
-                  //     name
-                  //     title
-                  //     typ
-                  //     value
-                  //   }
-                  //   image {
-                  //     localFile { 
-                  //       publicURL
-                  //     }
-                  //   } 
-                  // }
-                  //
-                  //
-                  // ... on WpPage_Acfconstructor_Const_Contactform {
-                  //   fieldGroupName
-                  //   revers
-                  //   title
-                  //   titleForm
-                  //   titleImage
-                  //   image {
-                  //     localFile { 
-                  //       publicURL
-                  //     }
-                  //   }
-                  //   contacts {
-                  //     value
-                  //     name
-                  //   }
-                  // }
-
+                  
+                  ... on WpPage_Acfconstructor_Const_Contactdata {
+                    fieldGroupName
+                    title
+                    image {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                    contacts { 
+                      value
+                      typ
+                      title
+                      name
+                    }
+                  } 
                   
                 }
               }
@@ -387,7 +364,7 @@ exports.createPages = ({graphql, actions}) => {
 
         // categoty  categoryTemplate
 
-        results.data?.allWpProductCategory.nodes.forEach(category => {
+        results.data.allWpProductCategory.nodes.forEach(category => {
 
             createPage({
                 path: category.uri,

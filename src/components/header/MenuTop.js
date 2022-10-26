@@ -131,7 +131,7 @@ const WrapBoxMenuImage = styled.div`
         z-index: 0;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center center; 
+        background-position: top center; 
         transition: all 0.5s ease;
         &:hover {
             filter:none;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ConstructorItem from "./Constructor_Item";
+import CollectionItem from "./Collection_Item";
 import {minCol, maxCol} from "../../function/SizeCol";
 
 
@@ -39,12 +39,17 @@ const Collections = ( {item} ) => {
             right: 0; 
             z-index: 1;
             background-size: cover;
-            background-position: center center;  
+            background-position: top center;  
             filter: none;
+            &.first {
+                position: relative;
+                padding-top: 120%;
+            }
         }
         .collections-list {
             
         }
+       
         .collection-item {
             margin-bottom: 10rem;
             //margin-bottom: 20rem;
@@ -81,7 +86,7 @@ const Collections = ( {item} ) => {
                 margin-bottom: 5rem;
             }
             &:nth-child(odd) {
-                img {
+                .ImageBG.first {
                     @media(min-width: ${minCol.sm}) {
                         filter: grayscale(100%);
                     }
@@ -91,14 +96,14 @@ const Collections = ( {item} ) => {
                 }
             }
             &:nth-child(even) {
-                .ImageBG {
+                .ImageBG:not(.first) {
                     @media(min-width: ${minCol.sm}) {
                         filter: grayscale(100%);
                     }
                     &:hover {
                         filter: none;
                     }
-                }
+                } 
             }
         }
         
@@ -116,7 +121,7 @@ const Collections = ( {item} ) => {
             <div className="collections-list section-box">
 
                 {item.collection.map( (item, index) => (
-                    <ConstructorItem key={index} item={item}  />
+                    <CollectionItem key={index} item={item}  />
                 ))}
 
             </div>

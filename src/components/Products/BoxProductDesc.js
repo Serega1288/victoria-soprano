@@ -24,6 +24,10 @@ const BoxProductDesc = ({item}) => {
         }
     `);
 
+    const clickBtnMessege = () => {
+        document.getElementById('clickBtnMessege').click()
+    }
+
     return (
         <>
             { item.content && (
@@ -42,7 +46,7 @@ const BoxProductDesc = ({item}) => {
                     </Link>
                     <div className="a">
                         <img src={iconWois} alt=""/>
-                        <span>Contact us</span>
+                        <span onClick={clickBtnMessege}>Contact us</span>
                     </div>
                 </div>
                 <div className="d-sm-flex align-items-center justify-content-between box-desc-2">

@@ -3,12 +3,14 @@ import {graphql, useStaticQuery} from "gatsby";
 import styled from "styled-components";
 import MesegerImg from "../../assets/img/Messaanger.png"
 import {maxCol} from "../../function/SizeCol";
-
+//import {btnMessage} from '../../function/hook'
 
 
 
 
 const Meseger = () => {
+
+    console.log();
 
     const [open, setOpen ] = useState(false);
 
@@ -40,7 +42,7 @@ const Meseger = () => {
     return (
         <MesegerStyle className={`MesegerBtn d-inline-flex align-items-center justify-content-center ${open ? ' active' : '' }`}>
             <div className="container pos">
-                <div onClick={clickBtnMessege} className="pulse MesegerBtn d-inline-flex align-items-center justify-content-center">
+                <div id="clickBtnMessege" onClick={clickBtnMessege} className="pulse MesegerBtn d-inline-flex align-items-center justify-content-center">
                     <img className="MesegerImg anim" src={MesegerImg} alt=""/>
                     <div className="MesegerClose anim"></div>
                 </div>
@@ -68,6 +70,9 @@ const MesegerStyle = styled.div`
     position: fixed;
     top: 100%;
     left: 0;
+    @media (max-width: ${maxCol.md}) {
+        left: 2.5rem;
+    }
     right:0;
     z-index: 10;
     
@@ -78,9 +83,6 @@ const MesegerStyle = styled.div`
     .MesegerBtn {
         position: absolute;
         left: 0;
-        @media(max-width: ${maxCol.sm}) {
-            left: 2rem;
-        }
         top: -8rem;
         cursor: pointer;
         width: 6rem;
@@ -168,17 +170,14 @@ const MesegerStyle = styled.div`
     .BoxChat {
         position: absolute;
         left:0;
-        @media(max-width: ${maxCol.sm}) {
-            left: 2rem; 
-        }
         top:0;
         .chat-img {
             border-radius: 50%;
             background-color: #ffe4d0;
             
             img {
-                width: auto;
-                height: auto;
+                width: 3rem;
+                height: 3rem;
             }
             transition: all .3s ease;
             //opacity: 0;

@@ -11,7 +11,7 @@ import Collaps from './Collaps';
 import Content3 from './ContentCols';
 import Editor from "./Editor";
 import Contactdata from "./Contactdata";
-import Contactform from "./Contactform";
+// import Contactform from "./Contactform";
 
 
 const Const = ( { item } ) => {
@@ -20,20 +20,20 @@ const Const = ( { item } ) => {
         <>
             { item.fieldGroupName ? (
                 <>
-                    { item.fieldGroupName === 'Page_Acfconstructor_Const_Editor' ? ( <Editor item={item} /> ) : null }
-                    { item.fieldGroupName === 'Page_Acfconstructor_Const_Banner' ? ( <Banner item={item} /> ) : null }
-                    { item.fieldGroupName === 'Page_Acfconstructor_Const_Collections' ? ( <Collections item={item} /> ) : null }
-                    { item.fieldGroupName === 'Page_Acfconstructor_Const_Videovoutube' ? ( <Video item={item} /> ) : null }
-                    { item.fieldGroupName === 'Page_Acfconstructor_Const_Instagram' ? ( <Instagram item={item} /> ) : null }
-                    { item.fieldGroupName === 'Page_Acfconstructor_Const_Slider' ? ( <Slider item={item} /> ) : null }
-                    { item.fieldGroupName === 'Page_Acfconstructor_Const_Title' ? ( <Title item={item} /> ) : null }
-                    { item.fieldGroupName === 'Page_Acfconstructor_Const_ContentTextImgImg' ? ( <Content1 item={item} /> ) : null }
-                    { item.fieldGroupName === 'Page_Acfconstructor_Const_ContentImgTitleText' ? ( <Content2 item={item} /> ) : null }
-                    { item.fieldGroupName === 'Page_Acfconstructor_Const_Collaps' ? ( <Collaps item={item} /> ) : null }
-                    { item.fieldGroupName === 'Page_Acfconstructor_Const_Content' ? ( <Content3 item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Editor' ? ( <Editor item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Banner' ? ( <Banner item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Collections' ? ( <Collections item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Videovoutube' ? ( <Video item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Instagram' ? ( <Instagram item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Slider' ? ( <Slider item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Title' ? ( <Title item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_ContentTextImgImg' ? ( <Content1 item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_ContentImgTitleText' ? ( <Content2 item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Collaps' ? ( <Collaps item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Content' ? ( <Content3 item={item} /> ) : null }
 
-                    { item.fieldGroupName === 'Page_Acfconstructor_Const_Contactdata' ? ( <Contactdata item={item} /> ) : null }
-                    { item.fieldGroupName === 'Page_Acfconstructor_Const_Contactform' ? ( <Contactform item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Contactdata' ? ( <Contactdata item={item} /> ) : null }
+                    {/*{ item.fieldGroupName == 'Page_Acfconstructor_Const_Contactform' ? ( <Contactform item={item} /> ) : null }*/}
 
                 </>
             ) : null }

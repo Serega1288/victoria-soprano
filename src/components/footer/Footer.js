@@ -14,6 +14,7 @@ const Footer = () => {
             firstSetScroll(!firstScroll)
         }
     });
+
     //console.log('>>>', firstScroll ? 'LoadFooter' :' not LoadFooter' )
     return (
         <>
