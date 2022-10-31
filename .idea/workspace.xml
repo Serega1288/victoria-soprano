@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="data new 2">
-      <change afterPath="$PROJECT_DIR$/src/components/header/Meseger.js" afterDir="false" />
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="data new ...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/Messaanger.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/Messaanger.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Products/CollapsListAttribute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/CollapsListAttribute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/breadcrumb.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/breadcrumb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Meseger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Meseger.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +81,7 @@
       <workItem from="1666512108446" duration="10293000" />
       <workItem from="1666615558813" duration="7218000" />
       <workItem from="1666679565832" duration="12509000" />
+      <workItem from="1667207142462" duration="1522000" />
     </task>
     <task id="LOCAL-00001" summary="data new">
       <created>1665393400359</created>

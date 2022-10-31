@@ -31,7 +31,7 @@ const Section = styled.section`
             }
     }
     .ImageBG {
-        background-position: center center;
+        background-position: top center;
         background-repeat: no-repeat;
         background-size: cover;
         min-height: calc(100vh - 13.4rem - 18rem ); 

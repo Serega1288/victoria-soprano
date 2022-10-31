@@ -39,23 +39,42 @@ const LoadFooter = () => {
                         <div className="col-12 col-sm-6 col-md-3">
                             <div className="d-sm-flex justify-content-sm-center w100 h100">
                                 <div className="box-menu d-sm-inline-flex flex-sm-column justify-sm-content-between">
+
                                     <div>
                                         <h3 className="title">
-                                            Newsletter
+                                            Office:
                                         </h3>
-                                        <form className="Newsletter">
-                                            <label htmlFor="email" className="d-block">
-                                                <input placeholder="Email" id="email" type="email"/>
-                                            </label>
-                                            <label className="radio d-flex align-items-center" htmlFor="term-Newsletter">
-                                                <input id="term-Newsletter" type="checkbox" className="d-flex" />
-                                                <span className="d-flex">I accept the policy to subscribe to emails</span>
-                                            </label>
-                                            <button className="btn style-1">subscribe</button>
-                                        </form>
+                                        <p>
+                                           POLSKA, Krakow 30693, <br />
+                                            ul. Adama Bochenka 16/7 <br />
+                                            NIP 6793225747
+                                        </p>
+
                                     </div>
 
-                                    <IconList />
+                                    <div>
+                                        {/*<h3 className="title" style={{margin: 0}}>*/}
+                                        {/*    /!*Newsletter*!/ Follow Us:*/}
+                                        {/*</h3>*/}
+
+
+                                        {/*<form className="Newsletter">*/}
+                                        {/*    <label htmlFor="email" className="d-block">*/}
+                                        {/*        <input placeholder="Email" id="email" type="email"/>*/}
+                                        {/*    </label>*/}
+                                        {/*    <label className="radio d-flex align-items-center" htmlFor="term-Newsletter">*/}
+                                        {/*        <input id="term-Newsletter" type="checkbox" className="d-flex" />*/}
+                                        {/*        <span className="d-flex">I accept the policy to subscribe to emails</span>*/}
+                                        {/*    </label>*/}
+                                        {/*    <button className="btn style-1">subscribe</button>*/}
+                                        {/*</form>*/}
+
+                                        <IconList />
+                                    </div>
+
+
+
+
 
                                 </div>
                             </div>

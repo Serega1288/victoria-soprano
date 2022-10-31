@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 
 // import required modules
-import { Scrollbar } from "swiper";
+import { Scrollbar, Autoplay } from "swiper";
 
 const Slider = ( { item } ) => {
     //console.log('Slider >>>', item.sliders);
@@ -23,7 +23,7 @@ const Slider = ( { item } ) => {
          }
          .slider-item {
             background-size: cover;
-            background-position: center center;
+            background-position: top center;
             min-height: calc(100vh - 8.8rem - 9rem); 
             @media(min-width: ${minCol.md}) {  
                 min-height: calc(100vh - 13.4rem - 9rem);
@@ -94,8 +94,14 @@ const Slider = ( { item } ) => {
                     dragSize: 12,
                     draggable: true,
                 }}
-                modules={[Scrollbar, Lazy]}
-                preloadImages={false}
+                modules={[Autoplay, Scrollbar, Lazy]}
+                preloadImages={true}
+                loop={false}
+                speed={1000}
+                autoplay={{
+                    "delay": 4000,
+                    "disableOnInteraction": true
+                }}
                 lazy={{
                     enabled: true,
                     loadOnTransitionStart: true
