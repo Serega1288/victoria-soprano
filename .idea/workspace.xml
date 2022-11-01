@@ -6,19 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="data new ...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Collections.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Collections.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Constructor_Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Collection_Item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Instagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Instagram.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Video.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Video.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/VideoIframe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/VideoIframe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/VideoOpen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/VideoOpen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Meseger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Meseger.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Collection_Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Collection_Item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Const_Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Const_Item.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/function/useScrollPosition.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/function/useScrollPosition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/GlobalCols.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalCols.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +90,7 @@
       <workItem from="1666512108446" duration="10293000" />
       <workItem from="1666615558813" duration="7218000" />
       <workItem from="1666679565832" duration="12509000" />
-      <workItem from="1667207142462" duration="34674000" />
+      <workItem from="1667207142462" duration="36365000" />
     </task>
     <task id="LOCAL-00001" summary="data new">
       <created>1665393400359</created>
@@ -220,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667225962718</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="data new ...">
+      <created>1667332710833</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1667332710833</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

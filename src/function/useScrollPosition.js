@@ -36,8 +36,3 @@ export const useScrollPosition = (effect, deps, element, useWindow, wait) => {
         return () => window.removeEventListener(`scroll`, handleScroll);
     }, deps);
 };
-
-export const lazyLoadImage = () => {
-    console.log('lazyLoadImage');
-
-}

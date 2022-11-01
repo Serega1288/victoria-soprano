@@ -28,7 +28,7 @@ const path = require('path');
 //     })
 // }
 
-const frontTemplate = path.resolve('./src/templates/FrontPage.js');
+const frontTemplate = path.resolve('./src/templates/FrontPage.js')
 const pageTemplate = path.resolve(`./src/templates/page.js`)
 const categoryProductTemplate = path.resolve(`./src/templates/CategoryProduct.js`)
 const productTemplate = path.resolve(`./src/templates/Product.js`)
@@ -198,7 +198,23 @@ exports.createPages = ({graphql, actions}) => {
                       }
                     }
                   } 
-
+                  
+                  
+                  ... on WpPage_Acfconstructor_Const_Contactdata {
+                    fieldGroupName
+                    title
+                    image {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                    contacts {
+                      value
+                      typ
+                      title
+                      name
+                    }
+                  } 
                   
                 }
               }

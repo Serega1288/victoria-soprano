@@ -4,7 +4,7 @@ import CategoryDesc from "./CategoriesDesc";
 import ListProduct from "./CategoryListProduct"
 
 const Products = (props) => {
-    console.log('Products >>', props );
+    //console.log('Products >>', props );
     return (
         <>
             <BannerProductCat item={props.theme.pageContext} />

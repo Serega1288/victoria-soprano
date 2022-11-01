@@ -1,14 +1,12 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import {Link} from 'gatsby';
-import {lazyLoadImage} from '../../function/useScrollPosition';
 
 import lozad from "lozad";
 
 const Collections = ( {item} ) => {
     //console.log('item >>>', item);
 
-    lazyLoadImage();
 
     const { observe } = lozad("[data-use-lozad]", {
         rootMargin: '100px 0px', // syntax similar to that of CSS Margin

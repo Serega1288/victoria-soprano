@@ -32,7 +32,7 @@ const Const = ( { item } ) => {
                     { item.fieldGroupName == 'Page_Acfconstructor_Const_Collaps' ? ( <Collaps item={item} /> ) : null }
                     { item.fieldGroupName == 'Page_Acfconstructor_Const_Content' ? ( <Content3 item={item} /> ) : null }
 
-                    {/*{ item.fieldGroupName == 'Page_Acfconstructor_Const_Contactdata' ? ( <Contactdata item={item} /> ) : null }*/}
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Contactdata' ? ( <Contactdata item={item} /> ) : null }
                     {/*{ item.fieldGroupName == 'Page_Acfconstructor_Const_Contactform' ? ( <Contactform item={item} /> ) : null }*/}
 
                 </>
