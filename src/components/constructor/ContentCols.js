@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {minCol, maxCol} from "../../function/SizeCol";
 
 const ContentCols = ( { item } ) => {
-    console.log('content cols >>> ', item )
+    //console.log('content cols >>> ', item )
     return (
         <Section className="section  contentCols">
             <div className="container section-box">

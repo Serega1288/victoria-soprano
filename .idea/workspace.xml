@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="data new ...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Collection_Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Collection_Item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Const_Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Const_Item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/function/useScrollPosition.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/function/useScrollPosition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CategoryProduct/ProductItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoryProduct/ProductItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Constructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Constructor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Contactform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Contactform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/ContentCols.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/ContentCols.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +90,7 @@
       <workItem from="1666512108446" duration="10293000" />
       <workItem from="1666615558813" duration="7218000" />
       <workItem from="1666679565832" duration="12509000" />
-      <workItem from="1667207142462" duration="36365000" />
+      <workItem from="1667207142462" duration="37084000" />
     </task>
     <task id="LOCAL-00001" summary="data new">
       <created>1665393400359</created>
@@ -218,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667332710833</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="data new ...">
+      <created>1667334415895</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1667334415895</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
