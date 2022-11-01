@@ -2,6 +2,7 @@ import React, {useState}  from 'react';
 import {graphql, useStaticQuery} from "gatsby";
 import styled from "styled-components";
 import MesegerImg from "../../assets/img/Messaanger.png"
+import {maxCol} from "../../function/SizeCol";
 
 
 
@@ -67,6 +68,9 @@ const MesegerStyle = styled.div`
     position: fixed;
     top: 100%;
     left: 0;
+    @media (max-width: ${maxCol.md}) {
+        left: 2.5rem;
+    }
     right:0;
     z-index: 10;
     
@@ -170,8 +174,8 @@ const MesegerStyle = styled.div`
             background-color: #ffe4d0;
             
             img {
-                width: auto;
-                height: auto;
+                width: 3rem;
+                height: 3rem;
             }
             transition: all .3s ease;
             //opacity: 0;

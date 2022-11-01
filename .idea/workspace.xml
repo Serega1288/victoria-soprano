@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="data new ...">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Collections.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Collections.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Constructor_Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Collection_Item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Instagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Instagram.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Video.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Video.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/VideoIframe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/VideoIframe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/VideoOpen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/VideoOpen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Meseger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Meseger.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/function/useScrollPosition.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/function/useScrollPosition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/GlobalCols.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalCols.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,25 +41,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/work/project/soprano/victoria-soprano/src/assets/img&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/work/project/soprano/victoria-soprano/src/assets/img",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.2.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\work\project\soprano\victoria-soprano\src\assets\img" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="YT.Player" />
+    </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -80,7 +99,7 @@
       <workItem from="1666512108446" duration="10293000" />
       <workItem from="1666615558813" duration="7218000" />
       <workItem from="1666679565832" duration="12509000" />
-      <workItem from="1667207142462" duration="1803000" />
+      <workItem from="1667207142462" duration="34674000" />
     </task>
     <task id="LOCAL-00001" summary="data new">
       <created>1665393400359</created>
@@ -194,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667225867387</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="data new ...">
+      <created>1667225962718</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1667225962718</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,5 +242,9 @@
     <MESSAGE value="data new 2" />
     <MESSAGE value="data new ..." />
     <option name="LAST_COMMIT_MESSAGE" value="data new ..." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

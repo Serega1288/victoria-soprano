@@ -24,9 +24,11 @@ const Slider = ( { item } ) => {
          .slider-item {
             background-size: cover;
             background-position: top center;
-            min-height: calc(100vh - 8.8rem - 9rem); 
-            @media(min-width: ${minCol.md}) {  
-                min-height: calc(100vh - 13.4rem - 9rem);
+            min-height: calc(100vh); 
+            //min-height: calc(100vh - 8.8rem - 9rem); 
+            // @media(min-width: ${minCol.md}) {  
+                //min-height: calc(100vh - 13.4rem);
+                                min-height: calc(100v);
             }
          }
          .swiper {
@@ -97,9 +99,9 @@ const Slider = ( { item } ) => {
                 modules={[Autoplay, Scrollbar, Lazy]}
                 preloadImages={true}
                 loop={false}
-                speed={1000}
+                speed={1500}
                 autoplay={{
-                    "delay": 4000,
+                    "delay": 5000,
                     "disableOnInteraction": true
                 }}
                 lazy={{

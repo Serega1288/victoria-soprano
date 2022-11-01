@@ -12,6 +12,13 @@ import sfProBold from '../assets/fonts/SFProDisplay/sf-bold.woff2';
 
 const GlobalCols = createGlobalStyle`  
 
+.lozad {
+    opacity: 0;
+    &.fade { 
+        opacity: 1;
+    }
+}
+
 @font-face {
     font-family: 'Bolkit';
     font-style: normal;
