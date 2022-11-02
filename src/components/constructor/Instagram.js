@@ -5,13 +5,15 @@ import lozad from "lozad";
 
 const Instagram = ( { item } ) => {
 
-    const { observe } = lozad("[data-use-lozad]", {
-        rootMargin: '100px 0px', // syntax similar to that of CSS Margin
-        threshold: 0.1, // ratio of element convergence
-        loaded: el => {
-            el.classList.add("fade");
-        }
-    });
+    // const { observe } = lozad("[data-use-lozad]", {
+    //     rootMargin: '100px 0px', // syntax similar to that of CSS Margin
+    //     threshold: 0.1, // ratio of element convergence
+    //     loaded: el => {
+    //         el.classList.add("fade");
+    //     }
+    // });
+    //
+    const { observe } = lozad();
 
     useEffect(() => {
         observe();
