@@ -18,6 +18,18 @@ const BoxProductDesc = ({item}) => {
                         uri
                       }
                     }
+                    whereToBuy {
+                      ... on WpPage {
+                        id
+                        uri
+                      }  
+                    }
+                    partnership {
+                      ... on WpPage {
+                        id
+                        uri
+                      }
+                    }
                   }
                 }
               } 
@@ -50,8 +62,8 @@ const BoxProductDesc = ({item}) => {
                     </div>
                 </div>
                 <div className="d-sm-flex align-items-center justify-content-between box-desc-2">
-                    <Link className='btn style-3' to={'/'}>Where to buy</Link>
-                    <Link className='btn style-3' to={'/'}>Partnership</Link>
+                    <Link className='btn style-3' to={data.wp.themeGeneralSettings.ACFoptionThemes.whereToBuy.uri}>Where to buy</Link>
+                    <Link className='btn style-3' to={data.wp.themeGeneralSettings.ACFoptionThemes.partnership.uri}>Partnership</Link>
                 </div>
             </div>
 

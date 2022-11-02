@@ -4,37 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="data new 2">
-      <change afterPath="$PROJECT_DIR$/src/function/hook.js" afterDir="false" />
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="data new">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CategoryProduct/CategoryBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoryProduct/CategoryBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CategoryProduct/ProductItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoryProduct/ProductItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CategoryProduct/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoryProduct/Products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Products/BoxProductDesc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/BoxProductDesc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Banner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/CollapsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/CollapsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Collections.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Collections.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Const_Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Const_Item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Constructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Constructor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Contactdata.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Contactdata.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Contactform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Contactform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/ContentCols.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/ContentCols.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Editor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Instagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Instagram.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Video.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Video.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/VideoIframe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/VideoIframe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/constructor/VideoOpen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/VideoOpen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/LoadFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/LoadFooter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/MenuTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/MenuTop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Meseger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Meseger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/GlobalCols.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalCols.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667389379814</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="data new">
+      <created>1667406729445</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1667406729445</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,10 +269,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="data new" />
     <MESSAGE value="data new ..." />
     <MESSAGE value="data new 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="data new 2" />
+    <MESSAGE value="data new" />
+    <option name="LAST_COMMIT_MESSAGE" value="data new" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

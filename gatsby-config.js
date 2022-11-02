@@ -78,6 +78,13 @@ module.exports = {
     //   __key: "images"
     // },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "pages",

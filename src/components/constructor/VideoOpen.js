@@ -62,7 +62,7 @@ const VideoOpen = ( {video} ) => {
 
             <div className={`statusPlay`} >
                 <iframe data-use-lozad-iframe id={videoCode} className="youtube-video lozad fade" width="100%" height="100%"
-                        src={`https://www.youtube.com/embed/${videoCode}?autoplay=1&modestbranding=1&controls=0&mute=1`}
+                        src={`https://www.youtube.com/embed/${videoCode}?autoplay=1&modestbranding=1&controls=0&mute=1&loop=1`}
                         frameBorder="0" allowFullScreen></iframe>
             </div>
 
