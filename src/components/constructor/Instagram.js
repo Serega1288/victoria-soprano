@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import styled from "styled-components";
 import {minCol, maxCol} from "../../function/SizeCol";
-import lozad from "lozad";
+// import lozad from "lozad";
 
 const Instagram = ( { item } ) => {
 
@@ -13,11 +13,11 @@ const Instagram = ( { item } ) => {
     //     }
     // });
     //
-    const { observe } = lozad();
-
-    useEffect(() => {
-        observe();
-    }, [observe]);
+    // const { observe } = lozad();
+    //
+    // useEffect(() => {
+    //     observe();
+    // }, [observe]);
 
     //console.log('Instagram >>>', item);
     const Section = styled.section`
@@ -170,9 +170,14 @@ const Instagram = ( { item } ) => {
                                 <div className="img w100 d-sm-block d-flex justify-content-end">
                                     {/*<img className="image1" src={item.image1.localFile.publicURL} alt=""/>*/}
                                     <div
-                                        className="anim image1 lozad imgDiv grey"
+                                        className="anim image1 lozad imgDiv grey fade"
                                         data-use-lozad
-                                        data-background-image={item.image1.localFile.publicURL}/>
+                                        // data-background-image={item.image1.localFile.publicURL}
+                                        style={{
+                                            backgroundImage: `url(${item.image1.localFile.publicURL})`
+                                        }}
+
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -181,9 +186,13 @@ const Instagram = ( { item } ) => {
                                 <div className="img">
                                     {/*<img className="image2" src={item.image2.localFile.publicURL} alt=""/>*/}
                                     <div
-                                        className="anim image2 lozad imgDiv"
+                                        className="anim image2 lozad imgDiv  fade"
                                         data-use-lozad
-                                        data-background-image={item.image2.localFile.publicURL}/>
+                                        // data-background-image={item.image2.localFile.publicURL}
+                                        style={{
+                                            backgroundImage: `url(${item.image2.localFile.publicURL})`
+                                        }}
+                                    />
                                 </div>
                                 <a className="d-none d-sm-block" target="_blank" href={item.channelurl}>
                                     <div className="Title3">

@@ -208,7 +208,7 @@ exports.createPages = ({graphql, actions}) => {
                         publicURL
                       }
                     }
-                    contacts {
+                    contacts { 
                       value
                       typ
                       title
@@ -295,6 +295,10 @@ exports.createPages = ({graphql, actions}) => {
             nodes {
               uri
               ACFBox {
+                  listVideo {
+                    video
+                    numberStep
+                  }
                   like { 
                     ... on WpProduct {
                       uri

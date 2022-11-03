@@ -3,12 +3,14 @@ import {graphql, useStaticQuery} from "gatsby";
 import styled from "styled-components";
 import MesegerImg from "../../assets/img/Messaanger.png"
 import {maxCol} from "../../function/SizeCol";
-
+//import {btnMessage} from '../../function/hook'
 
 
 
 
 const Meseger = () => {
+
+    console.log();
 
     const [open, setOpen ] = useState(false);
 
@@ -40,7 +42,7 @@ const Meseger = () => {
     return (
         <MesegerStyle className={`MesegerBtn d-inline-flex align-items-center justify-content-center ${open ? ' active' : '' }`}>
             <div className="container pos">
-                <div onClick={clickBtnMessege} className="pulse MesegerBtn d-inline-flex align-items-center justify-content-center">
+                <div id="clickBtnMessege" onClick={clickBtnMessege} className="pulse MesegerBtn d-inline-flex align-items-center justify-content-center">
                     <img className="MesegerImg anim" src={MesegerImg} alt=""/>
                     <div className="MesegerClose anim"></div>
                 </div>

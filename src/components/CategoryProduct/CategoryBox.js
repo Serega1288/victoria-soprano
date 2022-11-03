@@ -34,9 +34,9 @@ const Section = styled.section`
         background-position: top center;
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: calc(100vh - 13.4rem - 18rem ); 
+        min-height: calc(100vh - 13.4rem); 
         @media (max-width: ${maxCol.sm}) {
-            min-height: calc(100vh - 8.8rem  - 12rem );
+            min-height: calc(100vh - 8.8rem);
         }
         &:hover {
             filter: none;
