@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import {minCol, maxCol} from "../../function/SizeCol";
 
@@ -31,9 +31,16 @@ const Banner = ( {item} ) => {
             } 
         } 
     `;
+    const [active, setActive] = useState(false);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setActive(!active)
+        }, 500);
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
-        <Section className="banner d-flex justify-content-center align-items-center">
+        <Section style={{opacity: 0}} className={`${ active ? ' active-block ' : '' } anim banner d-flex justify-content-center align-items-center`}>
             <h1 className="container BannerTitle">
                 {item.title}
             </h1>

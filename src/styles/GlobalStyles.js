@@ -129,16 +129,22 @@ ul {
         }
     }
 }
- 
+.active-block {
+    opacity: 1 !important;
+}
 .anim, a, .btn, input, a:after, a:before, a div {
     transition: all 0.5s ease;  
 }
 .WrapMenu {
     position: fixed;
-    bottom:100%;
-    height: calc(100vh - 13.4rem);  
-    @media (max-width: ${maxCol.sm}) { 
-        height: calc(100vh - 8.8rem);   
+    height: 100%;
+    // height: calc(100vh - 13.4rem);  
+    // @media (max-width: ${maxCol.md}) { 
+    //     height: calc(100vh - 8.8rem);   
+    // } 
+    padding-top: 13.4rem;
+    @media (max-width: ${maxCol.md}) { 
+       padding-top: 0;  
     } 
     left: 0;
     right: 0; 
@@ -148,6 +154,7 @@ ul {
     background-color: #f7f4ed; 
     border: 1px solid #000;
     border-top: 0;
+    bottom: 100%;
     &.open {
         bottom:0;
     }

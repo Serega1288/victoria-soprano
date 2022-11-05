@@ -40,18 +40,18 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        "trackingId": "testID"
+        "trackingId": "AW-738495468"
       }
     },
     "gatsby-plugin-sitemap",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `Victoria Soprano`,
+        short_name: `Collection Victoria Soprano`,
         start_url: '/',
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        background_color: `#f7f4ed`,
+        theme_color: `#86644b`,
         display: `standalone`,
         icon: `src/assets/img/gatsby-icon.png`,
       },
@@ -77,13 +77,20 @@ module.exports = {
     //   },
     //   __key: "images"
     // },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`),
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: path.join(__dirname, `src`, `images`),
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: path.join(__dirname, `src`, `images`),
+    //   },
+    // },
     {
       resolve: 'gatsby-source-filesystem',
       options: {

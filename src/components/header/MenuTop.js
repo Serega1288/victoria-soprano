@@ -71,10 +71,10 @@ const MenuTop = () => {
             </WrapBoxMenuImage>
             <WrapBoxMenuTop className="container h100">
                 <div className="row h100 box-menu-top">
-                    <div className="col-12 col-sm-6 col-xl-7">
+                    <div className="col-12 col-md-6 col-xl-7">
 
                     </div>
-                    <div className="col-12 col-sm-6 col-xl-5 d-flex align-items-center justify-content-center pos">
+                    <div className="col-12 col-md-6 col-xl-5 d-flex align-items-center justify-content-center pos">
                         <div className="wrap">
                             <ul className="menu ul-clear">
                                 {allWpMenuItem.nodes.map(item => (
@@ -117,7 +117,7 @@ const WrapBoxMenuImage = styled.div`
     bottom:0;
     left: 0;
     right: 47%;
-    @media (max-width: ${maxCol.sm}) {
+    @media (max-width: ${maxCol.md}) {
         right: 50%;    
     }
     z-index: 2;
@@ -137,25 +137,36 @@ const WrapBoxMenuImage = styled.div`
             filter:none;
         }
     }
-    @media (max-width: 565px) {
-        top: 50%;
+    @media (max-width: ${maxCol.md}) {
+        top: 75%;
         right: 0;
         z-index: 0;
         .background {
             background-position: top center; 
         }
     }
+    @media (max-width: ${maxCol.sm}) {
+        top: 50%;
+    }
 `;
 
 const WrapBoxMenuTop = styled.div`
+        
         background-color: #f7f4ed;
         position: relative;
         z-index: 1;
-        @media (max-width: 565px) {
-                height: auto !important;
+        @media (max-width: ${maxCol.md}) {
+            height: auto !important;
+            position: absolute;
+            top: 13.4rem;
+            right: 0;
+            left: 0;
+        }
+        @media (max-width: ${maxCol.sm}) {
+            top: 8.8rem;
         }
         .box-menu-top {
-           @media (max-width: 565px) {
+           @media (max-width: ${maxCol.md}) {
                 height: auto;
            }
         }
@@ -163,7 +174,7 @@ const WrapBoxMenuTop = styled.div`
         position: relative;
       }
       .menu {  
-        @media (max-width: 565px) { 
+        @media (max-width: ${maxCol.sm}) { 
            margin-top: 4rem;
            margin-bottom: 3rem;
         }
@@ -171,7 +182,7 @@ const WrapBoxMenuTop = styled.div`
         li {
             margin-top: 4rem;
             margin-bottom: 4rem;
-            @media (max-width: 565px) { 
+            @media (max-width: ${maxCol.sm}) { 
                 margin-top: 1.6rem;
                 margin-bottom: 1.6rem;
            }
@@ -184,7 +195,7 @@ const WrapBoxMenuTop = styled.div`
            font-size: 6.6rem;
            line-height: 6.9rem;
            padding: 0 2rem;
-           @media (max-width: 565px) { 
+           @media (max-width: ${maxCol.sm}) { 
                 font-size: 3rem;
                 line-height: 3.6rem; 
            }
@@ -195,7 +206,7 @@ const WrapBoxMenuTop = styled.div`
         }
         .parents {
             padding-left: 6rem;
-            @media(max-wdth: 565px) {
+            @media(max-wdth: ${maxCol.sm}) {
                 padding-left: 4.8rem;
             }
             padding-right: 3rem;
@@ -211,7 +222,7 @@ const WrapBoxMenuTop = styled.div`
         bottom: 0;
         right: 0;
         z-index: 1;     
-        @media (max-width: 565px) { 
+        @media (max-width: ${maxCol.sm}) { 
             top: 0rem;
             width: 1.8rem;
             height: 1.8rem;
@@ -224,7 +235,7 @@ const WrapBoxMenuTop = styled.div`
             height: 100%;
             border-right: 2px solid #000;
             border-bottom: 2px solid #000;
-            @media (max-width: 565px) { 
+            @media (max-width: ${maxCol.sm}) { 
                 border-right: 1.5px solid #000;
                 border-bottom: 1.5px solid #000;
             }
@@ -235,7 +246,7 @@ const WrapBoxMenuTop = styled.div`
       .sub-menu-prev {
         transform: rotate(180deg);
         top: -4.5rem;
-        @media (max-width: 565px) {
+        @media (max-width: ${maxCol.sm}) {
             top: -3rem;
         }
       }

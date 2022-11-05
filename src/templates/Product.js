@@ -23,7 +23,7 @@ const Product = (props) => {
     `);
 
 
-    //console.log('Product page', props);
+    console.log('Product page', props);
 
     return (
         <Layout title={ props.pageContext.title } desc={ data.wp.allSettings.generalSettingsTitle } >
@@ -34,7 +34,11 @@ const Product = (props) => {
                             <Title item={props.pageContext} />
                         </div>
                         <div className="col-12 col-sm-6  box-gallery">
-                            <Gallery firstImage={props.pageContext.featuredImage} item={props.pageContext.ACFBox.gallery} />
+                            <Gallery
+                                firstImage={props.pageContext.featuredImage}
+                                item={props.pageContext.ACFBox.gallery}
+                                listVideo={props.pageContext.ACFBox.listVideo}
+                            />
                         </div>
                         <div className="col-12 col-sm-6 d-flex justify-content-center">
                             <div className="box-product-desc">
@@ -52,6 +56,53 @@ export default Product;
 
 
 const Section = styled.section`
+    .WrapIframe {
+        overflow: hidden;
+        position: absolute;
+        top:0;
+        bottom:0; 
+        left: 0;
+        right: 0;
+        z-index:2;
+    }
+    .slider-item-iframe {
+        position: absolute;
+        //top:-7rem;
+        top:0;
+        width: 100%;
+        height: 100%;
+        //height: calc(100% + 7rem + 7rem);
+        left: 0;
+        right: 0;
+        z-index:2;
+        opacity: 0;
+        &.active-iframe {
+            opacity: 1;
+        }
+    }
+    .play {
+        position: absolute;
+        top: 0;
+        bottom:0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:before {
+            margin-left: 0.5rem;
+            content: '';
+            display: block;
+            border-top: 1.8rem solid transparent;
+            border-left: 3rem solid rgba(255, 255, 255, 0.6);
+            border-bottom: 1.8rem solid transparent;
+        }
+    }
     .box-desc {
         margin-bottom: 10rem;
         @media(max-width: ${maxCol.sm}) {

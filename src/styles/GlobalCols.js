@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import {minCol, maxCol} from "../function/SizeCol";
-import bolkit from '../assets/fonts/bolkit/bolkit.woff2';
-import bolkitBold from '../assets/fonts/bolkit/bolkit-bold.woff2';
+// import bolkit from '../assets/fonts/bolkit/bolkit.woff2';
+// import bolkitBold from '../assets/fonts/bolkit/bolkit-bold.woff2';
 
 import sfPro from '../assets/fonts/SFProDisplay/sf-regular.woff2';
 import sfProBold from '../assets/fonts/SFProDisplay/sf-bold.woff2';
@@ -10,7 +10,8 @@ import sfProBold from '../assets/fonts/SFProDisplay/sf-bold.woff2';
 // font-family: 'Bolkit';
 // font-family: 'SF Pro Display';
 
-const GlobalCols = createGlobalStyle`  
+const GlobalCols = createGlobalStyle` 
+ 
 
 .lozad {
     opacity: 0;
@@ -19,18 +20,7 @@ const GlobalCols = createGlobalStyle`
     }
 }
 
-@font-face {
-    font-family: 'Bolkit';
-    font-style: normal;
-    font-weight: 400; 
-    src: url("${bolkit}") format("woff2");
-}
-@font-face {
-    font-family: 'Bolkit';
-    font-style: normal;
-    font-weight: 700; 
-    src: url("${bolkitBold}") format("woff2");
-}
+
 
 
 @font-face {

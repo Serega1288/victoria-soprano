@@ -295,6 +295,10 @@ exports.createPages = ({graphql, actions}) => {
             nodes {
               uri
               ACFBox {
+                  listVideo {
+                    video
+                    numberStep
+                  }
                   like { 
                     ... on WpProduct {
                       uri
