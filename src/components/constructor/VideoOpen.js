@@ -1,6 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react';
-//import lozad from "lozad";
-
+import React from 'react';
 
 const VideoOpen = ( {video} ) => {
 

@@ -2,7 +2,6 @@ import React from 'react';
 import {graphql, Link, useStaticQuery} from "gatsby";
 import iconWois from '../../assets/img/whatsapp.png';
 import CollapsListAttribute from "../Products/CollapsListAttribute";
-//import { Meseger } from '../header/Meseger';
 
 const BoxProductDesc = ({item}) => {
     //console.log('BoxProductDesc >>>', item);

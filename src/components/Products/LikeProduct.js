@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import {maxCol} from "../../function/SizeCol";
 import {Link} from "gatsby"
@@ -105,9 +105,9 @@ const Section = styled.div`
     }
     .ListProduct {
            .slider-item {
-                padding-top: 140%;
+                padding-top: 155%;
                 background-size: cover;
-                background-position: top center;
+                background-position: center center;
                 display: block;
            }   
     }

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -39,7 +39,6 @@ const Gallery = (prop) => {
             <Swiper
                 style={{
                     "--swiper-navigation-color": "#fff",
-                    "--swiper-pagination-color": "#fff",
                 }}
                 spaceBetween={22}
                 pagination={true}
@@ -47,7 +46,7 @@ const Gallery = (prop) => {
                 thumbs={{ swiper: thumbsSwiper }}
                 modules={[FreeMode, Navigation, Thumbs, Lazy, Pagination]}
                 className="mySwiper2"
-                preloadImages={false}
+                preloadImages={true}
                 lazy={{
                     enabled: true,
                     loadOnTransitionStart: true
@@ -59,7 +58,7 @@ const Gallery = (prop) => {
                     prop.firstImage && (
                         <SwiperSlide>
                             <Fancybox>
-                                <div data-fancybox="gallery" className="slider-item swiper-lazy"
+                                <div data-fancybox={0} className="slider-item swiper-lazy zoom-image"
                                      key={prop.firstImage.node.localFile.publicURL}
                                      data-background={prop.firstImage.node.localFile.publicURL}
                                      href={prop.firstImage.node.localFile.publicURL}
@@ -80,7 +79,7 @@ const Gallery = (prop) => {
                     return (
                     <SwiperSlide key={index}>
                         {
-                            prop.listVideo.map( (item, index) => {
+                            prop.listVideo?.map( (item, index) => {
                                 return (
                                     step === item.numberStep && (
                                         <div  key={index} className="WrapIframe">
@@ -91,7 +90,7 @@ const Gallery = (prop) => {
                             })
                         }
                         <Fancybox>
-                            <div data-fancybox="gallery" className="slider-item swiper-lazy"
+                            <div data-fancybox={index+1} className="slider-item swiper-lazy zoom-image"
                                  key={item.localFile.publicURL}
                                  data-background={item.localFile.publicURL}
                                  href={item.localFile.publicURL}
@@ -111,10 +110,11 @@ const Gallery = (prop) => {
                 spaceBetween={22}
                 slidesPerView={3}
                 freeMode={true}
+                navigation={true}
                 watchSlidesProgress={true}
-                modules={[FreeMode, Navigation, Thumbs, Lazy]}
+                modules={[FreeMode, Navigation, Thumbs, Lazy, Pagination]}
                 className="mySwiper"
-                preloadImages={false}
+                preloadImages={true}
                 lazy={{
                     enabled: true,
                     loadOnTransitionStart: true
@@ -149,7 +149,7 @@ const Gallery = (prop) => {
                             <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                         {
-                            prop.listVideo.map( (item, index) => {
+                            prop.listVideo?.map( (item, index) => {
                                 return (
                                     step === item.numberStep && (
                                         <div key={index} className="play"></div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import {minCol, maxCol} from "../../function/SizeCol";
+import {minCol} from "../../function/SizeCol";
 
 
 const Banner = ( {item} ) => {
@@ -40,11 +40,14 @@ const Banner = ( {item} ) => {
     }, []);
 
     return (
-        <Section style={{opacity: 0}} className={`${ active ? ' active-block ' : '' } anim banner d-flex justify-content-center align-items-center`}>
-            <h1 className="container BannerTitle">
-                {item.title}
-            </h1>
-        </Section>
+        <>
+            <div className={`${ active ? ' active-block ' : '' } status-anim`}></div>
+            <Section style={{opacity: 0}} className={`anim banner d-flex justify-content-center align-items-center`}>
+                <h1 className="container BannerTitle">
+                    {item.title}
+                </h1>
+            </Section>
+        </>
     )
 };
 

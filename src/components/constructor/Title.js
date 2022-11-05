@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {minCol, maxCol} from "../../function/SizeCol";
+import {maxCol} from "../../function/SizeCol";
 
 
 const TitleH = styled.section` 

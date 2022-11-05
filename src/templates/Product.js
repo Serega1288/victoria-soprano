@@ -3,6 +3,7 @@ import {minCol, maxCol} from "../function/SizeCol";
 import styled from "styled-components";
 import {graphql, useStaticQuery} from "gatsby";
 import Layout from '../components/Layout';
+import searchSVG from '../assets/img/search.svg'
 
 import Title from "../components/constructor/Title";
 import Gallery from "../components/Products/Gallery";
@@ -33,14 +34,14 @@ const Product = (props) => {
                         <div className="col-12 box-title">
                             <Title item={props.pageContext} />
                         </div>
-                        <div className="col-12 col-sm-6  box-gallery">
+                        <div className="col-12 col-sm-6  box-gallery pos z-in-1">
                             <Gallery
                                 firstImage={props.pageContext.featuredImage}
                                 item={props.pageContext.ACFBox.gallery}
                                 listVideo={props.pageContext.ACFBox.listVideo}
                             />
                         </div>
-                        <div className="col-12 col-sm-6 d-flex justify-content-center">
+                        <div className="col-12 col-sm-6 d-flex justify-content-center pos z-in-2">
                             <div className="box-product-desc">
                                 <BoxProductDesc item={props.pageContext} />
                             </div>
@@ -78,6 +79,20 @@ const Section = styled.section`
         opacity: 0;
         &.active-iframe {
             opacity: 1;
+        }
+    }
+    .zoom-image {
+        cursor: pointer;
+        position: relative;
+        &:before {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            content:'';
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            background-image: url(${searchSVG});
         }
     }
     .play {
@@ -274,11 +289,11 @@ const Section = styled.section`
     
     .mySwiper2 {
         .slider-item {
-            padding-top: 118%;
+            padding-top: 150%;
             @media(max-width: ${maxCol.sm}) {
                 padding-top: 170%;
             }
-            background-position: top center;
+            background-position: center center;
             background-size: cover;
         }
         .swiper-slide-active {
@@ -322,6 +337,10 @@ const Section = styled.section`
                 opacity: 1; 
             } 
         }
+    }
+    
+    .swiper-button-next, .swiper-button-prev {
+        color: #fff;
     }
     
     

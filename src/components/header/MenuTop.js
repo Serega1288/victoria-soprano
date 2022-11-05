@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {minCol, maxCol} from "../../function/SizeCol";
+import {maxCol} from "../../function/SizeCol";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import styled from 'styled-components';
 //import BackgroundImage from 'gatsby-background-image';

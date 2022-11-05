@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import {graphql, useStaticQuery} from "gatsby";
-import {minCol, maxCol} from "../function/SizeCol";
+import {maxCol} from "../function/SizeCol";
 import styled from "styled-components";
 import img404 from '../assets/img/404.png';
 

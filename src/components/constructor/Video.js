@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {minCol, maxCol} from "../../function/SizeCol";
+import React from 'react';
+import {minCol} from "../../function/SizeCol";
 import styled from 'styled-components';
 import VideoOpen from './VideoOpen';
 
@@ -90,9 +90,12 @@ const Video = ( {item} ) => {
                       overflow: hidden;
                       iframe {
                         width: 100%;
-                        height: calc(100% + 6rem + 100px);
+                        //height: calc(100% + 6rem + 100px);
+                        height: calc(100%);
                         position: absolute;
-                        top: -60px;
+                        //top: -60px;
+                        top: 0rem;
+                        bottom: 0rem;
                         left: 0;
                         right: 0;
                       }

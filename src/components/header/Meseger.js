@@ -3,9 +3,6 @@ import {graphql, useStaticQuery} from "gatsby";
 import styled from "styled-components";
 import MesegerImg from "../../assets/img/Messaanger.png"
 import {maxCol} from "../../function/SizeCol";
-//import {btnMessage} from '../../function/hook'
-
-
 
 
 const Meseger = () => {
