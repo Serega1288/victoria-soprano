@@ -1,5 +1,5 @@
 import React from 'react';
-import {minCol, maxCol} from "../../function/SizeCol";
+import {maxCol} from "../../function/SizeCol";
 
 import styled from 'styled-components';
 import {Link} from 'gatsby';

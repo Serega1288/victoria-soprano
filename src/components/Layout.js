@@ -7,7 +7,6 @@ import  Header from './header/Header';
 import  Footer from './footer/Footer';
 import styled from "styled-components";
 import {maxCol} from "../function/SizeCol";
-import bolkitBold from '../assets/fonts/bolkit/bolkit-bold.woff2';
 import bolkit from '../assets/fonts/bolkit/bolkit.woff2';
 
 // ${props => props.sizeCol.sm}

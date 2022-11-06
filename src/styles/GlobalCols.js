@@ -1,14 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
-import {minCol, maxCol} from "../function/SizeCol";
-// import bolkit from '../assets/fonts/bolkit/bolkit.woff2';
-// import bolkitBold from '../assets/fonts/bolkit/bolkit-bold.woff2';
+import {minCol} from "../function/SizeCol";
 
 import sfPro from '../assets/fonts/SFProDisplay/sf-regular.woff2';
 import sfProBold from '../assets/fonts/SFProDisplay/sf-bold.woff2';
 
-
-// font-family: 'Bolkit';
-// font-family: 'SF Pro Display';
 
 const GlobalCols = createGlobalStyle` 
  

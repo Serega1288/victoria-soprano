@@ -41,9 +41,8 @@ const Section = styled.section`
         padding-bottom: 5rem;
     } 
     .ImageBG {
-        display: block;
-        padding-top: 194%;
-        
+        display: block; 
+        padding-top: 200%;
         background-size: cover;
         background-position: center center;
     }
@@ -90,7 +89,7 @@ const Section = styled.section`
                 width: 50%; 
                 --bs-gutter-x: 3rem;
                 .ImageBG {
-                    padding-top: 138%;
+                    padding-top: 150%;
                 }
             }
         }

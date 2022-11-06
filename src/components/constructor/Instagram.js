@@ -1,6 +1,6 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import styled from "styled-components";
-import {minCol, maxCol} from "../../function/SizeCol";
+import {maxCol} from "../../function/SizeCol";
 // import lozad from "lozad";
 
 const Instagram = ( { item } ) => {

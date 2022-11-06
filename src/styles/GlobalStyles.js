@@ -1,10 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import {minCol, maxCol} from "../function/SizeCol";
-// font-family: 'Bolkit';
-// font-family: 'SF Pro Display';
 
-
-//console.log('sizeCol >>' , sizeCol.sm );
 
 const GlobalStyles = createGlobalStyle` 
 
@@ -129,7 +125,10 @@ ul {
         }
     }
 }
-.active-block {
+.status-anim + * {
+    opacity: 0 !important;
+}
+.status-anim.active-block + * {
     opacity: 1 !important;
 }
 .anim, a, .btn, input, a:after, a:before, a div {

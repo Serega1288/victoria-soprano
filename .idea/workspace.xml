@@ -5,18 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="data new ...">
-      <change afterPath="$PROJECT_DIR$/src/function/fancybox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/GlobalFonts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CategoryProduct/CategoryListProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoryProduct/CategoryListProduct.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/BoxProductDesc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/BoxProductDesc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Products/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/LikeProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/LikeProduct.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/constructor/Banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Banner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Collaps.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Collaps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Collection_Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Collection_Item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Const_Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Const_Item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Content_text_img_img.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Content_text_img_img.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Instagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Instagram.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Title.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Title.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Video.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Video.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/constructor/VideoOpen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/VideoOpen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/MenuTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/MenuTop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Meseger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Meseger.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/function/fancybox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/function/fancybox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/GlobalCols.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalCols.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/GlobalFonts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalFonts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/GlobalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalStyles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/FrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/FrontPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Product.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -271,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667465683644</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="data new ...">
+      <created>1667640525780</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1667640525780</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

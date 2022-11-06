@@ -1,7 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import styled from 'styled-components';
+import React from 'react';
 import {Link} from 'gatsby';
-import {useScrollPosition} from "../../function/useScrollPosition";
 
 // import lozad from "lozad";
 
