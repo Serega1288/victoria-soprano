@@ -36,8 +36,8 @@ const Gallery = (prop) => {
         const prevId = 'stepIframe' + swiper.previousIndex
         const activeId = 'stepIframe' + swiper.activeIndex
 
-        const getPreveUrlData = document.getElementById(prevId)?.getAttribute('data-src');
-        const getActiveUrl = document.getElementById(activeId)?.getAttribute('src');
+        const getPreveUrlData = document.getElementById(prevId)?.getAttribute('stop-src');
+        const getActiveUrl = document.getElementById(activeId)?.getAttribute('play-src');
 
         document.getElementById(prevId)?.setAttribute('src', getPreveUrlData);
         document.getElementById(activeId)?.setAttribute('src', getActiveUrl);
@@ -133,8 +133,9 @@ const Gallery = (prop) => {
                                             {/*/>*/}
                                             <iframe
                                             id={`stepIframe${step}`}
-                                            className="slider-item-iframe anim"
-                                            data-src={`https://www.youtube.com/embed/${item.video.split('?v=')[1].split('&')}?autoplay=0&modestbranding=1&controls=0&mute=0&loop=1`}
+                                            className="slider-item-iframe"
+                                            play-src={`https://www.youtube.com/embed/${item.video.split('?v=')[1].split('&')}?autoplay=1&modestbranding=1&controls=0&mute=0&loop=1`}
+                                            stop-src={`https://www.youtube.com/embed/${item.video.split('?v=')[1].split('&')}?autoplay=0&modestbranding=1&controls=0&mute=0&loop=1`}
                                             src={`https://www.youtube.com/embed/${item.video.split('?v=')[1].split('&')}?autoplay=0&modestbranding=1&controls=0&mute=0&loop=1`}
                                             >
                                             </iframe>
