@@ -98,6 +98,20 @@ const Section = styled.section`
             background-image: url(${searchSVG});
         }
     }
+    .zoom-image {
+        cursor: pointer;
+        position: relative;
+        &:before {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            content:'';
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            background-image: url(${searchSVG});
+        }
+    }
     .play {
         position: absolute;
         top: 0;
