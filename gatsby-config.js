@@ -12,6 +12,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://victoriasoprano.com',
+        sitemap: 'https://victoriasoprano.com/sitemap/sitemap-index.xml',
+        policy: [{userAgent: '*', allow: '/'}]
+      }
+    },
+    {
       resolve: `gatsby-source-wordpress`,
       options: {
         //url: process.env.WPGRAPHQL_URL,
