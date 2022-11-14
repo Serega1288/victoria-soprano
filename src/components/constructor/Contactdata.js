@@ -3,7 +3,7 @@ import styled from "styled-components"
 import {minCol, maxCol} from '../../function/SizeCol'
 
 const Editor = ( { item } ) => {
-    console.log('Contact data >>>', item)
+    //console.log('Contact data >>>', item)
     return (
         <Section className="boxBackground">
             <div className="container h100">

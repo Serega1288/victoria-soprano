@@ -42,13 +42,13 @@ const Header = ( props ) => {
                 <div className="container">
                     <div className="row">
                         <div className="col d-flex align-items-center">
-                            <IconItems className="ul-clear align-items-center d-flex d-md-none">
-                                <li className="">
-                                    <Link to="/search/">
-                                        <img src={ImgSearch} className="search" alt="search" />
-                                    </Link>
-                                </li>
-                            </IconItems>
+                            {/*<IconItems className="ul-clear align-items-center d-flex d-md-none">*/}
+                            {/*    <li className="">*/}
+                            {/*        <Link to="/search/">*/}
+                            {/*            <img src={ImgSearch} className="search" alt="search" />*/}
+                            {/*        </Link>*/}
+                            {/*    </li>*/}
+                            {/*</IconItems>*/}
                         </div>
                         <div className="col-auto">
                             <Link  to="/">
@@ -57,11 +57,11 @@ const Header = ( props ) => {
                         </div>
                         <div className="col d-flex align-items-center justify-content-end">
                             <IconItems className="ul-clear d-flex align-items-center ">
-                                <li className="d-none d-md-block">
-                                    <Link to="/search/">
-                                        <img src={ImgSearch} className="search" alt="search" />
-                                    </Link>
-                                </li>
+                                {/*<li className="d-none d-md-block">*/}
+                                {/*    <Link to="/search/">*/}
+                                {/*        <img src={ImgSearch} className="search" alt="search" />*/}
+                                {/*    </Link>*/}
+                                {/*</li>*/}
                                 <li className="d-none">
                                     <Link to="/user/">
                                         <img src={ImgUser} className="user" alt="user" />

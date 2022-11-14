@@ -11,10 +11,10 @@ import Collaps from './Collaps';
 import Content3 from './ContentCols';
 import Editor from "./Editor";
 import Contactdata from "./Contactdata";
-
+//import Contactform from "./Contactform";
 
 const Const = ( { item } ) => {
-    //console.log('>>', props.props );
+    console.log('>>', item );
     return (
         <>
             { item.fieldGroupName ? (

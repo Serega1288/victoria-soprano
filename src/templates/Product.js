@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {graphql, useStaticQuery} from "gatsby";
 import Layout from '../components/Layout';
 import searchSVG from '../assets/img/search.svg'
+import downloadSVG from '../assets/img/download.svg'
 
 import Title from "../components/constructor/Title";
 import Gallery from "../components/Products/Gallery";
@@ -57,6 +58,18 @@ export default Product;
 
 
 const Section = styled.section`
+    .ImgDownload {
+        background-image: url(${downloadSVG});
+        width: 3rem;
+        height: 4rem;
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 2;
+        @media(max-width: ${maxCol.sm}) {
+            bottom: 4rem;
+        }
+    }
     .WrapIframe {
         overflow: hidden;
         position: absolute;
@@ -69,16 +82,45 @@ const Section = styled.section`
     .slider-item-iframe {
         position: absolute;
         //top:-7rem;
-        top:0;
+        top:0; 
         width: 100%;
         height: 100%;
         //height: calc(100% + 7rem + 7rem);
         left: 0;
         right: 0;
         z-index:2;
-        opacity: 0;
-        &.active-iframe {
-            opacity: 1;
+        iframe {
+            opacity: 0;    
+            &.active-iframe {
+                opacity: 1;
+            }
+        }
+        
+    }
+    .iframeBefore, .iframeAfter {
+        width: 25%;
+        z-index: 5;
+        position: absolute;
+        top: 0;
+        bottom:0;
+        left:0;
+    }
+    .iframeAfter {
+        right:0;
+        left: auto;
+    }
+    .zoom-image {
+        cursor: pointer;
+        position: relative;
+        &:before {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            content:'';
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            background-image: url(${searchSVG});
         }
     }
     .zoom-image {

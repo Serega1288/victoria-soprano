@@ -2,11 +2,33 @@ import React from 'react';
 import styled from "styled-components";
 
 const Editor = ( { item } ) => {
-    //console.log('editor >>>', item);
+    console.log('contact form >>>', item);
     return (
-        <Section className="section editor">
+        <Section className="contact-form">
             <div className="container">
-                {/*<div className="text" dangerouslySetInnerHTML={{__html: item.text}} />*/}
+                <div className="row">
+                    .
+                </div>
+                <div className="row">
+                    <div className="col-12 col-sm-6">
+                        <div className="box-title">
+                            {item.item.title}
+                        </div>
+                        <div className="box-content">
+                            !! <form action=""></form>
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6">
+                        <div className="box-title">
+                            {item.item.title}
+                        </div>
+                        <div className="box-content">
+                            <div className="box-img">
+                                <img src={item.item.image.localFile.publicURL} alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </Section>
     )
@@ -15,6 +37,9 @@ export default Editor;
 
 const Section = styled.section`
     .text {
+        
+    }
+    .box-img {
         
     }
 `;
