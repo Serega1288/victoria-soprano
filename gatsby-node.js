@@ -222,8 +222,12 @@ exports.createPages = ({graphql, actions}) => {
                     revers
                     titleForm
                     titleImage 
+                    image {
+                      localFile {
+                        publicURL
+                      }
+                    } 
                   }
-                  
                 }
               }
             }

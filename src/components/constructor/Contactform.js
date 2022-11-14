@@ -12,7 +12,7 @@ const Editor = ( { item } ) => {
                 <div className="row">
                     <div className="col-12 col-sm-6">
                         <div className="box-title">
-                            {item.item.title}
+                            {item.titleForm}
                         </div>
                         <div className="box-content">
                             !! <form action=""></form>
@@ -20,11 +20,11 @@ const Editor = ( { item } ) => {
                     </div>
                     <div className="col-12 col-sm-6">
                         <div className="box-title">
-                            {item.item.title}
+                            {item.titleImage}
                         </div>
                         <div className="box-content">
                             <div className="box-img">
-                                <img src={item.item.image.localFile.publicURL} alt=""/>
+                                {/*<img src={item.image.localFile.publicURL} alt=""/>*/}
                             </div>
                         </div>
                     </div>

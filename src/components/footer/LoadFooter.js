@@ -5,7 +5,7 @@ import FooterMenu1 from './FooterMenu1';
 import FooterMenu2 from './FooterMenu2';
 import FooterMenu3 from './FooterMenu3';
 import IconList from "./IconList";
-
+import FormMailChimp from './FormMailchim';
 
 
 const LoadFooter = () => {
@@ -58,16 +58,7 @@ const LoadFooter = () => {
                                         {/*</h3>*/}
 
 
-                                        {/*<form className="Newsletter">*/}
-                                        {/*    <label htmlFor="email" className="d-block">*/}
-                                        {/*        <input placeholder="Email" id="email" type="email"/>*/}
-                                        {/*    </label>*/}
-                                        {/*    <label className="radio d-flex align-items-center" htmlFor="term-Newsletter">*/}
-                                        {/*        <input id="term-Newsletter" type="checkbox" className="d-flex" />*/}
-                                        {/*        <span className="d-flex">I accept the policy to subscribe to emails</span>*/}
-                                        {/*    </label>*/}
-                                        {/*    <button className="btn style-1">subscribe</button>*/}
-                                        {/*</form>*/}
+                                        <FormMailChimp />
 
                                         <IconList />
                                     </div>
@@ -101,7 +92,43 @@ const WrapFooter = styled.footer`
     [aria-current="page"] {
         border-bottom: 1px solid #1a0f07;
     }
+    
+    .sendMessage {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            display: block;
+            opacity: 0;
+            visibility: hidden;
+            background: #86644b;
+            color: #f7f4ed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            @media (max-width: ${maxCol.sm}) {
+                    padding: 2rem 3rem;
+                    margin-left: -2.7rem;
+                    width: calc(100% + 2.7rem*2);
+            }
+    }
+    
+    .statusSend.send {
+             & + .sendMessage {
+                opacity: 1;
+                visibility: visible;
+            }
+    }
+    .boxForm {
+        @media (max-width: ${maxCol.sm}) {
+            margin-top: 4rem;
+        }
+    }
     .Newsletter {
+        
         @media (max-width: ${maxCol.sm}) {
             button {
                 width: calc(100% + 2.7rem + 2.7rem);

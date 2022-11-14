@@ -26,6 +26,7 @@
     "gatsby-plugin-google-analytics": "^4.24.0",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-local-search": "^2.0.1",
+    "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^4.24.0",
     "gatsby-plugin-mdx": "^4.3.0",
     "gatsby-plugin-offline": "^5.24.0",
