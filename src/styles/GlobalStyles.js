@@ -32,7 +32,7 @@ img {
 }
 
 .grey { 
-    filter: grayscale(100%);
+    //filter: grayscale(100%);
 }
 .grey_off { 
     filter: none;

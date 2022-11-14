@@ -216,6 +216,14 @@ exports.createPages = ({graphql, actions}) => {
                     }
                   } 
                   
+                  
+                  ... on WpPage_Acfconstructor_Const_Contactform {
+                    fieldGroupName
+                    revers
+                    titleForm
+                    titleImage 
+                  }
+                  
                 }
               }
             }

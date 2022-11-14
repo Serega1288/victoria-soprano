@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {graphql, useStaticQuery} from "gatsby";
 import Layout from '../components/Layout';
 import searchSVG from '../assets/img/search.svg'
+import downloadSVG from '../assets/img/download.svg'
 
 import Title from "../components/constructor/Title";
 import Gallery from "../components/Products/Gallery";
@@ -57,6 +58,18 @@ export default Product;
 
 
 const Section = styled.section`
+    .ImgDownload {
+        background-image: url(${downloadSVG});
+        width: 3rem;
+        height: 4rem;
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 2;
+        @media(max-width: ${maxCol.sm}) {
+            bottom: 4rem;
+        }
+    }
     .WrapIframe {
         overflow: hidden;
         position: absolute;
@@ -83,6 +96,18 @@ const Section = styled.section`
             }
         }
         
+    }
+    .iframeBefore, .iframeAfter {
+        width: 25%;
+        z-index: 5;
+        position: absolute;
+        top: 0;
+        bottom:0;
+        left:0;
+    }
+    .iframeAfter {
+        right:0;
+        left: auto;
     }
     .zoom-image {
         cursor: pointer;

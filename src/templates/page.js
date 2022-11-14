@@ -8,7 +8,7 @@ const FrontPage = (props) => {
     const data = useStaticQuery(graphql` 
         {
             wp { 
-                allSettings {
+                allSettings { 
                     generalSettingsTitle 
                     generalSettingsDescription
                 }

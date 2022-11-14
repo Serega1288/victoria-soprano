@@ -97,6 +97,7 @@ const Gallery = (prop) => {
                 {
                     prop.firstImage && (
                         <SwiperSlide>
+                            <a target="_blank" download href={prop.firstImage.node.localFile.publicURL} className="ImgDownload"></a>
                             <Fancybox>
                                 <div data-fancybox={0} className="slider-item swiper-lazy zoom-image"
                                      key={prop.firstImage.node.localFile.publicURL}
@@ -131,6 +132,7 @@ const Gallery = (prop) => {
                                             {/*    onReady={onReady}*/}
                                             {/*    className="slider-item-iframe anim"*/}
                                             {/*/>*/}
+                                            <div className="iframeBefore"></div>
                                             <iframe
                                             id={`stepIframe${step}`}
                                             className="slider-item-iframe"
@@ -139,11 +141,13 @@ const Gallery = (prop) => {
                                             src={`https://www.youtube.com/embed/${item.video.split('?v=')[1].split('&')}?autoplay=0&modestbranding=1&controls=0&mute=0&loop=1`}
                                             >
                                             </iframe>
+                                            <div className="iframeAfter"></div>
                                         </div>
                                     )
                                 )
                             })
                         }
+                        <a download href={prop.firstImage.node.localFile.publicURL} className="ImgDownload"></a>
                         <Fancybox>
                             <div data-fancybox={index+1} className="slider-item swiper-lazy zoom-image"
                                  key={item.localFile.publicURL}
