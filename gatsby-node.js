@@ -226,12 +226,12 @@ exports.createPages = ({graphql, actions}) => {
                           required
                           type
                           label
+                        }  
+                        image {
+                          localFile {
+                            publicURL
+                          }
                         }
-                    }
-                    image {
-                      localFile {
-                        publicURL
-                      }
                     }
                   }
                 }

@@ -11,7 +11,7 @@ import Collaps from './Collaps';
 import Content3 from './ContentCols';
 import Editor from "./Editor";
 import Contactdata from "./Contactdata";
-import Contactform from "./Contactform";
+import Contactform from "./ContactForm";
 
 const Const = ( { item } ) => {
     console.log('>>', item );
