@@ -39,7 +39,7 @@ const Main = styled.main`
         //border-bottom: none;
       }
       
-      & > section:first-child .ContactData {
+      & > section:last-child .ContactData {
         margin-bottom: 13rem;
         @media(max-width: ${maxCol.sm}) {
            margin-bottom: 5rem;

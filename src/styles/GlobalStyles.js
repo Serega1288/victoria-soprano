@@ -62,6 +62,12 @@ img {
    font-size: 0;
 }
 
+.p-0 {
+    padding:0;
+}
+.m-0 {
+    margin:0;
+}
  
 
 .body {

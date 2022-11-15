@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="14.11.2022/2">
-      <change afterPath="$PROJECT_DIR$/src/components/footer/FormMailchim.js" afterDir="false" />
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="14.11.2022/3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Const_Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Const_Item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/constructor/Contactform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Contactform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/LoadFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/LoadFooter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/GlobalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalStyles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +94,8 @@
       <workItem from="1666679565832" duration="12509000" />
       <workItem from="1667207142462" duration="43195000" />
       <workItem from="1668416914219" duration="2763000" />
-      <workItem from="1668428358523" duration="8295000" />
+      <workItem from="1668428358523" duration="9833000" />
+      <workItem from="1668514697415" duration="3412000" />
     </task>
     <task id="LOCAL-00001" summary="data new">
       <created>1665393400359</created>
@@ -290,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668423371215</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="14.11.2022/3">
+      <created>1668437127805</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1668437127805</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +315,8 @@
     <MESSAGE value="data new" />
     <MESSAGE value="data new 2" />
     <MESSAGE value="14.11.2022/2" />
-    <option name="LAST_COMMIT_MESSAGE" value="14.11.2022/2" />
+    <MESSAGE value="14.11.2022/3" />
+    <option name="LAST_COMMIT_MESSAGE" value="14.11.2022/3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
