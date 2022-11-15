@@ -219,14 +219,20 @@ exports.createPages = ({graphql, actions}) => {
                   
                   ... on WpPage_Acfconstructor_Const_Contactform {
                     fieldGroupName
-                    revers
-                    titleForm
-                    titleImage 
+                    listTabForm {
+                        title
+                        form {
+                          name 
+                          required
+                          type
+                          label
+                        }
+                    }
                     image {
                       localFile {
                         publicURL
                       }
-                    } 
+                    }
                   }
                 }
               }

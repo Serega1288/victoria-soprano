@@ -5,17 +5,17 @@ import {minCol} from "../../function/SizeCol";
 const Editor = ( { item } ) => {
     console.log('contact form >>>', item);
 
-    const ImageBG = styled.div`  
-        background-size: cover;
-        background-image: url(${ item.image.localFile.publicURL });
-        padding-top: 121%;
-    `;
+    // const ImageBG = styled.div`
+    //     background-size: cover;
+    //     background-image: url(${ item.image.localFile.publicURL });
+    //     padding-top: 121%;
+    // `;
 
     return (
         <Section className="contact-form">
             <div className="container">
                 <div className="box ContactData">
-                    <div className="box-title border-right">
+                    <div className="box-title">
                         {/*{item.title}*/}
                     </div>
                     <div className="row m-0">
@@ -24,10 +24,10 @@ const Editor = ( { item } ) => {
                                 !! <form action=""></form>
                             </div>
                         </div>
-                        <div className="col-12 col-sm-6 p-0 col-right">
+                        <div className="col-12 col-sm-6 p-0">
                             <div className="box-content">
                                 <div className="box-img">
-                                    <ImageBG />
+                                    {/*<ImageBG />*/}
                                 </div>
                             </div>
                         </div>
