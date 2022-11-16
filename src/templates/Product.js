@@ -15,7 +15,7 @@ const Product = (props) => {
 
     const data = useStaticQuery(graphql` 
         {
-            wp {  
+            wp {   
                 allSettings {
                     generalSettingsTitle 
                     generalSettingsDescription
@@ -25,7 +25,7 @@ const Product = (props) => {
     `);
 
 
-    console.log('Product page', props);
+    //console.log('Product page', props);
 
     return (
         <Layout title={ props.pageContext.title } desc={ data.wp.allSettings.generalSettingsTitle } >

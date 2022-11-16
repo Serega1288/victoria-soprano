@@ -5,11 +5,12 @@ import {maxCol, minCol} from "../../function/SizeCol";
 //import scrollTo from 'gatsby-plugin-smoothscroll';
 //import { onAnchorLinkClick } from "gatsby-plugin-anchor-links";
 
-const Editor = ( { item } ) => {
+const Editor = ( { item, href } ) => {
     //const [num, setNum] = useQueryParam("x", NumberParam);
     // const [foo, setFoo] = useQueryParam("foo", StringParam);
-    // console.log('url >>>', foo);
-    const params = window.location.href;
+
+    const params = href;
+
     const url = new URL(params);
     const c = url.searchParams.get("tabs");
 
@@ -17,7 +18,7 @@ const Editor = ( { item } ) => {
 
     //scrollTo('#contact-form')
 
-    console.log('url >>>', params, c );
+
 
     const clickTab = (index) => {
         console.log('>>>', index )

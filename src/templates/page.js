@@ -4,7 +4,7 @@ import {graphql, useStaticQuery} from "gatsby";
 import Const from "../components/constructor/Constructor";
 
 const FrontPage = (props) => {
-
+    ///console.log('dsds', props.location.href)
     const data = useStaticQuery(graphql` 
         {
             wp { 
@@ -18,7 +18,7 @@ const FrontPage = (props) => {
     const list = props.pageContext.ACFconstructor.const;
     return (
         <Layout title={ props.pageContext.title } desc={ data.wp.allSettings.generalSettingsTitle } >
-            <Const props={list} />
+            <Const href={props.location.href} props={list} />
         </Layout>
     );
 };

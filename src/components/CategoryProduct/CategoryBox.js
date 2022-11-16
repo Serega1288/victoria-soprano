@@ -12,7 +12,7 @@ const CategoryBox = ({item}) => {
             {item.map( (item, index) => {
                 //console.log('categoryItem', item);
                 return (
-                    <CategoryItem item={item} step={index+1} />
+                    <CategoryItem key={index} item={item} step={index+1} />
                 )
             })}
         </Section>

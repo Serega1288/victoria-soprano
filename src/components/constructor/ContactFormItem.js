@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
-import Field from './ContactFormField';
-import {maxCol, minCol} from "../../function/SizeCol";
+import Field from './ContactFormField'
+import {maxCol, minCol} from "../../function/SizeCol"
+import FormSend from './FormSend'
 
 const ContactFormItem = ( { item, ind, c } ) => {
 
@@ -22,6 +23,7 @@ const ContactFormItem = ( { item, ind, c } ) => {
         }`}>
             <div className="col-12 col-sm-6 p-0">
                 <div className="box-content box-form-content border-right h100 d-flex align-items-center justify-content-center">
+                    {/*<FormSend item={item} ind={ind} />*/}
                     <form className='formStyle2'>
                         {item.form.map( (item, index) => (
                             <Field key={index} i={index+1} item={item} ind={ind} />

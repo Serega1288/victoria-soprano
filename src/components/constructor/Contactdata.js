@@ -22,8 +22,8 @@ const Editor = ( { item } ) => {
                                     {item.title}
                                 </h1>
 
-                                    {item.contacts.map(item => (
-                                    <div className="row list-item">
+                                    {item.contacts.map((item, index) => (
+                                    <div key={index} className="row list-item">
                                         <div className="col-5 col-sm-6 name">
                                             {item.name}
                                         </div>

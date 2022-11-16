@@ -13,8 +13,8 @@ import Editor from "./Editor";
 import Contactdata from "./Contactdata";
 import Contactform from "./ContactForm";
 
-const Const = ( { item } ) => {
-    console.log('>>', item );
+const Const = ( { item, href } ) => {
+    //console.log('>>', href );
     return (
         <>
             { item.fieldGroupName ? (
@@ -32,7 +32,7 @@ const Const = ( { item } ) => {
                     { item.fieldGroupName === 'Page_Acfconstructor_Const_Content' ? ( <Content3 item={item} /> ) : null }
 
                     { item.fieldGroupName === 'Page_Acfconstructor_Const_Contactdata' ? ( <Contactdata item={item} /> ) : null }
-                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Contactform' ? ( <Contactform item={item} /> ) : null }
+                    { item.fieldGroupName == 'Page_Acfconstructor_Const_Contactform' ? ( <Contactform href={href} item={item} /> ) : null }
 
                 </>
             ) : null }
