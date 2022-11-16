@@ -12,6 +12,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -133
+      }
+    },
+    "gatsby-plugin-use-query-params",
+    {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
         endpoint: 'https://victoriasoprano.us1.list-manage.com/subscribe/post?u=98f0c6abf8aa92fd64b79bf58&amp;id=6172fe3458&amp;f_id=00b902e2f0', // string; add your MC list endpoint here; see instructions below

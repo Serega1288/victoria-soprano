@@ -80,11 +80,14 @@ const Section = styled.section`
         margin-bottom: 2.5rem;
         @media(max-width: ${maxCol.sm}) {
             margin-bottom: 1.5rem;
+            &:last-child {
+                margin-bottom: 4rem;
+            }
         }
     }
     .box-text {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         @media(min-width: ${minCol.sm}) {
             padding-left: 6rem;
             padding-right: 6rem;

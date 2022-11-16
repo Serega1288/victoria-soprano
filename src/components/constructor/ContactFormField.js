@@ -11,14 +11,14 @@ const Field = ( { item, i, ind } ) => {
 
             { item.type === 'message' && (
                     <>
-                        <span>{item.label}  </span>
+                        <span>{item.label} {item.required ? '*' : '' }</span>
                         <textarea required={item.required ? 'required' : false } name={item.name} />
                     </>
             )}
 
                 { item.type === 'text' && (
                     <>
-                        <span>{item.label}</span>
+                        <span>{item.label} {item.required ? '*' : '' }</span>
                         <input
                             required={item.required ? 'required' : false }
                             type='text' name={item.name}
@@ -28,7 +28,7 @@ const Field = ( { item, i, ind } ) => {
 
                 { item.type === 'email' && (
                     <>
-                        <span>{item.label}</span>
+                        <span>{item.label} {item.required ? '*' : '' }</span>
                         <input
                             required={item.required ? 'required' : false }
                             type='email' name={item.name}
@@ -37,7 +37,7 @@ const Field = ( { item, i, ind } ) => {
                 )}
                 { item.type === 'phone' && (
                     <>
-                        <span>{item.label}</span>
+                        <span>{item.label} {item.required ? '*' : '' }</span>
                         <input
                         required={item.required ? 'required' : false }
                         type='phone' name={item.name}

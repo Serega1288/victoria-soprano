@@ -2,6 +2,7 @@ import React from 'react';
 import {graphql, Link, useStaticQuery} from "gatsby";
 import iconWois from '../../assets/img/whatsapp.png';
 import CollapsListAttribute from "../Products/CollapsListAttribute";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const BoxProductDesc = ({item}) => {
     //console.log('BoxProductDesc >>>', item);
@@ -29,11 +30,14 @@ const BoxProductDesc = ({item}) => {
                         uri
                       }
                     }
+                    parm:partnershipParametrs
                   }
                 }
               } 
         }
     `);
+
+    const parm = data.wp.themeGeneralSettings.ACFoptionThemes.parm;
 
     const clickBtnMessege = () => {
         document.getElementById('clickBtnMessege').click()
@@ -62,7 +66,7 @@ const BoxProductDesc = ({item}) => {
                 </div>
                 <div className="d-sm-flex align-items-center justify-content-between box-desc-2">
                     <Link className='btn style-3' to={data.wp.themeGeneralSettings.ACFoptionThemes.whereToBuy.uri}>Where to buy</Link>
-                    <Link className='btn style-3' to={data.wp.themeGeneralSettings.ACFoptionThemes.partnership.uri}>Partnership</Link>
+                    <AnchorLink className='btn style-3' to={`${data.wp.themeGeneralSettings.ACFoptionThemes.partnership.uri}${parm}`}>Partnership</AnchorLink>
                 </div>
             </div>
 
