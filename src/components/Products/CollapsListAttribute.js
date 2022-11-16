@@ -33,7 +33,7 @@ const CollapsList = ({item}) => {
                                     {item.title}
                                 </div>
                                 <div className="CollapsList-text-sub-text">
-                                    { item.list.map( (item, index) => (
+                                    { item?.list?.map( (item, index) => (
                                         <span key={index}>{item.item}<span>,</span></span>
                                     ))}
                                 </div>

@@ -5,7 +5,7 @@ import {maxCol, minCol} from "../../function/SizeCol";
 //import scrollTo from 'gatsby-plugin-smoothscroll';
 //import { onAnchorLinkClick } from "gatsby-plugin-anchor-links";
 
-const Editor = ( { item, href } ) => {
+const ContactForm = ( { item, href } ) => {
     //const [num, setNum] = useQueryParam("x", NumberParam);
     // const [foo, setFoo] = useQueryParam("foo", StringParam);
 
@@ -70,7 +70,7 @@ const Editor = ( { item, href } ) => {
         </Section>
     )
 }
-export default Editor;
+export default ContactForm;
 
 const Section = styled.section` 
     margin-top: -1px;

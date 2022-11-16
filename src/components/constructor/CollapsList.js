@@ -32,7 +32,7 @@ const CollapsList = ({item, step , ev1, ev2, s } ) => {
                             </div>
                             <div  {...getCollapseProps()}>
                                 {/*collaps-list*/}
-                                { item.list.map( (item, index) => (
+                                { item?.list?.map( (item, index) => (
                                     <div className="box-list" key={index}>
                                         <div className="subTitle">{item.subTitle}</div>
                                         <div className="editor" dangerouslySetInnerHTML={{__html: item.editor}} />
@@ -59,7 +59,7 @@ const CollapsList = ({item, step , ev1, ev2, s } ) => {
                             </div>
                             <div  {...getCollapseProps()}>
                                 {/*collaps-list*/}
-                                { item.list.map( (item, index) => (
+                                { item?.list?.map( (item, index) => (
                                     <div className="box-list" key={index}>
                                         <div className="subTitle">{item.subTitle}</div>
                                         <div className="editor" dangerouslySetInnerHTML={{__html: item.editor}} />
@@ -86,7 +86,7 @@ const CollapsList = ({item, step , ev1, ev2, s } ) => {
                             </div>
                             <div  {...getCollapseProps()}>
                                 {/*collaps-list*/}
-                                { item.list.map( (item, index) => (
+                                { item?.list?.map( (item, index) => (
                                     <div className="box-list" key={index}>
                                         <div className="subTitle">{item.subTitle}</div>
                                         <div className="editor" dangerouslySetInnerHTML={{__html: item.editor}} />

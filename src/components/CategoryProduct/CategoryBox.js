@@ -9,12 +9,9 @@ const CategoryBox = ({item}) => {
 
     return (
         <Section className="categoryBox">
-            {item.map( (item, index) => {
-                //console.log('categoryItem', item);
-                return (
-                    <CategoryItem key={index} item={item} step={index+1} />
-                )
-            })}
+            {item.map( (item, index) => (
+                <CategoryItem key={index} item={item} step={index+1} />
+            ))}
         </Section>
     )
 }
