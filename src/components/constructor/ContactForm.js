@@ -9,10 +9,8 @@ const ContactForm = ( { item, href } ) => {
     //const [num, setNum] = useQueryParam("x", NumberParam);
     // const [foo, setFoo] = useQueryParam("foo", StringParam);
 
-    const params = href;
-
-    const url = new URL(params);
-    const c = url.searchParams.get("tabs");
+    const url = new URLSearchParams(href);
+    const c = url.get("tabs");
 
     //onAnchorLinkClick('#contact-form');
 
