@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components"
 import Field from './ContactFormField'
 import {maxCol, minCol} from "../../function/SizeCol"
-import FormSend from './FormSend'
+//import FormSend from './FormSend'
 
 const ContactFormItem = ( { item, ind, c } ) => {
 
