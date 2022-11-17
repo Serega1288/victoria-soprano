@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="17.11.2022/6">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/pinit_fg_en_round_red_32.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/sendEmail/sendEmail.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/sendEmail/sendEmail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Products/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Gallery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/ContactForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/ContactFormItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/ContactFormItem.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +99,7 @@
       <workItem from="1668514697415" duration="21209000" />
       <workItem from="1668541982075" duration="11034000" />
       <workItem from="1668617549212" duration="35336000" />
-      <workItem from="1668690550024" duration="13658000" />
+      <workItem from="1668690550024" duration="14794000" />
     </task>
     <task id="LOCAL-00001" summary="data new">
       <created>1665393400359</created>
@@ -397,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668704847364</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="17.11.2022/6">
+      <created>1668710551382</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1668710551382</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

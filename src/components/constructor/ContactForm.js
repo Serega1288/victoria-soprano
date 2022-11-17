@@ -2,24 +2,24 @@ import React from 'react'
 import styled from "styled-components"
 import ContactFormItem from './ContactFormItem'
 import {maxCol, minCol} from "../../function/SizeCol";
-//import scrollTo from 'gatsby-plugin-smoothscroll';
-//import { onAnchorLinkClick } from "gatsby-plugin-anchor-links";
 
 const ContactForm = ( { item, href } ) => {
     //const [num, setNum] = useQueryParam("x", NumberParam);
     // const [foo, setFoo] = useQueryParam("foo", StringParam);
 
-    const url = new URLSearchParams(href);
-    const c = url.get("tabs");
+    // const url = new URLSearchParams(href);
+    // const c = url.get("tabs");
+
+    const c = href.split('?tabs=')[1]?.split('#')[0];
 
     //onAnchorLinkClick('#contact-form');
 
     //scrollTo('#contact-form')
 
-
+    console.log('href >>>', c )
 
     const clickTab = (index) => {
-        console.log('>>>', index )
+        console.log('clickTab >>>', index )
 
         document.querySelectorAll('.tab-title.active')[0]?.classList.remove("active")
         document.querySelectorAll('.anim.tab-item-contact.active.row.m-0')[0]?.classList.remove("active")
@@ -27,6 +27,9 @@ const ContactForm = ( { item, href } ) => {
 
         document.getElementById(`tab-title-${index}`).classList.add("active")
         document.getElementById(`tab-item-contact-${index}`).classList.add("active")
+
+
+        console.log('tabs index >>>>', index)
 
         //event.target.classList.add("active")
 

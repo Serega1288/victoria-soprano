@@ -12,7 +12,7 @@ import useForm from "../../function/useForm"
 
 const ContactFormItem = ( { item, ind, c } ) => {
 
-    console.log('item', item);
+    //console.log('item', item);
 
     let formInputs={
         garbage: '',
