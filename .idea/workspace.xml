@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="17.11.2022/4">
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="17.11.2022/5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/sendEmail/sendEmail.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/sendEmail/sendEmail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Gallery.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +100,7 @@
       <workItem from="1668514697415" duration="21209000" />
       <workItem from="1668541982075" duration="11034000" />
       <workItem from="1668617549212" duration="35336000" />
-      <workItem from="1668690550024" duration="1414000" />
+      <workItem from="1668690550024" duration="8265000" />
     </task>
     <task id="LOCAL-00001" summary="data new">
       <created>1665393400359</created>
@@ -380,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668688683140</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="17.11.2022/5">
+      <created>1668696202065</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1668696202065</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,14 +423,15 @@
     <MESSAGE value="17.11.2022/2" />
     <MESSAGE value="17.11.2022/3" />
     <MESSAGE value="17.11.2022/4" />
-    <option name="LAST_COMMIT_MESSAGE" value="17.11.2022/4" />
+    <MESSAGE value="17.11.2022/5" />
+    <option name="LAST_COMMIT_MESSAGE" value="17.11.2022/5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/functions/sendEmail/sendEmail.js</url>
-          <line>33</line>
+          <line>54</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

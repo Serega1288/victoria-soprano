@@ -1,14 +1,35 @@
 const nodemailer = require('nodemailer');
 const axios = require('axios')
 
-const transporter = nodemailer.createTransport({
-  host: process.env.MAIL_HOST,
-  port: process.env.MAIL_PORT,
+// const transporter = nodemailer.createTransport({
+//   host: process.env.MAIL_HOST,
+//   port: process.env.MAIL_PORT,
+//   auth: {
+//     user: process.env.MAIL_USER,
+//     pass: process.env.MAIL_PASS,
+//   },
+// });
+
+// var transporter = nodemailer.createTransport({
+//   host: "smtp.gmail.com",
+//   port: 587,
+//   auth: {
+//     user: "victoriasoprano.com",
+//     pass: "U7=3rZ*q8"
+//   }
+// });
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
   auth: {
-    user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASS,
-  },
+    user: 'victoriasoprano.com',
+    pass: 'U7=3rZ*q8'
+  }
 });
+
+
+
+
 
 function pause() {
   return new Promise((resolve, reject) => {
@@ -107,13 +128,18 @@ exports.handler = async (event, context) => {
   //   console.log(key, obj[key]);
   // });
 
-  // Посылаем email
-  await transporter.sendMail({
+  const mailOptions = {
     from: 'Victoria Soprano Group <info@victoriasoprano.com>',
     to: `<${body.email}>`,
     subject: body.title,
     html: emailHtml,
-  });
+  };
+  await transporter.sendMail(mailOptions, function (err, info) {
+    if(err)
+      console.log(err)
+    else
+      console.log(info);
+  })
 
 
 
