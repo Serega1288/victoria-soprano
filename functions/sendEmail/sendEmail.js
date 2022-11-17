@@ -44,10 +44,36 @@ exports.handler = async (event, context) => {
       };
     }
   }
-  //const html_ = '';
-  // for (body of fieldsRequired) {
-  //    html_ = html_ + fieldsRequired
-  // }
+
+
+
+  let msg = ''
+
+  Object.entries(body).forEach(field => {
+    const [key, value] = field;
+    if ( key !== 'garbage' ) {
+      msg += key + ': ' + value +  '\n'
+    }
+  })
+
+  msg = encodeURI(msg)
+  axios
+      .post(`https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}/sendMessage?chat_id=${process.env.TELEGRAM_CHOP}&parse_mode=html&text=${msg}`, {
+        todo: 'Buy the milk',
+      })
+      .then((res) => {
+        console.log(`statusCode: ${res.statusCode}`)
+        console.log(res)
+      })
+      .catch((error) => {
+        console.error(error)
+      })
+
+
+
+
+
+
   let emailHtml='';
 
   // body.forEach(([key, value]) => {
@@ -88,28 +114,6 @@ exports.handler = async (event, context) => {
     subject: body.title,
     html: emailHtml,
   });
-
-  let msg = ''
-
-  Object.entries(body).forEach(field => {
-    const [key, value] = field;
-    if ( key !== 'garbage' ) {
-      msg += key + ': ' + value +  '\n'
-    }
-  })
-
-  msg = encodeURI(msg)
-  axios
-      .post(`https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}/sendMessage?chat_id=${process.env.TELEGRAM_CHOP}&parse_mode=html&text=${msg}`, {
-        todo: 'Buy the milk',
-      })
-      .then((res) => {
-        console.log(`statusCode: ${res.statusCode}`)
-        console.log(res)
-      })
-      .catch((error) => {
-        console.error(error)
-      })
 
 
 

@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="17.11.2022/3">
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="17.11.2022/4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/sendEmail/sendEmail.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/sendEmail/sendEmail.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/work/project/soprano/victoria-soprano/src/function",
+    "last_opened_file_path": "C:/work/project/soprano/victoria-soprano",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -97,7 +97,8 @@
       <workItem from="1668428358523" duration="9833000" />
       <workItem from="1668514697415" duration="21209000" />
       <workItem from="1668541982075" duration="11034000" />
-      <workItem from="1668617549212" duration="34749000" />
+      <workItem from="1668617549212" duration="35336000" />
+      <workItem from="1668690550024" duration="1414000" />
     </task>
     <task id="LOCAL-00001" summary="data new">
       <created>1665393400359</created>
@@ -372,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668687728524</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="17.11.2022/4">
+      <created>1668688683140</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1668688683140</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +413,8 @@
     <MESSAGE value="17.11.2022/1" />
     <MESSAGE value="17.11.2022/2" />
     <MESSAGE value="17.11.2022/3" />
-    <option name="LAST_COMMIT_MESSAGE" value="17.11.2022/3" />
+    <MESSAGE value="17.11.2022/4" />
+    <option name="LAST_COMMIT_MESSAGE" value="17.11.2022/4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -413,7 +422,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/functions/sendEmail/sendEmail.js</url>
           <line>33</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
