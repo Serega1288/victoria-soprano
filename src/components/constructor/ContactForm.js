@@ -72,8 +72,39 @@ export default ContactForm;
 
 const Section = styled.section` 
     margin-top: -1px;
+    
+    .garbage {
+        position: absolute;
+       height: 0 !important; 
+       opacity: 0 !important;
+       z-index: -1000 !important;
+    }
+    
     .wrap-tabs-contact {
          
+    }
+    .statusSend {
+        font-family: 'Bolkit';
+        font-size: 3.2rem;
+        @media (max-width: ${maxCol.sm}) {
+            font-size: 2rem;
+        }
+        line-height: 1.4;
+        font-weight: 700;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        bottom:0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        background-color: #f7f4ed;
+        &.active {
+            visibility: visible;
+            opacity: 1;
+        }
     }
     .tab-item-contact {
         position: absolute;
@@ -153,7 +184,7 @@ const Section = styled.section`
     }
     .box-title {
         font-family: 'sfPro';
-        padding: 2rem 6rem;
+        padding: 2rem 6rem; 
         border-bottom: 1px solid #1A0F07;
         text-transform: uppercase;
         font-size: 2.2rem;

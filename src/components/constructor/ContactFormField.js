@@ -1,18 +1,33 @@
 import React from 'react'
 
 
-const Field = ( { item, i, ind } ) => {
+const Field = ( { item, i, ind, disabled, values, onChange, isLoading } ) => {
     return (
         <>
             <label className={`box-field-${item.type}`} htmlFor={`field-${ind+'-'+i}`}>
             { item.type === 'button' && (
-                    <button className="style-3 btn">{item.name}</button>
+                <>
+                    <input
+                        disabled={disabled}
+                        type="garbage"
+                        name="garbage"
+                        className="garbage"
+                        value={values.garbage}
+                        onChange={onChange} />
+                    <button disabled={disabled} type="submit" className="style-3 btn">
+                        { isLoading ? 'Send...' :  item.name  }
+                    </button>
+                </>
             )}
 
             { item.type === 'message' && (
                     <>
                         <span>{item.label} {item.required ? '*' : '' }</span>
-                        <textarea required={item.required ? 'required' : false } name={item.name} />
+                        <textarea required={item.required ? 'required' : false } name={item.name}
+                                  disabled={disabled}
+                                  onChange={onChange}
+                                  value={values[item.name]}
+                        />
                     </>
             )}
 
@@ -22,6 +37,9 @@ const Field = ( { item, i, ind } ) => {
                         <input
                             required={item.required ? 'required' : false }
                             type='text' name={item.name}
+                            disabled={disabled}
+                            onChange={onChange}
+                            value={values[item.name]}
                         />
                     </>
                 )}
@@ -31,7 +49,10 @@ const Field = ( { item, i, ind } ) => {
                         <span>{item.label} {item.required ? '*' : '' }</span>
                         <input
                             required={item.required ? 'required' : false }
-                            type='email' name={item.name}
+                            type='email' name='email'
+                            disabled={disabled}
+                            onChange={onChange}
+                            value={values.email}
                         />
                     </>
                 )}
@@ -41,6 +62,9 @@ const Field = ( { item, i, ind } ) => {
                         <input
                         required={item.required ? 'required' : false }
                         type='phone' name={item.name}
+                        disabled={disabled}
+                        onChange={onChange}
+                        value={values[item.name]}
                         />
                     </>
 
