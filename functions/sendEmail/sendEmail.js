@@ -19,12 +19,21 @@ const axios = require('axios')
 //   }
 // });
 
+// var transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     user: 'info@victoriasoprano.com',
+//     pass: 'U7=3rZ*q8'
+//   }
+// });
+
 var transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: "smtp.gmail.com",
+  port: 465,
   auth: {
-    user: 'victoriasoprano.com',
-    pass: 'U7=3rZ*q8'
-  }
+    user: "info@victoriasoprano.com",
+    pass: "U7=3rZ*q8",
+  },
 });
 
 

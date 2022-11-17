@@ -5,6 +5,7 @@ import {graphql, useStaticQuery} from "gatsby";
 import Layout from '../components/Layout';
 import searchSVG from '../assets/img/search.svg'
 import downloadSVG from '../assets/img/download.svg'
+import pinterest from '../assets/img/pinit_fg_en_round_red_32.png'
 
 import Title from "../components/constructor/Title";
 import Gallery from "../components/Products/Gallery";
@@ -58,6 +59,31 @@ export default Product;
 
 
 const Section = styled.section`
+    .pinterest {
+        // background-image: url(${pinterest});
+        display: inline-block;
+        position: absolute;
+        top: 2rem;
+        z-index: 10;
+        left: 2rem;
+        a {
+            position: relative;
+            &:before {
+                content: 'Save';
+                position: absolute;
+                left: 100%;
+                top: 0;
+                bottom: 0;
+                font-weight: 700;
+                //color: #e60023; 
+                color: #fff; 
+                margin: auto 0.5rem;
+                font-size: 1.8rem;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
     .ImgDownload {
         background-image: url(${downloadSVG});
         width: 3rem;

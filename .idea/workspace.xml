@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="17.11.2022/5">
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="17.11.2022/6">
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pinit_fg_en_round_red_32.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/sendEmail/sendEmail.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/sendEmail/sendEmail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Products/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Product.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/work/project/soprano/victoria-soprano",
+    "last_opened_file_path": "C:/work/project/soprano/victoria-soprano/src/assets/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -52,9 +53,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\work\project\soprano\victoria-soprano\src\assets\img" />
       <recent name="C:\work\project\soprano\victoria-soprano\src\function" />
       <recent name="C:\work\project\soprano\victoria-soprano" />
-      <recent name="C:\work\project\soprano\victoria-soprano\src\assets\img" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -100,7 +101,7 @@
       <workItem from="1668514697415" duration="21209000" />
       <workItem from="1668541982075" duration="11034000" />
       <workItem from="1668617549212" duration="35336000" />
-      <workItem from="1668690550024" duration="8265000" />
+      <workItem from="1668690550024" duration="13658000" />
     </task>
     <task id="LOCAL-00001" summary="data new">
       <created>1665393400359</created>
@@ -389,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668696202065</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="17.11.2022/6">
+      <created>1668704847364</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1668704847364</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,14 +432,15 @@
     <MESSAGE value="17.11.2022/3" />
     <MESSAGE value="17.11.2022/4" />
     <MESSAGE value="17.11.2022/5" />
-    <option name="LAST_COMMIT_MESSAGE" value="17.11.2022/5" />
+    <MESSAGE value="17.11.2022/6" />
+    <option name="LAST_COMMIT_MESSAGE" value="17.11.2022/6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/functions/sendEmail/sendEmail.js</url>
-          <line>54</line>
+          <line>63</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

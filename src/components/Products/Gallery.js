@@ -98,24 +98,26 @@ const Gallery = (prop) => {
                     prop.firstImage && (
                         <SwiperSlide>
                             <a target="_blank" download href={prop.firstImage.node.localFile.publicURL} className="ImgDownload"></a>
-                            <a data-pin-do="buttonBookmark" data-pin-tall="true" data-pin-round="true"
-                               data-pin-media={prop.firstImage.node.localFile.publicURL}
-                               data-pin-log="button_pinit_bookmarklet"
-                               href="https://www.pinterest.com/pin/create/button/">
-                                <img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_round_red_32.png" />
+                            <span className="pinterest">
+                            <a className="pinterest" data-pin-do="buttonBookmark" data-pin-tall="true" data-pin-round="true"
+                                    data-pin-media={prop.firstImage.node.localFile.publicURL}
+                                    data-pin-log="button_pinit_bookmarklet pinterest"
+                                    href="https://www.pinterest.com/pin/create/button/">
+                                Save
                             </a>
-                            <img src={prop.firstImage.node.localFile.publicURL} alt="" />
+                            </span>
+
                             <Fancybox>
 
-                                <div data-fancybox={0} className="slider-item swiper-lazy zoom-image"
+                                <div  className="zoom-image"
                                      key={prop.firstImage.node.localFile.publicURL}
-                                     data-background={prop.firstImage.node.localFile.publicURL}
+                                     // data-background={prop.firstImage.node.localFile.publicURL}
                                      href={prop.firstImage.node.localFile.publicURL}
                                 >
-
-
-                                    <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                    <img data-fancybox={0} className="" src={prop.firstImage.node.localFile.publicURL} alt="" />
                                 </div>
+                                <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+
                             </Fancybox>
                         </SwiperSlide>
                     )
@@ -158,22 +160,25 @@ const Gallery = (prop) => {
                             })
                         }
                         <a download href={prop.firstImage.node.localFile.publicURL} className="ImgDownload"></a>
-                        <a data-pin-do="buttonBookmark" data-pin-tall="true" data-pin-round="true"
-                           data-pin-media={item.localFile.publicURL}
-                           data-pin-log="button_pinit_bookmarklet"
-                           href="https://www.pinterest.com/pin/create/button/">
-                            <img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_round_red_32.png" />
-                        </a>
-                        <img src={item.localFile.publicURL} alt=""/>
+                        <span className="pinterest">
+                            <a className="pinterest" data-pin-do="buttonBookmark" data-pin-tall="true" data-pin-round="true"
+                               data-pin-media={prop.firstImage.node.localFile.publicURL}
+                               data-pin-log="button_pinit_bookmarklet pinterest"
+                               href="https://www.pinterest.com/pin/create/button/">
+                                Save
+                            </a>
+                            </span>
+
                         <Fancybox>
 
-                            <div data-fancybox={index+1} className="slider-item swiper-lazy zoom-image"
+                            <div data-fancybox={index+1} className="zoom-image"
                                  key={item.localFile.publicURL}
-                                 data-background={item.localFile.publicURL}
+                                 // data-background={item.localFile.publicURL}
                                  href={item.localFile.publicURL}
                             >
-                                <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                <img className="" src={item.localFile.publicURL} alt=""/>
                             </div>
+                            <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </Fancybox>
 
 
