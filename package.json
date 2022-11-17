@@ -13,7 +13,8 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "netlify": "netlify dev"
+    "netlify": "netlify dev",
+    "prebuild": "netlify-lambda install"
   },
   "dependencies": {
     "@apollo/client": "^3.7.0",
