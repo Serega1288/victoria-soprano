@@ -4,7 +4,7 @@ import CategoryBox from './CategoryBox';
 import CategoryDesc from './CategoriesDesc';
 
 const Categories = (props) => {
-    // console.log('categories page >>', props.theme.pageContext );
+    //console.log('categories page >>', props );
     return (
         <>
             <CategoryTitle item={props.theme.pageContext.name} breadcrumb={props} />

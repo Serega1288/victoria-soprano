@@ -19,6 +19,7 @@ img {
 /* width */
 ::-webkit-scrollbar {
   width: 2px;
+  height: 4px;
 }
 // #86644B
 /* Track */
@@ -231,7 +232,27 @@ ul {
     }
 } 
 
-
+.wrap-table {
+    overflow: scroll;
+    table {
+        width: 100% !important;
+        min-width: 80rem;
+    }
+    margin-bottom: 2rem;
+    td {
+        padding: 0.5rem 1rem;
+    }
+    td {
+        p:last-child {
+            margin-bottom:0;
+        }
+    }
+    tbody {
+        background: #c4c4c4;
+        background: #ffe4d0;
+        //color: #fff
+    }
+}
  
  
 .section {

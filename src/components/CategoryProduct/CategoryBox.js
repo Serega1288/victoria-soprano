@@ -18,6 +18,8 @@ const CategoryBox = ({item}) => {
 export default CategoryBox;
 
 const Section = styled.section`
+    display: flex;
+    flex-direction: column;
     .CategoryItem {
            border-top:1px solid #000;
            padding-top: 10rem;

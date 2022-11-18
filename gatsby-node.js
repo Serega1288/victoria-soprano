@@ -50,6 +50,11 @@ exports.createPages = ({graphql, actions}) => {
               }
               ACFconstructor {
                 const {
+                    
+                  ... on WpPage_Acfconstructor_Const_Editor {
+                      fieldGroupName
+                      text
+                  } 
                 
                   ... on WpPage_Acfconstructor_Const_Banner {
                     fieldGroupName
@@ -219,7 +224,7 @@ exports.createPages = ({graphql, actions}) => {
                   
                   ... on WpPage_Acfconstructor_Const_Contactform {
                     fieldGroupName
-                    listTabForm {
+                    listTabForm { 
                         title
                         form {
                           name 
@@ -243,11 +248,17 @@ exports.createPages = ({graphql, actions}) => {
             nodes {
               name
               id
+              OrderSortCategory {
+                filterSort
+              }
               wpChildren {
                 nodes {
                   name
                   id
                   uri
+                  OrderSortCategory {
+                    filterSort
+                  }
                   ACFcategory {
                     typ
                     subtitle
