@@ -30,6 +30,8 @@ const path = require('path');
 
 const frontTemplate = path.resolve('./src/templates/FrontPage.js')
 const pageTemplate = path.resolve(`./src/templates/page.js`)
+const postTemplate = path.resolve(`./src/templates/post.js`)
+
 const categoryProductTemplate = path.resolve(`./src/templates/CategoryProduct.js`)
 const productTemplate = path.resolve(`./src/templates/Product.js`)
 
@@ -39,6 +41,213 @@ exports.createPages = ({graphql, actions}) => {
 
     return graphql(`
         {
+          
+          
+          allWpPost {
+            nodes {
+              slug
+              title 
+              content
+              ACFconstructor {
+                const {
+ 
+                  ... on WpPost_Acfconstructor_Const_Editor {
+                      fieldGroupName
+                      text
+                  } 
+                
+                  ... on WpPost_Acfconstructor_Const_Banner {
+                    fieldGroupName
+                    title
+                    banner {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                    bannerMobile {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                  }
+                  
+                  ... on WpPost_Acfconstructor_Const_Collections {
+                    blockTitle
+                    fieldGroupName
+                    collection {
+                      title
+                      text
+                      img1 {
+                        localFile {
+                          publicURL
+                        }
+                      }
+                      img2 {
+                        localFile {
+                          publicURL
+                        }
+                      }
+                      collectionUrl
+                    }
+                  }
+                  
+                  ... on WpPost_Acfconstructor_Const_Videovoutube {
+                    blockTitle
+                    fieldGroupName
+                    video
+                    videofon {
+                      localFile { 
+                        publicURL
+                      } 
+                    }
+                    videofon {
+                      localFile { 
+                        publicURL
+                      } 
+                    } 
+                    videofonMobile {
+                      localFile { 
+                        publicURL
+                      } 
+                    }
+                  }
+                   
+                  ... on WpPost_Acfconstructor_Const_Instagram {
+                    blockTitle0
+                    blockTitle1
+                    blockTitle2
+                    blockTitle3
+                    channelname
+                    channelurl
+                    fieldGroupName 
+                    image1 {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                    image2 {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                  } 
+                   
+                  ... on WpPost_Acfconstructor_Const_Slider {
+                    fieldGroupName
+                    blocktitle 
+                    sliders {
+                      fotoSlider {
+                        localFile {
+                          publicURL
+                        }
+                      }
+                      fotoSliderMob {
+                        localFile {
+                          publicURL
+                        }
+                      }
+                    } 
+                  }
+                  
+                  ... on WpPost_Acfconstructor_Const_Title {
+                    fieldGroupName
+                    title
+                  }
+                  ... on WpPost_Acfconstructor_Const_ContentTextImgImg {
+                    editor
+                    fieldGroupName
+                    notColor1
+                    foto1 {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                    notColor2
+                    foto2 {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                  }
+                  ... on WpPost_Acfconstructor_Const_Collaps {
+                    fieldGroupName
+                    collapsListLeft {
+                      title 
+                      list {
+                        subTitle
+                        editor
+                      }
+                    }
+                  }
+                  ... on WpPost_Acfconstructor_Const_ContentImgTitleText {
+                    editor
+                    fieldGroupName
+                    notColor
+                    title
+                    foto {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                  }
+                  
+                  ... on WpPost_Acfconstructor_Const_Content {
+                    editor
+                    fieldGroupName 
+                    vertical
+                    reverse
+                    notColor
+                    foto {
+                      localFile { 
+                        publicURL
+                      }
+                    }
+                  } 
+                  
+                  
+                  ... on WpPost_Acfconstructor_Const_Contactdata {
+                    fieldGroupName
+                    title
+                    image {
+                      localFile {
+                        publicURL
+                      }
+                    }
+                    contacts { 
+                      value
+                      typ
+                      title
+                      name
+                    }
+                  } 
+                  
+                  
+                  ... on WpPost_Acfconstructor_Const_Contactform {
+                    fieldGroupName
+                    listTabForm { 
+                        title
+                        form {
+                          name 
+                          required
+                          type
+                          label
+                          cols 
+                        }  
+                        image {
+                          localFile {
+                            publicURL
+                          }
+                        }
+                    }
+                  }
+                  
+                  
+                  
+                }
+              }
+            }
+          } 
+        
           page:allWpPage {
             nodes {
               slug
@@ -230,8 +439,8 @@ exports.createPages = ({graphql, actions}) => {
                           name 
                           required
                           type
-                          label 
-                          cols
+                          label
+                          cols 
                         }  
                         image {
                           localFile {
@@ -398,23 +607,6 @@ exports.createPages = ({graphql, actions}) => {
 
         // categoty  categoryTemplate
 
-        results.data.allWpProductCategory.nodes.forEach(category => {
-
-            createPage({
-                path: category.uri,
-                component: categoryProductTemplate,
-                context: category,
-            })
-
-        });
-
-        results.data.allWpProduct.nodes.forEach(item => {
-            createPage({
-                path: item.uri,
-                component: productTemplate,
-                context: item,
-            })
-        });
 
         results.data.page.nodes.forEach(item => {
 
@@ -439,6 +631,39 @@ exports.createPages = ({graphql, actions}) => {
             }
 
         })
+
+
+        results.data.allWpPost.nodes.forEach(item => {
+
+            createPage({
+                path: `/blog/${item.slug}`,
+                component:  postTemplate,
+                context: item,
+            })
+
+        });
+
+
+        results.data.allWpProductCategory.nodes.forEach(category => {
+
+            createPage({
+                path: category.uri,
+                component: categoryProductTemplate,
+                context: category,
+            })
+
+        });
+
+        results.data.allWpProduct.nodes.forEach(item => {
+            createPage({
+                path: item.uri,
+                component: productTemplate,
+                context: item,
+            })
+        });
+
+
+
 
     });
 };

@@ -6,7 +6,7 @@ const Const = ( props ) => {
     return (
         <>
             {props?.props?.map( (item, index) => (
-                <ConstItem href={props.href} key={index} item={item}  />
+                <ConstItem type={props.type} href={props.href} key={index} item={item}  />
             ))}
         </>
     )
