@@ -12,7 +12,7 @@ import useForm from "../../function/useForm"
 
 const ContactFormItem = ( { item, ind, c } ) => {
 
-    //console.log('item', item);
+    console.log('item', item);
 
     let formInputs={
         garbage: '',
@@ -59,9 +59,9 @@ const ContactFormItem = ( { item, ind, c } ) => {
                         {message ? <span dangerouslySetInnerHTML={{__html: message}} className="formMessaga"/>  : ''}
                     </div>
 
-                    <form onSubmit={submitForm} className='formStyle2'>
+                    <form onSubmit={submitForm} className='formStyle2 row'>
                         {item.form.map( (item, index) => (
-                            <Field key={index} i={index+1} item={item} ind={ind}
+                            <Field cols={item.cols} key={index} i={index+1} item={item} ind={ind}
                                 disabled={isLoading}
                                 values={values}
                                 onChange={captureInput}

@@ -1,10 +1,11 @@
 import React from 'react'
 
 
-const Field = ( { item, i, ind, disabled, values, onChange, isLoading } ) => {
+const Field = ( { item, i, ind, disabled, values, onChange, isLoading, cols } ) => {
+    const col = 12/cols;
     return (
         <>
-            <label className={`box-field-${item.type}`} htmlFor={`field-${ind+'-'+i}`}>
+            <label className={`col-12 col-sm-${col} box-field-${item.type}`} htmlFor={`field-${ind+'-'+i}`}>
             { item.type === 'button' && (
                 <>
                     <input
@@ -15,7 +16,7 @@ const Field = ( { item, i, ind, disabled, values, onChange, isLoading } ) => {
                         value={values.garbage}
                         onChange={onChange} />
                     <button disabled={disabled} type="submit" className="style-3 btn">
-                        { isLoading ? 'Send...' :  item.name  }
+                        { isLoading ? 'Send...' :  item.label  }
                     </button>
                 </>
             )}

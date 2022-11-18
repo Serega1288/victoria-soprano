@@ -230,7 +230,8 @@ exports.createPages = ({graphql, actions}) => {
                           name 
                           required
                           type
-                          label
+                          label 
+                          cols
                         }  
                         image {
                           localFile {
