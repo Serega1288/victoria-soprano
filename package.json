@@ -42,6 +42,7 @@
     "gatsby-plugin-use-query-params": "^1.0.1",
     "gatsby-source-filesystem": "^4.24.0",
     "gatsby-source-wordpress": "^6.24.0",
+    "gatsby-theme-headless-wordpress-admin": "^0.0.7",
     "gatsby-transformer-remark": "^5.24.0",
     "gatsby-transformer-sharp": "^4.24.0",
     "gbimage-bridge": "^0.2.2",

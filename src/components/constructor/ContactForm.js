@@ -1,24 +1,20 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import styled from "styled-components"
 import ContactFormItem from './ContactFormItem'
 import {maxCol, minCol} from "../../function/SizeCol";
+import queryString from "query-string"
+const ContactForm = ( {item, href } ) => {
 
-const ContactForm = ( { item, href } ) => {
-    //const [num, setNum] = useQueryParam("x", NumberParam);
-    // const [foo, setFoo] = useQueryParam("foo", StringParam);
+    const [c, setC] = useState(href)
+    useEffect(() => {
 
-    // const url = new URLSearchParams(href);
-    // const c = url.get("tabs");
-
-    const c = href.split('?tabs=')[1]?.split('#')[0];
-
-    //onAnchorLinkClick('#contact-form');
-
-    //scrollTo('#contact-form')
-
-    console.log('href >>>', c )
+        const x = href.split('?tabs=')[1]?.split('#')[0];
+        // console.log('href >>>',  x )
+        setC(x)
+    })
 
     const clickTab = (index) => {
+
         console.log('clickTab >>>', index )
 
         document.querySelectorAll('.tab-title.active')[0]?.classList.remove("active")
@@ -41,6 +37,7 @@ const ContactForm = ( { item, href } ) => {
     }
     return (
         <Section id="contact-form" className="contact-form">
+
             <div className="container">
                 <div className="box ContactData">
                     <div className="box-title box-tabs-title d-flex justify-content-center align-items-center">
