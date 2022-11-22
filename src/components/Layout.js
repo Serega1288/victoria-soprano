@@ -9,6 +9,7 @@ import styled from "styled-components";
 import {maxCol} from "../function/SizeCol";
 import bolkit from '../assets/fonts/bolkit/bolkit.woff2';
 
+
 // ${props => props.sizeCol.sm}
 
 const Layout = ( {children, title, desc } ) => {
@@ -19,7 +20,6 @@ const Layout = ( {children, title, desc } ) => {
                 <title>{ title } | { desc }</title>
                 <meta name="p:domain_verify" content="4304277d9010e64d1d62fde007276f2e"/>
                 <link rel="preload" href={bolkit} as="font" type="font/woff2" crossOrigin="anonymous" />
-                <script async defer src="https://assets.pinterest.com/js/pinit.js"></script>
             </Helmet>
             <GlobalFonts />
             <GlobalCols />

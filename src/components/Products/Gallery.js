@@ -13,6 +13,7 @@ import "swiper/css/thumbs";
 
 // import required modules
 import {FreeMode, Navigation, Thumbs, Lazy, Pagination} from "swiper";
+import {Script} from "gatsby";
 
 const Gallery = (prop) => {
     //console.log('page product gallery', prop);
@@ -76,6 +77,11 @@ const Gallery = (prop) => {
 
     return (
         <>
+            {/*<Script*/}
+            {/*    src="https://assets.pinterest.com/js/pinit.js"*/}
+            {/*    onLoad={() => console.log("success")}*/}
+            {/*    onError={() => console.log("sadness")}*/}
+            {/*/>*/}
             <Swiper
                 style={{
                     "--swiper-navigation-color": "#fff",

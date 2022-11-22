@@ -17,9 +17,6 @@ const Const = ( { item, href, type } ) => {
     console.log('>>', item );
     return (
         <>
-
-
-
             { item.fieldGroupName ? (
                 <>
                     { item.fieldGroupName === `${type ? 'Post' : 'Page'}_Acfconstructor_Const_Editor` ? ( <Editor item={item} /> ) : null }
