@@ -42,14 +42,14 @@ var transporter = nodemailer.createTransport({
 
 function pause() {
   return new Promise((resolve, reject) => {
-    setTimeout(resolve, 500);
+    setTimeout(resolve, 1000);
   });
 }
 
 // send the email
 exports.handler = async (event, context) => {
   // Делаем паузу - 2сек.
-  await pause();
+
 
   const body = JSON.parse(event.body);
 
@@ -101,7 +101,7 @@ exports.handler = async (event, context) => {
 
 
 
-
+  await pause();
 
 
   let emailHtml='';
@@ -128,7 +128,6 @@ exports.handler = async (event, context) => {
 
     }
   });
-
 
 
   console.log('body >>>>', emailHtml)
