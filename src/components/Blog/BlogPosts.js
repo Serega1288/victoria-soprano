@@ -2,6 +2,7 @@ import React from 'react';
 import {graphql, useStaticQuery} from "gatsby";
 import BlogItem from "./BlogItem";
 import styled from 'styled-components';
+import {maxCol} from "../../function/SizeCol";
 
 const  BlogPosts = (props) => {
 
@@ -56,9 +57,21 @@ const BlogPost = styled.div`
             .blog-img {
                 padding-bottom: 102%;
             }
+            .blog-item-title {
+                font-size: 2rem;
+                @media(max-width: ${maxCol.sm}) {
+                    font-size: 1.5rem;
+                }
+            }
             &:first-child {
                 .blog-img {
                     padding-bottom: 50%;
+                }
+                .blog-item-title {
+                    font-size: 2.5rem;
+                    @media(max-width: ${maxCol.sm}) {
+                        font-size: 1.5rem;
+                    }
                 }
             }
         }
@@ -67,12 +80,24 @@ const BlogPost = styled.div`
         display: block;
         margin-bottom: 4rem;
         text-decoration: none;
+        position: relative;
+        
     }
     .blog-item-title {
-        
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.5);
+            z-index: 1;
+            min-height: 4rem;
+            margin: 3rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
     }
     .blog-img {
         padding-bottom: 100%;
-        background-position: center center;
+        background-position: top center;
     }
 `;

@@ -10,11 +10,11 @@ const  item = ({post, step}) => {
         background-size: cover;
         background-image: url(${img});
     `;
-
+    // ${step === 0 ? 'col-sm-8' : '' }
     return (
             <Link className={`blog-item ${step === 0 ? 'col-sm-8' : '' }`} to={`/blog/${post.slug}`}>
                 <ImageBG className="blog-img" />
-                <h3 className="blog-item-title text-center">{post.title}</h3>
+                <h2 className="blog-item-title text-center">{post.title}</h2>
             </Link>
     )
 };
