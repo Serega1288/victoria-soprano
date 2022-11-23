@@ -286,14 +286,18 @@ const Section = styled.section`
     .box-desc-2 {
        margin-top: 4rem;
         margin-bottom: 5rem; 
-        @media(max-width: ${maxCol.sm}) {
-            a {
-                margin-bottom: 2.5rem;
-            }
-        } 
         a:last-child {
             margin-left: 1rem;
         }
+        @media(max-width: ${maxCol.sm}) {
+            a {
+                margin-bottom: 2.5rem;
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+        } 
+        
     }
     .box-desc-1 {
         margin-top: 2.5rem;

@@ -76,7 +76,7 @@ const MenuTop = () => {
                     </div>
                     <div className="col-12 col-md-6 col-xl-5 d-flex align-items-center justify-content-center pos">
                         <div className="wrap">
-                            <ul className="menu ul-clear">
+                            <ul className="menu ul-clear d-flex flex-column-reverse">
                                 {allWpMenuItem.nodes.map(item => (
 
                                     <li key={item.id} className={ item.childItems.nodes && item.childItems.nodes.length > 0 ? 'parents' : '' } >
@@ -175,7 +175,7 @@ const WrapBoxMenuTop = styled.div`
       }
       .menu {  
         @media (max-width: ${maxCol.sm}) { 
-           margin-top: 2rem;
+           margin-top: 2rem; 
            margin-bottom: 2rem; 
         }
         text-align: center;
@@ -183,8 +183,8 @@ const WrapBoxMenuTop = styled.div`
             margin-top: 4rem;
             margin-bottom: 4rem;
             @media (max-width: ${maxCol.sm}) { 
-                margin-top: 1rem;
-                margin-bottom: 1rem;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
            }
         }
         [aria-current="page"] {

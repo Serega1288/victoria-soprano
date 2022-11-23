@@ -37,7 +37,7 @@ const  BlogPosts = (props) => {
     return (
         <section className="section">
             <BlogPost className="container">
-                <div className="row row-cols-2 row-cols-sm-3 box-blog-item">
+                <div className="row row-cols-1 row-cols-sm-3 box-blog-item">
                     {  posts.map((post, index) => (
                         <BlogItem key={post.id} step={index} post={post} />
                     ) ) }
@@ -66,6 +66,9 @@ const BlogPost = styled.div`
             &:first-child {
                 .blog-img {
                     padding-bottom: 50%;
+                    @media(max-width: ${maxCol.sm}) {
+                        padding-bottom: 102%;
+                    }
                 }
                 .blog-item-title {
                     font-size: 2.5rem;
