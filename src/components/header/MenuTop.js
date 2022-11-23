@@ -175,16 +175,16 @@ const WrapBoxMenuTop = styled.div`
       }
       .menu {  
         @media (max-width: ${maxCol.sm}) { 
-           margin-top: 4rem;
-           margin-bottom: 3rem;
+           margin-top: 2rem;
+           margin-bottom: 2rem; 
         }
         text-align: center;
         li {
             margin-top: 4rem;
             margin-bottom: 4rem;
             @media (max-width: ${maxCol.sm}) { 
-                margin-top: 1.6rem;
-                margin-bottom: 1.6rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
            }
         }
         [aria-current="page"] {
