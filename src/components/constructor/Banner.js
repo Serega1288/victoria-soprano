@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import {minCol} from "../../function/SizeCol";
+import {minCol, maxCol} from "../../function/SizeCol";
 import {Link} from "gatsby";
 
 const Banner = ( {item} ) => {
@@ -26,6 +26,9 @@ const Banner = ( {item} ) => {
             font-weight: 400;
             margin: 0;
             font-size: 6rem;
+            @media(max-width: ${maxCol.sm}) {
+                font-size: 5rem; 
+            }
             line-height: normal;
             text-align: center;
         }

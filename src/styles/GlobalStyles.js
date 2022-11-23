@@ -236,6 +236,9 @@ ul {
     
     &.style-4 {
         font-size: 2rem;
+        @media(max-width: ${maxCol.sm}) {
+            font-size: 1.6rem;
+        }
         border: 3px solid #86644b;
         padding: 1rem 3.3rem;
 

@@ -9,6 +9,7 @@ const CategoryTitle = ({item, breadcrumb}) => {
     return (
         <Section className="categoryTitle">
             <h1>{item}</h1>
+            <div className="text" dangerouslySetInnerHTML={{__html: item?.ACFcategory?.edit }} />
             <Breadcrumb item={breadcrumb} />
         </Section>
     )
