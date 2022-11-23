@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="22.11.2022/1">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Blog/BlogPosts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Products/Pinit.js" afterDir="false" />
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="23.11.2022/1">
+      <change afterPath="$PROJECT_DIR$/src/components/Blog/BlogItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Products/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Gallery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/IconList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/IconList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Meseger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Meseger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Blog/BlogPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Blog/BlogPosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/GlobalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalStyles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/blog.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,13 +108,7 @@
       <workItem from="1668804889725" duration="470000" />
       <workItem from="1669126816011" duration="15179000" />
       <workItem from="1669206450139" duration="143000" />
-    </task>
-    <task id="LOCAL-00001" summary="data new">
-      <created>1665393400359</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1665393400360</updated>
+      <workItem from="1669206261592" duration="10058000" />
     </task>
     <task id="LOCAL-00002" summary="data new">
       <created>1665592261653</created>
@@ -459,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669132031558</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="23.11.2022/1">
+      <created>1669206287416</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1669206287416</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +495,8 @@
     <MESSAGE value="18.11.2022/3" />
     <MESSAGE value="18.11.2022/4" />
     <MESSAGE value="22.11.2022/1" />
-    <option name="LAST_COMMIT_MESSAGE" value="22.11.2022/1" />
+    <MESSAGE value="23.11.2022/1" />
+    <option name="LAST_COMMIT_MESSAGE" value="23.11.2022/1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

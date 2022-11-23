@@ -69,7 +69,10 @@ img {
 .m-0 {
     margin:0;
 }
- 
+
+.text-center {
+    text-align: center;
+}
 
 .body {
     overflow: hidden;   
@@ -344,6 +347,7 @@ ul {
         }
     }
 }
+
 `;
 
 export default GlobalStyles;

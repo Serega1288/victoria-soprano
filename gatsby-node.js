@@ -61,8 +61,6 @@ exports.createPages = ({graphql, actions}) => {
 
     return graphql(`
         {
-          
-          
           allWpPost {
             nodes {
               slug
@@ -630,7 +628,7 @@ exports.createPages = ({graphql, actions}) => {
 
         results.data.page.nodes.forEach(item => {
 
-            //console.log('>>>', item);
+            //console.log('page >>>', item.template.templateName );
 
             if ( item.isFrontPage === true ) {
 
@@ -642,43 +640,50 @@ exports.createPages = ({graphql, actions}) => {
 
             } else {
 
-                createPage({
-                    path: `${item.slug}`,
-                    component:  pageTemplate,
-                    context: item,
-                })
-
+                if ( item.template.templateName === 'Page Blog') {
+                    createPage({
+                        path: '/blog/',
+                        component:  blogTemplate,
+                        context: item,
+                    })
+                } else {
+                    createPage({
+                        path: `${item.slug}`,
+                        component:  pageTemplate,
+                        context: item,
+                    })
+                }
             }
 
         })
 
 
-        // results.data.allWpPost.nodes.forEach(item => {
-        //
-        //     createPage({
-        //         path: `/blog/${item.slug}`,
-        //         component:  postTemplate,
-        //         context: item,
-        //     })
-        //
-        // });
-
-        results.data.allWpPost.nodes.forEach((post, index) => {
-            const  previous = index === posts.nodes.length - 1 ? null : posts.nodes[index + 1];
-            const  next = index === 0 ? null : posts.nodes[index - 1];
+        results.data.allWpPost.nodes.forEach(item => {
 
             createPage({
-                path: `/blog/${post.slug.current}`,
-                component: postTemplate,
-                context: {
-                    slug: post.slug.current,
-                    previous,
-                    next,
-                }
+                path: `/blog/${item.slug}`,
+                component:  postTemplate,
+                context: item,
             })
+
         });
 
-        createBlogPage( createPage, results.data.allWpPost )
+        // results.data.allWpPost.nodes.forEach((post, index) => {
+        //     const  previous = index === posts.nodes.length - 1 ? null : posts.nodes[index + 1];
+        //     const  next = index === 0 ? null : posts.nodes[index - 1];
+        //
+        //     createPage({
+        //         path: `/blog/${post.slug.current}`,
+        //         component: postTemplate,
+        //         context: {
+        //             slug: post.slug.current,
+        //             previous,
+        //             next,
+        //         }
+        //     })
+        // });
+        //
+        // createBlogPage( createPage, results.data.allWpPost )
 
 
         results.data.allWpProductCategory.nodes.forEach(category => {
