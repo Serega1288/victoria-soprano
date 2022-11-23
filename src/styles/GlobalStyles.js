@@ -233,6 +233,26 @@ ul {
             display: block;
         }
     }
+    
+    &.style-4 {
+        font-size: 2rem;
+        border: 3px solid #86644b;
+        padding: 1rem 3.3rem;
+
+        background-color: #86644b;
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        text-align: center;
+        &:hover, &:focus { 
+            border: 3px solid #1a0f07;
+            background-color: #1a0f07;
+            color: #fff;
+        }
+         @media(max-width: ${maxCol.sm}) {
+            display: block;
+        }
+    }
 } 
 
 .wrap-table {

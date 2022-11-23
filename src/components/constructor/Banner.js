@@ -14,6 +14,13 @@ const Banner = ( {item} ) => {
         background-image: url(${ imgUrlMobile });
         background-size: cover;
         background-position: top center;
+        .BoxBtn {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            a {
+                margin: 1rem;
+            }
+        }
         .BannerTitle {
             color: #ffe4d0;
             font-weight: 400;
@@ -42,10 +49,14 @@ const Banner = ( {item} ) => {
     return (
         <>
             <div className={`${ active ? ' active-block ' : '' } status-anim`}></div>
-            <Section style={{opacity: 0}} className={`anim banner d-flex justify-content-center align-items-center`}>
+            <Section style={{opacity: 0}} className={`anim banner d-flex justify-content-center align-items-center flex-column`}>
                 <h1 className="container BannerTitle">
                     {item.title}
                 </h1>
+                <p className="BoxBtn d-block d-md-flex align-items-center justify-content-center ">
+                    <a className="btn style-4" href="/product-category/victoria-soprano/">Victoria Soprano Collection</a>
+                    <a className="btn style-4" href="/product-category/katherine-joyce/">Katherine Joyce Collection</a>
+                </p>
             </Section>
         </>
     )
