@@ -136,7 +136,8 @@ const Section = styled.section`
         left: auto;
     }
     .zoom-image {
-        cursor: pointer;
+        padding-top: 150%;
+        cursor: pointer;  
         position: relative;
         &:before {
             position: absolute;
@@ -147,6 +148,15 @@ const Section = styled.section`
             width: 4rem;
             height: 4rem;
             background-image: url(${searchSVG});
+        }
+        img {
+           object-fit: cover;
+            position: absolute;
+            height: 100%;
+            width: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
     .zoom-image {
@@ -281,7 +291,9 @@ const Section = styled.section`
                 margin-bottom: 2.5rem;
             }
         } 
-        
+        a:last-child {
+            margin-left: 1rem;
+        }
     }
     .box-desc-1 {
         margin-top: 2.5rem;

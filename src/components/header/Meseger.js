@@ -50,7 +50,7 @@ const Meseger = () => {
                                 <a
                                     className="anim d-flex align-items-center justify-content-center" target="_blank" href={item.url} >
                                     <img
-                                        className="anim" src={item.icon.localFile.publicURL}
+                                        className="anim" src={item.icon?.localFile.publicURL}
                                     />
                                 </a>
                             </li>

@@ -3,9 +3,12 @@ import Layout from '../components/Layout';
 import {graphql, useStaticQuery} from "gatsby";
 import Const from "../components/constructor/Constructor";
 
+
 const FrontPage = (props) => {
-    ///console.log('dsds', props.location.href)
-    const data = useStaticQuery(graphql`  
+    const { data, pageContext } = props;
+    const posts = data.posts.nodes;  
+
+    const dataUseStatic = useStaticQuery(graphql`  
         {
             wp { 
                 allSettings { 
@@ -17,8 +20,10 @@ const FrontPage = (props) => {
     `);
     const list = props.pageContext.ACFconstructor.const;
     return (
-        <Layout title={ props.pageContext.title } desc={ data.wp.allSettings.generalSettingsTitle } >
+        <Layout title={ props.pageContext.title } desc={ dataUseStatic.wp.allSettings.generalSettingsTitle } >
             <Const href={props.location.href} props={list} />
+            {/*<BlogPosts posts={posts} />*/}
+            {/*<Pagination pageContext={pageContext} />*/}
         </Layout>
     );
 };

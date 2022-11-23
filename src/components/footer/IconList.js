@@ -33,9 +33,9 @@ const IconList = () => {
                     <a className="anim d-flex align-items-center justify-content-center" target="_blank" href={item.url} >
                         <img
                             className="anim"
-                            height={item.icon.height}
-                            width={item.icon.width}
-                            src={item.icon.localFile.publicURL}
+                            height={item.icon?.height}
+                            width={item.icon?.width}
+                            src={item.icon?.localFile.publicURL}
                         />
                     </a>
                 </li>

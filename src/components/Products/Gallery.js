@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useEffect } from "react";
 import YouTube, { YouTubeProps } from 'react-youtube';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,7 +13,8 @@ import "swiper/css/thumbs";
 
 // import required modules
 import {FreeMode, Navigation, Thumbs, Lazy, Pagination} from "swiper";
-import {Script} from "gatsby";
+
+import Pinit from './Pinit';
 
 const Gallery = (prop) => {
     //console.log('page product gallery', prop);
@@ -75,13 +76,51 @@ const Gallery = (prop) => {
         console.log('s>>', s)
     }
 
+    // const addExternalScript = (url, callback) => {
+    //     const script = document.createElement('script');
+    //     script.src = url;
+    //     script.async=true;
+    //     script.onload = callback;
+    //     document.body.appendChild(script);
+    // };
+    //
+    // useEffect(()=>{
+    //     addExternalScript("https://assets.pinterest.com/js/pinit.js")
+    // },[])
+
+    // useLayoutEffect( () => {
+    //
+    //     const scripts = document.getElementsByTagName('script')
+    //     const scriptI = Object.values(scripts).findIndex((val) => {
+    //         return (
+    //             //val.src.match('https://assets.pinterest.com/js/pinit.js')
+    //             !!val.src.match(/https:\/\/assets.pinterest.com\/js\/pinit.js/gi)
+    //         )
+    //
+    //     })
+    //
+    //     if (scriptI !== -1)
+    //         scripts[scriptI].parentNode.removeChild(scripts[scriptI])
+    //
+    //     console.log('>>>', Object.values(scripts).map(s => s.src) , scriptI , scripts[scriptI] )
+    //
+    //
+    //
+    //
+    // },[])
+
+    // useLayoutEffect(()=>{
+    //     //document.getElementById('pinit').setAttribute('src', 'https://assets.pinterest.com/js/pinit.js')
+    //     document.getElementById('pinit').src = 'https://assets.pinterest.com/js/pinit.js'
+    // }, [])
+
     return (
         <>
-            {/*<Script*/}
-            {/*    src="https://assets.pinterest.com/js/pinit.js"*/}
-            {/*    onLoad={() => console.log("success")}*/}
-            {/*    onError={() => console.log("sadness")}*/}
-            {/*/>*/}
+            <Pinit />
+
+
+            {/*<script id="pinit" src="https://assets.pinterest.com/js/pinit.js" />*/}
+
             <Swiper
                 style={{
                     "--swiper-navigation-color": "#fff",

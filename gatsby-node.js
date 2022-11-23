@@ -31,10 +31,30 @@ const path = require('path');
 const frontTemplate = path.resolve('./src/templates/FrontPage.js')
 const pageTemplate = path.resolve(`./src/templates/page.js`)
 const postTemplate = path.resolve(`./src/templates/post.js`)
-
+const blogTemplate = path.resolve(`./src/templates/blog.js`)
 const categoryProductTemplate = path.resolve(`./src/templates/CategoryProduct.js`)
 const productTemplate = path.resolve(`./src/templates/Product.js`)
 
+
+const createBlogPage = (createPage, posts) => {
+
+    const { nodes } = posts;
+    const postsPerPage = 4;
+    const numPages = Math.ceil(nodes.length / postsPerPage);
+
+    Array.from({length: numPages}).forEach((_,i) =>{
+        createPage({
+            path: i === 0 ? '/blog/' : `/blog/page/${i + 1}`,
+            component: blogTemplate,
+            context: {
+                limit: postsPerPage,
+                skip: i * postsPerPage,
+                numPages,
+                currentPage: i + 1,
+            }
+        })
+    })
+}
 
 exports.createPages = ({graphql, actions}) => {
     const {createPage} = actions;
@@ -633,15 +653,32 @@ exports.createPages = ({graphql, actions}) => {
         })
 
 
-        results.data.allWpPost.nodes.forEach(item => {
+        // results.data.allWpPost.nodes.forEach(item => {
+        //
+        //     createPage({
+        //         path: `/blog/${item.slug}`,
+        //         component:  postTemplate,
+        //         context: item,
+        //     })
+        //
+        // });
+
+        results.data.allWpPost.nodes.forEach((post, index) => {
+            const  previous = index === posts.nodes.length - 1 ? null : posts.nodes[index + 1];
+            const  next = index === 0 ? null : posts.nodes[index - 1];
 
             createPage({
-                path: `/blog/${item.slug}`,
-                component:  postTemplate,
-                context: item,
+                path: `/blog/${post.slug.current}`,
+                component: postTemplate,
+                context: {
+                    slug: post.slug.current,
+                    previous,
+                    next,
+                }
             })
-
         });
+
+        createBlogPage( createPage, results.data.allWpPost )
 
 
         results.data.allWpProductCategory.nodes.forEach(category => {
