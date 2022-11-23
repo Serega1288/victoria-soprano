@@ -14,7 +14,7 @@ import Contactdata from "./Contactdata";
 import Contactform from "./ContactForm";
 
 const Const = ( { item, href, type } ) => {
-    console.log('>>', item );
+    //console.log('>>', item );
     return (
         <>
             { item.fieldGroupName ? (

@@ -7,7 +7,7 @@ const CategoryTitle = ({item, breadcrumb}) => {
     // const item = props.theme.pageContext;
 
     const text = breadcrumb?.theme?.pageContext?.ACFcategory?.edit;
-    console.log('catTitleBlock >>', breadcrumb );
+    //console.log('catTitleBlock >>', breadcrumb );
     return (
         <Section className="categoryTitle">
             <h1>{item}</h1>

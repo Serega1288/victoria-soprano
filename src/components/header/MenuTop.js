@@ -180,8 +180,8 @@ const WrapBoxMenuTop = styled.div`
         }
         text-align: center;
         li {
-            margin-top: 4rem;
-            margin-bottom: 4rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
             @media (max-width: ${maxCol.sm}) { 
                 margin-top: 0.5rem;
                 margin-bottom: 0.5rem;

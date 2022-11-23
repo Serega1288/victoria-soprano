@@ -22,7 +22,7 @@ const FrontPage = (props) => {
     const generalDescription = data.wp.allSettings.generalSettingsDescription;
 
 
-    console.log('dsds >>>', data.wp.allSettings)
+    //console.log('dsds >>>', data.wp.allSettings)
 
     return (
         <>

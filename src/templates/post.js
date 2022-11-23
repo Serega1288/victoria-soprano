@@ -6,7 +6,7 @@ import Const from "../components/constructor/Constructor";
 const FrontPage = (props) => {
     ///console.log('dsds', props.location.href)
     const data = useStaticQuery(graphql` 
-        {
+        { 
             wp {  
                 allSettings { 
                     generalSettingsTitle 

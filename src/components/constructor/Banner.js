@@ -27,7 +27,7 @@ const Banner = ( {item} ) => {
             margin: 0;
             font-size: 6rem;
             @media(max-width: ${maxCol.sm}) {
-                font-size: 5rem; 
+                font-size: 4.5rem; 
             }
             line-height: normal;
             text-align: center;
@@ -58,7 +58,7 @@ const Banner = ( {item} ) => {
                 </h1>
                 <p className="BoxBtn d-block d-md-flex align-items-center justify-content-center ">
                     <Link className="btn style-4" to="/collection/victoria-soprano/">Victoria Soprano Collection</Link>
-                    <Link className="btn style-4" to="/collection/katherine-joyce/">Katherine Joyce Collection</Link>
+                    {/*<Link className="btn style-4" to="/collection/katherine-joyce/">Katherine Joyce Collection</Link>*/}
                 </p>
             </Section>
         </>
