@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import {minCol} from "../../function/SizeCol";
-
+import {Link} from "gatsby";
 
 const Banner = ( {item} ) => {
     //console.log('item >>>', item);
@@ -54,8 +54,8 @@ const Banner = ( {item} ) => {
                     {item.title}
                 </h1>
                 <p className="BoxBtn d-block d-md-flex align-items-center justify-content-center ">
-                    <a className="btn style-4" href="/product-category/victoria-soprano/">Victoria Soprano Collection</a>
-                    <a className="btn style-4" href="/product-category/katherine-joyce/">Katherine Joyce Collection</a>
+                    <Link className="btn style-4" href="/product-category/victoria-soprano/">Victoria Soprano Collection</Link>
+                    <Link className="btn style-4" href="/product-category/katherine-joyce/">Katherine Joyce Collection</Link>
                 </p>
             </Section>
         </>
