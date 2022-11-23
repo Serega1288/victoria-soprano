@@ -57,8 +57,8 @@ const Banner = ( {item} ) => {
                     {item.title}
                 </h1>
                 <p className="BoxBtn d-block d-md-flex align-items-center justify-content-center ">
-                    <Link className="btn style-4" href="/product-category/victoria-soprano/">Victoria Soprano Collection</Link>
-                    <Link className="btn style-4" href="/product-category/katherine-joyce/">Katherine Joyce Collection</Link>
+                    <Link className="btn style-4" to="/collection/victoria-soprano/">Victoria Soprano Collection</Link>
+                    <Link className="btn style-4" to="/collection/katherine-joyce/">Katherine Joyce Collection</Link>
                 </p>
             </Section>
         </>
