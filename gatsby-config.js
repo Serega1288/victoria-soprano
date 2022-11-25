@@ -12,6 +12,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        includeInDevelopment: true, // optional parameter to include script in development
+        id: process.env.YOUR_HOTJAR_ID,
+        sv: process.env.YOUR_HOTJAR_SNIPPET_VERSION,
+      },
+    },
+    {
       resolve: "gatsby-plugin-anchor-links",
       options: {
         offset: -133
