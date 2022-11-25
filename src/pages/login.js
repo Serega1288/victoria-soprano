@@ -1,32 +1,155 @@
 import React from 'react';
 import Layout from '../components/Layout';
-//import { useLogin } from "gatsby-theme-headless-wordpress-admin";
-
+import useForm from "../function/useFormLogin";
+import styled from 'styled-components';
+import Title from '../components/constructor/Title'
+import {minCol, maxCol} from "../function/SizeCol";
+import {Link} from "gatsby";
 
 const LoginPage = () => {
 
 
-    // const [sendUserLogin, { data, error, loading, called }] = useLogin({
-    //     onCompleted: (data) => {
-    //         console.log({ data });
-    //     },
-    //     onError: (err) => {
-    //         console.log({ err });
-    //     },
-    // });
+    const { values, captureInput, submitForm, isLoading, error, message } = useForm();
 
     return (
-        <Layout title="Login">
-            <div className="Login d-flex justify-content-center align-items-center flex-column">
-                {/*<button*/}
-                {/*    onClick={() =>*/}
-                {/*        sendUserLogin({*/}
-                {/*            variables: { username: "your_username", password: "your_password" },*/}
-                {/*        })*/}
-                {/*    }*/}
-                {/*/>*/}
+        <Layout title="Login" desc="desc">
+            <div className="Login container">
+
+                    <BoxForm className="sectionHeight">
+                        <Title item={{title: "Sign in"}} />
+                        <form onSubmit={submitForm}>
+
+                                <input type="garbage"
+                                       name="garbage"
+                                       disabled={isLoading}
+                                       value={values.garbage}
+                                       onChange={captureInput}
+                                       isLoading={isLoading}
+                                       className="garbage"
+                                />
+
+                            <label>
+                                <input type="email"
+                                       required="required"
+                                       name="email"
+                                       disabled={isLoading}
+                                       value={values.email}
+                                       onChange={captureInput}
+                                       isLoading={isLoading}
+                                       placeholder="Email"
+                                />
+                            </label>
+                            <label>
+                                <input type="password"
+                                       required="required"
+                                       name="password"
+                                       disabled={isLoading}
+                                       value={values.password}
+                                       onChange={captureInput}
+                                       isLoading={isLoading}
+                                       placeholder="Password"
+                                />
+                                <span className="row">
+                                    <span className="col">
+                                         <Link className="link-form" to="/register/">Register</Link>
+                                    </span>
+                                    <span className="col-auto">
+                                        <Link className="link-form" to="/restart-pass/">Forgot your password ?</Link>
+                                    </span>
+                                </span>
+
+                            </label>
+                            <button disabled={isLoading} type="submit" className="style-3 btn">
+                                { isLoading ? 'Log into account...' :  'Log into account'  }
+                            </button>
+                        </form>
+
+                        <div>
+
+                            {error ?  error  : ''}
+                            {message ? message  : ''}
+                        </div>
+                    </BoxForm>
+
             </div>
         </Layout>
     );
 };
 export default LoginPage;
+
+
+const BoxForm = styled.div`
+    overflow: hidden;
+    &.sectionHeight {
+        min-height: calc(100vh - 13.4rem);
+        @media(max-width:${maxCol.sm}) { 
+            min-height: calc(100vh - 8.8rem);
+        }
+    }
+     max-width: 75rem;
+     margin: auto;
+     button {
+        min-height: 6rem;
+        width: 100%;
+        display: block;
+        max-width: calc(100% - 5rem*2);
+        margin-left: auto;
+        margin-right: auto;
+        @media(max-width:${maxCol.sm}) { 
+            min-height: 5rem;
+            max-width: 100%; 
+        }
+     }
+     .link-form {
+        color: #000000;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        display: inline-block;
+        text-decoration: none;
+        position: relative;
+        &:after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background: #000;
+            margin-top: 1px;
+            display: block;
+        }
+        &:hover {
+            color: #86644B;
+            &:after {
+                background: #86644B;
+            }
+        }
+     }
+     .title { 
+        @media(min-width:${minCol.sm}) { 
+            margin-bottom: 5rem !important; 
+        }
+     }
+     label {
+        width: 100%;
+        display: block;
+        margin-bottom: 5rem;
+        @media(max-width:${maxCol.sm}) { 
+            margin-bottom: 2.5rem;
+        }
+     } 
+     input {
+        width: 100%;
+        display: block;
+        height: 8rem;
+        border: 1px solid #000000;
+        padding: 0 2.5rem;
+        font-size: 3rem;
+        text-transform: uppercase;
+        @media(max-width:${maxCol.sm}) { 
+            height: 5rem;
+            font-size: 1.8rem;
+        }
+        &::placeholder {
+            color: #C4C4C4;
+            font-weight: 400;
+        }
+     }
+`

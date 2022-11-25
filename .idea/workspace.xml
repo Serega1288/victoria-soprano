@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="24.11.2022/1">
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Editor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/sendLogin/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/sendLogin/sendLogin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/function/AuthLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/function/useFormLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Banner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/ContactForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/MenuTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/MenuTop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/GlobalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalStyles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +48,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/work/project/soprano/frontend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/work/project/soprano/victoria-soprano/functions/sendLogin&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -49,9 +61,14 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\work\project\soprano\victoria-soprano\functions\sendLogin" />
+      <recent name="C:\work\project\soprano\victoria-soprano\src\components" />
       <recent name="C:\work\project\soprano\victoria-soprano\src\assets\img" />
       <recent name="C:\work\project\soprano\victoria-soprano\src\function" />
       <recent name="C:\work\project\soprano\victoria-soprano" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\work\project\soprano\victoria-soprano\src\function" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -103,14 +120,9 @@
       <workItem from="1668804889725" duration="470000" />
       <workItem from="1669126816011" duration="15179000" />
       <workItem from="1669206450139" duration="143000" />
-      <workItem from="1669206261592" duration="22321000" />
-    </task>
-    <task id="LOCAL-00013" summary="data new">
-      <created>1666681383520</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1666681383520</updated>
+      <workItem from="1669206261592" duration="46699000" />
+      <workItem from="1669355424734" duration="1535000" />
+      <workItem from="1669411021930" duration="446000" />
     </task>
     <task id="LOCAL-00014" summary="data new 2">
       <created>1666682034340</created>
@@ -448,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669240998448</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="24.11.2022/1">
+      <created>1669241361734</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1669241361734</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,6 +519,11 @@
           <url>file://$PROJECT_DIR$/functions/sendEmail/sendEmail.js</url>
           <line>63</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/pages/login.js</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

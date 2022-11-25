@@ -72,14 +72,7 @@ export default ContactForm;
 
 const Section = styled.section` 
     margin-top: -1px;
-    
-    .garbage {
-        position: absolute;
-       height: 0 !important; 
-       opacity: 0 !important;
-       z-index: -1000 !important;
-    }
-    
+ 
     .wrap-tabs-contact {
          
     }

@@ -301,7 +301,13 @@ ul {
              
         }
 }      
-
+.garbage {
+        position: absolute;
+       height: 0 !important; 
+       width: 0 !important; 
+       opacity: 0 !important;
+       z-index: -1000 !important;
+}
 .block-title {
     color: #1a0f07;
     font-family: 'sfPro';
