@@ -123,15 +123,40 @@ exports.handler = async (event, context) => {
   //       console.error(error, 'error >>')
   //     })
 
+    console.log('body >>', body);
+
       let date = '';
+      let m='';
 
       axios({
         method: 'get',
-        url: `${process.env.URL_AJAX}?action=authLogin&token=${process.env.AUTH_TOKEN}`,
+        url: `${process.env.URL_AJAX}?action=authLogin&token=${process.env.AUTH_TOKEN}&user=${body.email}&pass=${body.password}`,
       })
       .then(function (response) {
-           date = response.data.replace(/\D/g,'');
+           date = response.data.split('{')[1].split('}')[0];
            console.log('fine >>>',  date)
+
+
+
+            if ( date === '01' || date === '02' ) {
+              m = 'Sorry, but an error has occurred, please contact technical support. Error code:';
+            }
+
+            if ( date == '03' ) {
+              m = 'Mail not found. Write another one or register.';
+
+            }
+
+            if ( date === '04' ) {
+              m = 'Invalid password.';
+            }
+
+            if ( date[0] + date[1] === '1_' ) {
+              m = 'You have successfully logged in.';
+            }
+
+             console.log('Mail >>', m);
+
       }).catch((error) => {
            date = error;
            console.error(error, 'error >>>')
@@ -238,6 +263,6 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ message: 'Transaction successful!', result: date }),
+    body: JSON.stringify({ message: m, result: date }),
   };
 };

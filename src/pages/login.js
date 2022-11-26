@@ -37,6 +37,7 @@ const LoginPage = () => {
                                        onChange={captureInput}
                                        isLoading={isLoading}
                                        placeholder="Email"
+                                       className={ message?.result === '03' ? ' error' : '' }
                                 />
                             </label>
                             <label>
@@ -48,6 +49,7 @@ const LoginPage = () => {
                                        onChange={captureInput}
                                        isLoading={isLoading}
                                        placeholder="Password"
+                                       className={ message?.result === '04' ? ' error' : '' }
                                 />
                                 <span className="row">
                                     <span className="col">
@@ -64,9 +66,9 @@ const LoginPage = () => {
                             </button>
                         </form>
 
-                        <div>
+                        <div className={`statusInfo ${error || message ?  'active'  : ''}`}>
                             {error ?  error  : ''}
-                            {message ? message  : ''}
+                            {message ? message?.message  : ''}
                         </div>
                     </BoxForm>
 
@@ -142,7 +144,6 @@ const BoxForm = styled.div`
         border: 1px solid #000000;
         padding: 0 2.5rem;
         font-size: 3rem;
-        text-transform: uppercase;
         @media(max-width:${maxCol.sm}) { 
             height: 5rem;
             font-size: 1.8rem;

@@ -51,8 +51,7 @@ const useForm = () => {
                 password: '',
                 garbage: ''
             });
-            setMessage('Thank you! <br> Message sent successfully. <br> We will contact you shortly.');
-
+            setMessage(responseText);
         }
 
         //console.log(' values >>>', values);
