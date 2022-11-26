@@ -65,11 +65,11 @@ const LoginPage = () => {
                         </form>
 
                         <div>
-
                             {error ?  error  : ''}
                             {message ? message  : ''}
                         </div>
                     </BoxForm>
+
 
             </div>
         </Layout>

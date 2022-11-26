@@ -105,22 +105,69 @@ exports.handler = async (event, context) => {
   //     })
 
 
-  axios({
-    method: 'POST',
-    responseType: 'json',
-    url: `${process.env.URL_AJAX}?action=authLogin&token=${process.env.AUTH_TOKEN}`,
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  }).then((res) => {
+  // axios({
+  //   method: 'POST',
+  //   responseType: 'json',
+  //   url: `${process.env.URL_AJAX}?action=authLogin&token=${process.env.AUTH_TOKEN}`,
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //   }
+  // })
+  // .then((res) => {
+  //
+  //   // JSON.parse(res.data)
+  //   console.log(res, 'ok res')
+  //   //console.log(res)
+  // })
+  //     .catch((error) => {
+  //       console.error(error, 'error >>')
+  //     })
 
-    // JSON.parse(res.data)
-    console.log(res, 'ok res')
-    //console.log(res)
-  })
-      .catch((error) => {
-        console.error(error, 'error >>')
+      let date = '';
+
+      axios({
+        method: 'get',
+        url: `${process.env.URL_AJAX}?action=authLogin&token=${process.env.AUTH_TOKEN}`,
       })
+      .then(function (response) {
+           date = response.data.replace(/\D/g,'');
+           console.log('fine >>>',  date)
+      }).catch((error) => {
+           date = error;
+           console.error(error, 'error >>>')
+      });
+
+
+  // \x05\x07�{
+
+  //  \x03
+
+
+  // axios({
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //   url: `${process.env.URL_AJAX}?action=authLogin&token=${process.env.AUTH_TOKEN}`,
+  //   data: {
+  //     action: 'authLogin',
+  //     token: process.env.AUTH_TOKEN
+  //   },
+  //   responseType: 'json'
+  // }).then((res) => {
+  //
+  //   // JSON.parse(res.data)
+  //   console.log(res, 'ok res')
+  //   //console.log(res)
+  // })
+  //     .catch((error) => {
+  //       console.error(error, 'error >>')
+  //     })
+
+  // fetch(`${process.env.URL_AJAX}?action=authLogin&token=${process.env.AUTH_TOKEN}`)
+  //     .then(response => response.json())
+  //     .then(data => console.log(data));
+
+
+
 
   // axios({
   //   method: 'GET',
@@ -191,6 +238,6 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ message: 'Transaction successful!' }),
+    body: JSON.stringify({ message: 'Transaction successful!', result: date }),
   };
 };

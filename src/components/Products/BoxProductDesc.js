@@ -61,7 +61,7 @@ const BoxProductDesc = ({item}) => {
                     </Link>
                     <div className="a">
                         <img src={iconWois} alt=""/>
-                        <span onClick={clickBtnMessege}>Contact us</span>
+                        <span className="d-flex justify-content-center align-items-center flex-column" onClick={clickBtnMessege}>Contact us</span>
                     </div>
                 </div>
                 <div className="d-sm-flex align-items-center justify-content-between box-desc-2">

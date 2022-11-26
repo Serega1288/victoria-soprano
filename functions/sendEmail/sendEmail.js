@@ -42,7 +42,7 @@ var transporter = nodemailer.createTransport({
 
 function pause() {
   return new Promise((resolve, reject) => {
-    setTimeout(resolve, 1000);
+    setTimeout(resolve, 2000);
   });
 }
 

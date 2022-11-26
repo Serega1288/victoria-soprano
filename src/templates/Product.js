@@ -306,6 +306,7 @@ const Section = styled.section`
             margin-right: 0.8rem;
         }
         .a {
+            
             cursor: pointer;
             color: #000000;
             text-decoration: none;
