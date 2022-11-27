@@ -28,11 +28,11 @@ const axios = require('axios')
 // });
 
 var transporter = nodemailer.createTransport({
-  host: "mail.adm.tools",
-  port: 465,
+  host: process.env.MAIL_HOST,
+  port: process.env.MAIL_PORT,
   auth: {
-    user: "support@victoriasoprano.com",
-    pass: "~p!uy83GC;E6",
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS,
   },
 });
 
