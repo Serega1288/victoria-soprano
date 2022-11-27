@@ -4,6 +4,7 @@ import React from 'react';
 //import { Formik, Form, Field } from 'formik'
 import Layout from '../components/Layout';
 import {graphql, useStaticQuery} from "gatsby";
+import {instanceAuthService} from "../function/auth";
 //import {maxCol} from "../function/SizeCol"; w
 //import styled from "styled-components";
 
@@ -33,6 +34,11 @@ const SearchPage = () => {
         <Layout title="Seacrh"  desc={ data.wp.allSettings.generalSettingsTitle } >
             <div className="page-404 d-flex justify-content-center align-items-center flex-column">
                 <h1>SearchPage</h1>
+                {instanceAuthService.isLogined()}
+
+                {/*{ typeof window !== 'undefined' && localStorage.getItem('user') }*/}
+
+                {/*{console.log('instanceAuthService.isLogined', instanceAuthService.isLogined)}*/}
                 {/*<Formik*/}
                 {/*    initialValues={{ query: '' }}*/}
                 {/*    onSubmit={(values, { setSubmitting }) => {*/}

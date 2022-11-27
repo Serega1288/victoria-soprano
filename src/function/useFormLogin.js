@@ -1,5 +1,6 @@
 import {useState} from "react";
-
+import {instanceAuthService} from "./auth";
+import {navigate} from "gatsby";
 
 const useForm = () => {
     const [values, setValues] = useState({password: '', email: '', garbage: ''});
@@ -38,6 +39,18 @@ const useForm = () => {
 
         console.log('responseText >>>', responseText);
 
+        // const handleLogin =  async () => {
+        //     //request to natify
+        //
+        //     const user = {
+        //         name: message?.result
+        //     }
+        //
+        //     instanceAuthService.saveUser(user)
+        //     navigate('/search')
+        // }
+
+
         // 2. перевіряємо відповідь від сервера
         if (res.status >= 400 && res.status < 600 ) {
             setIsLoading(false);
@@ -52,6 +65,20 @@ const useForm = () => {
                 garbage: ''
             });
             setMessage(responseText);
+
+            console.log('ddd', responseText.result )
+
+            if ( responseText.result[0] + responseText?.result[1] === '1_' ) {
+
+                const user = {
+                    name: responseText?.result
+                }
+                instanceAuthService.saveUser(user)
+                navigate('/search')
+
+            }
+
+
         }
 
         //console.log(' values >>>', values);

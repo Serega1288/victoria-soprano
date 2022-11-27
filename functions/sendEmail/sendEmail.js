@@ -28,11 +28,11 @@ const axios = require('axios')
 // });
 
 var transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
+  host: "mail.adm.tools",
   port: 465,
   auth: {
-    user: "info@victoriasoprano.com",
-    pass: "U7=3rZ*q8",
+    user: "support@victoriasoprano.com",
+    pass: "~p!uy83GC;E6",
   },
 });
 
@@ -137,8 +137,8 @@ exports.handler = async (event, context) => {
   // });
 
   const mailOptions = {
-    from: 'Victoria Soprano Group <info@victoriasoprano.com>',
-    to: `<${body.email}>`,
+    from: 'Victoria Soprano Group <support@victoriasoprano.com>',
+    to: `<info@victoriasoprano.com>`,
     subject: body.title,
     html: emailHtml,
   };

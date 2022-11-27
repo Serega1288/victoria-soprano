@@ -1,15 +1,22 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Layout from '../components/Layout';
 import useForm from "../function/useFormLogin";
 import styled from 'styled-components';
 import Title from '../components/constructor/Title'
 import {minCol, maxCol} from "../function/SizeCol";
-import {Link} from "gatsby";
+import {Link, navigate} from "gatsby";
+
+
 
 const LoginPage = () => {
 
 
     const { values, captureInput, submitForm, isLoading, error, message } = useForm();
+
+    // useEffect(()=>{
+    //     //message?.result[0] + message?.result[1] ? handleLogin() : ''
+    //     console.log('instanceAuthService', message?.result[0], instanceAuthService.isLogined );
+    // },[])
 
     return (
         <Layout title="Login" desc="desc">
@@ -37,7 +44,7 @@ const LoginPage = () => {
                                        onChange={captureInput}
                                        isLoading={isLoading}
                                        placeholder="Email"
-                                       className={ message?.result === '03' ? ' error' : '' }
+                                       //className={ message?.result === '03' ? ' error' : '' }
                                 />
                             </label>
                             <label>
@@ -49,7 +56,7 @@ const LoginPage = () => {
                                        onChange={captureInput}
                                        isLoading={isLoading}
                                        placeholder="Password"
-                                       className={ message?.result === '04' ? ' error' : '' }
+                                       //className={ message?.result === '04' ? ' error' : '' }
                                 />
                                 <span className="row">
                                     <span className="col">
@@ -66,10 +73,12 @@ const LoginPage = () => {
                             </button>
                         </form>
 
-                        <div className={`statusInfo ${error || message ?  'active'  : ''}`}>
+                        <h3 className={`
+                        statusInfo text-center ${error || message ?  ' active '  : ''} 
+                        ${message?.result === '01' || message?.result === '02' || message?.result === '03' || message?.result === '04' ?  'error'  : 'done'} `}>
                             {error ?  error  : ''}
                             {message ? message?.message  : ''}
-                        </div>
+                        </h3>
                     </BoxForm>
 
 
@@ -90,6 +99,25 @@ const BoxForm = styled.div`
     }
      max-width: 75rem;
      margin: auto;
+     
+     .statusInfo {
+        margin: 4rem auto;
+        max-width: 60rem;
+        display: none;
+        padding: 2rem ;
+        color: #fff;
+        &.error {
+            background: #ffe4d0;
+            color: #1a0f07;
+        }
+        &.done {
+            background: #1a0f07;
+        }
+        &.active {
+            display: block;
+        }
+     }
+     
      button {
         min-height: 6rem;
         width: 100%;
@@ -147,6 +175,9 @@ const BoxForm = styled.div`
         @media(max-width:${maxCol.sm}) { 
             height: 5rem;
             font-size: 1.8rem;
+        }
+        &.error {
+            border-color: #A12A2E; 
         }
         &::placeholder {
             color: #C4C4C4;
