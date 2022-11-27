@@ -168,6 +168,19 @@ ul {
         bottom:0;
     }
 } 
+
+.alignleft {
+    float: left;
+    margin-right: 7rem;
+    margin-bottom: 2rem; 
+    margin-top: 2rem;
+    @media (max-width: ${maxCol.md}) { 
+       float: none;
+       display: block;
+       text-align: center;
+       margin-right: 0rem;
+    } 
+}
  
 .btn {
     cursor: pointer; 
