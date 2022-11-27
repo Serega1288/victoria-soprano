@@ -1,9 +1,10 @@
 import {useState} from "react";
+import {navigate} from "gatsby";
 
 
 
 
-const useForm = (formInputs) => {
+const useForm = (formInputs , numberForm) => {
     const [values, setValues] = useState(formInputs);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -53,6 +54,10 @@ const useForm = (formInputs) => {
                 garbage: ''
             });
             setMessage('Thank you! <br> Message sent successfully. <br> We will contact you shortly.');
+
+            setTimeout(function () {
+                navigate(`#statusSend-${numberForm}`)
+            }, 500);
 
         }
 

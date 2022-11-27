@@ -171,6 +171,7 @@ ul {
 
 .alignleft {
     float: left;
+    max-width: 50%;
     margin-right: 7rem;
     margin-bottom: 2rem; 
     margin-top: 2rem;
@@ -178,7 +179,8 @@ ul {
        float: none;
        display: block;
        text-align: center;
-       margin-right: 0rem;
+       margin-right: 0rem; 
+       max-width: 100%;
     } 
 }
  

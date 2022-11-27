@@ -28,7 +28,9 @@ const ContactFormItem = ( { item, ind, c } ) => {
     }
    // console.log('ss', formInputs)
 
-    const { values, captureInput, submitForm, isLoading, error, message } = useForm(formInputs);
+
+
+    const { values, captureInput, submitForm, isLoading, error, message } = useForm(formInputs, ind);
 
     const ImageBG = styled.div`
         background-size: cover;
@@ -54,7 +56,7 @@ const ContactFormItem = ( { item, ind, c } ) => {
         }`}>
             <div className="col-12 col-sm-6 p-0">
                 <div className="pos box-content box-form-content border-right h100 d-flex align-items-center justify-content-center">
-                    <div className={`statusSend d-flex justify-content-center align-items-center anim ${error || message ? ' active ' : ''}`}>
+                    <div id={`statusSend-${ind}`} className={`statusSend d-flex justify-content-center align-items-center anim ${error || message ? ' active ' : ''}`}>
                         {error ? <span className="formError">Sorry, something went wrong! <br /> The message has not been sent, <br /> contact us through messengers.</span>  : ''}
                         {message ? <span dangerouslySetInnerHTML={{__html: message}} className="formMessaga"/>  : ''}
                     </div>

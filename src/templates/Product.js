@@ -365,6 +365,13 @@ const Section = styled.section`
             font-size: 2.2rem;
         }
     }
+    a.pinterest {
+        opacity: 0;
+    }
+    [data-pin-log="button_pinit"] {
+        opacity: 1;
+    }
+    
     .box-gallery {
         
     }

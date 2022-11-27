@@ -76,6 +76,7 @@ const Section = styled.section`
     .wrap-tabs-contact {
          
     }
+    
     .statusSend {
         font-family: 'Bolkit';
         font-size: 3.2rem;
@@ -97,6 +98,13 @@ const Section = styled.section`
         &.active {
             visibility: visible;
             opacity: 1;
+            @media (max-width: ${maxCol.sm}) {
+                min-height: 40rem;
+                position: relative;
+                & + form {
+                    display: none; 
+                }
+            }
         }
     }
     .tab-item-contact {
