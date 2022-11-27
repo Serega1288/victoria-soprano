@@ -141,7 +141,7 @@ ul {
 .status-anim.active-block + * {
     opacity: 1 !important;
 }
-.anim, a, .btn, input, a:after, a:before, a div {
+.anim, a, .btn, .btn:before, .btn:after , input, a:after, a:before, a div {
     transition: all 0.5s ease;  
 }
 .WrapMenu {

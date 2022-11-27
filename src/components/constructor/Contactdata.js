@@ -28,18 +28,19 @@ const Editor = ( { item } ) => {
                                             {item.name}
                                         </div>
                                         <div className="col-7 col-sm-6 value">
+                                            {console.log('item !!!', item.typ )}
                                             <a className={item.typ} target={
                                                 `
-                                                ${item.typ === 'url' && (`_blank`)}
-                                                ${item.typ === 'email' && (`_self`)}
-                                                ${item.typ === 'phone' && (`_self`)}
-                                                ${item.typ === 'messengers' && (`_self`)}  
+                                                ${item.typ === 'url' ? (`_blank`) : '' }
+                                                ${item.typ === 'email' ? (`_self`) : ''}
+                                                ${item.typ === 'phone' ? (`_self`) : ''}
+                                                ${item.typ === 'messengers' ? (`_self`) : ''}  
                                                 `
                                             } href={`
-                                                ${item.typ === 'url' && (item.value)}
-                                                ${item.typ === 'email' && (`mailto:` + item.value)}
-                                                ${item.typ === 'phone' && (`tel:` + item.value)}
-                                                ${item.typ === 'messengers' && (item.value)}  
+                                                ${item.typ === 'url' ? (item.value) : ''}
+                                                ${item.typ === 'email' ? (`mailto:` + item.value) : ''}
+                                                ${item.typ === 'phone' ? (`tel:` + item.value) : ''}
+                                                ${item.typ === 'messengers' ? (item.value) : ''}  
                                                 `}>
                                                 {item.title}
                                             </a>

@@ -35,17 +35,17 @@ const Collections = ( {item} ) => {
             <div className="container">
                 <div className="row">
                     <div className="col-sm-6">
-                        <div className="box d-flex flex-column-reverse flex-sm-column">
-                            <div>
+                        <div className="pos box d-flex flex-column-reverse flex-sm-column">
+                            <Link to={item.collectionUrl} className="WrapText">
                                 <div className="title">
                                     {item.title}
                                 </div>
                                 <div className="text">
                                     {item.text}
                                 </div>
-                                <Link className="btn style-2" to={item.collectionUrl}> View </Link>
-                            </div>
-                            <div className="WrapImg">
+                                <span className="anim btn style-2"> View </span>
+                            </Link>
+                            <Link to={item.collectionUrl} className="WrapImg">
                                 {/*<ImageBG_1 className="anim ImageBG first" />*/}
                                 <div
                                     className="anim ImageBG first lozad fade"
@@ -55,7 +55,7 @@ const Collections = ( {item} ) => {
                                     }}
                                     data-background-image={item.img1.localFile.publicURL}
                                 />
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

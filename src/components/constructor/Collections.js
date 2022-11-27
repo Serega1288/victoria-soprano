@@ -53,8 +53,34 @@ const Collections = ( {item} ) => {
         .collection-item {
             margin-bottom: 10rem;
             //margin-bottom: 20rem;
+            a {
+                text-decoration: none;
+            }
             @media (max-width: ${maxCol.sm}) {
                 margin-bottom: 2rem;
+                .WrapText {
+                     padding: 2rem 0;
+                     margin-bottom: 5rem;
+                     position: absolute;
+                     z-index: 2;
+                     bottom: 3rem;
+                     left: 0;
+                     right: 0;
+                     &:before {
+                        content: '';
+                        display: block;
+                        left: -100px;
+                        right: -100px;
+                        top: 0;
+                        z-index: -1;
+                        bottom: 0;
+                        position: absolute;
+                        background: rgba(255,255,255,0.5);
+                     }
+                     .btn {
+                        margin-bottom: 0;
+                     }
+                }
             } 
             position: relative;
             .title { 

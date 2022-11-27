@@ -38,8 +38,6 @@ var transporter = nodemailer.createTransport({
 
 
 
-
-
 function pause() {
   return new Promise((resolve, reject) => {
     setTimeout(resolve, 2000);
@@ -138,7 +136,7 @@ exports.handler = async (event, context) => {
 
   const mailOptions = {
     from: 'Victoria Soprano Group <support@victoriasoprano.com>',
-    to: `<info@victoriasoprano.com>`,
+    to: '<info@victoriasoprano.com>',
     subject: body.title,
     html: emailHtml,
   };
