@@ -135,8 +135,8 @@ exports.handler = async (event, context) => {
   // });
 
   const mailOptions = {
-    from: 'Victoria Soprano Group <support@victoriasoprano.com>',
-    to: '<info@victoriasoprano.com>',
+    from: `Victoria Soprano Group <${process.env.MAIL_USER}>`,
+    to: `<${process.env.SEND_EMAIL_TO}>`,
     subject: body.title,
     html: emailHtml,
   };
