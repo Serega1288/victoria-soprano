@@ -204,10 +204,10 @@ const Gallery = (prop) => {
                                 )
                             })
                         }
-                        <a download href={prop.firstImage.node.localFile.publicURL} className="ImgDownload"></a>
+                        <a download href={item.localFile.publicURL} className="ImgDownload"></a>
                         <span className="pinterest">
                             <a className="pinterest" data-pin-do="buttonBookmark" data-pin-tall="true" data-pin-round="true"
-                               data-pin-media={prop.firstImage.node.localFile.publicURL}
+                               data-pin-media={item.localFile.publicURL}
                                data-pin-log="button_pinit_bookmarklet pinterest"
                                href="https://www.pinterest.com/pin/create/button/">
                                 Save
