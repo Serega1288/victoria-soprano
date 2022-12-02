@@ -168,7 +168,9 @@ ul {
         bottom:0;
     }
 } 
-
+.swiper-button-disabled {
+    opacity: 0 !important;
+}
 .alignleft {
     float: left;
     max-width: 50%;
