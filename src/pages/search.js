@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import {graphql, useStaticQuery} from "gatsby";
 import {instanceAuthService} from "../function/auth";
 import {AuthLayout} from "../function/AuthLayout";
+import FrontPage from "./404";
 
 //import {maxCol} from "../function/SizeCol"; w
 //import styled from "styled-components";
@@ -84,13 +85,13 @@ const SearchPage = () => {
         </Layout>
     );
 };
+export default SearchPage;
 
-
-export default () => (
-    <AuthLayout>
-        <SearchPage />
-    </AuthLayout>
-);
+// export default () => (
+//     <AuthLayout>
+//         <SearchPage />
+//     </AuthLayout>
+// );
 
 
 // const Search = styled.section`
