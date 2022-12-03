@@ -136,8 +136,6 @@ exports.handler = async (event, context) => {
            date = response.data.split('{')[1].split('}')[0];
            console.log('fine >>>',  date)
 
-
-
             if ( date === '01' || date === '02' ) {
               m = 'Sorry, but an error has occurred, please contact technical support. Error code:';
             }

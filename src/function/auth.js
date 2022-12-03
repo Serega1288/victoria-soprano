@@ -1,4 +1,6 @@
-const LOCAL_STORAGE_KEY = 'user'
+import {navigate} from "gatsby";
+
+const LOCAL_STORAGE_KEY = process.env.LOCAL_TOKEN
 
 class Auth {
 
@@ -11,13 +13,15 @@ class Auth {
         //true | false
         const data = typeof window !== 'undefined' && localStorage.getItem(LOCAL_STORAGE_KEY)
         if (data) {
-            try {
-                const user = JSON.parse(data);
-                if (user && user.name)
-                return true
-            } catch {
-                this.logout()
-            }
+            // try {
+            //     const user = JSON.parse(data);
+            //     if (user && user.name)
+            //     return true
+            // } catch {
+            //     this.logout()
+            // }
+
+            return true
 
             
         }
@@ -33,6 +37,11 @@ class Auth {
 
     logout = () => {
         typeof window !== 'undefined' && localStorage.removeItem(LOCAL_STORAGE_KEY)
+        navigate('/login')
+    }
+
+    localStoreClear = () => {
+        typeof window !== 'undefined' && localStorage.clear()
     }
 }
 

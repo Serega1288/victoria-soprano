@@ -70,9 +70,7 @@ const useForm = () => {
 
             if ( responseText.result[0] + responseText?.result[1] === '1_' ) {
 
-                const user = {
-                    name: responseText?.result
-                }
+                const user = responseText?.result
                 instanceAuthService.saveUser(user)
                 navigate('/search')
 

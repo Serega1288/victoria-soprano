@@ -1,4 +1,4 @@
-import { instanceAuthService } from './service/auth'
+import { instanceAuthService } from './auth'
 import { navigate } from 'gatsby'
 
 export const AuthLayout = ({children}) => {

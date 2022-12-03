@@ -5,6 +5,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import {graphql, useStaticQuery} from "gatsby";
 import {instanceAuthService} from "../function/auth";
+import {AuthLayout} from "../function/AuthLayout";
 //import {maxCol} from "../function/SizeCol"; w
 //import styled from "styled-components";
 
@@ -14,6 +15,7 @@ import {instanceAuthService} from "../function/auth";
 //     2: { id: 2, title: 'Document 2' },
 //     3: { id: 3, title: 'Document 3' },
 // }
+
 
 const SearchPage = () => {
 
@@ -30,13 +32,19 @@ const SearchPage = () => {
             }
         }
     `)
+
+
     return (
         <Layout title="Seacrh"  desc={ data.wp.allSettings.generalSettingsTitle } >
             <div className="page-404 d-flex justify-content-center align-items-center flex-column">
                 <h1>SearchPage</h1>
-                {instanceAuthService.isLogined()}
+                {instanceAuthService.isLogined() ? 'true' : 'false' }
+                {/* () => - потрібно щоб не вик*/}
+                <span onClick={() => instanceAuthService.logout()}>dasdas</span>
 
-                {/*{ typeof window !== 'undefined' && localStorage.getItem('user') }*/}
+                {/*{instanceAuthService.localStoreClear()}*/}
+
+                { typeof window !== 'undefined' && localStorage.getItem('user') }
 
                 {/*{console.log('instanceAuthService.isLogined', instanceAuthService.isLogined)}*/}
                 {/*<Formik*/}
@@ -60,7 +68,14 @@ const SearchPage = () => {
         </Layout>
     );
 };
-export default SearchPage;
+
+
+export default () => (
+    <AuthLayout>
+        <SearchPage />
+    </AuthLayout>
+);
+
 
 // const Search = styled.section`
 //     text-align: center;

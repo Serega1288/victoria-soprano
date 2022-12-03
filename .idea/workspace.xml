@@ -4,29 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="02.01.2022/3">
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="03.01.2022/1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CategoryProduct/BannerProductCat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoryProduct/BannerProductCat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CategoryProduct/CategoryItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoryProduct/CategoryItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CategoryProduct/ProductItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoryProduct/ProductItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Products/LikeProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/LikeProduct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Products/LikeProductItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/LikeProductItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Banner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Collection_Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Collection_Item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Collections.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Collections.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/ContactFormItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/ContactFormItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Contactdata.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Contactdata.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/ContentCols.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/ContentCols.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Content_img_title_text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Content_img_title_text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Content_text_img_img.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Content_text_img_img.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Instagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Instagram.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/constructor/Video.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Video.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/sendLogin/sendLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/sendLogin/sendLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/function/AuthLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/function/AuthLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/function/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/function/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/function/useFormLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/function/useFormLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/search.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,14 +120,7 @@
       <workItem from="1669624869086" duration="3528000" />
       <workItem from="1669810357458" duration="4157000" />
       <workItem from="1669921732489" duration="5448000" />
-      <workItem from="1669994510029" duration="29452000" />
-    </task>
-    <task id="LOCAL-00028" summary="14.11.2022/3">
-      <created>1668437127805</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1668437127805</updated>
+      <workItem from="1669994510029" duration="34255000" />
     </task>
     <task id="LOCAL-00029" summary="15.11.2022/1">
       <created>1668522400950</created>
@@ -481,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669994652009</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="03.01.2022/1">
+      <created>1670027578425</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1670027578425</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +483,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="18.11.2022/2" />
     <MESSAGE value="18.11.2022/3" />
     <MESSAGE value="18.11.2022/4" />
     <MESSAGE value="22.11.2022/1" />
@@ -524,7 +507,8 @@
     <MESSAGE value="27.11.2022/8" />
     <MESSAGE value="28.11.2022/1" />
     <MESSAGE value="02.01.2022/3" />
-    <option name="LAST_COMMIT_MESSAGE" value="02.01.2022/3" />
+    <MESSAGE value="03.01.2022/1" />
+    <option name="LAST_COMMIT_MESSAGE" value="03.01.2022/1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
