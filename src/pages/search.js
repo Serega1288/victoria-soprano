@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import {graphql, useStaticQuery} from "gatsby";
 import {instanceAuthService} from "../function/auth";
 import {AuthLayout} from "../function/AuthLayout";
+
 //import {maxCol} from "../function/SizeCol"; w
 //import styled from "styled-components";
 
@@ -19,6 +20,10 @@ import {AuthLayout} from "../function/AuthLayout";
 
 const SearchPage = () => {
 
+
+
+
+
     //const [query, setQuery] = useState(null)
     //const results = useFlexSearch(query, index, store)
 
@@ -30,8 +35,19 @@ const SearchPage = () => {
                     generalSettingsDescription
                 }
             }
+            
+            allWpPost {
+                nodes {
+                  slug
+                  title
+                  content
+                }
+            }
         }
     `)
+
+    console.log('>>>', data)
+
 
 
     return (
