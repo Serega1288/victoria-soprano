@@ -36,8 +36,11 @@ class Auth {
     }
 
     logout = () => {
-        typeof window !== 'undefined' && localStorage.removeItem(LOCAL_STORAGE_KEY)
-        navigate('/login')
+        if(typeof window !== 'undefined') {
+            localStorage.removeItem(LOCAL_STORAGE_KEY)
+            navigate('/login')
+        }
+
     }
 
     localStoreClear = () => {
