@@ -2,19 +2,30 @@ import React from 'react'
 import styled from "styled-components"
 import {minCol, maxCol} from '../../function/SizeCol'
 
+import { getImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
+import BackgroundImage from 'gatsby-background-image'
+
 const Editor = ( { item } ) => {
     //console.log('Contact data >>>', item)
+
+    const image = getImage(item.image.localFile.childImageSharp)
+    const bgImage = convertToBgImage(image)
+
     return (
         <Section className="boxBackground">
             <div className="container h100">
                 <div className="ContactData h100">
                     <div className="row h100">
                         <div className="col-12 col-sm-6">
-                            <div className="img"
-                                 style={{
-                                     backgroundImage: `url(${item.image.localFile.publicURL})`
-                                 }}
-                            ></div>
+                            <div className="img pos">
+                                <BackgroundImage
+                                    Tag="div"
+                                    // Spread bgImage into BackgroundImage:
+                                    {...bgImage}
+                                    preserveStackingContext
+                                />
+                            </div>
                         </div>
                         <div className="col-12 col-sm-6 d-flex align-items-sm-center justify-content-sm-center">
                             <div className="box-text w100">
@@ -28,7 +39,7 @@ const Editor = ( { item } ) => {
                                             {item.name}
                                         </div>
                                         <div className="col-7 col-sm-6 value">
-                                            {console.log('item !!!', item.typ )}
+                                            {/*{console.log('item !!!', item.typ )}*/}
                                             <a className={item.typ} target={
                                                 `${item.typ === 'url' ? (`_blank`) : '' }${item.typ === 'email' ? (`_self`) : ''}${item.typ === 'phone' ? (`_self`) : ''}${item.typ === 'messengers' ? (`_self`) : ''}`
                                             } href={`${item.typ === 'url' ? (item.value) : ''}${item.typ === 'email' ? (`mailto:` + item.value) : ''}${item.typ === 'phone' ? (`tel:` + item.value) : ''}${item.typ === 'messengers' ? (item.value) : ''}`}>
@@ -112,6 +123,13 @@ const Section = styled.section`
             margin-left: 1rem;
             margin-bottom: 1rem; 
             padding-top: 182%;
+        }
+        & > * {
+            position: absolute !important;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
         }
     }
     // min-height: calc(100vh - 8.8rem); 

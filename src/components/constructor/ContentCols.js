@@ -2,8 +2,11 @@ import React from 'react';
 import styled from "styled-components";
 import {minCol, maxCol} from "../../function/SizeCol";
 
+import { getImage, GatsbyImage  } from "gatsby-plugin-image"
+
 const ContentCols = ( { item } ) => {
-    //console.log('content cols >>> ', item )
+    console.log('content cols >>> ', item )
+
     return (
         <Section className="section  contentCols">
             <div className="container section-box">
@@ -12,7 +15,7 @@ const ContentCols = ( { item } ) => {
                         <div className="text" dangerouslySetInnerHTML={{__html: item.editor}} />
                     </div>
                     <div className="right col-12 col-sm-5 col-md-auto">
-                        <img src={item.foto.localFile.publicURL} alt=""/>
+                        <GatsbyImage style={{width: '100%'}} image={getImage(item.foto.localFile.childImageSharp)} />
                     </div>
                 </div>
             </div>

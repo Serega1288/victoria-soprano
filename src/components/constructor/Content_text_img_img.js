@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import {maxCol} from "../../function/SizeCol";
 
+import { getImage, GatsbyImage  } from "gatsby-plugin-image"
+
 const Content1 = ( {item} ) => {
     //console.log('text img img >>>', item )
     const Section = styled.section`
@@ -33,10 +35,16 @@ const Content1 = ( {item} ) => {
                         <div className="text" dangerouslySetInnerHTML={{__html: item.editor}} />
                     </div>
                     <div className="order-md-2 col-6 col-md-4">
-                        <img className={ item.notColor1 === true && 'grey' } src={item.foto1.localFile.publicURL} alt=""/>
+                        <GatsbyImage
+                            className={ item.notColor1 === true && 'grey' }
+                            style={{width: '100%'}} image={getImage(item.foto1.localFile.childImageSharp)}
+                        />
                     </div>
                     <div className="order-md-3 col-6 col-md-4">
-                        <img className={ item.notColor2 === true && 'grey' } src={item.foto2.localFile.publicURL} alt=""/>
+                        <GatsbyImage
+                            className={ item.notColor2 === true && 'grey' }
+                            style={{width: '100%'}} image={getImage(item.foto2.localFile.childImageSharp)}
+                        />
                     </div>
                 </div>
             </div>

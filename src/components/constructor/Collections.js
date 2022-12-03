@@ -32,7 +32,7 @@ const Collections = ( {item} ) => {
             }
         }
         .ImageBG {
-            position: absolute;
+            position: absolute !important;
             top: 0;
             bottom: 0;
             left: 0; 
@@ -42,7 +42,7 @@ const Collections = ( {item} ) => {
             background-position: top center;  
             filter: none;
             &.first {
-                position: relative;
+                position: relative !important;
                 padding-top: 120%;
             }
         }

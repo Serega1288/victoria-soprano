@@ -3,7 +3,16 @@ import styled from "styled-components";
 import {maxCol} from "../../function/SizeCol";
 // import lozad from "lozad";
 
+import { getImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
+import BackgroundImage from 'gatsby-background-image'
+
 const Instagram = ( { item } ) => {
+
+    const bgImage1 = convertToBgImage(getImage(item.image1.localFile.childImageSharp))
+    const bgImage2 = convertToBgImage(getImage(item.image2.localFile.childImageSharp))
+
+    console.log('bgImage1 >>>', bgImage1);
 
     // const { observe } = lozad("[data-use-lozad]", {
     //     rootMargin: '100px 0px', // syntax similar to that of CSS Margin
@@ -169,15 +178,25 @@ const Instagram = ( { item } ) => {
                             <div className="BoxLeft d-flex align-items-end justify-content-end justify-content-sm-center h100 ">
                                 <div className="img w100 d-sm-block d-flex justify-content-end">
                                     {/*<img className="image1" src={item.image1.localFile.publicURL} alt=""/>*/}
-                                    <div
-                                        className="anim image1 lozad imgDiv grey fade"
-                                        data-use-lozad
-                                        // data-background-image={item.image1.localFile.publicURL}
-                                        style={{
-                                            backgroundImage: `url(${item.image1.localFile.publicURL})`
-                                        }}
 
+                                    <BackgroundImage
+                                        className="image1 imgDiv grey"
+                                        Tag="div"
+                                        // Spread bgImage into BackgroundImage:
+                                        {...bgImage1}
+                                        preserveStackingContext
                                     />
+
+                                    {/*<div*/}
+                                    {/*    className="anim image1 lozad imgDiv grey fade"*/}
+                                    {/*    data-use-lozad*/}
+                                    {/*    // data-background-image={item.image1.localFile.publicURL}*/}
+                                    {/*    style={{*/}
+                                    {/*        backgroundImage: `url(${item.image1.localFile.publicURL})`*/}
+                                    {/*    }}*/}
+
+                                    {/*/>*/}
+
                                 </div>
                             </div>
                         </div>
@@ -185,14 +204,24 @@ const Instagram = ( { item } ) => {
                             <div className="BoxRight">
                                 <div className="img">
                                     {/*<img className="image2" src={item.image2.localFile.publicURL} alt=""/>*/}
-                                    <div
-                                        className="anim image2 lozad imgDiv  fade"
-                                        data-use-lozad
-                                        // data-background-image={item.image2.localFile.publicURL}
-                                        style={{
-                                            backgroundImage: `url(${item.image2.localFile.publicURL})`
-                                        }}
+
+                                    <BackgroundImage
+                                        className="image2 imgDiv grey"
+                                        Tag="div"
+                                        // Spread bgImage into BackgroundImage:
+                                        {...bgImage2}
+                                        preserveStackingContext
                                     />
+
+                                    {/*<div*/}
+                                    {/*    className="anim image2 lozad imgDiv  fade"*/}
+                                    {/*    data-use-lozad*/}
+                                    {/*    // data-background-image={item.image2.localFile.publicURL}*/}
+                                    {/*    style={{*/}
+                                    {/*        backgroundImage: `url(${item.image2.localFile.publicURL})`*/}
+                                    {/*    }}*/}
+                                    {/*/>*/}
+
                                 </div>
                                 <a className="d-none d-sm-block" target="_blank" href={item.channelurl}>
                                     <div className="Title3">

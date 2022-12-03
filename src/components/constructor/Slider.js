@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Lazy } from 'swiper';
 import {minCol, maxCol} from "../../function/SizeCol";
 // Import Swiper styles
 import "swiper/css";
@@ -11,11 +10,15 @@ import "swiper/css/scrollbar";
 // import required modules
 import { Scrollbar, Autoplay } from "swiper";
 
+import { getImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
+import BackgroundImage from 'gatsby-background-image'
+
 const Slider = ( { item } ) => {
     //console.log('Slider >>>', item.sliders);
 
     const Section = styled.section`
-         .section-box {
+         .section-box { 
             padding-bottom: 6rem;
             @media(max-width: ${maxCol.sm}) {
                 padding-bottom: 3.5rem;
@@ -96,7 +99,7 @@ const Slider = ( { item } ) => {
                     dragSize: 12,
                     draggable: true,
                 }}
-                modules={[Autoplay, Scrollbar, Lazy]}
+                modules={[Autoplay, Scrollbar]}
                 preloadImages={true}
                 loop={false}
                 speed={1500}
@@ -104,25 +107,46 @@ const Slider = ( { item } ) => {
                     "delay": 5000,
                     "disableOnInteraction": true
                 }}
-                lazy={{
-                    enabled: true,
-                    loadOnTransitionStart: true
-                }}
+                // lazy={{
+                //     enabled: true,
+                //     loadOnTransitionStart: true
+                // }}
             >
-                {item.sliders.map( (item, index) => (
+                {item.sliders.map( (item, index) => {
+                    const bgImage1 = convertToBgImage(getImage(item.fotoSlider.localFile.childImageSharp))
+                    const bgImage2 = convertToBgImage(getImage(item.fotoSliderMob.localFile.childImageSharp))
+                    return (
                     <SwiperSlide key={index}>
-                        <div className="d-none d-sm-block slider-item swiper-lazy"
-                             key={item.fotoSlider.localFile.publicURL}
-                             data-background={item.fotoSlider.localFile.publicURL} >
-                            <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                        </div>
-                        <div className="d-block d-sm-none slider-item swiper-lazy"
-                             key={item.fotoSliderMob.localFile.publicURL}
-                             data-background={item.fotoSliderMob.localFile.publicURL} >
-                            <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                        </div>
+
+                        <BackgroundImage
+                            className="d-none d-sm-block slider-item"
+                            Tag="div"
+                            // Spread bgImage into BackgroundImage:
+                            {...bgImage1}
+                            preserveStackingContext
+                        />
+
+                        <BackgroundImage
+                            className="d-block d-sm-none slider-item"
+                            Tag="div"
+                            // Spread bgImage into BackgroundImage:
+                            {...bgImage2}
+                            preserveStackingContext
+                        />
+
+                        {/*<div className="d-none d-sm-block slider-item swiper-lazy"*/}
+                        {/*     key={item.fotoSlider.localFile.publicURL}*/}
+                        {/*     data-background={item.fotoSlider.localFile.publicURL} >*/}
+                        {/*    <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>*/}
+                        {/*</div>*/}
+                        {/*<div className="d-block d-sm-none slider-item swiper-lazy"*/}
+                        {/*     key={item.fotoSliderMob.localFile.publicURL}*/}
+                        {/*     data-background={item.fotoSliderMob.localFile.publicURL} >*/}
+                        {/*    <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>*/}
+                        {/*</div>*/}
+
                     </SwiperSlide>
-                ))}
+                )})}
             </Swiper>
         </Section>
     );

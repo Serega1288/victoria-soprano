@@ -7,12 +7,18 @@ import {maxCol, minCol} from "../../function/SizeCol"
 import useForm from "../../function/useForm"
 
 
+import { getImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
+import BackgroundImage from 'gatsby-background-image'
 
 
 
 const ContactFormItem = ( { item, ind, c } ) => {
 
     console.log('item', item);
+
+    const image = getImage(item.image.localFile.childImageSharp)
+    const bgImage = convertToBgImage(image)
 
     let formInputs={
         garbage: '',
@@ -32,13 +38,21 @@ const ContactFormItem = ( { item, ind, c } ) => {
 
     const { values, captureInput, submitForm, isLoading, error, message } = useForm(formInputs, ind);
 
+    // background-size: cover;
+    // background-image: url(${item.image.localFile.publicURL});
+
     const ImageBG = styled.div`
-        background-size: cover;
-        background-image: url(${item.image.localFile.publicURL}); 
         padding-top: 121%;
         background-position: center center;
         @media(max-width: ${maxCol.sm}) {
             padding-top: 180%;
+        }
+        & > * {
+            position: absolute !important;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
         }
     `;
 
@@ -75,8 +89,16 @@ const ContactFormItem = ( { item, ind, c } ) => {
             </div>
             <div className="col-12 col-sm-6 p-0 col-right">
                 <div className="box-content box-image-content">
-                    <div className="box-img">
-                        <ImageBG />
+                    <div className="box-img pos">
+                        <ImageBG>
+                            <BackgroundImage
+                                Tag="div"
+                                // Spread bgImage into BackgroundImage:
+                                {...bgImage}
+                                preserveStackingContext
+                            />
+                        </ImageBG>
+
                     </div>
                 </div>
             </div>

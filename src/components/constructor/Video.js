@@ -8,11 +8,18 @@ const Video = ( {item} ) => {
 
 
 
+    // const ImageBG = styled.div`
+    //     background-size: cover;
+    //     background-image: url(${ item.videofonMobile.localFile.publicURL });
+    //     @media(min-width: ${minCol.md}) {
+    //           background-image: url(${ item.videofon.localFile.publicURL });
+    //     }
+    // `;
+
     const ImageBG = styled.div`  
         background-size: cover;
-        background-image: url(${ item.videofonMobile.localFile.publicURL });
         @media(min-width: ${minCol.md}) { 
-              background-image: url(${ item.videofon.localFile.publicURL });
+
         }
     `;
 

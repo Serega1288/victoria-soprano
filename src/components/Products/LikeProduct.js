@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {maxCol} from "../../function/SizeCol";
+import {maxCol, minCol} from "../../function/SizeCol";
 import {Link} from "gatsby"
 
 // Import Swiper React components
@@ -12,6 +12,10 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination, Lazy } from "swiper";
+
+import { getImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
+import BackgroundImage from 'gatsby-background-image'
 
 const TitleH = styled.div` 
         
@@ -32,6 +36,7 @@ const TitleH = styled.div`
 
 const LikeProduct = ({item}) => {
     //console.log('LikeProduct >', item);
+
 
     return (
         <Section className="section boxLikeProduct">
@@ -76,10 +81,15 @@ const LikeProduct = ({item}) => {
                             //console.log('LikeProduct >>>', item);
                             return (
                             <SwiperSlide key={index}>
-                                <Link to={item.uri} className="slider-item swiper-lazy anim"
-                                     key={item.featuredImage.node.localFile.publicURL}
-                                     data-background={item.featuredImage.node.localFile.publicURL} >
-                                    <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                <Link to={item.uri} className="slider-item anim pos"
+                                     key={item.featuredImage.node.localFile.publicURL}>
+                                    <BackgroundImage
+                                        className="ImageBG"
+                                        Tag="div"
+                                        // Spread bgImage into BackgroundImage:
+                                        {...convertToBgImage(getImage(item.featuredImage.node.localFile.childImageSharp))}
+                                        preserveStackingContext
+                                    />
                                 </Link>
                             </SwiperSlide>
                         )})}
@@ -116,6 +126,13 @@ const Section = styled.div`
     }
     .slider-item {
         margin-bottom: 6rem;
+        & > * {
+            position: absolute !important;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+        }
     }
     .swiper-pagination {
         span {

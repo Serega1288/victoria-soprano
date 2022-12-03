@@ -80,11 +80,23 @@ exports.createPages = ({graphql, actions}) => {
                     banner {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                     bannerMobile {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                   }
@@ -98,11 +110,23 @@ exports.createPages = ({graphql, actions}) => {
                       img1 {
                         localFile {
                           publicURL
+                          childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                          }
                         }
                       }
                       img2 {
                         localFile {
                           publicURL
+                          childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                          }
                         }
                       }
                       collectionUrl
@@ -116,16 +140,34 @@ exports.createPages = ({graphql, actions}) => {
                     videofon {
                       localFile { 
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       } 
                     }
                     videofon {
                       localFile { 
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       } 
                     } 
                     videofonMobile {
                       localFile { 
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       } 
                     }
                   }
@@ -141,11 +183,23 @@ exports.createPages = ({graphql, actions}) => {
                     image1 {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                     image2 {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                   } 
@@ -157,11 +211,23 @@ exports.createPages = ({graphql, actions}) => {
                       fotoSlider {
                         localFile {
                           publicURL
+                          childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                          }
                         }
                       }
                       fotoSliderMob {
                         localFile {
                           publicURL
+                          childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                          }
                         }
                       }
                     } 
@@ -178,12 +244,24 @@ exports.createPages = ({graphql, actions}) => {
                     foto1 {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                     notColor2
                     foto2 {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                   }
@@ -205,6 +283,12 @@ exports.createPages = ({graphql, actions}) => {
                     foto {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                   }
@@ -218,6 +302,12 @@ exports.createPages = ({graphql, actions}) => {
                     foto {
                       localFile { 
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                   } 
@@ -229,6 +319,12 @@ exports.createPages = ({graphql, actions}) => {
                     image {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                     contacts { 
@@ -254,6 +350,12 @@ exports.createPages = ({graphql, actions}) => {
                         image {
                           localFile {
                             publicURL
+                            childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                            }
                           }
                         }
                     }
@@ -261,7 +363,7 @@ exports.createPages = ({graphql, actions}) => {
                   
                   
                   
-                }
+                } 
               }
             }
           } 
@@ -289,11 +391,24 @@ exports.createPages = ({graphql, actions}) => {
                     banner {
                       localFile {
                         publicURL
+                        childImageSharp {
+                          gatsbyImageData( 
+                            width: 1920
+                            placeholder: BLURRED
+                            formats: [AUTO, WEBP]
+                          )
+                        }
                       }
                     }
                     bannerMobile {
                       localFile {
                         publicURL
+                        childImageSharp {
+                          gatsbyImageData( 
+                            placeholder: BLURRED
+                            formats: [AUTO, WEBP]
+                          ) 
+                        }
                       }
                     }
                   }
@@ -307,11 +422,25 @@ exports.createPages = ({graphql, actions}) => {
                       img1 {
                         localFile {
                           publicURL
+                          childImageSharp { 
+                              gatsbyImageData( 
+                                width: 425
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                            }
                         }
                       }
                       img2 {
                         localFile {
                           publicURL
+                          childImageSharp {
+                              gatsbyImageData(
+                                width: 960
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                          }
                         }
                       }
                       collectionUrl
@@ -322,21 +451,6 @@ exports.createPages = ({graphql, actions}) => {
                     blockTitle
                     fieldGroupName
                     video
-                    videofon {
-                      localFile { 
-                        publicURL
-                      } 
-                    }
-                    videofon {
-                      localFile { 
-                        publicURL
-                      } 
-                    } 
-                    videofonMobile {
-                      localFile { 
-                        publicURL
-                      } 
-                    }
                   }
                    
                   ... on WpPage_Acfconstructor_Const_Instagram {
@@ -350,11 +464,25 @@ exports.createPages = ({graphql, actions}) => {
                     image1 {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                width: 500
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                     image2 {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                width: 640
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                   } 
@@ -366,11 +494,25 @@ exports.createPages = ({graphql, actions}) => {
                       fotoSlider {
                         localFile {
                           publicURL
+                          childImageSharp {
+                              gatsbyImageData(
+                                width: 1920
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                          }
                         }
                       }
                       fotoSliderMob {
                         localFile {
                           publicURL
+                          childImageSharp {
+                              gatsbyImageData(
+                                width: 600
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                          }
                         }
                       }
                     } 
@@ -383,16 +525,28 @@ exports.createPages = ({graphql, actions}) => {
                   ... on WpPage_Acfconstructor_Const_ContentTextImgImg {
                     editor
                     fieldGroupName
-                    notColor1
+                    notColor1 
                     foto1 {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                     notColor2
                     foto2 {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                   }
@@ -414,6 +568,12 @@ exports.createPages = ({graphql, actions}) => {
                     foto {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                   }
@@ -427,6 +587,12 @@ exports.createPages = ({graphql, actions}) => {
                     foto {
                       localFile { 
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                   } 
@@ -438,6 +604,12 @@ exports.createPages = ({graphql, actions}) => {
                     image {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                     contacts { 
@@ -463,6 +635,12 @@ exports.createPages = ({graphql, actions}) => {
                         image {
                           localFile {
                             publicURL
+                            childImageSharp {
+                                  gatsbyImageData(
+                                    placeholder: BLURRED
+                                    formats: [AUTO, WEBP]
+                                  )
+                            }
                           }
                         }
                     }
@@ -494,16 +672,34 @@ exports.createPages = ({graphql, actions}) => {
                     banner {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                     bannerMobile {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                     bannerOpenCategory {
                       localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       }
                     }
                   } 
@@ -519,6 +715,13 @@ exports.createPages = ({graphql, actions}) => {
                       uri
                       localFile {
                         publicURL
+                        childImageSharp {
+                          gatsbyImageData( 
+                            width: 630
+                            placeholder: BLURRED
+                            formats: [AUTO, WEBP]
+                          ) 
+                        }
                       }
                     }
                   }
@@ -531,16 +734,34 @@ exports.createPages = ({graphql, actions}) => {
                 banner {
                   localFile {
                     publicURL
+                    childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                    }
                   }
                 }
                 bannerMobile {
                   localFile {
                     publicURL
+                    childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                    }
                   }
                 }
                 bannerOpenCategory {
                   localFile {
                     publicURL
+                    childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                    }
                   }
                 }
               }
@@ -564,6 +785,12 @@ exports.createPages = ({graphql, actions}) => {
                         node {
                           localFile {
                             publicURL
+                                childImageSharp {
+                                  gatsbyImageData(
+                                    placeholder: BLURRED
+                                    formats: [AUTO, WEBP]
+                                  )
+                            }
                           }
                         }
                       }
@@ -572,6 +799,12 @@ exports.createPages = ({graphql, actions}) => {
                   gallery {
                     localFile {
                         publicURL
+                        childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                        }
                       } 
                   }
                   specifications {
@@ -585,6 +818,12 @@ exports.createPages = ({graphql, actions}) => {
                 node {
                   localFile {
                     publicURL
+                    childImageSharp {
+                              gatsbyImageData(
+                                placeholder: BLURRED
+                                formats: [AUTO, WEBP]
+                              )
+                    } 
                   }
                 }
               }

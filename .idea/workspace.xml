@@ -4,8 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="27.11.2022/5">
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="02.01.2022/3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CategoryProduct/BannerProductCat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoryProduct/BannerProductCat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CategoryProduct/CategoryItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoryProduct/CategoryItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CategoryProduct/ProductItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoryProduct/ProductItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/LikeProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/LikeProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/LikeProductItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/LikeProductItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Banner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Collection_Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Collection_Item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Collections.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Collections.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/ContactFormItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/ContactFormItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Contactdata.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Contactdata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/ContentCols.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/ContentCols.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Content_img_title_text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Content_img_title_text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Content_text_img_img.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Content_text_img_img.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Instagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Instagram.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/constructor/Video.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/constructor/Video.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,22 +52,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/work/project/soprano/victoria-soprano/src/function&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/work/project/soprano/victoria-soprano",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\work\project\soprano\victoria-soprano\src\function" />
@@ -111,42 +132,11 @@
       <workItem from="1669206261592" duration="46699000" />
       <workItem from="1669355424734" duration="1535000" />
       <workItem from="1669411021930" duration="28763000" />
-      <workItem from="1669539566188" duration="8816000" />
-    </task>
-    <task id="LOCAL-00023" summary="data new">
-      <created>1667657838995</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1667657838995</updated>
-    </task>
-    <task id="LOCAL-00024" summary="data new">
-      <created>1667659212998</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1667659212998</updated>
-    </task>
-    <task id="LOCAL-00025" summary="data new 2">
-      <created>1667660918590</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1667660918590</updated>
-    </task>
-    <task id="LOCAL-00026" summary="14.11.2022/2">
-      <created>1668418360445</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1668418360445</updated>
-    </task>
-    <task id="LOCAL-00027" summary="14.11.2022/2">
-      <created>1668423371215</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1668423371215</updated>
+      <workItem from="1669539566188" duration="19411000" />
+      <workItem from="1669624869086" duration="3528000" />
+      <workItem from="1669810357458" duration="4157000" />
+      <workItem from="1669921732489" duration="5448000" />
+      <workItem from="1669994510029" duration="29452000" />
     </task>
     <task id="LOCAL-00028" summary="14.11.2022/3">
       <created>1668437127805</created>
@@ -456,7 +446,42 @@
       <option name="project" value="LOCAL" />
       <updated>1669553544743</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="27.11.2022/6">
+      <created>1669554004890</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1669554004890</updated>
+    </task>
+    <task id="LOCAL-00073" summary="27.11.2022/7">
+      <created>1669558306672</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1669558306672</updated>
+    </task>
+    <task id="LOCAL-00074" summary="27.11.2022/8">
+      <created>1669564591796</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1669564591796</updated>
+    </task>
+    <task id="LOCAL-00075" summary="28.11.2022/1">
+      <created>1669628624929</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1669628624929</updated>
+    </task>
+    <task id="LOCAL-00076" summary="02.01.2022/3">
+      <created>1669994652009</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1669994652009</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,11 +499,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="17.11.2022/4" />
-    <MESSAGE value="17.11.2022/5" />
-    <MESSAGE value="17.11.2022/6" />
-    <MESSAGE value="17.11.2022/7" />
-    <MESSAGE value="18.11.2022/1" />
     <MESSAGE value="18.11.2022/2" />
     <MESSAGE value="18.11.2022/3" />
     <MESSAGE value="18.11.2022/4" />
@@ -499,7 +519,12 @@
     <MESSAGE value="27.11.2022/3" />
     <MESSAGE value="27.11.2022/4" />
     <MESSAGE value="27.11.2022/5" />
-    <option name="LAST_COMMIT_MESSAGE" value="27.11.2022/5" />
+    <MESSAGE value="27.11.2022/6" />
+    <MESSAGE value="27.11.2022/7" />
+    <MESSAGE value="27.11.2022/8" />
+    <MESSAGE value="28.11.2022/1" />
+    <MESSAGE value="02.01.2022/3" />
+    <option name="LAST_COMMIT_MESSAGE" value="02.01.2022/3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
