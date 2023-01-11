@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="03.01.2022/1">
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="03.01.2022/5">
+      <change afterPath="$PROJECT_DIR$/src/components/Search/BlockSearch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Search/SearchField.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Search/SearchResult.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Search/SearchResultItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/function/appollo/client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/function/appollo/wrap-root-element.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/sendLogin/sendLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/sendLogin/sendLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/function/AuthLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/function/AuthLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/function/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/function/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/function/useFormLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/function/useFormLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/MenuTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/MenuTop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/search.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,29 +44,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/work/project/soprano/victoria-soprano",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/work/project/soprano/victoria-soprano&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\work\project\soprano\victoria-soprano\src\function\appollo" />
       <recent name="C:\work\project\soprano\victoria-soprano\src\function" />
       <recent name="C:\work\project\soprano\victoria-soprano\functions\sendLogin" />
       <recent name="C:\work\project\soprano\victoria-soprano\src\components" />
       <recent name="C:\work\project\soprano\victoria-soprano\src\assets\img" />
-      <recent name="C:\work\project\soprano\victoria-soprano" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\work\project\soprano\victoria-soprano\src\function" />
@@ -120,35 +128,16 @@
       <workItem from="1669624869086" duration="3528000" />
       <workItem from="1669810357458" duration="4157000" />
       <workItem from="1669921732489" duration="5448000" />
-      <workItem from="1669994510029" duration="34255000" />
-    </task>
-    <task id="LOCAL-00029" summary="15.11.2022/1">
-      <created>1668522400950</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1668522400950</updated>
-    </task>
-    <task id="LOCAL-00030" summary="15.11.2022/2">
-      <created>1668523060313</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1668523060313</updated>
-    </task>
-    <task id="LOCAL-00031" summary="15.11.2022/2">
-      <created>1668533278396</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1668533278396</updated>
-    </task>
-    <task id="LOCAL-00032" summary="16.11.2022/1">
-      <created>1668617903265</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1668617903265</updated>
+      <workItem from="1669994510029" duration="37334000" />
+      <workItem from="1670072716379" duration="27000" />
+      <workItem from="1670072758432" duration="19520000" />
+      <workItem from="1670443624244" duration="702000" />
+      <workItem from="1670787424014" duration="14322000" />
+      <workItem from="1672168437874" duration="78000" />
+      <workItem from="1673189999952" duration="4586000" />
+      <workItem from="1673350069900" duration="14969000" />
+      <workItem from="1673448616995" duration="1183000" />
+      <workItem from="1673447747831" duration="16197000" />
     </task>
     <task id="LOCAL-00033" summary="16.11.2022/2">
       <created>1668622478870</created>
@@ -465,7 +454,35 @@
       <option name="project" value="LOCAL" />
       <updated>1670027578425</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="03.01.2022/2">
+      <created>1670069608318</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1670069608318</updated>
+    </task>
+    <task id="LOCAL-00079" summary="03.01.2022/3">
+      <created>1670071350907</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1670071350907</updated>
+    </task>
+    <task id="LOCAL-00080" summary="03.01.2022/4">
+      <created>1670075599611</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1670075599612</updated>
+    </task>
+    <task id="LOCAL-00081" summary="03.01.2022/5">
+      <created>1670077175716</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1670077175716</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,10 +500,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="18.11.2022/3" />
-    <MESSAGE value="18.11.2022/4" />
-    <MESSAGE value="22.11.2022/1" />
-    <MESSAGE value="23.11.2022/1" />
     <MESSAGE value="23.11.2022/2" />
     <MESSAGE value="23.11.2022/3" />
     <MESSAGE value="23.11.2022/4" />
@@ -508,7 +521,11 @@
     <MESSAGE value="28.11.2022/1" />
     <MESSAGE value="02.01.2022/3" />
     <MESSAGE value="03.01.2022/1" />
-    <option name="LAST_COMMIT_MESSAGE" value="03.01.2022/1" />
+    <MESSAGE value="03.01.2022/2" />
+    <MESSAGE value="03.01.2022/3" />
+    <MESSAGE value="03.01.2022/4" />
+    <MESSAGE value="03.01.2022/5" />
+    <option name="LAST_COMMIT_MESSAGE" value="03.01.2022/5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -522,6 +539,16 @@
           <url>file://$PROJECT_DIR$/src/pages/login.js</url>
           <line>10</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/footer/FooterMenu1.js</url>
+          <line>5</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Search/SearchResultItem.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

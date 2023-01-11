@@ -767,11 +767,12 @@ exports.createPages = ({graphql, actions}) => {
               }
             }
           }
-           
+            
            
           allWpProduct {
             nodes {
               uri
+              id
               ACFBox {
                   listVideo {
                     video

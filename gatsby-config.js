@@ -1,5 +1,7 @@
-const dotenv = require('dotenv');
-const path = require(`path`);
+const dotenv = require('dotenv')
+const path = require(`path`)
+const fs = require('fs')
+
 dotenv.config({
   path: '.env',
 });
@@ -62,7 +64,12 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-apollo",
+    {
+      resolve: 'gatsby-plugin-apollo',
+      options: {
+        uri: process.env.SERVER_QRAPHQL_URL
+      }
+    },
     "gatsby-plugin-image",
     {
       resolve: `gatsby-plugin-sharp`,
@@ -172,66 +179,73 @@ module.exports = {
     },
 
     {
-      resolve: 'gatsby-plugin-local-search',
+      resolve: `gatsby-plugin-local-search`,
       options: {
-        // A unique name for the search index. This should be descriptive of
-        // what the index contains. This is required.
-        name: 'pages',
-
-        // Set the search engine to create the index. This is required.
-        // The following engines are supported: flexsearch, lunr
-        engine: 'flexsearch',
-
-        // Provide options to the engine. This is optional and only recommended
-        // for advanced users.
-        //
-        // Note: Only the flexsearch engine supports options.
-        engineOptions: 'speed',
-
-        // GraphQL query used to fetch all data for the search index. This is
-        // required.
+        name: `blogs`,
+        engine: `flexsearch`,
+        engineOptions: {
+          tokenize: 'forward',
+        },
         query: `
-          {
-            allMarkdownRemark {
-              nodes {
-                id
-                # frontmatter {
-                #   path
-                #   title
-                # }
-                # rawMarkdownBody
+        {
+          allWpProduct {
+            nodes {
+              id
+              title
+              content
+              uri
+              featuredImage {
+                node {
+                  localFile {
+                    publicURL
+                    childImageSharp {
+                      gatsbyImageData (
+                        placeholder: BLURRED
+                        formats: [AUTO, WEBP]
+                      )
+                    }
+                  }
+                }
               }
             }
           }
+        } 
         `,
-
-        // Field used as the reference value for each document.
-        // Default: 'id'.
         ref: 'id',
-
-        // List of keys to index. The values of the keys are taken from the
-        // normalizer function below.
-        // Default: all fields
-        index: ['title', 'body'],
-
-        // List of keys to store and make available in your UI. The values of
-        // the keys are taken from the normalizer function below.
-        // Default: all fields
-        store: ['id', 'path', 'title'],
-
-        // Function used to map the result from the GraphQL query. This should
-        // return an array of items to index in the form of flat objects
-        // containing properties to index. The objects must contain the `ref`
-        // field above (default: 'id'). This is required.
+        index: ['title'],
+        store: ['id', 'title', 'uri', 'img'],
         normalizer: ({ data }) =>
-            data.allMarkdownRemark.nodes.map((node) => ({
+            data.allWpProduct.nodes.map((node) => ({
               id: node.id,
-              // path: node.frontmatter.path,
-              // title: node.frontmatter.title,
-              // body: node.rawMarkdownBody,
+              title: node.title,
+              uri: node.uri,
+              img: node?.featuredImage?.node.localFile.childImageSharp
             })),
       },
     },
+
+    // {
+    //   resolve: 'gatsby-plugin-local-search',
+    //   options: {
+    //     name: 'product',
+    //     engine: 'lunr',
+    //     query: fs.readFileSync(
+    //         path.resolve(__dirname, 'src/localSearchQuery.graphql'),
+    //         'utf-8',
+    //     ),
+    //     ref: 'url',
+    //     index: ['title'],
+    //     store: ['title'],
+    //     normalizer: ({ data }) =>
+    //         data.allWpProduct.nodes.map((node) => {
+    //           // const content = valuesDeep(node.data?.body).join(' ')
+    //
+    //           return {
+    //             title: node.data?.title ?? node.data?.title?.text,
+    //           }
+    //         }),
+    //   },
+    // },
 
   ]
 };

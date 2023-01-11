@@ -168,7 +168,7 @@ const WrapBoxMenuTop = styled.div`
         .box-menu-top {
            @media (max-width: ${maxCol.md}) {
                 height: auto;
-           }
+           } 
         }
       .col-left {
         position: relative;

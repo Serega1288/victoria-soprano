@@ -4,11 +4,14 @@ import React from 'react';
 //import { Formik, Form, Field } from 'formik'
 import Layout from '../components/Layout';
 import {graphql, useStaticQuery} from "gatsby";
-import {instanceAuthService} from "../function/auth";
-import {AuthLayout} from "../function/AuthLayout";
-import FrontPage from "./404";
+// import {instanceAuthService} from "../function/auth";
+// import {AuthLayout} from "../function/AuthLayout";
+// import FrontPage from "./404";
+import styled from "styled-components";
+import BlockSearch from "../components/Search/BlockSearch";
+import {maxCol, minCol} from "../function/SizeCol";
 
-//import {maxCol} from "../function/SizeCol"; w
+//import {maxCol} from "../function/SizeCol";
 //import styled from "styled-components";
 
 // const index = 0 /* a FlexSearch index */
@@ -36,52 +39,34 @@ const SearchPage = () => {
                     generalSettingsDescription
                 }
             }
-            
-            allWpPost {
-                nodes {
-                  slug
-                  title
-                  content
-                }
-            }
+#            allWpPost {
+#                nodes {
+#                  slug
+#                  title
+#                  content
+#                }
+#            }
         }
     `)
 
-    console.log('>>>', data)
+    //console.log('>>>', data)
 
 
 
     return (
         <Layout title="Seacrh"  desc={ data.wp.allSettings.generalSettingsTitle } >
-            <div className="page-404 d-flex justify-content-center align-items-center flex-column">
-                <h1>SearchPage</h1>
-                {instanceAuthService.isLogined() ? 'true' : 'false' }
-                {/* () => - потрібно щоб не вик*/}
-                <span onClick={() => instanceAuthService.logout()}>dasdas</span>
+            <Search className="page-search">
+                <h1 className="text-center">Search</h1>
+                <BlockSearch />
+                {/*{instanceAuthService.isLogined() ? 'true' : 'false' }*/}
+                {/*/!* () => - потрібно щоб не вик*!/*/}
+                {/*<span onClick={() => instanceAuthService.logout()}>dasdas</span>*/}
 
-                {/*{instanceAuthService.localStoreClear()}*/}
+                {/*/!*{instanceAuthService.localStoreClear()}*!/*/}
 
-                { typeof window !== 'undefined' && localStorage.getItem('user') }
+                {/*{ typeof window !== 'undefined' && localStorage.getItem('user') }*/}
 
-                {/*{console.log('instanceAuthService.isLogined', instanceAuthService.isLogined)}*/}
-                {/*<Formik*/}
-                {/*    initialValues={{ query: '' }}*/}
-                {/*    onSubmit={(values, { setSubmitting }) => {*/}
-                {/*        setQuery(values.query)*/}
-                {/*        setSubmitting(false)*/}
-                {/*    }}*/}
-                {/*>*/}
-                {/*    <Form>*/}
-                {/*        <Field name="query" />*/}
-                {/*    </Form>*/}
-                {/*    <h1>Results</h1>*/}
-                {/*    <ul>*/}
-                {/*        {results.map(result => (*/}
-                {/*            <li key={result.id}>{result.title}</li>*/}
-                {/*        ))}*/}
-                {/*    </ul>*/}
-                {/*</Formik>*/}
-            </div>
+            </Search>
         </Layout>
     );
 };
@@ -94,14 +79,80 @@ export default SearchPage;
 // );
 
 
-// const Search = styled.section`
-//     text-align: center;
-//     height: calc(100vh - 13.4rem);
-//     @media (max-width: ${maxCol.lg}) {
-//
-//     }
-//     @media (max-width: ${maxCol.sm}) {
-//         height: calc(100vh - 8.8rem);
-//     }
-//
-// `;
+const Search = styled.section`
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  min-height: 50vh;
+  .Result { 
+    @media (max-width: ${maxCol.sm}) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    .ImageBG {
+      display: block;
+      padding-top: 200%;
+      background-size: cover;
+      background-position: center center;
+    }
+    .ProductItemTitle {
+      font-size: 4.5rem;
+      line-height: 1;
+      color: #000;
+      margin-top:2.5rem;
+      margin-bottom:2.5rem;
+      @media (max-width: ${maxCol.sm}) {
+        font-size: 2.2rem;
+        margin-top:1.5rem;
+        margin-bottom:2.2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+    a {
+      text-decoration: none;
+      margin-bottom: 7.5rem;
+      @media (max-width: ${maxCol.sm}) {
+        margin-bottom: 0rem;
+      }
+    }
+  }
+  
+  .formStyle2 {
+    width: 100%;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    label {
+      margin-bottom: 2rem;
+      display: block;
+
+    }
+    input, textarea {
+      display: block;
+      width:100%;
+      background: rgba(0,0,0,0);
+      border: 1px solid #000000;
+      padding: 0 1rem;
+    }
+    input {
+      height: 5rem;
+    }
+    textarea {
+      height: 10rem;
+      padding: 1rem;
+    }
+    span {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    button {
+      margin-top: 2rem;
+      height: 5rem;
+      min-width: 100%;
+      @media (min-width: ${minCol.sm}) {
+        min-width: 20rem;
+      }
+
+    }
+  }
+`;
