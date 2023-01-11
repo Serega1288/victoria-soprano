@@ -78,16 +78,16 @@ const LikeProduct = ({item}) => {
                     >
 
                         {item.map( (item, index) => {
-                            //console.log('LikeProduct >>>', item);
+                            console.log('LikeProduct >>>', item);
                             return (
                             <SwiperSlide key={index}>
                                 <Link to={item.uri} className="slider-item anim pos"
-                                     key={item.featuredImage.node.localFile.publicURL}>
+                                     key={index}>
                                     <BackgroundImage
                                         className="ImageBG"
                                         Tag="div"
                                         // Spread bgImage into BackgroundImage:
-                                        {...convertToBgImage(getImage(item.featuredImage.node.localFile.childImageSharp))}
+                                        {...convertToBgImage(getImage(item?.featuredImage?.node?.localFile?.childImageSharp))}
                                         preserveStackingContext
                                     />
                                 </Link>

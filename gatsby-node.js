@@ -786,11 +786,11 @@ exports.createPages = ({graphql, actions}) => {
                         node {
                           localFile {
                             publicURL
-                                childImageSharp {
-                                  gatsbyImageData(
-                                    placeholder: BLURRED
-                                    formats: [AUTO, WEBP]
-                                  )
+                            childImageSharp {
+                               gatsbyImageData(
+                                  placeholder: BLURRED
+                                  formats: [AUTO, WEBP]
+                               )
                             }
                           }
                         }
