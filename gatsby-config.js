@@ -187,12 +187,11 @@ module.exports = {
           tokenize: 'forward',
         },
         query: `
-        {
+        { 
           allWpProduct {
             nodes {
               id
               title
-              content
               uri
               featuredImage {
                 node {

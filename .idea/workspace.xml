@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="03.01.2022/5">
-      <change afterPath="$PROJECT_DIR$/src/components/Search/BlockSearch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search/SearchField.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search/SearchResult.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search/SearchResultItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/function/appollo/client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/function/appollo/wrap-root-element.js" afterDir="false" />
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="11.01.2023/1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/MenuTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/MenuTop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/search.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,14 +125,7 @@
       <workItem from="1673189999952" duration="4586000" />
       <workItem from="1673350069900" duration="14969000" />
       <workItem from="1673448616995" duration="1183000" />
-      <workItem from="1673447747831" duration="16197000" />
-    </task>
-    <task id="LOCAL-00033" summary="16.11.2022/2">
-      <created>1668622478870</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1668622478870</updated>
+      <workItem from="1673447747831" duration="17150000" />
     </task>
     <task id="LOCAL-00034" summary="16.11.2022/3">
       <created>1668625754404</created>
@@ -482,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670077175716</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="11.01.2023/1">
+      <created>1673467975826</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1673467975827</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +488,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="23.11.2022/2" />
     <MESSAGE value="23.11.2022/3" />
     <MESSAGE value="23.11.2022/4" />
     <MESSAGE value="23.11.2022/5" />
@@ -525,7 +512,8 @@
     <MESSAGE value="03.01.2022/3" />
     <MESSAGE value="03.01.2022/4" />
     <MESSAGE value="03.01.2022/5" />
-    <option name="LAST_COMMIT_MESSAGE" value="03.01.2022/5" />
+    <MESSAGE value="11.01.2023/1" />
+    <option name="LAST_COMMIT_MESSAGE" value="11.01.2023/1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
