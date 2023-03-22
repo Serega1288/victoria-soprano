@@ -14,6 +14,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: "621715872942839",
+      },
+    },
+    {
       resolve: `gatsby-plugin-hotjar`,
       options: {
         includeInDevelopment: true, // optional parameter to include script in development
@@ -94,7 +100,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        "trackingId": "AW-738495468"
+        "trackingId": "G-NJPQ7FXGH0"
       }
     },
     "gatsby-plugin-sitemap",
