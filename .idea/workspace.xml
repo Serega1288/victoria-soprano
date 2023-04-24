@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="11.01.2023/1">
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="11.01.2023/2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/BlockSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/BlockSearch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,22 +34,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/work/project/soprano/victoria-soprano&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/work/project/soprano/victoria-soprano",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\work\project\soprano\victoria-soprano\src\function\appollo" />
@@ -125,14 +127,20 @@
       <workItem from="1673189999952" duration="4586000" />
       <workItem from="1673350069900" duration="14969000" />
       <workItem from="1673448616995" duration="1183000" />
-      <workItem from="1673447747831" duration="17150000" />
-    </task>
-    <task id="LOCAL-00034" summary="16.11.2022/3">
-      <created>1668625754404</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1668625754404</updated>
+      <workItem from="1673447747831" duration="18363000" />
+      <workItem from="1673947091169" duration="5366000" />
+      <workItem from="1674271087280" duration="668000" />
+      <workItem from="1675265127514" duration="1644000" />
+      <workItem from="1675495038226" duration="4533000" />
+      <workItem from="1675684331093" duration="12000" />
+      <workItem from="1676216277605" duration="521000" />
+      <workItem from="1676216918646" duration="124000" />
+      <workItem from="1679316430473" duration="666000" />
+      <workItem from="1679382140848" duration="7000" />
+      <workItem from="1679385966286" duration="1190000" />
+      <workItem from="1679476052579" duration="105000" />
+      <workItem from="1679479916531" duration="33000" />
+      <workItem from="1682325345766" duration="106000" />
     </task>
     <task id="LOCAL-00035" summary="16.11.2022/4">
       <created>1668626673730</created>
@@ -470,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673467975827</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="11.01.2023/2">
+      <created>1673468759506</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1673468759506</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +503,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="23.11.2022/3" />
     <MESSAGE value="23.11.2022/4" />
     <MESSAGE value="23.11.2022/5" />
     <MESSAGE value="23.11.2022/6" />
@@ -513,7 +527,8 @@
     <MESSAGE value="03.01.2022/4" />
     <MESSAGE value="03.01.2022/5" />
     <MESSAGE value="11.01.2023/1" />
-    <option name="LAST_COMMIT_MESSAGE" value="11.01.2023/1" />
+    <MESSAGE value="11.01.2023/2" />
+    <option name="LAST_COMMIT_MESSAGE" value="11.01.2023/2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -535,7 +550,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Search/SearchResultItem.js</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

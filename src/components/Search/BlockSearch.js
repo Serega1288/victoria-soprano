@@ -7,6 +7,7 @@ import React, { useContext, useEffect, useState } from 'react';
 // import ActionButton from '../buttons/ActionButton';
 import SearchResult from './SearchResult';
 import SearchField from './SearchField';
+import {useQuery} from "@apollo/client";
 
 const query = graphql` 
     {
@@ -24,7 +25,8 @@ function Search() {
     const [blogsIndexStore, setBlogsIndexStore] = useState(null);
     // const [categoriesIndexStore, setCategoriesIndexStore] = useState(null);
     // const [authorsIndexStore, setAuthorsIndexStore] = useState(null);
-    const data = useStaticQuery(query);
+    // const data = useStaticQuery(query);
+    const data = useQuery(query);
 
     // useEffect(() => {
     //     if (isSearchModalOpen) {
