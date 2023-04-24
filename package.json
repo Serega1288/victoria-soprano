@@ -30,6 +30,7 @@
     "gatsby-plugin-apollo": "^4.0.2",
     "gatsby-plugin-facebook-pixel": "^1.0.8",
     "gatsby-plugin-google-analytics": "^4.24.0",
+    "gatsby-plugin-google-gtag": "^4.25.0",
     "gatsby-plugin-hotjar": "^1.1.1",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-local-search": "^2.0.1",

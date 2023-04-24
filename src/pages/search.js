@@ -57,7 +57,7 @@ const SearchPage = () => {
         <Layout title="Seacrh"  desc={ data.wp.allSettings.generalSettingsTitle } >
             <Search className="page-search">
                 <h1 className="text-center">Search</h1>
-                <BlockSearch />
+                {/*<BlockSearch />*/}
                 {/*{instanceAuthService.isLogined() ? 'true' : 'false' }*/}
                 {/*/!* () => - потрібно щоб не вик*!/*/}
                 {/*<span onClick={() => instanceAuthService.logout()}>dasdas</span>*/}
