@@ -59,12 +59,12 @@ function Search() {
             // { data: authorsIndex },
             // { data: authorsStore },
         ] = await Promise.all([
-            axios.get(${blogsPublicIndexURL}),
-            axios.get(${blogsPublicStoreURL}),
-            // axios.get(${categoriesPublicIndexURL}),
-            // axios.get(${categoriesPublicStoreURL}),
-            // axios.get(${authorsPublicIndexURL}),
-            // axios.get(${authorsPublicStoreURL}),
+            axios.get(`${blogsPublicIndexURL}`),
+            axios.get(`${blogsPublicStoreURL}`),
+            // axios.get(`${categoriesPublicIndexURL}`),
+            // axios.get(`${categoriesPublicStoreURL}`),
+            // axios.get(`${authorsPublicIndexURL}`),
+            // axios.get(`${authorsPublicStoreURL}`),
         ]);
         console.log('w', blogsIndex, blogsStore)
         setBlogsIndexStore({
