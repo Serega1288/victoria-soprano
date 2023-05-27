@@ -7,9 +7,8 @@ import React, { useContext, useEffect, useState } from 'react';
 // import ActionButton from '../buttons/ActionButton';
 import SearchResult from './SearchResult';
 import SearchField from './SearchField';
-import {useQuery} from "@apollo/client";
 
-const query = graphql` 
+const query = graphql`
     {
         localSearchBlogs {
             publicStoreURL
@@ -25,8 +24,7 @@ function Search() {
     const [blogsIndexStore, setBlogsIndexStore] = useState(null);
     // const [categoriesIndexStore, setCategoriesIndexStore] = useState(null);
     // const [authorsIndexStore, setAuthorsIndexStore] = useState(null);
-    // const data = useStaticQuery(query);
-    const data = useQuery(query);
+    const data = useStaticQuery(query);
 
     // useEffect(() => {
     //     if (isSearchModalOpen) {
@@ -61,12 +59,12 @@ function Search() {
             // { data: authorsIndex },
             // { data: authorsStore },
         ] = await Promise.all([
-            axios.get(`${blogsPublicIndexURL}`),
-            axios.get(`${blogsPublicStoreURL}`),
-            // axios.get(`${categoriesPublicIndexURL}`),
-            // axios.get(`${categoriesPublicStoreURL}`),
-            // axios.get(`${authorsPublicIndexURL}`),
-            // axios.get(`${authorsPublicStoreURL}`),
+            axios.get(${blogsPublicIndexURL}),
+            axios.get(${blogsPublicStoreURL}),
+            // axios.get(${categoriesPublicIndexURL}),
+            // axios.get(${categoriesPublicStoreURL}),
+            // axios.get(${authorsPublicIndexURL}),
+            // axios.get(${authorsPublicStoreURL}),
         ]);
         console.log('w', blogsIndex, blogsStore)
         setBlogsIndexStore({
@@ -87,26 +85,26 @@ function Search() {
 
     // if (!isSearchModalOpen) return null;
     return (
-            <div className="container">
-                <div className="formStyle2">
-                    <SearchField
-                        value={searchQuery}
-                        setValue={setSearchQuery}
-                        onFocus={handleOnFocus}
-                    />
-                </div>
-                {
-                    searchQuery &&
-                    blogsIndexStore && (
-                        <div className="Result row row-cols-2 row-cols-sm-3">
-                            <SearchResult
-                                searchQuery={searchQuery}
-                                blogsIndexStore={blogsIndexStore}
-                            />
-                        </div>
-                    )
-                }
+        <div className="container">
+            <div className="formStyle2">
+                <SearchField
+                    value={searchQuery}
+                    setValue={setSearchQuery}
+                    onFocus={handleOnFocus}
+                />
             </div>
+            {
+                searchQuery &&
+                blogsIndexStore && (
+                    <div className="Result row row-cols-2 row-cols-sm-3">
+                        <SearchResult
+                            searchQuery={searchQuery}
+                            blogsIndexStore={blogsIndexStore}
+                        />
+                    </div>
+                )
+            }
+        </div>
     );
 }
 
