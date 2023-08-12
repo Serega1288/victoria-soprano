@@ -176,9 +176,10 @@ const Gallery = (prop) => {
                     // const img = item.localFile.publicURL;
                     return (
                     <SwiperSlide key={index}>
+                        {/*{console.log('prop.listVideo >>', prop.listVideo)}*/}
                         {
                             prop.listVideo?.map( (item, index) => {
-                                console.log('>>>>>', item.video.split('?v=')[1].split('&'));
+                                console.log('>>>>>', item);
                                 return (
                                     step === item.numberStep && (
                                         <div  key={index} className="WrapIframe">
@@ -190,14 +191,31 @@ const Gallery = (prop) => {
                                             {/*    className="slider-item-iframe anim"*/}
                                             {/*/>*/}
                                             <div className="iframeBefore"></div>
-                                            <iframe
-                                            id={`stepIframe${step}`}
-                                            className="slider-item-iframe"
-                                            play-src={`https://www.youtube.com/embed/${item.video.split('?v=')[1].split('&')}?autoplay=1&modestbranding=1&controls=0&mute=0&loop=1`}
-                                            stop-src={`https://www.youtube.com/embed/${item.video.split('?v=')[1].split('&')}?autoplay=0&modestbranding=1&controls=0&mute=0&loop=1`}
-                                            src={`https://www.youtube.com/embed/${item.video.split('?v=')[1].split('&')}?autoplay=0&modestbranding=1&controls=0&mute=0&loop=1`}
-                                            >
-                                            </iframe>
+
+                                            {/*{*/}
+                                            {/*    console.log('item.video.split(\'?v=\')', item.video.split('?v=')['1'])*/}
+                                            {/*}*/}
+                                            {
+                                                item.video.split('?v=')['1'] === undefined ? (
+                                                    <iframe
+                                                    id={`stepIframe${step}`}
+                                                    className="slider-item-iframe"
+                                                    play-src={`https://www.youtube.com/embed/${item.video.split('shorts/')[1]}?autoplay=1&modestbranding=1&controls=0&mute=0&loop=1`}
+                                                    stop-src={`https://www.youtube.com/embed/${item.video.split('shorts/')[1]}?autoplay=0&modestbranding=1&controls=0&mute=0&loop=1`}
+                                                    src={`https://www.youtube.com/embed/${item.video.split('shorts/')[1]}?autoplay=0&modestbranding=1&controls=0&mute=0&loop=1`}
+                                                    >
+                                                    </iframe>
+                                                ) : (
+                                                    <iframe
+                                                        id={`stepIframe${step}`}
+                                                        className="slider-item-iframe"
+                                                        play-src={`https://www.youtube.com/embed/${item.video.split('?v=')[1]?.split('&')}?autoplay=1&modestbranding=1&controls=0&mute=0&loop=1`}
+                                                        stop-src={`https://www.youtube.com/embed/${item.video.split('?v=')[1]?.split('&')}?autoplay=0&modestbranding=1&controls=0&mute=0&loop=1`}
+                                                        src={`https://www.youtube.com/embed/${item.video.split('?v=')[1]?.split('&')}?autoplay=0&modestbranding=1&controls=0&mute=0&loop=1`}
+                                                    >
+                                                    </iframe>
+                                                )
+                                            }
                                             <div className="iframeAfter"></div>
                                         </div>
                                     )

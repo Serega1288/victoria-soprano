@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="12.08.2023/1">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Gallery.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,21 +145,7 @@
       <workItem from="1685177346886" duration="775000" />
       <workItem from="1685205036596" duration="1738000" />
       <workItem from="1691832986671" duration="4000" />
-      <workItem from="1691833333029" duration="381000" />
-    </task>
-    <task id="LOCAL-00039" summary="17.11.2022/3">
-      <created>1668687728524</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1668687728524</updated>
-    </task>
-    <task id="LOCAL-00040" summary="17.11.2022/4">
-      <created>1668688683140</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1668688683140</updated>
+      <workItem from="1691833333029" duration="2284000" />
     </task>
     <task id="LOCAL-00041" summary="17.11.2022/5">
       <created>1668696202065</created>
@@ -488,7 +476,21 @@
       <option name="project" value="LOCAL" />
       <updated>1691833506806</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="12.08.2023/1">
+      <created>1691833761108</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1691833761108</updated>
+    </task>
+    <task id="LOCAL-00089" summary="12.08.2023/1">
+      <created>1691833818871</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1691833818871</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
