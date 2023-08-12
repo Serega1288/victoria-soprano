@@ -1,15 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {maxCol} from "../../function/SizeCol";
 
 import styled from 'styled-components';
 import {Link} from 'gatsby';
 import ImgLogo from '../../assets/img/logo.png';
+import ImgBag from '../../assets/img/bag.svg';
 import ImgSearch from '../../assets/img/search.png';
 import ImgUser from '../../assets/img/user.png';
 import WrapMenu from './WrapMenu';
-import Meseger from '../header/Meseger'
-
-const {useState} = React;
+// import Meseger from '../header/Meseger'
+import {instanceAuthService} from "../../function/auth";
 
 const Header = ( props ) => {
 
@@ -57,6 +57,16 @@ const Header = ( props ) => {
                         </div>
                         <div className="col d-flex align-items-center justify-content-end">
                             <IconItems className="ul-clear d-flex align-items-center ">
+
+                                { instanceAuthService.isLogined() &&
+                                    <li className="d-none d-md-block">
+                                        <Link className='wrapBag' to="/cart/">
+                                            <span>0</span>
+                                            <img src={ImgBag} className="cart" alt="cart" />
+                                        </Link>
+                                    </li>
+                                }
+
                                 <li className="d-none d-md-block">
                                     <Link to="/search/">
                                         <img src={ImgSearch} className="search" alt="search" />
@@ -81,7 +91,7 @@ const Header = ( props ) => {
             <WrapMenu open={open} first={first} />
 
 
-            <Meseger />
+            {/*<Meseger />*/}
 
         </>
     )
@@ -109,7 +119,28 @@ const m = 0.7;
      right: 0;
      z-index:100;
      background-color: #f7f4ed;
-     
+   
+    .wrapBag {
+      position: relative;
+      span {
+        background-color: #86644b;
+        border-radius: 50%;
+        color: #fff;
+        width: 1.5rem;
+        height: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        position: absolute;
+        top: 0.5rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 1;
+      }
+    }
      
      .logo {
         height: 11.2rem;

@@ -5,7 +5,7 @@ import bolkitBold from "../assets/fonts/bolkit/bolkit-bold.woff2";
 const GlobalFonts = createGlobalStyle`
 @font-face {
     font-family: 'Bolkit';
-    font-style: normal;
+    font-style: normal; 
     font-weight: 400; 
     src: url("${bolkit}") format("woff2");
 }

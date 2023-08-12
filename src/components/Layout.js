@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import GlobalFonts from '../styles/GlobalFonts';
+// import GlobalFonts from '../styles/GlobalFonts';
 import GlobalCols from '../styles/GlobalCols';
 import  GlobalStyles from '../styles/GlobalStyles';
 import  Header from './header/Header';
@@ -17,7 +17,7 @@ const Layout = ( {children, title, desc } ) => {
                 <meta name="p:domain_verify" content="4304277d9010e64d1d62fde007276f2e"/>
                 <link rel="preload" href={bolkit} as="font" type="font/woff2" crossOrigin="anonymous" />
             </Helmet>
-            <GlobalFonts />
+            {/*<GlobalFonts />*/}
             <GlobalCols />
             <GlobalStyles />
             <Header/>

@@ -773,6 +773,12 @@ exports.createPages = ({graphql, actions}) => {
             nodes {
               uri
               id 
+              ACF_product_attribute_variable {
+                color
+                size
+                priceFront
+                priceSaleFront
+              }
               ACFBox {
                   listVideo {
                     video
