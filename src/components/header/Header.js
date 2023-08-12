@@ -62,8 +62,8 @@ const Header = ( props ) => {
                                         <img src={ImgSearch} className="search" alt="search" />
                                     </Link>
                                 </li>
-                                <li className="d-none">
-                                    <Link to="/user/">
+                                <li className="">
+                                    <Link to="/account/">
                                         <img src={ImgUser} className="user" alt="user" />
                                     </Link>
                                 </li>

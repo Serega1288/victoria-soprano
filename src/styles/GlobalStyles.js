@@ -273,6 +273,21 @@ ul {
             display: block;
         }
     }
+  &.style-5 {
+    font-size: 1.8rem;
+    border: none;
+    padding: 1rem 3.3rem;
+    background-color: #1a0f07;
+    color: #fff;
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    &:hover, &:focus {
+      background-color: #86644b;
+      color: #fff;
+    }
+  }
 } 
 
 .wrap-table {
@@ -394,6 +409,13 @@ ul {
     }
 }
 
+.informBox {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  margin-bottom: 5rem;
+  font-size: 2.2rem;
+}
 `;
 
 export default GlobalStyles;

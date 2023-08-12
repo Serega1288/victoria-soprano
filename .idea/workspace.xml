@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="11.01.2023/2">
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="27.05.2023/1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/BlockSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/BlockSearch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,22 +31,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/work/project/soprano/victoria-soprano",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/work/project/molfar-comics.com/www&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\work\project\soprano\victoria-soprano\src\function\appollo" />
@@ -140,28 +137,12 @@
       <workItem from="1679385966286" duration="1190000" />
       <workItem from="1679476052579" duration="105000" />
       <workItem from="1679479916531" duration="33000" />
-      <workItem from="1682325345766" duration="106000" />
-    </task>
-    <task id="LOCAL-00035" summary="16.11.2022/4">
-      <created>1668626673730</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1668626673730</updated>
-    </task>
-    <task id="LOCAL-00036" summary="16.11.2022/5">
-      <created>1668627513828</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1668627513828</updated>
-    </task>
-    <task id="LOCAL-00037" summary="17.11.2022/1">
-      <created>1668683309601</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1668683309601</updated>
+      <workItem from="1682325345766" duration="2526000" />
+      <workItem from="1682426374786" duration="31000" />
+      <workItem from="1685175528367" duration="1655000" />
+      <workItem from="1685177346886" duration="775000" />
+      <workItem from="1685205036596" duration="1738000" />
+      <workItem from="1691832986671" duration="4000" />
     </task>
     <task id="LOCAL-00038" summary="17.11.2022/2">
       <created>1668685932084</created>
@@ -485,7 +466,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673468759506</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="24.04.2023/1">
+      <created>1682325485950</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1682325485950</updated>
+    </task>
+    <task id="LOCAL-00085" summary="24.04.2023/2">
+      <created>1682326684892</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1682326684893</updated>
+    </task>
+    <task id="LOCAL-00086" summary="27.05.2023/1">
+      <created>1685205084045</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1685205084046</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,9 +505,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="23.11.2022/4" />
-    <MESSAGE value="23.11.2022/5" />
-    <MESSAGE value="23.11.2022/6" />
     <MESSAGE value="23.11.2022/7" />
     <MESSAGE value="23.11.2022/8" />
     <MESSAGE value="23.11.2022/9" />
@@ -528,7 +527,10 @@
     <MESSAGE value="03.01.2022/5" />
     <MESSAGE value="11.01.2023/1" />
     <MESSAGE value="11.01.2023/2" />
-    <option name="LAST_COMMIT_MESSAGE" value="11.01.2023/2" />
+    <MESSAGE value="24.04.2023/1" />
+    <MESSAGE value="24.04.2023/2" />
+    <MESSAGE value="27.05.2023/1" />
+    <option name="LAST_COMMIT_MESSAGE" value="27.05.2023/1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

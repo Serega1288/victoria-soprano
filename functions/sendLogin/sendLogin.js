@@ -41,227 +41,229 @@ const axios = require('axios')
 
 
 function pause() {
-  return new Promise((resolve, reject) => {
-    setTimeout(resolve, 1000);
-  });
+    return new Promise((resolve, reject) => {
+        setTimeout(resolve, 2000);
+    });
 }
 
 // send the email
 exports.handler = async (event, context) => {
-  // Делаем паузу - 2сек.
+    // Делаем паузу - 2сек.
 
 
-  const body = JSON.parse(event.body);
+    const body = JSON.parse(event.body);
 
-  // Проверка "мусорного" поля input
-  if (body.garbage) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ message: 'Спам !!!' }),
-    };
-  }
-
-  //console.log('!!!>> s', body)
-
-  const fieldsRequired = ['email','password'];
-
-  // Email - обязательное поле
-  for (const field of fieldsRequired) {
-    if (!body[field]) {
-      return {
-        statusCode: 400,
-        body: JSON.stringify({
-          message: `Введите ${field}!`,
-        }),
-      };
+    // Проверка "мусорного" поля input
+    if (body.garbage) {
+        return {
+            statusCode: 400,
+            body: JSON.stringify({ message: 'Spam !!!' }),
+        };
     }
-  }
+
+    //console.log('!!!>> s', body)
+
+    const fieldsRequired = ['email','password'];
+
+    // Email - обязательное поле
+    // for (const field of fieldsRequired) {
+    //   if (!body[field]) {
+    //     return {
+    //       statusCode: 400,
+    //       body: JSON.stringify({
+    //         message: `Введите ${field}!`,
+    //       }),
+    //     };
+    //   }
+    // }
 
 
 
-  let msg = ''
+    let msg = ''
 
-  Object.entries(body).forEach(field => {
-    const [key, value] = field;
-    if ( key !== 'garbage' ) {
-      msg += key + ': ' + value +  '\n'
-    }
-  })
+    Object.entries(body).forEach(field => {
+        const [key, value] = field;
+        if ( key !== 'garbage' ) {
+            msg += key + ': ' + value +  '\n'
+        }
+    })
 
-  msg = encodeURI(msg)
+    msg = encodeURI(msg)
 
-  // token=${process.env.AUTH_TOKEN}
-  // axios
-  //     .get(`${process.env.URL_AJAX}?action=authLogin`, {
-  //       token: process.env.AUTH_TOKEN,
-  //     })
-  //     .then((res) => {
-  //       // JSON.parse(res.data)
-  //       console.log('>>', res, 'ok')
-  //       //console.log(res)
-  //     })
-  //     .catch((error) => {
-  //       console.error(error, 'error')
-  //     })
+    // token=${process.env.AUTH_TOKEN}
+    // axios
+    //     .get(`${process.env.URL_AJAX}?action=authLogin`, {
+    //       token: process.env.AUTH_TOKEN,
+    //     })
+    //     .then((res) => {
+    //       // JSON.parse(res.data)
+    //       console.log('>>', res, 'ok')
+    //       //console.log(res)
+    //     })
+    //     .catch((error) => {
+    //       console.error(error, 'error')
+    //     })
 
 
-  // axios({
-  //   method: 'POST',
-  //   responseType: 'json',
-  //   url: `${process.env.URL_AJAX}?action=authLogin&token=${process.env.AUTH_TOKEN}`,
-  //   headers: {
-  //     'Content-Type': 'application/json'
-  //   }
-  // })
-  // .then((res) => {
-  //
-  //   // JSON.parse(res.data)
-  //   console.log(res, 'ok res')
-  //   //console.log(res)
-  // })
-  //     .catch((error) => {
-  //       console.error(error, 'error >>')
-  //     })
+    // axios({
+    //   method: 'POST',
+    //   responseType: 'json',
+    //   url: `${process.env.URL_AJAX}?action=authLogin&token=${process.env.AUTH_TOKEN}`,
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   }
+    // })
+    // .then((res) => {
+    //
+    //   // JSON.parse(res.data)
+    //   console.log(res, 'ok res')
+    //   //console.log(res)
+    // })
+    //     .catch((error) => {
+    //       console.error(error, 'error >>')
+    //     })
 
     console.log('body >>', body);
 
-      let date = '';
-      let m='';
+    let date = '';
+    let m='';
 
-      axios({
+    await axios({
         method: 'get',
         url: `${process.env.URL_AJAX}?action=authLogin&token=${process.env.AUTH_TOKEN}&user=${body.email}&pass=${body.password}`,
-      })
-      .then(function (response) {
-           date = response.data.split('{')[1].split('}')[0];
-           console.log('fine >>>',  date)
+    })
+        .then(function (response) {
+            date = response.data.split('{')[1].split('}')[0];
+            console.log('fine >>>',  date)
+
+
 
             if ( date === '01' || date === '02' ) {
-              m = 'Sorry, but an error has occurred, please contact technical support. Error code:';
+                m = 'Sorry, but an error has occurred, please contact technical support. Error code:';
             }
 
             if ( date == '03' ) {
-              m = 'Mail not found. Write another one or register.';
+                m = 'Mail not found. Write another one or register.';
 
             }
 
             if ( date === '04' ) {
-              m = 'Invalid password.';
+                m = 'Invalid password.';
             }
 
             if ( date[0] + date[1] === '1_' ) {
-              m = 'You have successfully logged in.';
+                m = 'You have successfully logged in.';
             }
 
-             console.log('Mail >>', m);
+            console.log('Mail >>', m);
 
-      }).catch((error) => {
-           date = error;
-           console.error(error, 'error >>>')
-      });
-
-
-
-  // \x05\x07�{
-
-  //  \x03
-
-
-  // axios({
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  //   url: `${process.env.URL_AJAX}?action=authLogin&token=${process.env.AUTH_TOKEN}`,
-  //   data: {
-  //     action: 'authLogin',
-  //     token: process.env.AUTH_TOKEN
-  //   },
-  //   responseType: 'json'
-  // }).then((res) => {
-  //
-  //   // JSON.parse(res.data)
-  //   console.log(res, 'ok res')
-  //   //console.log(res)
-  // })
-  //     .catch((error) => {
-  //       console.error(error, 'error >>')
-  //     })
-
-  // fetch(`${process.env.URL_AJAX}?action=authLogin&token=${process.env.AUTH_TOKEN}`)
-  //     .then(response => response.json())
-  //     .then(data => console.log(data));
+        }).catch((error) => {
+            date = error;
+            console.error(error, 'error >>>')
+        });
 
 
 
+    // \x05\x07�{
 
-  // axios({
-  //   method: 'GET',
-  //   url: process.env.URL_AJAX,
-  //   headers: {
-  //     'action': 'authLogin',
-  //     'token': process.env.AUTH_TOKEN,
-  //   }
-  // }).then(resp => {
-  //   console.log(resp.data);
-  // }).catch(err => {
-  //   // Handle Error Here
-  //   console.error(err, 'err');
-  // });
+    //  \x03
 
 
+    // axios({
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    //   url: `${process.env.URL_AJAX}?action=authLogin&token=${process.env.AUTH_TOKEN}`,
+    //   data: {
+    //     action: 'authLogin',
+    //     token: process.env.AUTH_TOKEN
+    //   },
+    //   responseType: 'json'
+    // }).then((res) => {
+    //
+    //   // JSON.parse(res.data)
+    //   console.log(res, 'ok res')
+    //   //console.log(res)
+    // })
+    //     .catch((error) => {
+    //       console.error(error, 'error >>')
+    //     })
 
-  await pause();
-
-
-  //let emailHtml='';
-
-  // body.forEach(([key, value]) => {
-  //   console.log(key + ' - ' + value) // key - value
-  // });
-
-  // event.body.forEach((obj) => {
-  //   Object.entries(obj).forEach(([key, value]) => {
-  //     console.log(`${key} ${value}`);
-  //   });
-  // });
-
-  // Object.entries(body).forEach(entry => {
-  //   const [key, value] = entry;
-  //   //console.log(key, value);
-  //   if ( key !== 'garbage' ) {
-  //     if ( key === 'title' ) {
-  //       emailHtml = emailHtml + '<br><strong>Title form send:</strong> ' + value + '<br>'
-  //     } else {
-  //       emailHtml = emailHtml + '<br><strong>' + key + ':</strong> ' + value
-  //     }
-  //
-  //   }
-  // });
-
-
-  //console.log('body >>>>', emailHtml)
-
-  // Object.keys( JSON.stringify(body) ).forEach(key => {
-  //   console.log(key, obj[key]);
-  // });
-
-  // const mailOptions = {
-  //   from: 'Victoria Soprano Group <info@victoriasoprano.com>',
-  //   to: `<${body.email}>`,
-  //   subject: body.title,
-  //   html: emailHtml,
-  // };
-  //
-  // await transporter.sendMail(mailOptions, function (err, info) {
-  //   if(err)
-  //     console.log(err)
-  //   else
-  //     console.log(info);
-  // })
+    // fetch(`${process.env.URL_AJAX}?action=authLogin&token=${process.env.AUTH_TOKEN}`)
+    //     .then(response => response.json())
+    //     .then(data => console.log(data));
 
 
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ message: m, result: date }),
-  };
+
+    // axios({
+    //   method: 'GET',
+    //   url: process.env.URL_AJAX,
+    //   headers: {
+    //     'action': 'authLogin',
+    //     'token': process.env.AUTH_TOKEN,
+    //   }
+    // }).then(resp => {
+    //   console.log(resp.data);
+    // }).catch(err => {
+    //   // Handle Error Here
+    //   console.error(err, 'err');
+    // });
+
+
+
+    // await pause();
+
+
+    //let emailHtml='';
+
+    // body.forEach(([key, value]) => {
+    //   console.log(key + ' - ' + value) // key - value
+    // });
+
+    // event.body.forEach((obj) => {
+    //   Object.entries(obj).forEach(([key, value]) => {
+    //     console.log(`${key} ${value}`);
+    //   });
+    // });
+
+    // Object.entries(body).forEach(entry => {
+    //   const [key, value] = entry;
+    //   //console.log(key, value);
+    //   if ( key !== 'garbage' ) {
+    //     if ( key === 'title' ) {
+    //       emailHtml = emailHtml + '<br><strong>Title form send:</strong> ' + value + '<br>'
+    //     } else {
+    //       emailHtml = emailHtml + '<br><strong>' + key + ':</strong> ' + value
+    //     }
+    //
+    //   }
+    // });
+
+
+    //console.log('body >>>>', emailHtml)
+
+    // Object.keys( JSON.stringify(body) ).forEach(key => {
+    //   console.log(key, obj[key]);
+    // });
+
+    // const mailOptions = {
+    //   from: 'Victoria Soprano Group <info@victoriasoprano.com>',
+    //   to: `<${body.email}>`,
+    //   subject: body.title,
+    //   html: emailHtml,
+    // };
+    //
+    // await transporter.sendMail(mailOptions, function (err, info) {
+    //   if(err)
+    //     console.log(err)
+    //   else
+    //     console.log(info);
+    // })
+
+
+
+    return {
+        statusCode: 200,
+        body: JSON.stringify({ message: m, result: date }),
+    };
 };

@@ -772,11 +772,12 @@ exports.createPages = ({graphql, actions}) => {
           allWpProduct {
             nodes {
               uri
-              id
+              id 
               ACFBox {
                   listVideo {
                     video
                     numberStep
+                    shorts
                   }
                   like { 
                     ... on WpProduct {

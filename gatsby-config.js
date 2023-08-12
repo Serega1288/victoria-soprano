@@ -14,6 +14,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-tidio`,
+      options: {
+        tidioId: "yoposfqoqhqvd800knx8uiydbauevoux",
+        // get this from the tidio script widget
+        development: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
         pixelId: "621715872942839",

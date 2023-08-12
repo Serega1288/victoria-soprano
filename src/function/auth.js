@@ -35,12 +35,19 @@ class Auth {
         typeof window !== 'undefined' && localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(user))
     }
 
+    // logout = () => {
+    //     if(typeof window !== 'undefined') {
+    //         localStorage.removeItem(LOCAL_STORAGE_KEY)
+    //         navigate('/login')
+    //     }
+    //
+    // }
+
     logout = () => {
         if(typeof window !== 'undefined') {
-            localStorage.removeItem(LOCAL_STORAGE_KEY)
-            navigate('/login')
+            typeof window !== 'undefined' && localStorage.removeItem(LOCAL_STORAGE_KEY)
+            navigate('/')
         }
-
     }
 
     localStoreClear = () => {

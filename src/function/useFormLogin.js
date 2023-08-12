@@ -35,9 +35,13 @@ const useForm = () => {
             body: JSON.stringify(values),
         });
 
-        const responseText = JSON.parse(await res.text() );
+        // const resDate = await res.text();
 
-        console.log('responseText >>>', responseText);
+        const responseText = JSON.parse( await res.text() );
+        // const responseText = resDate;
+        // const responseText = await res;
+
+        // console.log('responseText >>>', responseText);
 
         // const handleLogin =  async () => {
         //     //request to natify
@@ -66,16 +70,15 @@ const useForm = () => {
             });
             setMessage(responseText);
 
-            console.log('ddd', responseText.result )
+            // console.log('ddd >', responseText )
 
-            if ( responseText.result[0] + responseText?.result[1] === '1_' ) {
+            if ( responseText?.result[0] + responseText?.result[1] === '1_' ) {
 
                 const user = responseText?.result
                 instanceAuthService.saveUser(user)
-                navigate('/search')
+                navigate('/account')
 
             }
-
 
         }
 

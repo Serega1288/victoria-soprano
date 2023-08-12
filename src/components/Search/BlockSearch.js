@@ -8,7 +8,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import SearchResult from './SearchResult';
 import SearchField from './SearchField';
 
-const query = graphql`
+const query = graphql` 
     {
         localSearchBlogs {
             publicStoreURL
