@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="27.05.2023/1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="12.08.2023/1">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,13 +143,7 @@
       <workItem from="1685177346886" duration="775000" />
       <workItem from="1685205036596" duration="1738000" />
       <workItem from="1691832986671" duration="4000" />
-    </task>
-    <task id="LOCAL-00038" summary="17.11.2022/2">
-      <created>1668685932084</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1668685932084</updated>
+      <workItem from="1691833333029" duration="381000" />
     </task>
     <task id="LOCAL-00039" summary="17.11.2022/3">
       <created>1668687728524</created>
@@ -487,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685205084046</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="12.08.2023/1">
+      <created>1691833506805</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1691833506806</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,7 +506,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="23.11.2022/7" />
     <MESSAGE value="23.11.2022/8" />
     <MESSAGE value="23.11.2022/9" />
     <MESSAGE value="24.11.2022/1" />
@@ -530,7 +530,8 @@
     <MESSAGE value="24.04.2023/1" />
     <MESSAGE value="24.04.2023/2" />
     <MESSAGE value="27.05.2023/1" />
-    <option name="LAST_COMMIT_MESSAGE" value="27.05.2023/1" />
+    <MESSAGE value="12.08.2023/1" />
+    <option name="LAST_COMMIT_MESSAGE" value="12.08.2023/1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -539,11 +540,6 @@
           <url>file://$PROJECT_DIR$/functions/sendEmail/sendEmail.js</url>
           <line>61</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/pages/login.js</url>
-          <line>10</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/footer/FooterMenu1.js</url>
