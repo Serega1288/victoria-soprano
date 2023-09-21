@@ -179,7 +179,7 @@ const Gallery = (prop) => {
                         {/*{console.log('prop.listVideo >>', prop.listVideo)}*/}
                         {
                             prop.listVideo?.map( (item, index) => {
-                                console.log('>>>>>', item);
+                                // console.log('>>>>>', item);
                                 return (
                                     step === item.numberStep && (
                                         <div  key={index} className="WrapIframe">

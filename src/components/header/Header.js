@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {maxCol} from "../../function/SizeCol";
 
 import styled from 'styled-components';
@@ -10,6 +10,7 @@ import ImgUser from '../../assets/img/user.png';
 import WrapMenu from './WrapMenu';
 // import Meseger from '../header/Meseger'
 import {instanceAuthService} from "../../function/auth";
+import {localStoreService} from "../../function/hook";
 
 const Header = ( props ) => {
 
@@ -36,6 +37,21 @@ const Header = ( props ) => {
         }
     };
 
+
+    const [ stepCartNumber, stepCartNumberSet ] = useState(0);
+    useEffect(()=>{
+        let stepCart = 0;
+        if ( localStoreService.getLocal('CartBuy') ) {
+
+            localStoreService.getLocal('CartBuy').map((item, index) => (
+                stepCart = stepCart + item.step
+            ) )
+        }
+        // console.log('instanceAuthService', stepCart, localStoreService.getLocal('CartBuy') );
+        stepCartNumberSet(stepCart);
+
+    },[])
+
     return (
         <>
             <WrapHeader className="d-flex align-items-center">
@@ -61,7 +77,9 @@ const Header = ( props ) => {
                                 { instanceAuthService.isLogined() &&
                                     <li className="d-none d-md-block">
                                         <Link className='wrapBag' to="/cart/">
-                                            <span>0</span>
+                                            <span id='BagCount'>
+                                                { stepCartNumber }
+                                            </span>
                                             <img src={ImgBag} className="cart" alt="cart" />
                                         </Link>
                                     </li>
@@ -123,15 +141,17 @@ const m = 0.7;
     .wrapBag {
       position: relative;
       span {
-        background-color: #86644b;
-        border-radius: 50%;
-        color: #fff;
-        width: 1.5rem;
-        height: 1.5rem;
+        //background-color: #86644b;
+        //border-radius: 50%;
+        color: #86644b;
+        //width: 1.2rem;
+        //height: 1.2rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 0;
         position: absolute;
         top: 0.5rem;
         left: 0;
@@ -141,7 +161,9 @@ const m = 0.7;
         z-index: 1;
       }
     }
-     
+     .cart {
+       height: 2.8rem;
+     }
      .logo {
         height: 11.2rem;
         @media (max-width:${maxCol.sm}) {

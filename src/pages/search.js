@@ -10,18 +10,6 @@ import {graphql, useStaticQuery} from "gatsby";
 import styled from "styled-components";
 import BlockSearch from "../components/Search/BlockSearch";
 import {maxCol, minCol} from "../function/SizeCol";
-
-//import {maxCol} from "../function/SizeCol";
-//import styled from "styled-components";
-
-// const index = 0 /* a FlexSearch index */
-// const store = {
-//     1: { id: 1, title: 'Document 1' },
-//     2: { id: 2, title: 'Document 2' },
-//     3: { id: 3, title: 'Document 3' },
-// }
-
-
 const SearchPage = () => {
 
 

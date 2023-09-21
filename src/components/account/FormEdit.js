@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import styled from "styled-components";
 import svgEdit from "../../assets/img/edit.svg";
 import Section from "../../styles/ContactFormStyle"
 import useForm from "../../function/useFormAccount";
-
+import Select from "react-select";
+import JSONData from "../../assets/country.json";
 const FormEdit = ({type, click}) => {
+    // const jsonFilePath = require.resolve('../../assets/country.json');
+
+    // const jsonFilePath = 'https://valid.layercode.workers.dev/list/countries?format=select&flags=true&value=code';
+
+    const [countries, setCountries] = useState(JSONData.countries);
+    const [selectedCountry, setSelectedCountry] = useState(JSONData.userSelectValue);
 
     const { values, captureInput, submitForm, isLoading, error, message } = useForm(type);
 
@@ -124,12 +131,20 @@ const FormEdit = ({type, click}) => {
                                     </label>
                                     <label className="box-field-text">
                                         <span>Country *</span>
-                                        <input
+                                        {/*{console.log('countries>>>>', selectedCountry?.value)}*/}
+                                        <Select
                                             required
-                                            type='text'
+                                            options={countries}
+                                            value={values.billing_country = selectedCountry}
+                                            onChange={(selectedOption) => setSelectedCountry(selectedOption)}
+                                            disabled={isLoading}
+                                            isLoading={isLoading}
+                                        />
+                                        <input
+                                            type='hidden'
                                             name='billing_country'
                                             disabled={isLoading}
-                                            value={values.billing_country}
+                                            value={values.billing_country = selectedCountry?.value}
                                             onChange={captureInput}
                                             isLoading={isLoading}
                                         />
@@ -206,6 +221,20 @@ const FormEdit = ({type, click}) => {
 export default FormEdit;
 
 const DatePerson = styled.div`
+  .box-field-text {
+    .css-13cymwt-control {
+      background-color: rgba(0,0,0,0);
+      min-height: 5rem;
+      border-radius: 0;
+      border-color: #000;
+    }
+    .css-1u9des2-indicatorSeparator {
+        background-color: #000;
+    }
+    .gfwmsu .formStyle2 input {
+      height: calc(5rem - 4px - 2px );
+    }
+  }
       .statusInfo {
         margin: 4rem auto;
         max-width: 60rem;

@@ -7,7 +7,7 @@ import  Header from './header/Header';
 import  Footer from './footer/Footer';
 import styled from "styled-components";
 import {maxCol} from "../function/SizeCol";
-import bolkit from '../assets/fonts/bolkit/bolkit.woff2';
+// import bolkit from '../assets/fonts/bolkit/bolkit.woff2';
 
 const Layout = ( {children, title, desc } ) => {
     return (
@@ -15,7 +15,7 @@ const Layout = ( {children, title, desc } ) => {
             <Helmet>
                 <title>{ title } | { desc }</title>
                 <meta name="p:domain_verify" content="4304277d9010e64d1d62fde007276f2e"/>
-                <link rel="preload" href={bolkit} as="font" type="font/woff2" crossOrigin="anonymous" />
+                {/*<link rel="preload" href={bolkit} as="font" type="font/woff2" crossOrigin="anonymous" />*/}
             </Helmet>
             {/*<GlobalFonts />*/}
             <GlobalCols />

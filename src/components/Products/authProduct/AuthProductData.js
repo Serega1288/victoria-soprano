@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
 import {Link} from 'gatsby'
-import styled from "styled-components";
+import styled from "styled-components"
+import {localStoreService} from "../../../function/hook"
 
 const AuthProductData = ({item}) => {
-    console.log('BoxProductDesc >>>', item.ACF_product_attribute_variable );
+    // console.log('BoxProductDesc >>>', item );
+    // console.log('CartBuy >>>>>>>>>', localStoreService.getLocal('CartBuy') )
 
     const  d = item.ACF_product_attribute_variable;
     const [ variableAttrColor, variableAttrColorOpen ] = useState(null);
@@ -12,6 +14,8 @@ const AuthProductData = ({item}) => {
 
     const [ validAttrColor, validAttrColorSet ] = useState(1);
     const [ validAttrSize, validAttrSizeSet ] = useState(1);
+
+    const [ activeAddProdCartSave, activeAddProdCartSaveSet ] = useState(0);
 
     const clickStep = (op) => {
         if (op === 'plus') {
@@ -35,22 +39,144 @@ const AuthProductData = ({item}) => {
         validAttrSizeSet(1)
     };
 
-    const ClickBuy = () => {
+
+    const ClickBuy = ( step, color, size ) => {
         if (variableAttrColor === null) { validAttrColorSet(0) };
         if (variableAttrSize === null) { validAttrSizeSet(0) }
+
+        // console.log('variableAttrColor', variableAttrColor)
+        // console.log('variableAttrSize', variableAttrSize)
+        // console.log('step', step)
+
+        if ( variableAttrColor !== null && variableAttrSize !== null ) {
+            // alert('buy');
+            activeAddProdCartSaveSet(1)
+
+            let price = d.priceSaleFront ? ( d.priceSaleFront ) : ( d.priceFront );
+
+            let getCart = localStoreService.getLocal('CartBuy');
+
+            if (  getCart ) {
+
+                let activeAddProdCart = 0;
+
+                getCart.map((cart, index)=> {
+                    if ( cart.id === item.id && cart.color === color && cart.size === size ) {
+                        cart.step = cart.step + step
+                        activeAddProdCart=1
+                    }
+                })
+
+                if ( activeAddProdCart === 0 ) {
+                    const Arr = [
+                        ...getCart,
+                        {
+                            uri : item.uri,
+                            img : item.featuredImage,
+                            id : item.id,
+                            databaseId : item.databaseId,
+                            art : item.ACFBox.article,
+                            color,
+                            size,
+                            price: price,
+                            step,
+                            title: item.title
+                        },
+                    ];
+
+                    // console.log('CartBuy >>>>>>>>> not null CartBuy', getCart )
+                    localStoreService.saveLocal('CartBuy', Arr );
+
+                } else {
+
+                    // console.log('CartBuy >>>>>>>>> not null CartBuy', getCart )
+                    localStoreService.saveLocal('CartBuy', getCart );
+
+                }
+
+
+            } else {
+                const Arr = [
+                    {
+                        uri : item.uri,
+                        img : item.featuredImage,
+                        id : item.id,
+                        databaseId : item.databaseId,
+                        art : item.ACFBox.article,
+                        color,
+                        size,
+                        price: price,
+                        step,
+                        title: item.title
+                    },
+                ];
+                // console.log('CartBuy >>>>>>>>> null' )CartBuy >>>>>>>>>
+
+                localStoreService.saveLocal('CartBuy', Arr );
+            }
+
+
+            console.log('Click CartBuy >>>>>>>>>', localStoreService.getLocal('CartBuy') )
+
+            setTimeout(() => {
+                variableAttrColorOpen(null)
+                variableAttrSizeOpen(null)
+                stepSet(1)
+                activeAddProdCartSaveSet(0)
+            }, 500);
+
+
+        }
+
+        let count = 0;
+        localStoreService.getLocal('CartBuy').map((cart, index)=> {
+            count = count + cart.step
+        })
+        console.log('count >>>', count)
+        // BagCount
+
+        document.getElementById("BagCount").innerHTML = count;
+
     };
+
+    const clearS = () => {
+        localStoreService.saveLocal('CartBuy', null );
+    }
+
+
+    // const onBuy = (step, Img, category, title, id) => {
+    //     const Arr = [
+    //         {
+    //             Img: Img,
+    //             title: title,
+    //             category: category,
+    //             step: step,
+    //             id: id,
+    //             price: +price,
+    //             url: props.uri,
+    //             order: props.pageContext.ACForderDateProduct
+    //         },
+    //     ];
+    //     localStoreService.saveLocal('CartBuy', Arr );
+    //
+    //     navigate('/checkout');
+    // };
+
 
     return (
         <Section>
+
+            {/*<span onClick={()=>clearS()}>clear!!!!!!!!!!</span>*/}
+
             <div className="price">
                 {
                     d.priceSaleFront ? (
                         <>
                             <span>
-                                d.priceFront + '$'
+                                {d.priceFront + '$'}
                             </span>
                             <span className='savePrice'>
-                                d.priceSaleFront + '$'
+                                {d.priceSaleFront + '$'}
                             </span>
                         </>
                     ) : (
@@ -58,6 +184,13 @@ const AuthProductData = ({item}) => {
                     )
                 }
             </div>
+            {
+                item.ACFBox.article && (
+                    <div className='art'>
+                        Art: <span>{item.ACFBox.article}</span>
+                    </div>
+                )
+            }
             <div className="attr">
 
                 <div className="attr-item attr-color">
@@ -67,7 +200,7 @@ const AuthProductData = ({item}) => {
                         </div>
                         <div className="col-8 d-flex align-items-center">
                             <div className="values row">
-                                {  item.ACF_product_attribute_variable.color.map((item, index) => (
+                                {  d.color.map((item, index) => (
                                     <div onClick={()=>clickAttrColor(item)} className={`value col-auto ${ item === variableAttrColor && 'active' }`}>{item}</div>
                                 ) ) }
                             </div>
@@ -82,7 +215,7 @@ const AuthProductData = ({item}) => {
                         </div>
                         <div className="col-8 d-flex align-items-center">
                             <div className="values row">
-                                {  item.ACF_product_attribute_variable.size.map((item, index) => (
+                                {  d.size.map((item, index) => (
                                     <div onClick={()=>clickAttrSize(item)} className={`value col-auto ${ item === variableAttrSize && 'active' }`}>{item}</div>
                                 ) ) }
                             </div>
@@ -108,8 +241,10 @@ const AuthProductData = ({item}) => {
                                 <span onClick={()=>clickStep('plus')} className="plus">+</span>
                             </div>
                         </div>
+
                         <div className="col-9">
-                            <span  onClick={()=>ClickBuy()} className='btn style-3 w100'>
+                            <span  onClick={()=>ClickBuy( step, variableAttrColor, variableAttrSize )}
+                                   className={`btn style-3 w100 ${ activeAddProdCartSave === 1 && 'add' }`}>
                                 ADD TO BAG
                             </span>
                         </div>
@@ -209,6 +344,4 @@ const Section = styled.div`
       height: 1.5px;
     }
   }
-  
-  
 `;

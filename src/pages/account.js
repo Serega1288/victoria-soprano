@@ -7,9 +7,15 @@ import styled from "styled-components";
 import svgEdit from "../assets/img/edit.svg"
 import GetDataAccount from "../function/dataAccount"
 import FormEdit from "../components/account/FormEdit"
-
+import JSONData from "../assets/country.json"
 const AccountPage = () => {
 
+    const getContryName = (name) => {
+        // console.log('JSONData', JSONData.countries)
+        const result = JSONData.countries.find(item => item.value === name)
+        // console.log('JSONData', name, result)
+        return result.label
+    }
 
 
     const { dataAccount, fetchDataAccount, isLoadingDataAccount } = GetDataAccount();
@@ -48,7 +54,7 @@ const AccountPage = () => {
                                 {isLoadingDataAccount === false ? (
                                     dataAccount.result?.meta_data?.map((item, index) => {
                                         if ( item.key === 'active_acount' ) {
-                                            console.log('>>>>', item.value);
+                                            // console.log('>>>>', item.value);
                                             if ( item.value === '0' ) {
                                                 return (
                                                     dataAccount.result?.last_name === ''
@@ -64,8 +70,8 @@ const AccountPage = () => {
                                                     || dataAccount.result?.billing.city === ''
                                                     || dataAccount.result?.billing.address_1 === ''
                                                     || dataAccount.result?.billing.postcode === ''
-                                                        ? ( <div className='informBox'>To activate your account, please fill in all the contact details below.</div> ) :
-                                                        ( <div className='informBox'>After filling in all relevant data, your account will be activated within 24 hours. But you will be able to see all current prices after activation of your account by the site administration.</div> )
+                                                        ? ( <div key={index} className='informBox'>To activate your account, please fill in all the contact details below.</div> ) :
+                                                        ( <div key={index} className='informBox'>After filling in all relevant data, your account will be activated within 24 hours. But you will be able to see all current prices after activation of your account by the site administration.</div> )
 
                                                 )
                                             }
@@ -152,7 +158,10 @@ const AccountPage = () => {
                                             <div className='country'>
                                                 {
                                                     isLoadingDataAccount === false ? (
-                                                        dataAccount.result?.billing?.country === '' ? ( '....' ) : ( dataAccount.result?.billing?.country )
+                                                        dataAccount.result?.billing?.country === '' ? ( '....' ) : (
+                                                            getContryName(dataAccount.result?.billing?.country)
+                                                    )
+
                                                     ) : ('....')
                                                 }
                                             </div>

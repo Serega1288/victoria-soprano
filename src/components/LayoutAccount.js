@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "gatsby";
 import styled from "styled-components";
 import {instanceAuthService} from "../function/auth";
-// import {minCol, maxCol} from "../function/SizeCol";
+import {minCol, maxCol} from "../function/SizeCol"
 // import dataAccount from "../function/dataAccount";
 
 const LayoutAccount = ({children}) => {
@@ -17,7 +17,7 @@ const LayoutAccount = ({children}) => {
 
                 <AccountWrap id='AccountScroll-0' className="account container">
                     <div className="row">
-                        <div className="col-12 col-md-5">
+                        <div className="col-12 col-md-4 col-xl-5">
                             <AccountMenu>
                                 <ul>
                                     <li>
@@ -57,7 +57,7 @@ const LayoutAccount = ({children}) => {
                                 </ul>
                             </AccountMenu>
                         </div>
-                        <div className="col-12 col-md-7">
+                        <div className="col-12 col-md-8 col-xl-7">
                             {children}
                         </div>
                     </div>
@@ -74,6 +74,7 @@ const AccountWrap = styled.div`
     padding-bottom: 10rem;
 `;
 const AccountMenu = styled.div`
+    margin-bottom: 9rem;
     .LogoutUser {
       cursor: pointer; 
       max-width: 23rem;
@@ -100,6 +101,9 @@ const AccountMenu = styled.div`
       font-size: 2.2rem;
       font-weight: 500;
       line-height: 1;
+      @media (max-width:${maxCol.sm}) {
+        font-size: 1.8rem;
+      }
     }
     .LogoutUser {
       border-top: 1px solid #000000;

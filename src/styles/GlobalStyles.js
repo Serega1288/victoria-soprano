@@ -141,7 +141,7 @@ ul {
 .status-anim.active-block + * {
     opacity: 1 !important;
 }
-.anim, a, .btn, .btn:before, .btn:after , input, a:after, a:before, a div {
+.anim, a, .a, .btn, .btn:before, .btn:after , input, a:after, a:before, a div, .a svg, .a svg path {
     transition: all 0.5s ease;  
 }
 .WrapMenu {
@@ -234,7 +234,6 @@ ul {
             min-width: 10rem;
         }
     }
-    
     &.style-3 {
         font-size: 1.8rem;
         border: none;
@@ -243,7 +242,8 @@ ul {
         color: #fff;
         text-decoration: none;
         text-align: center;
-        &:hover, &:focus { 
+ 
+        &:hover, &:focus, &.add { 
             background-color: #1a0f07;
         }
          @media(max-width: ${maxCol.sm}) {

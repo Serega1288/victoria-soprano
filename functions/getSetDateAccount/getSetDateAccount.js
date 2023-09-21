@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
   let statusCode = '';
 
 
-  if ( body.type === 'getDateAccount' ) {
+  if ( body.type === 'getDateAccount' || body.type === 'order' ) {
 
       // console.log('getDateAccount >>>', body );
 
@@ -25,10 +25,10 @@ exports.handler = async (event, context) => {
       },
     }).then(response => {
       m = response.data;
-      // console.log('>>>>>>>>>>>>>>>>>>>>>>>> done', response.data );
+      // console.log('>>>>>>>>>>>>>>>>>>>>>>>> done', body.type, response.data );
     }).catch(error => {
       // console.error('>>>>>>>>>>>>>>>>>>>>>>>> error', error);
-        // console.log('>>>>>>>>', response.data.result );
+      //   console.log('>>>>>>>>', body.type, response.data.result );
       return {
         statusCode: 400,
         body: JSON.stringify({ m: body, result: error}),

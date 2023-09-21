@@ -25,11 +25,11 @@ const AccountData = () => {
         if (d) {
             setDataAccount(d);
 
-            console.log('Account >>>', d.result )
+            // console.log('Account >>>', d.result )
 
             if( d?.result === '') {
                 // instanceAuthService.logout()
-                console.log('Account >>> not', d )
+                // console.log('Account >>> not', d )
             }
             // d?.result?.meta_data?.forEach((element) => {
             //     if(element.key === 'accoont_active' ) {

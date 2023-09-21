@@ -7,7 +7,7 @@ import {instanceAuthService} from "../../function/auth";
 import AuthProductData from "./authProduct/AuthProductData"
 
 const BoxProductDesc = ({item}) => {
-    //console.log('BoxProductDesc >>>', item);
+    // console.log('BoxProductDesc >>>', item);
 
     const data = useStaticQuery(graphql` 
         {
@@ -47,9 +47,20 @@ const BoxProductDesc = ({item}) => {
 
     return (
         <>
+
+
+
             { instanceAuthService.isLogined() && <AuthProductData item={item} /> }
+
             { item.content && (
                  <>
+                     {
+                         instanceAuthService.isLogined() ? ('') : (
+                             <div className='art'>
+                                 Art: <span>{item.ACFBox.article}</span>
+                             </div>
+                         )
+                     }
                      <div className="sub-title">
                          About dress
                      </div>

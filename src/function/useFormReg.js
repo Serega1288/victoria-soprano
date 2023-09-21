@@ -10,7 +10,7 @@ const useForm = (d, email, type) => {
     const [message, setMessage] = useState(null);
 
 
-    console.log('user values code >>>>>>> !!!', values.code, values.email);
+    // console.log('user values code >>>>>>> !!!', values.code, values.email);
 
 
     const captureInput = e => {

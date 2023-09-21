@@ -1,8 +1,8 @@
 {
-  "name": "sendLogin",
+  "name": "sendCheckout",
   "version": "1.0.0",
   "description": "",
-  "main": "sendLogin.js",
+  "main": "sendCheckout.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.1.3",
-    "node-fetch": "^3.3.0",
-    "nodemailer": "^6.8.0"
+    "node-fetch": "^3.3.0"
   }
 }

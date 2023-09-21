@@ -10,12 +10,12 @@ const GlobalFonts = createGlobalStyle`
     src: url("${bolkit}") format("woff2");
 }
 @font-face {
-    font-family: 'Bolkit';
+    font-family: 'Bolkit'; 
     font-style: normal;
     font-weight: 700; 
     src: url("${bolkitBold}") format("woff2");
-}
-h1,h2,h3,h4 {
+} 
+h1,h2,h3,h4, .bolkit {
         font-family: 'Bolkit';
       }
 `;

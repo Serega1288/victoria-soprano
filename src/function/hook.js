@@ -1,3 +1,5 @@
+import React from "react";
+
 class Hook {
 
     saveLocal = (KEY, VALUE) => {
@@ -6,6 +8,18 @@ class Hook {
 
     getLocal = (KEY) => {
         return typeof window !== 'undefined' && JSON.parse( localStorage.getItem(KEY) )
+    }
+
+    getCountCart = () => {
+
+        console.log('>>>>>>>>>>>>',  typeof window !== 'undefined' && JSON.parse( localStorage.getItem('CartBuy') ) )
+
+        return typeof window !== 'undefined' && JSON.parse(
+            localStorage.getItem('CartBuy').map((item, index) => (
+                    item
+                )
+            )
+        )
     }
 
     localStoreClear = () => {

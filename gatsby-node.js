@@ -773,6 +773,7 @@ exports.createPages = ({graphql, actions}) => {
             nodes {
               uri
               id 
+              databaseId
               ACF_product_attribute_variable {
                 color
                 size
@@ -780,7 +781,8 @@ exports.createPages = ({graphql, actions}) => {
                 priceSaleFront
               }
               ACFBox {
-                  listVideo {
+                  article
+                  listVideo {  
                     video
                     numberStep
                     shorts
@@ -894,11 +896,15 @@ exports.createPages = ({graphql, actions}) => {
                         context: item,
                     })
                 } else {
-                    createPage({
-                        path: `${item.slug}`,
-                        component:  pageTemplate,
-                        context: item,
-                    })
+
+                    if ( item.template.templateName === 'Page Checkout') { } else {
+                        createPage({
+                            path: `${item.slug}`,
+                            component:  pageTemplate,
+                            context: item,
+                        })
+                    }
+
                 }
             }
 

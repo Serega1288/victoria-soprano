@@ -59,6 +59,21 @@ export default Product;
 
 
 const Section = styled.section`
+    .art {
+      color: #86644B;
+      margin-top: 0rem;
+      margin-bottom: 3rem;
+      font-size: 3rem;
+      span {
+        color: #000;
+        margin-left: 0.5rem;
+        font-weight: 400;
+        //font-size: 2.4rem;
+      }
+      @media(max-width: ${maxCol.sm}) {
+        font-size: 2rem;
+      }
+    }
     .pinterest {
         // background-image: url(${pinterest});
         display: inline-block;
