@@ -139,7 +139,7 @@ const Section = styled.section`
         
     }
     .iframeBefore, .iframeAfter {
-        width: 25%;
+        width: 40%;
         z-index: 5;
         position: absolute;
         top: 0;
