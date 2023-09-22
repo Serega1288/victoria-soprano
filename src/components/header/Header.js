@@ -64,6 +64,16 @@ const Header = ( props ) => {
                                         <img src={ImgSearch} className="search" alt="search" />
                                     </Link>
                                 </li>
+                                { instanceAuthService.isLogined() &&
+                                    <li className="d-block d-md-none">
+                                        <Link className='wrapBag' to="/cart/">
+                                            <span id='BagCount'>
+                                                { stepCartNumber }
+                                            </span>
+                                            <img src={ImgBag} className="cart" alt="cart" />
+                                        </Link>
+                                    </li>
+                                }
                             </IconItems>
                         </div>
                         <div className="col-auto">
