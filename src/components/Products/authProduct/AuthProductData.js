@@ -200,7 +200,7 @@ const AuthProductData = ({item}) => {
                         </div>
                         <div className="col-8 d-flex align-items-center">
                             <div className="values row">
-                                {  d.color.map((item, index) => (
+                                {  d?.color?.map((item, index) => (
                                     <div onClick={()=>clickAttrColor(item)} className={`value col-auto ${ item === variableAttrColor && 'active' }`}>{item}</div>
                                 ) ) }
                             </div>
@@ -215,7 +215,7 @@ const AuthProductData = ({item}) => {
                         </div>
                         <div className="col-8 d-flex align-items-center">
                             <div className="values row">
-                                {  d.size.map((item, index) => (
+                                {  d?.size?.map((item, index) => (
                                     <div onClick={()=>clickAttrSize(item)} className={`value col-auto ${ item === variableAttrSize && 'active' }`}>{item}</div>
                                 ) ) }
                             </div>
