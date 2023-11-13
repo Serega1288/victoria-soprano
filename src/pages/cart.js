@@ -135,18 +135,18 @@ const CartPage = () => {
                                         ''
                                     ) : (
                                         <div className="row">
-                                            <div className="col-9">
+                                            <div className="col-12 col-md-9">
                                                 <div className='WrapCart'>
                                                     {
                                                         cart?.map((item, index) => (
                                                             <div key={`cartList ${index}`} className='ItemCart'>
                                                                 <div className="row">
-                                                                    <div className="col-6">
+                                                                    <div className="col-12 col-sm-6">
                                                                         <Link to={item.uri}>
                                                                             <img src={item.img.node.localFile.publicURL} alt=""/>
                                                                         </Link>
                                                                     </div>
-                                                                    <div className="col-6">
+                                                                    <div className="col-12 col-sm-6">
                                                                         <div className="wrapProductDate">
                                                                             <div className="title bolkit">
                                                                                 {item.title}
@@ -214,7 +214,7 @@ const CartPage = () => {
                                                     }
                                                 </div>
                                             </div>
-                                            <div className="col-3">
+                                            <div className="col-12 col-md-3">
                                                 <div className="WrapTotal">
                                                     <div className="TotalItem">
                                                         <div className="row">
@@ -287,7 +287,9 @@ const CartSection = styled.section`
     }
   }
   .wrapProductDate {
-    border-left: 1px solid #000;
+    @media (min-width: ${minCol.sm}) {
+      border-left: 1px solid #000;
+    }
     height: 100%;
     strong {
       font-weight: 600;
@@ -306,6 +308,9 @@ const CartSection = styled.section`
     }
     .wrapBtnItem {
       border-right: 1px solid #000;
+      @media (max-width: ${maxCol.sm}) {
+        border-left: 1px solid #000;
+      }
       .a {
         display: block; 
         width: 100%;
@@ -326,8 +331,10 @@ const CartSection = styled.section`
       }
     }
     & > div {
-      padding-left: 2.5rem;
       margin-bottom: 2.4rem;
+      @media (min-width: ${minCol.sm}) {
+        padding-left: 2.5rem;
+      }
     }
     .title {
       margin: 0;
@@ -353,6 +360,7 @@ const CartSection = styled.section`
     border: 1px solid #000;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    margin-bottom: 10rem;
   }
   .title {
     font-size: 3rem;
