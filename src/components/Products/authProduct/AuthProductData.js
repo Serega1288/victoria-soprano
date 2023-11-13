@@ -135,7 +135,8 @@ const AuthProductData = ({item}) => {
         console.log('count >>>', count)
         // BagCount
 
-        document.getElementById("BagCount").innerHTML = count;
+        document.getElementById("BagCount-1").innerHTML = count;
+        document.getElementById("BagCount-2").innerHTML = count;
 
     };
 
