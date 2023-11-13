@@ -67,7 +67,7 @@ const Header = ( props ) => {
                                 { instanceAuthService.isLogined() &&
                                     <li className="d-block d-md-none">
                                         <Link className='wrapBag' to="/cart/">
-                                            <span id='BagCount'>
+                                            <span id='BagCount-1'>
                                                 { stepCartNumber }
                                             </span>
                                             <img src={ImgBag} className="cart" alt="cart" />
@@ -87,7 +87,7 @@ const Header = ( props ) => {
                                 { instanceAuthService.isLogined() &&
                                     <li className="d-none d-md-block">
                                         <Link className='wrapBag' to="/cart/">
-                                            <span id='BagCount'>
+                                            <span id='BagCount-2'>
                                                 { stepCartNumber }
                                             </span>
                                             <img src={ImgBag} className="cart" alt="cart" />
