@@ -196,7 +196,7 @@ const CartPage = () => {
                                             />
 
                                             <div className="row">
-                                                <div className="col-9">
+                                                <div className="col-12 col-md-9">
                                                     <div className='WrapCart'>
                                                         <div className="list">
                                                             <>
@@ -379,7 +379,7 @@ const CartPage = () => {
                                                     </div>
                                                 </div>
 
-                                                <div className="col-3">
+                                                <div className="col-12 col-md-3">
                                                     <div className="WrapTotal">
                                                         <div className="TotalItem">
                                                             <div className="row">
@@ -543,6 +543,7 @@ const CartSection = styled.div`
     border: 1px solid #000;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    margin-bottom: 10rem;
   }
   .WrapCart {
     max-width: 84rem;
