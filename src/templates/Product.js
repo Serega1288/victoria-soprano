@@ -224,10 +224,10 @@ const Section = styled.section`
         .CollapsList-text {
             display: flex;
             flex-wrap: wrap;
-            & > * {
-                flex: 0 0 auto;
-                width: 50%;
-            }
+            // & > * {
+            //     flex: 0 0 auto;
+            //     width: 50%;
+            // }
         }
     }
     .CollapsList-text-sub-text {
