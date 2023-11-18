@@ -12,7 +12,7 @@ const  item = ({post, step}) => {
     `;
     // ${step === 0 ? 'col-sm-8' : '' }
     return (
-            <Link className={`blog-item ${step === 0 ? 'col-sm-8' : '' }`} to={`/blog/${post.slug}`}>
+            <Link className={`blog-item ${step === 0 ? 'col-sm-12' : '' }`} to={`/blog/${post.slug}`}>
                 <ImageBG className="blog-img" />
                 <h2 className="blog-item-title text-center">{post.title}</h2>
             </Link>
