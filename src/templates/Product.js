@@ -221,14 +221,6 @@ const Section = styled.section`
         .container {
             padding: 0;
         }
-        .CollapsList-text {
-            display: flex;
-            flex-wrap: wrap;
-            // & > * {
-            //     flex: 0 0 auto;
-            //     width: 50%;
-            // }
-        }
     }
     .CollapsList-text-sub-text {
         margin-bottom: 2rem;
