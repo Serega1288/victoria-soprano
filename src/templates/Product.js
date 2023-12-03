@@ -33,9 +33,10 @@ const Product = (props) => {
             <Section>
                 <div className="container box-desc">
                     <div className="row">
-                        <div className="col-12 box-title">
+                        <div className="col-12 box-title goooo111111111111">
                             <Title item={props.pageContext} />
                         </div>
+                    
                         <div className="col-12 col-sm-6  box-gallery pos z-in-1">
                             <Gallery
                                 firstImage={props.pageContext.featuredImage}
