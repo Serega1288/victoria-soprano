@@ -1,7 +1,7 @@
 import React from 'react';
 import {minCol, maxCol} from "../function/SizeCol";
 import styled from "styled-components";
-import {graphql, useStaticQuery} from "gatsby";
+import {graphql, Link, useStaticQuery} from "gatsby";
 import Layout from '../components/Layout';
 import searchSVG from '../assets/img/search.svg'
 import downloadSVG from '../assets/img/download.svg'
@@ -13,6 +13,8 @@ import BoxProductDesc from "../components/Products/BoxProductDesc";
 import LikeProduct from "../components/Products/LikeProduct";
 
 const Product = (props) => {
+
+    const page = props;
 
     const data = useStaticQuery(graphql` 
         {
@@ -26,32 +28,90 @@ const Product = (props) => {
     `);
 
 
-    //console.log('Product page', props);
+    // console.log('Product page', page);
 
     return (
-        <Layout title={ props.pageContext.title } desc={ data.wp.allSettings.generalSettingsTitle } >
+        <Layout title={ page.pageContext.node.title } desc={ data.wp.allSettings.generalSettingsTitle } >
             <Section>
                 <div className="container box-desc">
+
                     <div className="row">
-                        <div className="col-12 box-title goooo111111111111">
-                            <Title item={props.pageContext} />
+                        <div className="col-12 box-title">
+                            <Title item={page.pageContext.node} />
                         </div>
-                    
+
+                        <div className='col-12'>
+                            <div className='NavPages'>
+                                <div className="row">
+                                    <div className="col">
+                                        {
+                                            page.pageContext.previous && (
+                                                <Link className='btn style-2' to={page.pageContext.previous.uri}>
+                                                    Previous: {page.pageContext.previous.title}
+                                                </Link>
+                                            )
+                                        }
+                                    </div>
+                                    <div className="col-auto">
+                                        {
+                                            page.pageContext.next && (
+                                                <Link className='btn style-2' to={page.pageContext.next.uri}>
+                                                    Next: {page.pageContext.next.title}
+                                                </Link>
+                                            )
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="col-12 col-sm-6  box-gallery pos z-in-1">
                             <Gallery
-                                firstImage={props.pageContext.featuredImage}
-                                item={props.pageContext.ACFBox.gallery}
-                                listVideo={props.pageContext.ACFBox.listVideo}
+                                firstImage={page.pageContext.node.featuredImage}
+                                item={page.pageContext.node.ACFBox.gallery}
+                                listVideo={page.pageContext.node.ACFBox.listVideo}
                             />
+
+
                         </div>
                         <div className="col-12 col-sm-6 d-flex justify-content-center pos z-in-2">
                             <div className="box-product-desc">
-                                <BoxProductDesc item={props.pageContext} />
+                                <BoxProductDesc item={page.pageContext.node} />
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                { page.pageContext.node.ACFBox?.like && (<LikeProduct item={page.pageContext.node.ACFBox.like} />) }
+
+
+                <div className="container">
+                    <div className='NavPages'>
+                        <div className="row">
+                            <div className="col">
+                                {
+                                    page.pageContext.previous && (
+                                        <Link className='btn style-2' to={page.pageContext.previous.uri}>
+                                            Previous: {page.pageContext.previous.title}
+                                        </Link>
+                                    )
+                                }
+                            </div>
+                            <div className="col-auto">
+                                {
+                                    page.pageContext.next && (
+                                        <Link className='btn style-2' to={page.pageContext.next.uri}>
+                                            Next: {page.pageContext.next.title}
+                                        </Link>
+                                    )
+                                }
                             </div>
                         </div>
                     </div>
                 </div>
-                { props.pageContext.ACFBox?.like && (<LikeProduct item={props.pageContext.ACFBox.like} />) }
+
             </Section>
         </Layout>
     );
@@ -74,6 +134,10 @@ const Section = styled.section`
       @media(max-width: ${maxCol.sm}) {
         font-size: 2rem;
       }
+    }
+    .NavPages {
+      margin-bottom: 4rem;
+      //margin-top: 4rem;
     }
     .pinterest {
         // background-image: url(${pinterest});
@@ -222,7 +286,15 @@ const Section = styled.section`
         .container {
             padding: 0;
         }
-    }
+        .CollapsList-text {
+            display: flex;
+            flex-wrap: wrap;
+            //& > * {
+            //    flex: 0 0 auto;
+            //    width: 50%;
+            //}
+        }
+    } 
     .CollapsList-text-sub-text {
         margin-bottom: 2rem;
         line-height: 1;
