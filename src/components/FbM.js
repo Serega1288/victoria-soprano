@@ -1,33 +1,47 @@
 import React, { useEffect } from "react";
 
 function MessengerChat() {
+    // useEffect(() => {
+    //     window.fbAsyncInit = function () {
+    //         window.FB.init({
+    //             xfbml: true,
+    //             version: "v17.0",
+    //         });
+    //     };
+    //     (function (d, s, id) {
+    //         var js,
+    //             fjs = d.getElementsByTagName(s)[0];
+    //         if (d.getElementById(id)) return;
+    //         js = d.createElement(s);
+    //         js.id = id;
+    //         js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+    //         fjs.parentNode.insertBefore(js, fjs);
+    //     })(document, "script", "facebook-jssdk");
+    // });
+    // return (
+    //     <>
+    //         <div id="fb-root" />
+    //         <div
+    //             className="fb-customerchat"
+    //             attribution="page_inbox"
+    //             page_id="497817423746164"
+    //         />
+    //     </>
+    // );
+
     useEffect(() => {
-        window.fbAsyncInit = function () {
-            window.FB.init({
-                xfbml: true,
-                version: "v17.0",
-            });
+        const script = document.createElement("script");
+        script.src = "//code.tidio.co/puoxkrgs3xfan1bzpm8wzkh090dpwiek.js";
+        script.async = true;
+        document.body.appendChild(script);
+
+        return () => {
+            // Clean up script when component unmounts
+            document.body.removeChild(script);
         };
-        (function (d, s, id) {
-            var js,
-                fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        })(document, "script", "facebook-jssdk");
-    });
-    return (
-        <>
-            <div id="fb-root" />
-            <div
-                className="fb-customerchat"
-                attribution="page_inbox"
-                page_id="497817423746164"
-            />
-        </>
-    );
+    }, []);
+
+    return null; // No need to render anything
 }
 
 export default MessengerChat;
