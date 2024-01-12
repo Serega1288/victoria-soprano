@@ -11,7 +11,7 @@ const SavePage = () => {
     //const [query, setQuery] = useState(null)
     //const results = useFlexSearch(query, index, store)
 
-    const [ Save ] = useState(localStoreService.getLocal('saveProduct'));
+    const [ Save ] = useState(localStoreService.getLocal('saveProduct') || [] );
     const data = useStaticQuery(graphql` 
         {
             wp { 
