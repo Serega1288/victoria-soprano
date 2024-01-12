@@ -33,7 +33,7 @@ const SavePage = () => {
                 <Section className="ListProduct">
                     <div className="container">
                         <div className="row row-cols-2 row-cols-sm-3">
-                            {Save.map( (item, index) => {
+                            {Save?.map( (item, index) => {
                                 console.log('categoryItem', item);
                                 return (
                                     <ProductItem key={index} item={item} />
