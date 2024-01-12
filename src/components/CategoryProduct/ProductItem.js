@@ -6,9 +6,9 @@ import {maxCol} from "../../function/SizeCol";
 import { getImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from 'gatsby-background-image'
-
+import Save from '../../function/Save'
 const ProductItem = ({item}) => {
-   //console.log('ListProduct >>', item?.featuredImage?.node.localFile.childImageSharp );
+   console.log('ListProduct >>', item );
    //  const ImageBG = styled.div`
    //      background-image: url(${ item?.featuredImage?.node.localFile?.publicURL });
    //  `;
@@ -17,28 +17,25 @@ const ProductItem = ({item}) => {
     const bgImage = convertToBgImage(image)
 
     return (
-        <Link to={item.uri}>
-            {/*<ImageBG className="ImageBG" />*/}
-
-            <BackgroundImage
-                className="ImageBG"
-                Tag="div"
-                // Spread bgImage into BackgroundImage:
-                {...bgImage}
-                preserveStackingContext
-            />
-
-            {/*<BackgroundImage*/}
-            {/*    Tag={`section`}*/}
-            {/*    id={`media-test`}*/}
-            {/*    className="ImageBG"*/}
-            {/*    fluid={sources}*/}
-            {/*/>*/}
-
-            <h3 className="ProductItemTitle">
-                {item.title}
-            </h3>
-        </Link>
+        <div className="product">
+            <div className='wrapLink'>
+                <Save product={item} />
+                <Link to={item.uri}>
+                    <BackgroundImage
+                        className="ImageBG"
+                        Tag="div"
+                        // Spread bgImage into BackgroundImage:
+                        {...bgImage}
+                        preserveStackingContext
+                    />
+                </Link>
+            </div>
+            <Link to={item.uri}>
+                <h3 className="ProductItemTitle">
+                    {item.title}
+                </h3>
+            </Link>
+        </div>
     )
 }
 export default ProductItem;

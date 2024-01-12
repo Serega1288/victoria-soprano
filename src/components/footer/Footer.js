@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import LoadFooter from "./LoadFooter";
 import { useScrollPosition } from '../../function/useScrollPosition';
-
+import TidioScript from './TidioScript'
 
 const Footer = () => {
 
@@ -19,6 +19,7 @@ const Footer = () => {
     return (
         <>
             {firstScroll ? <LoadFooter /> : <footer className="footer-clone" style={{minHeight: '50rem'}} />  }
+            <TidioScript />
         </>
     )
 };

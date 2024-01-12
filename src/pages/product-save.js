@@ -1,26 +1,65 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Layout from '../components/Layout';
+import {graphql, useStaticQuery} from "gatsby";
 import styled from "styled-components";
-import {minCol, maxCol} from "../../function/SizeCol";
-import ProductItem from "./ProductItem";
+import BlockSearch from "../components/Search/BlockSearch";
+import {maxCol, minCol} from "../function/SizeCol";
+import ProductItem from "../components/CategoryProduct/ProductItem";
+import {localStoreService} from "../function/hook";
+const SavePage = () => {
 
-const ListProduct = ({item}) => {
-    //console.log('ListProduct >>', item );
+    //const [query, setQuery] = useState(null)
+    //const results = useFlexSearch(query, index, store)
+
+    const [ Save ] = useState(localStoreService.getLocal('saveProduct'));
+    const data = useStaticQuery(graphql` 
+        {
+            wp { 
+                allSettings {
+                    generalSettingsTitle 
+                    generalSettingsDescription
+                }
+            }
+        }
+    `)
+
+    //console.log('>>>', data)
+
+
+
     return (
-        <Section className="ListProduct">
-            <div className="container">
-                <div className="row row-cols-2 row-cols-sm-3">
-                    {item.map( (item, index) => {
-                        //console.log('categoryItem', item);
-                        return (
-                            <ProductItem key={index} item={item} />
-                        )
-                    })}
-                </div>
-            </div>
-        </Section>
-    )
-}
-export default ListProduct;
+        <Layout title="Save products"  desc={ data.wp.allSettings.generalSettingsTitle } >
+                <h1 className="text-center">Saved</h1>
+                <Section className="ListProduct">
+                    <div className="container">
+                        <div className="row row-cols-2 row-cols-sm-3">
+                            {Save.map( (item, index) => {
+                                console.log('categoryItem', item);
+                                return (
+                                    <ProductItem key={index} item={item} />
+                                )
+                            })}
+                        </div>
+                    </div>
+                </Section>
+                {/*{instanceAuthService.isLogined() ? 'true' : 'false' }*/}
+                {/*/!* () => - потрібно щоб не вик*!/*/}
+                {/*<span onClick={() => instanceAuthService.logout()}>dasdas</span>*/}
+
+                {/*/!*{instanceAuthService.localStoreClear()}*!/*/}
+
+                {/*{ typeof window !== 'undefined' && localStorage.getItem('user') }*/}
+
+        </Layout>
+    );
+};
+export default SavePage;
+
+// export default () => (
+//     <AuthLayout>
+//         <SearchPage />
+//     </AuthLayout>
+// );
 
 const Section = styled.section`
     padding-top: 10rem;

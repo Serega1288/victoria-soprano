@@ -1,7 +1,7 @@
 import React from 'react';
 import {minCol, maxCol} from "../function/SizeCol";
 import styled from "styled-components";
-import {graphql, useStaticQuery} from "gatsby";
+import {graphql, Link, useStaticQuery} from "gatsby";
 import Layout from '../components/Layout';
 import searchSVG from '../assets/img/search.svg'
 import downloadSVG from '../assets/img/download.svg'
@@ -13,6 +13,8 @@ import BoxProductDesc from "../components/Products/BoxProductDesc";
 import LikeProduct from "../components/Products/LikeProduct";
 
 const Product = (props) => {
+
+    const page = props;
 
     const data = useStaticQuery(graphql` 
         {
@@ -26,31 +28,96 @@ const Product = (props) => {
     `);
 
 
-    //console.log('Product page', props);
+    // console.log('Product page', page);
 
     return (
-        <Layout title={ props.pageContext.title } desc={ data.wp.allSettings.generalSettingsTitle } >
+        <Layout title={ page.pageContext.node.title } desc={ data.wp.allSettings.generalSettingsTitle } >
             <Section>
                 <div className="container box-desc">
+
                     <div className="row">
-                        <div className="col-12 box-title">
-                            <Title item={props.pageContext} />
+                        <div className="col-12 box-title d-block d-sm-none">
+                            <Title item={page.pageContext.node} />
                         </div>
-                        <div className="col-12 col-sm-6  box-gallery pos z-in-1">
-                            <Gallery
-                                firstImage={props.pageContext.featuredImage}
-                                item={props.pageContext.ACFBox.gallery}
-                                listVideo={props.pageContext.ACFBox.listVideo}
-                            />
-                        </div>
-                        <div className="col-12 col-sm-6 d-flex justify-content-center pos z-in-2">
-                            <div className="box-product-desc">
-                                <BoxProductDesc item={props.pageContext} />
+
+                        <div className='col-12'>
+                            <div className='NavPages'>
+                                <div className="row">
+                                    <div className="col-6 d-flex justify-content-end">
+                                        {
+                                            page.pageContext.previous && (
+                                                <Link className='btn style-2' to={page.pageContext.previous.uri}>
+                                                    Prev<span className='d-none d-sm-inline'>: {page.pageContext.previous.title}</span>
+                                                </Link>
+                                            )
+                                        }
+                                    </div>
+                                    <div className="col-6">
+                                        {
+                                            page.pageContext.next && (
+                                                <Link className='btn style-2' to={page.pageContext.next.uri}>
+                                                    Next<span className='d-none d-sm-inline'>: {page.pageContext.next.title}</span>
+                                                </Link>
+                                            )
+                                        }
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <div className="col-12 col-sm-6 col-lg-7  box-gallery pos z-in-1">
+                            <Gallery
+                                videofirstimage={page.pageContext.node.ACFBox.videofirstimage}
+                                firstImage={page.pageContext.node.featuredImage}
+                                item={page.pageContext.node.ACFBox.gallery}
+                                listVideo={page.pageContext.node.ACFBox.listVideo}
+                            />
+
+
+                        </div>
+                        <div className="col-12 col-sm-6 col-lg-5 d-flex align-items-center flex-column pos z-in-2 box-content">
+
+                            <div className="box-product-desc">
+                                <div className="box-title d-none d-sm-block">
+                                    <Title item={page.pageContext.node} />
+                                </div>
+                                <BoxProductDesc item={page.pageContext.node} />
+                            </div>
+
+                        </div>
                     </div>
+
+
+
                 </div>
-                { props.pageContext.ACFBox?.like && (<LikeProduct item={props.pageContext.ACFBox.like} />) }
+                { page.pageContext.node.ACFBox?.like && (<LikeProduct item={page.pageContext.node.ACFBox.like} />) }
+
+
+                {/*<div className="container">*/}
+                {/*    <div className='NavPages'>*/}
+                {/*        <div className="row">*/}
+                {/*            <div className="col">*/}
+                {/*                {*/}
+                {/*                    page.pageContext.previous && (*/}
+                {/*                        <Link className='btn style-2' to={page.pageContext.previous.uri}>*/}
+                {/*                            Previous: {page.pageContext.previous.title}*/}
+                {/*                        </Link>*/}
+                {/*                    )*/}
+                {/*                }*/}
+                {/*            </div>*/}
+                {/*            <div className="col-auto">*/}
+                {/*                {*/}
+                {/*                    page.pageContext.next && (*/}
+                {/*                        <Link className='btn style-2' to={page.pageContext.next.uri}>*/}
+                {/*                            Next: {page.pageContext.next.title}*/}
+                {/*                        </Link>*/}
+                {/*                    )*/}
+                {/*                }*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
+
             </Section>
         </Layout>
     );
@@ -73,12 +140,62 @@ const Section = styled.section`
       @media(max-width: ${maxCol.sm}) {
         font-size: 2rem;
       }
+    } 
+    
+    .wrapImgGallery { 
+      margin-bottom: 1.5rem;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 150%;
+      .imgGallery {
+        position: absolute !important;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        width: 100%;
+        max-width: 100%;
+      } 
+    }
+    .box-content {
+      .title {
+        margin-top: 0;
+        text-align: left;
+        margin-bottom: 4rem;
+      }
+      .price {
+        span {
+          color: #86644B;
+        }
+        margin-bottom: 2rem;
+      }
+    }
+    .NavPages {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+      z-index: 10;
+      background-color: #f7f4ed;
+      border: 1px solid #000;
+      padding-top: 0rem;
+      padding-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      .btn {
+        min-width: 30rem;
+        text-align: center;
+      }
     }
     .pinterest {
         // background-image: url(${pinterest});
         display: inline-block;
         position: absolute;
-        top: 2rem;
+        bottom: 1rem;
         z-index: 10;
         left: 2rem;
         a {
@@ -108,7 +225,7 @@ const Section = styled.section`
         right: 2rem;
         z-index: 2;
         @media(max-width: ${maxCol.sm}) {
-            bottom: 4rem;
+            bottom: 1.5rem;
         }
     }
     .WrapIframe {
@@ -139,7 +256,7 @@ const Section = styled.section`
         
     }
     .iframeBefore, .iframeAfter {
-        width: 25%;
+        width: 40%;
         z-index: 5;
         position: absolute;
         top: 0;
@@ -213,23 +330,41 @@ const Section = styled.section`
     }
     .box-desc {
         margin-bottom: 10rem;
+        margin-top: 10rem;
         @media(max-width: ${maxCol.sm}) {
-            margin-bottom: 5rem;    
+            margin-bottom: 5rem;   
+            margin-top: 0;
         }
     }
     @media(max-width: ${maxCol.sm}) {
+      .box-row-Gallery {
+        overflow: scroll;
+        flex-wrap: nowrap;
+        margin-bottom: 4rem;
+        & > * {
+          width: 80%;
+        }
+      }
+      .NavPages .btn {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: 100%;
+        text-align: center;
+        min-width: inherit;
+      }
         .container {
             padding: 0;
         }
         .CollapsList-text {
             display: flex;
             flex-wrap: wrap;
-            & > * {
-                flex: 0 0 auto;
-                width: 50%;
-            }
+            //& > * {
+            //    flex: 0 0 auto;
+            //    width: 50%;
+            //}
         }
-    }
+        
+    } 
     .CollapsList-text-sub-text {
         margin-bottom: 2rem;
         line-height: 1;
@@ -347,6 +482,7 @@ const Section = styled.section`
         }
     }
     .box-product-desc {
+        width: 100%;
         @media(max-width: ${maxCol.xl}) {
             padding-left: 2rem;
         } 
@@ -356,7 +492,8 @@ const Section = styled.section`
             
         } 
         @media(min-width: ${minCol.xl}) {
-            width: 42rem;
+            //width: 42rem;
+            padding-left: 4rem;
         }
     }
     .text {

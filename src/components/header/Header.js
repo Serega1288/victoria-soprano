@@ -11,6 +11,7 @@ import WrapMenu from './WrapMenu';
 // import Meseger from '../header/Meseger'
 import {instanceAuthService} from "../../function/auth";
 import {localStoreService} from "../../function/hook";
+import svgSaveBlack from '../../assets/img/saveBlack.svg'
 
 const Header = ( props ) => {
 
@@ -39,6 +40,7 @@ const Header = ( props ) => {
 
 
     const [ stepCartNumber, stepCartNumberSet ] = useState(0);
+
     useEffect(()=>{
         let stepCart = 0;
         if ( localStoreService.getLocal('CartBuy') ) {
@@ -49,6 +51,7 @@ const Header = ( props ) => {
         }
         // console.log('instanceAuthService', stepCart, localStoreService.getLocal('CartBuy') );
         stepCartNumberSet(stepCart);
+
 
     },[])
 
@@ -63,7 +66,17 @@ const Header = ( props ) => {
                                     <Link to="/search/">
                                         <img src={ImgSearch} className="search" alt="search" />
                                     </Link>
-                                </li>
+                                </li> 
+                                { instanceAuthService.isLogined() &&
+                                    <li className="d-block d-md-none">
+                                        <Link className='wrapBag' to="/cart/">
+                                            <span id='BagCount-1'>
+                                                { stepCartNumber }
+                                            </span>
+                                            <img src={ImgBag} className="cart" alt="cart" />
+                                        </Link>
+                                    </li>
+                                }
                             </IconItems>
                         </div>
                         <div className="col-auto">
@@ -77,7 +90,7 @@ const Header = ( props ) => {
                                 { instanceAuthService.isLogined() &&
                                     <li className="d-none d-md-block">
                                         <Link className='wrapBag' to="/cart/">
-                                            <span id='BagCount'>
+                                            <span id='BagCount-2'>
                                                 { stepCartNumber }
                                             </span>
                                             <img src={ImgBag} className="cart" alt="cart" />
@@ -93,6 +106,11 @@ const Header = ( props ) => {
                                 <li className="">
                                     <Link to="/account/">
                                         <img src={ImgUser} className="user" alt="user" />
+                                    </Link>
+                                </li>
+                                <li className="">
+                                    <Link to="/product-save/">
+                                        <img src={svgSaveBlack} className="user" alt="user" />
                                     </Link>
                                 </li>
                             </IconItems>

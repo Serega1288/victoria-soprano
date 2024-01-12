@@ -416,6 +416,10 @@ ul {
   margin-bottom: 5rem;
   font-size: 2.2rem;
 }
+
+.ListProduct [href="/collection/victoria-soprano/magic-flower-2024/test-product/"] {
+  display: none;
+}
 `;
 
 export default GlobalStyles;

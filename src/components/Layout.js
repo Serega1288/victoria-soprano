@@ -8,6 +8,7 @@ import  Footer from './footer/Footer';
 import styled from "styled-components";
 import {maxCol} from "../function/SizeCol";
 // import bolkit from '../assets/fonts/bolkit/bolkit.woff2';
+import PageTransition from "../components/PageTransition";
 
 const Layout = ( {children, title, desc } ) => {
     return (
@@ -21,7 +22,9 @@ const Layout = ( {children, title, desc } ) => {
             <GlobalCols />
             <GlobalStyles />
             <Header/>
-            <Main>{children}</Main>
+            <Main>
+                <PageTransition>{children}</PageTransition>
+            </Main>
             <Footer/>
         </div>
     )

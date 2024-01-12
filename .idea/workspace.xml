@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="15.08.2023/1">
+    <list default="true" id="e8a5bf7f-e5c8-4c23-8fba-ebff5d5fdec4" name="Changes" comment="21.09.2023/1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-browser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-browser.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Blog/BlogItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Blog/BlogItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Blog/BlogPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Blog/BlogPosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CategoryProduct/CategoryListProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoryProduct/CategoryListProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CategoryProduct/ProductItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoryProduct/ProductItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/LikeProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/LikeProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/authProduct/AuthProductData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/authProduct/AuthProductData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/checkout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/GlobalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalStyles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/Product.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,13 +163,8 @@
       <workItem from="1691833333029" duration="2284000" />
       <workItem from="1691846629115" duration="1086000" />
       <workItem from="1695302365832" duration="365000" />
-    </task>
-    <task id="LOCAL-00042" summary="17.11.2022/6">
-      <created>1668704847364</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1668704847364</updated>
+      <workItem from="1695302789100" duration="304000" />
+      <workItem from="1705067166523" duration="286000" />
     </task>
     <task id="LOCAL-00043" summary="17.11.2022/6">
       <created>1668710551382</created>
@@ -490,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691846908824</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="21.09.2023/1">
+      <created>1695302971798</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1695302971799</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +527,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="23.11.2022/9" />
     <MESSAGE value="24.11.2022/1" />
     <MESSAGE value="25.11.2022/1" />
     <MESSAGE value="26.11.2022/1" />
@@ -533,7 +551,8 @@
     <MESSAGE value="27.05.2023/1" />
     <MESSAGE value="12.08.2023/1" />
     <MESSAGE value="15.08.2023/1" />
-    <option name="LAST_COMMIT_MESSAGE" value="15.08.2023/1" />
+    <MESSAGE value="21.09.2023/1" />
+    <option name="LAST_COMMIT_MESSAGE" value="21.09.2023/1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -768,78 +768,95 @@ exports.createPages = ({graphql, actions}) => {
             }
           }
             
-           
+            
           allWpProduct {
-            nodes {
-              uri
-              id 
-              databaseId
-              ACF_product_attribute_variable {
-                color
-                size
-                priceFront
-                priceSaleFront
+           edges {
+              next {
+                uri
+                title
               }
-              ACFBox {
-                  article
-                  listVideo {  
-                    video
-                    numberStep
-                    shorts
+              previous {
+                uri
+                title
+              }
+              node {
+                  uri
+                  id 
+                  databaseId
+                  ACF_product_attribute_variable {
+                    color
+                    size
+                    priceFront
+                    priceSaleFront
                   }
-                  like { 
-                    ... on WpProduct {
-                      uri
-                      title
-                      featuredImage {
-                        node {
-                          localFile {
-                            publicURL
-                            childImageSharp {
-                               gatsbyImageData(
-                                  placeholder: BLURRED
-                                  formats: [AUTO, WEBP]
-                               )
+                  ACFBox {
+                      article
+                      videofirstimage {
+                        mediaItemUrl
+                      }
+                      listVideo {  
+                        video
+                        numberStep
+                        shorts 
+                        videoFile {
+                          mediaItemUrl
+                        }
+                      }
+                      like { 
+                        ... on WpProduct {
+                          uri
+                          title
+                          featuredImage {
+                            node {
+                              localFile {
+                                publicURL
+                                childImageSharp {
+                                   gatsbyImageData(
+                                      placeholder: BLURRED
+                                      formats: [AUTO, WEBP]
+                                   )
+                                }
+                              }
                             }
                           }
                         }
                       }
-                    }
+                      gallery {
+                        localFile {
+                            publicURL
+                            childImageSharp {
+                                  gatsbyImageData(
+                                    placeholder: BLURRED
+                                    formats: [AUTO, WEBP]
+                                  )
+                            }
+                          } 
+                      }
+                      specifications {
+                          title
+                          list {
+                            item 
+                          }
+                        }
                   }
-                  gallery {
-                    localFile {
+                  featuredImage {
+                    node {
+                      localFile {
                         publicURL
                         childImageSharp {
-                              gatsbyImageData(
-                                placeholder: BLURRED
-                                formats: [AUTO, WEBP]
-                              )
-                        }
-                      } 
-                  }
-                  specifications {
-                      title
-                      list {
-                        item 
+                                  gatsbyImageData(
+                                    placeholder: BLURRED
+                                    formats: [AUTO, WEBP]
+                                  )
+                        } 
                       }
                     }
-              }
-              featuredImage {
-                node {
-                  localFile {
-                    publicURL
-                    childImageSharp {
-                              gatsbyImageData(
-                                placeholder: BLURRED
-                                formats: [AUTO, WEBP]
-                              )
-                    } 
                   }
-                }
-              }
-              title
-              content
-            } 
+                  title
+                  content
+              } 
+            }
+           
           }
           
         } 
@@ -949,9 +966,9 @@ exports.createPages = ({graphql, actions}) => {
 
         });
 
-        results.data.allWpProduct.nodes.forEach(item => {
+        results.data.allWpProduct.edges.forEach(item => {
             createPage({
-                path: item.uri,
+                path: item.node.uri,
                 component: productTemplate,
                 context: item,
             })
@@ -1016,14 +1033,14 @@ exports.createPages = ({graphql, actions}) => {
 //     })
 //
 //
-    // allWpProduct.edges.forEach(edge => {
-    //     createPage({
-    //         path: `/shop/${edge.node.productCategories.slug}/${edge.node.slug}`,
-    //         component: slash(path.resolve(`./src/templates/product.js`)),
-    //         context: edge.node,
-    //     })
-    //
-    // })
+// allWpProduct.edges.forEach(edge => {
+//     createPage({
+//         path: `/shop/${edge.node.productCategories.slug}/${edge.node.slug}`,
+//         component: slash(path.resolve(`./src/templates/product.js`)),
+//         context: edge.node,
+//     })
+//
+// })
 //
 //     // allWpProductCategory.edges.forEach(edge => {
 //     //     createPage({
@@ -1035,6 +1052,3 @@ exports.createPages = ({graphql, actions}) => {
 //
 //
 // }
-
-
-
