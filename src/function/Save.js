@@ -7,17 +7,17 @@ const Save = ({product}) => {
 
 
 
-    const [ Save, SaveSet ] = useState(localStoreService.getLocal('saveProduct'));
+    const [ Save, SaveSet ] = useState( localStoreService.getLocal('saveProduct') );
     const [ foundItem, foundItemSet ] = useState();
     const clickSave = ( product, type ) => {
 
         // localStoreService.localStoreClear()
 
-        const getSave = localStoreService.getLocal('saveProduct');
+        //const getSave = localStoreService.getLocal('saveProduct');
         // console.log('getSave save >>>', getSave )
         let Arr = [];
 
-        if ( getSave == null ) {
+        if ( Save == null ) {
             Arr = [
                 {
                     uri : product.uri,
@@ -70,7 +70,9 @@ const Save = ({product}) => {
 
 
     useEffect(() => {
-        foundItemSet(Save.find(item => item.title === product.title));
+        if ( Save !== null ) {
+            foundItemSet(Save.find(item => item.title === product.title));
+        }
         console.log('product.title >>>', foundItem?.title )
     }, [Save, SaveSet, clickSave]);
 
