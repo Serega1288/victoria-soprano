@@ -36,12 +36,15 @@ const  BlogPosts = (props) => {
 
     return (
         <section className="section">
-            <BlogPost className="container">
-                <div className="row row-cols-1 row-cols-sm-3 box-blog-item">
-                    `{  posts.map((post, index) => (
+            <BlogPost className="container d-flex justify-content-center">
+                <div style={{maxWidth:'90rem', width: '100%' }} >
+                    <div className="row row-cols-1 row-cols-sm-2 box-blog-item">
+                        `{  posts.map((post, index) => (
                         <BlogItem key={post.id} step={index} post={post} />
                     ) ) }`
+                    </div>
                 </div>
+
             </BlogPost>
         </section>
     )

@@ -24,9 +24,9 @@ const Gallery = (prop) => {
         //     // access to player in all event handlers via event.target
         //     event.target.pauseVideo();
         // }
-      console.log('>>>', swiper)
-        console.log('>>> prev', swiper.previousIndex)
-        console.log('>>> active', swiper.activeIndex)
+      // console.log('>>>', swiper)
+      //   console.log('>>> prev', swiper.previousIndex)
+      //   console.log('>>> active', swiper.activeIndex)
         const prevId = 'stepIframe' + swiper.previousIndex
         const activeId = 'stepIframe' + swiper.activeIndex
 
@@ -65,7 +65,7 @@ const Gallery = (prop) => {
     };
 
     function onReady(s) {
-        console.log('s>>', s)
+        // console.log('s>>', s)
     }
 
     // const addExternalScript = (url, callback) => {

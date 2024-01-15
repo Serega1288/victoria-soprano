@@ -8,7 +8,7 @@ import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from 'gatsby-background-image'
 import Save from '../../function/Save'
 const ProductItem = ({item}) => {
-   console.log('ListProduct >>', item );
+   // console.log('ListProduct >>', item );
    //  const ImageBG = styled.div`
    //      background-image: url(${ item?.featuredImage?.node.localFile?.publicURL });
    //  `;
@@ -19,7 +19,7 @@ const ProductItem = ({item}) => {
     return (
         <div className="product">
             <div className='wrapLink'>
-                <Save product={item} />
+                <Save product={item} type='item' />
                 <Link to={item.uri}>
                     <BackgroundImage
                         className="ImageBG"

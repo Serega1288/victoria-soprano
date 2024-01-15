@@ -51,7 +51,7 @@ const CartPage = () => {
 
         cart[0].step++;
 
-        console.log('plus >>', cart[0].step , op, op1, op2, op3, cart);
+        // console.log('plus >>', cart[0].step , op, op1, op2, op3, cart);
 
         cartSet(cart);
         localStoreService.saveLocal('CartBuy', cart );

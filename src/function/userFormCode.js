@@ -9,7 +9,7 @@ const useFormCode = (d, t) => {
     const [message, setMessage] = useState(null);
 
 
-    console.log('values.email >>>> !!!', values.email );
+    // console.log('values.email >>>> !!!', values.email );
 
 
     const captureInput = e => {

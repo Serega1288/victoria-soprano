@@ -66,7 +66,7 @@ function Search() {
             // axios.get(`${authorsPublicIndexURL}`),
             // axios.get(`${authorsPublicStoreURL}`),
         ]);
-        console.log('w', blogsIndex, blogsStore)
+        // console.log('w', blogsIndex, blogsStore)
         setBlogsIndexStore({
             index: blogsIndex,
             store: blogsStore,

@@ -5,6 +5,7 @@ import CollapsListAttribute from "../Products/CollapsListAttribute";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import {instanceAuthService} from "../../function/auth";
 import AuthProductData from "./authProduct/AuthProductData"
+import Save from "../../function/Save";
 
 const BoxProductDesc = ({item}) => {
     // console.log('BoxProductDesc >>>', item);
@@ -70,14 +71,19 @@ const BoxProductDesc = ({item}) => {
 
             { ! instanceAuthService.isLogined() &&
                 <div className="box-not-login">
+
                     <div className="d-flex align-items-center box-desc-1">
                         <Link className="a" to={data.wp.themeGeneralSettings.ACFoptionThemes.sizeguide.uri}>
                             <span>Size Guide</span>
                         </Link>
                         <div className="a">
+                            <Save product={item} type='page' />
+                        </div>
+                        <div className="a">
                             <img src={iconWois} alt=""/>
                             <span className="d-flex justify-content-center align-items-center flex-column" onClick={clickBtnMessege}>Contact us</span>
                         </div>
+
                     </div>
                     <div className="d-sm-flex align-items-center justify-content-between box-desc-2">
                         <Link className='btn style-3' to={data.wp.themeGeneralSettings.ACFoptionThemes.whereToBuy.uri}>Where to buy</Link>

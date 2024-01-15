@@ -103,7 +103,7 @@ const CartPage = () => {
             cartSet(x);
             localStoreService.saveLocal('CartBuy', x );
 
-            console.log('x', x);
+            // console.log('x', x);
 
         }
 

@@ -12,7 +12,7 @@ class Hook {
 
     getCountCart = () => {
 
-        console.log('>>>>>>>>>>>>',  typeof window !== 'undefined' && JSON.parse( localStorage.getItem('CartBuy') ) )
+        // console.log('>>>>>>>>>>>>',  typeof window !== 'undefined' && JSON.parse( localStorage.getItem('CartBuy') ) )
 
         return typeof window !== 'undefined' && JSON.parse(
             localStorage.getItem('CartBuy').map((item, index) => (

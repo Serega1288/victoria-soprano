@@ -46,7 +46,7 @@ const Product = (props) => {
                                     <div className="col-6 d-flex justify-content-end">
                                         {
                                             page.pageContext.previous && (
-                                                <Link className='btn style-2' to={page.pageContext.previous.uri}>
+                                                <Link className='btn style-6' to={page.pageContext.previous.uri}>
                                                     Prev<span className='d-none d-sm-inline'>: {page.pageContext.previous.title}</span>
                                                 </Link>
                                             )
@@ -55,7 +55,7 @@ const Product = (props) => {
                                     <div className="col-6">
                                         {
                                             page.pageContext.next && (
-                                                <Link className='btn style-2' to={page.pageContext.next.uri}>
+                                                <Link className='btn style-6' to={page.pageContext.next.uri}>
                                                     Next<span className='d-none d-sm-inline'>: {page.pageContext.next.title}</span>
                                                 </Link>
                                             )
@@ -182,7 +182,7 @@ const Section = styled.section`
       z-index: 10;
       background-color: #f7f4ed;
       border: 1px solid #000;
-      padding-top: 0rem;
+      padding-top: 0.5rem;
       padding-bottom: 0.5rem;
       padding-left: 1.5rem;
       padding-right: 1.5rem;
@@ -455,16 +455,21 @@ const Section = styled.section`
         img {
             margin-right: 0.8rem;
         }
+      .save {
+        span {
+          
+        }
+      }
         .a {
-            
+            margin-left: 2.5rem !important;
             cursor: pointer;
             color: #000000;
             text-decoration: none;
             display:  inline-flex;
             padding-bottom: 0.2rem;
-            padding-top: 0.2rem; 
-            &:last-child {
-                margin-left: 6rem;
+            padding-top: 0.2rem;
+            &:first-child {
+              margin-left: 0rem !important;
             }
             span:after { 
                 content: '';

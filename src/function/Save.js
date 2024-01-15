@@ -3,7 +3,7 @@ import svgSave from '../assets/img/save.svg'
 import svgSaved from '../assets/img/saved.svg'
 import {localStoreService} from "./hook";
 
-const Save = ({product}) => {
+const Save = ({product, type}) => {
 
 
 
@@ -47,7 +47,7 @@ const Save = ({product}) => {
 
                 const updatedArr = Arr.filter(item => item.title !== product.title );
 
-                console.log(updatedArr);
+                // console.log(updatedArr);
 
                 Arr = updatedArr;
             }
@@ -64,26 +64,34 @@ const Save = ({product}) => {
         //
         // }
 
-        console.log('product save >>>', localStoreService.getLocal('saveProduct' ) )
+        // console.log('product save >>>', localStoreService.getLocal('saveProduct' ) )
 
     }
 
 
     useEffect(() => {
-        foundItemSet(Save.find(item => item.title === product.title));
-        console.log('product.title >>>', foundItem?.title )
+        if ( Save !== null ) {
+            foundItemSet(Save.find(item => item.title === product.title));
+            // console.log('product.title >>>', foundItem?.title)
+        }
     }, [Save, SaveSet, clickSave]);
 
     return (
         <>
             {
                 foundItem?.title === product.title ? (
-                    <div onClick={()=>clickSave(product, 'remove')} className="save d-flex aligh-items-center justify-content-center">
+                    <div onClick={()=>clickSave(product, 'remove')} className={`save d-flex ${type !== 'page' && ('align-items-center justify-content-center')}`}>
                         <img src={svgSaved} alt=""/>
+                        {
+                            type === 'page' && (<span>Remove dress</span>)
+                        }
                     </div>
                 ) : (
-                    <div onClick={()=>clickSave(product, 'add')} className="save d-flex aligh-items-center justify-content-center">
+                    <div onClick={()=>clickSave(product, 'add')} className={`save d-flex ${type !== 'page' && ('align-items-center justify-content-center')}`}>
                         <img src={svgSave} alt=""/>
+                        {
+                            type === 'page' && (<span>Save dress</span>)
+                        }
                     </div>
                 )
             }

@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {Link} from 'gatsby'
 import styled from "styled-components"
 import {localStoreService} from "../../../function/hook"
+import Save from "../../../function/Save";
 
 const AuthProductData = ({item}) => {
     // console.log('BoxProductDesc >>>', item );
@@ -235,6 +236,9 @@ const AuthProductData = ({item}) => {
 
                 <div className='wrap-buy'>
                     <div className="row">
+                        <div className='col-12'>
+                            <Save product={item} type='page' />
+                        </div>
                         <div className="col-3">
                             <div className="step">
                                 <span onClick={()=>clickStep('min')} className="min">-</span>
@@ -264,6 +268,13 @@ const Section = styled.div`
   .wrap-buy {
     margin-top: 2.5rem;
     margin-bottom: 5rem;
+    .save {
+      cursor: pointer;
+      img {
+        margin-right: 1rem;
+      }
+      margin-bottom: 1.5rem;
+    }
   }
   .error {
     color: darkred !important;

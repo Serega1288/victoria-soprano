@@ -12,7 +12,7 @@ const Instagram = ( { item } ) => {
     const bgImage1 = convertToBgImage(getImage(item.image1.localFile.childImageSharp))
     const bgImage2 = convertToBgImage(getImage(item.image2.localFile.childImageSharp))
 
-    console.log('bgImage1 >>>', bgImage1);
+    // console.log('bgImage1 >>>', bgImage1);
 
     // const { observe } = lozad("[data-use-lozad]", {
     //     rootMargin: '100px 0px', // syntax similar to that of CSS Margin

@@ -288,6 +288,27 @@ ul {
       color: #fff;
     }
   }
+  &.style-6 {
+    color: #fff;
+    font-size: 2.2rem;
+    line-height: 1;
+    text-decoration: none;
+    padding: 0.6rem 2.8rem;
+    position: relative;
+    background-color: #1a0f07;
+    &:hover, &:focus {
+      color: #fff;
+      &:before {
+        background-color: #86644b;
+        top: 0;
+      }
+    }
+    @media(max-width: ${maxCol.sm}) {
+      font-size: 1.6rem;
+      line-height: 1.92rem;
+      min-width: 10rem;
+    }
+  }
 } 
 
 .wrap-table {

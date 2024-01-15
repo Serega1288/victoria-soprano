@@ -39,7 +39,7 @@ const useForm = (formInputs , numberForm) => {
 
         const responseText = JSON.parse(await res.text() );
 
-        console.log('responseText >>>', responseText);
+        // console.log('responseText >>>', responseText);
 
         // 2. перевіряємо відповідь від сервера
         if (res.status >= 400 && res.status < 600 ) {

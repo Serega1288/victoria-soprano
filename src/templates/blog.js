@@ -5,7 +5,7 @@ import Const from "../components/constructor/Constructor";
 import BlogPosts from "../components/Blog/BlogPosts"
 
 const Blog = (props) => {
-    console.log('Blog >>', props);
+    // console.log('Blog >>', props);
     const { data, pageContext } = props;
     //const posts = data.posts.nodes;
 
