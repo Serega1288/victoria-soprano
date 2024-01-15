@@ -20,12 +20,12 @@ function MessengerChat() {
     });
     return (
         <>
-            // <div id="fb-root" />
-            // <div
-            //     className="fb-customerchat"
-            //     attribution="page_inbox"
-            //     page_id="497817423746164"
-            // />
+            {/*<div id="fb-root" />*/}
+            {/*<div*/}
+            {/*    className="fb-customerchat"*/}
+            {/*    attribution="page_inbox"*/}
+            {/*    page_id="497817423746164"*/}
+            {/*/>*/}
         </>
     );
 }
