@@ -298,10 +298,7 @@ ul {
     background-color: #1a0f07;
     &:hover, &:focus {
       color: #fff;
-      &:before {
-        background-color: #86644b;
-        top: 0;
-      }
+      background-color: #86644b;
     }
     @media(max-width: ${maxCol.sm}) {
       font-size: 1.6rem;
