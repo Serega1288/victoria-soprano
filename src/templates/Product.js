@@ -464,7 +464,7 @@ const Section = styled.section`
             margin-left: 2.5rem !important;
             cursor: pointer;
             color: #000000;
-            text-decoration: none;
+            text-decoration: none; 
             padding-bottom: 0.2rem;
             padding-top: 0.2rem;
             &:first-child {
@@ -472,10 +472,11 @@ const Section = styled.section`
             }
             span:after { 
                 content: '';
-                display: block;
+                display: block; 
                 width: 100%;
                 height: 1px;
                 background-color: #000;
+                color: #fff;
             }
             &:hover {
                 color: #86644b;
