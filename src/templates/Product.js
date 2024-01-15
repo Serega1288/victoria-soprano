@@ -465,7 +465,6 @@ const Section = styled.section`
             cursor: pointer;
             color: #000000;
             text-decoration: none;
-            display:  inline-flex;
             padding-bottom: 0.2rem;
             padding-top: 0.2rem;
             &:first-child {
