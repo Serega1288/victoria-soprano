@@ -6,7 +6,7 @@ import {maxCol} from "../../function/SizeCol";
 import { getImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from 'gatsby-background-image'
-// import Save from '../../function/Save'
+import Save from '../../function/Save'
 const ProductItem = ({item}) => {
    console.log('ListProduct >>', item );
    //  const ImageBG = styled.div`
@@ -19,7 +19,7 @@ const ProductItem = ({item}) => {
     return (
         <div className="product">
             <div className='wrapLink'>
-                {/*<Save product={item} />*/}
+                <Save product={item} />
                 <Link to={item.uri}>
                     <BackgroundImage
                         className="ImageBG"
