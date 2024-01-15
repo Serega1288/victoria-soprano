@@ -33,12 +33,20 @@ const SavePage = () => {
                 <Section className="ListProduct">
                     <div className="container">
                         <div className="row row-cols-2 row-cols-sm-3">
-                            {Save.map( (item, index) => {
-                                // console.log('categoryItem', item);
-                                return (
-                                    <ProductItem key={index} item={item} />
+                            {
+                                Save.length >= 1 ? (
+                                    Save.map( (item, index) => {
+                                        console.log('categoryItem', item);
+                                        return (
+                                            <ProductItem key={index} item={item} />
+                                        )
+                                    })
+                                ) : (
+                                    <div className='col-12 text-center'>
+                                        <div>You have not saved any products yet</div>
+                                    </div>
                                 )
-                            })}
+                            }
                         </div>
                     </div>
                 </Section>
