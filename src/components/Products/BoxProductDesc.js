@@ -78,10 +78,10 @@ const BoxProductDesc = ({item}) => {
                             <span>Size Guide</span>
                         </Link>
 
-                        <div className="a d-flex">
+                        <Link to='/contact/?tabs=1#contact-form' style={{textDecoration: "none"}} className="a d-flex justify-content-center align-items-center">
                             <img src={iconWois} alt=""/>
-                            <span><Link style={{textDecoration: "none"}} to='/contact/?tabs=1#contact-form' className="d-flex justify-content-center align-items-center flex-column">Contact us</Link></span>
-                        </div>
+                            <span>Contact us</span>
+                        </Link>
 
                         <div className="a d-none d-sm-flex">
                             <Save product={item} type='page' />
