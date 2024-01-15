@@ -62,11 +62,16 @@ const Header = ( props ) => {
                     <div className="row">
                         <div className="col d-flex align-items-center">
                             <IconItems className="ul-clear align-items-center d-flex d-md-none">
-                                <li className="">
+                                <li>
                                     <Link to="/search/">
                                         <img src={ImgSearch} className="search" alt="search" />
                                     </Link>
-                                </li> 
+                                </li>
+                                <li>
+                                    <Link to="/product-save/">
+                                        <img src={svgSaveBlack} className="user" alt="user" />
+                                    </Link>
+                                </li>
                                 { instanceAuthService.isLogined() &&
                                     <li className="d-block d-md-none">
                                         <Link className='wrapBag' to="/cart/">
@@ -108,7 +113,7 @@ const Header = ( props ) => {
                                         <img src={ImgUser} className="user" alt="user" />
                                     </Link>
                                 </li>
-                                <li className="">
+                                <li className="d-none d-md-block">
                                     <Link to="/product-save/">
                                         <img src={svgSaveBlack} className="user" alt="user" />
                                     </Link>
