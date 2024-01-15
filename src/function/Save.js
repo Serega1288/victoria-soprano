@@ -13,11 +13,11 @@ const Save = ({product}) => {
 
         // localStoreService.localStoreClear()
 
-        //const getSave = localStoreService.getLocal('saveProduct');
+        const getSave = localStoreService.getLocal('saveProduct');
         // console.log('getSave save >>>', getSave )
         let Arr = [];
 
-        if ( Save == null ) {
+        if ( getSave == null ) {
             Arr = [
                 {
                     uri : product.uri,
@@ -28,7 +28,7 @@ const Save = ({product}) => {
         } else {
             if ( type === 'add' ) {
                 Arr = [
-                    ...Save,
+                    ...getSave,
                     {
                         uri : product.uri,
                         featuredImage : product.featuredImage,
@@ -37,7 +37,7 @@ const Save = ({product}) => {
                 ];
             } else {
                 Arr = [
-                    ...Save,
+                    ...getSave,
                     {
                         uri : product.uri,
                         featuredImage : product.featuredImage,
@@ -54,7 +54,7 @@ const Save = ({product}) => {
 
         }
 
-
+        
         SaveSet(Arr)
         localStoreService.saveLocal('saveProduct', Arr );
 
