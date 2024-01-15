@@ -1,5 +1,7 @@
 const React = require("react");
-const FbM = require("./src/components/FbM").default;
+const TidioScript = require("./src/components/footer/TidioScript").default;
+// const FbM = require("./src/components/FbM").default;
+// const TidioScript = require("./src/components/footer/TidioScript").default;
 const GlobalFonts = require("./src/styles/GlobalFonts").default;
 
 
@@ -7,7 +9,8 @@ exports.wrapRootElement = ({ element }) => {
     // return <Layout {...props}>{element}</Layout>
     return (
         <>
-            <FbM />
+            <TidioScript />
+            {/*<FbM />*/}
             <GlobalFonts />
             {element}
         </>
