@@ -19,7 +19,7 @@ const ProductItem = ({item}) => {
     return (
         <div className="product">
             <div className='wrapLink'>
-                // <Save product={item} />
+                {/*<Save product={item} />*/}
                 <Link to={item.uri}>
                     <BackgroundImage
                         className="ImageBG"
