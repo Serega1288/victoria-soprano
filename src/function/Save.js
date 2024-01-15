@@ -28,7 +28,7 @@ const Save = ({product}) => {
         } else {
             if ( type === 'add' ) {
                 Arr = [
-                    ...getSave,
+                    ...Save,
                     {
                         uri : product.uri,
                         featuredImage : product.featuredImage,
@@ -37,7 +37,7 @@ const Save = ({product}) => {
                 ];
             } else {
                 Arr = [
-                    ...getSave,
+                    ...Save,
                     {
                         uri : product.uri,
                         featuredImage : product.featuredImage,
