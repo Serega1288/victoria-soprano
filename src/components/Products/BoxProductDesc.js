@@ -43,7 +43,7 @@ const BoxProductDesc = ({item}) => {
     const parm = data.wp.themeGeneralSettings.ACFoptionThemes.parm;
 
     const clickBtnMessege = () => {
-        document.getElementById('clickBtnMessege').click()
+        document.getElementById('button-body').click()
     }
 
     return (
