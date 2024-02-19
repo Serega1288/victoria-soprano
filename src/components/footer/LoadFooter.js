@@ -45,8 +45,8 @@ const LoadFooter = () => {
                                             Office:
                                         </h3>
                                         <p>
-                                           POLSKA, Krakow 30693, <br />
-                                            ul. Adama Bochenka 16/7 <br />
+                                            Aleja Spółdzielczości Pracy 36 C, lok.21 <br />
+                                            20-147 Lublin <br />
                                             NIP 6793225747
                                         </p>
 
