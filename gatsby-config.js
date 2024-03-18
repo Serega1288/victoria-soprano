@@ -76,6 +76,10 @@ module.exports = {
             },
           },
         },
+        excludedRoutes: [
+          "**/media",
+          "**/videos", 
+        ],
       },
     },
     {
